@@ -1,0 +1,71 @@
+# Seuils et constantes du plan de collecte des données.
+# Source : plan-donnees.md, version du 7 octobre 2026.
+#
+# Ce fichier est la SEULE source des valeurs chiffrees du plan.
+# Aucun script ne doit coder un seuil en dur.
+#
+# La section `proposes` contient les seuils marques "(proposé)" dans le plan :
+# ils attendent la validation du groupe avant tout lancement. Les valeurs ici
+# sont celles du plan et ne doivent pas etre changees : un changement de seuil
+# passe d'abord par le plan, puis se retrouve ici.
+
+plan: "plan-donnees.md, version du 7 octobre 2026"
+
+proposes:
+  # D1 filtre 3 : "On garde le segment si l'écart est inférieur à 15 % de mots (proposé)"
+  ecart_ecoute_max_pct: 15
+  # D4 filtre 3 : "Le rapport de longueur français/arabe, en caractères, sort
+  # de l'intervalle 0,6 à 2,5 (proposé)"
+  rapport_longueur_min: 0.6
+  rapport_longueur_max: 2.5
+  # D4 filtre 7 : "On retire les 20 % de segments les moins bien notés (proposé)"
+  qe_rejet_pire_pct: 20
+  # D5 : "Le jeu est accepté si moins de 5 % des segments ont une erreur de sens (proposé)"
+  taux_erreur_sens_max_pct: 5
+
+constantes:
+  # D1 filtre 1 : "Durée entre 5 et 25 secondes"
+  duree_segment_min_s: 5
+  duree_segment_max_s: 25
+  # D1 filtre 2 : "Au moins 6 mots dans la transcription"
+  mots_min_segment: 6
+  # D1 filtre 4 : "Pas plus de 200 segments par épisode"
+  segments_max_par_episode: 200
+  # D1 : "On s'arrête à 50 000 segments"
+  segments_objectif: 50000
+  # D2 protocole : "On tire 100 segments au hasard" / "vitesse sur 500 segments"
+  segments_comparaison_modeles: 100
+  segments_mesure_vitesse: 500
+  # D3 : "paquets de cinq segments consécutifs du même épisode"
+  taille_paquet_traduction: 5
+  # D3 : "Si le nombre de lignes ne correspond pas, on relance le paquet une fois"
+  relances_paquet_max: 1
+  # Jeu T/R : "80 extraits au total, 60 pour T et 20 pour R, de 20 à 30 secondes chacun"
+  extraits_t: 60
+  extraits_r: 20
+  duree_extrait_min_s: 20
+  duree_extrait_max_s: 30
+  # Jeu T/R : "Émissions diffusées après le 1er octobre 2026"
+  # -> la date de diffusion doit etre strictement posterieure au 1er octobre.
+  date_min_extrait: "2026-10-02"
+  # Jeu T/R : "Sur 15 extraits, une deuxième traduction indépendante"
+  extraits_avec_fr2: 15
+  # Jeu P : UNPC "plafonné à 20 000 phrases"
+  unpc_max_phrases: 20000
+  # Noms propres : "Taille visée : 300 à 500 entrées"
+  noms_min: 300
+  noms_max: 500
+  # D5 : "On tire 200 segments au hasard"
+  segments_controle_humain: 200
+  # D6 : "un lot spécial de 5 000 segments", coupes à 30/50/70 % des mots,
+  # "On en relit 100 à la main"
+  segments_debuts_phrase: 5000
+  coupe_debuts_pct: [30, 50, 70]
+  debuts_relecture: 100
+  # Jeu A : "100 à 200 heures", "600 segments par épisode"
+  segments_max_par_episode_a: 600
+  heures_alignement_min: 100
+  heures_alignement_max: 200
+  # Découpage : "95 % des épisodes pour l'entraînement, 5 % pour la validation"
+  episodes_validation_pct: 5
+

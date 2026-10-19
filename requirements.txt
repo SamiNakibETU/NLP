@@ -1,0 +1,5 @@
+# Scripts de collecte des donnees (code/donnees)
+pyyaml>=6.0
+
+# Les tests passent avec unittest (stdlib), sans installation.
+# pytest>=8.0  # optionnel : lance aussi les memes tests

@@ -1,0 +1,45 @@
+# Secrets et variables d'environnement
+.env
+
+# Fichiers audio et corpus sous licence de recherche (MGB-2)
+donnees/**/audio/
+donnees/distille/*
+!donnees/distille/lisezmoi.md
+donnees/alignement/*
+!donnees/alignement/lisezmoi.md
+donnees/presse/brut/
+donnees/presse/p_v1.jsonl
+donnees/presse/rejets.csv
+*.zip
+*.flac
+*.wav
+
+# Cache Python et notebooks
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Poids de modèles entraînés et dossiers temporaires d'essai
+modeles/
+resultats/essai_*/
+resultats/resultats_essai.csv
+
+# Documents de travail internes hors dépôt de code
+prompt-agent-donnees.md
+prompt-agent-projet.md
+transcript-conversation.md
+contre-proposition.md
+benchmark-architectures.md
+benchmark-recherche-complete.md
+plan-donnees.md
+plan-specifications.md
+architecture.md
+specifications.md
+journal-donnees.md
+journal-projet.md
+comptes-rendus/
+.zcodeignore
+*.pdf
+*.png
+*.svg
