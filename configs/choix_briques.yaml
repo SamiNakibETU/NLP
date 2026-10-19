@@ -1,0 +1,78 @@
+# Sélection des modèles d'écoute (ASR) et des modèles de langue (LLM)
+regles_choix:
+  ecart_choix_ecoute_max_pts: 3.0
+  metrique_ecoute: "wer_pct"
+  metrique_llm: "chrf_pp"
+  jeu_reglage: "donnees/test/r.jsonl"
+  jeu_attente: "google/fleurs"
+
+candidats_ecoute:
+  - nom: "whisper-large-v3"
+    modele_id: "openai/whisper-large-v3"
+    architecture: "WhisperForConditionalGeneration"
+    model_type: "whisper"
+    gated: false
+    d_enc: 1280
+    max_source_positions: 1500
+    frequence_vecteurs_hz: 50.0
+    duree_fenetre_s: 30.0
+    simplicite_s3: 1
+  - nom: "cohere-transcribe-arabic"
+    modele_id: "CohereLabs/cohere-transcribe-03-2026"
+    architecture: "CohereAsrForConditionalGeneration"
+    model_type: "cohere_asr"
+    gated: "auto"
+    trust_remote_code: true
+    parametres_bf16: 2065804048
+    simplicite_s3: 3
+  - nom: "qwen3-asr-1.7b"
+    modele_id: "Qwen/Qwen3-ASR-1.7B"
+    architecture: "Qwen3ASRForConditionalGeneration"
+    model_type: "qwen3_asr"
+    gated: false
+    d_model_interne: 1024
+    d_enc_sortie: 2048
+    max_source_positions: 1500
+    transformers_version_requise: "4.57.6"
+    simplicite_s3: 2
+
+candidats_llm:
+  - nom: "qwen3-4b"
+    modele_id: "Qwen/Qwen3-4B"
+    architecture: "Qwen3ForCausalLM"
+    model_type: "qwen3"
+    gated: false
+    hidden_size: 2560
+    num_hidden_layers: 36
+    transformers_version_requise: "4.51.0"
+    role: "principal"
+  - nom: "gemma-4-e4b"
+    modele_id: "google/gemma-4-E4B-it"
+    architecture: "Gemma4ForConditionalGeneration"
+    model_type: "gemma4"
+    gated: false
+    hidden_size: 2560
+    num_hidden_layers: 42
+    transformers_version_requise: "5.5.0.dev0"
+    role: "candidat_texte"
+  - nom: "qwen3-1.7b"
+    modele_id: "Qwen/Qwen3-1.7B"
+    architecture: "Qwen3ForCausalLM"
+    model_type: "qwen3"
+    gated: false
+    hidden_size: 2048
+    num_hidden_layers: 28
+    transformers_version_requise: "4.51.0"
+    role: "option_legere"
+
+chargement_llm:
+  quantification_4bits: true
+  bnb_4bit_quant_type: "nf4"
+  torch_dtype: "float16"
+  temperature: 0.0
+  max_new_tokens: 128
+
+consigne_traduction_zero_shot: >
+  Tu es un traducteur professionnel de journaux télévisés arabes vers le français.
+  Traduis fidèlement le texte arabe suivant en français sous forme de sous-titre clair,
+  sans commentaire ni ajout.
