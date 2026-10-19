@@ -1,0 +1,43 @@
+# Configuration du système S3 (encodeur audio + projecteur MLP + LLM avec LoRA)
+
+systeme: "S3"
+graine: 42
+
+briques:
+  modele_ecoute_id: "openai/whisper-large-v3"
+  modele_llm_id: "Qwen/Qwen3-4B"
+  modele_llm_leger_id: "Qwen/Qwen3-1.7B"
+  facteur_regroupement_k: 4        # 50 Hz / 4 = 12,5 vecteurs/s en entrée du LLM
+  duree_fenetre_encodeur_s: 30.0
+  debit_encodeur_hz: 50.0
+
+consignes:
+  temps_1_transcription: "Transcris en arabe."
+  temps_2_traduction: "Traduis en français."
+
+temps_1:
+  optimiseur: "AdamW"
+  learning_rate: 0.0001            # 1e-4 (projecteur seul, encodeur et LLM figés)
+  warmup_steps: 1000
+  lot_effectif: 16
+  eval_toutes_les_etapes: 1000
+  nb_segments_validation: 200
+  patience_arret: 3                # arrêt si le WER ne baisse plus sur 3 mesures de suite
+  seuil_alerte_etapes: 5000        # diagnostic si l'erreur n'a pas baissé après 5 000 étapes
+
+temps_2:
+  part_rappel_transcription: 0.15  # 15 % des exemples restent de la transcription arabe
+  learning_rate_lora: 0.0001       # 1e-4 pour le LoRA
+  learning_rate_projecteur: 0.00005 # 5e-5 pour le projecteur
+  lot_effectif: 16
+  eval_toutes_les_etapes: 500
+  nb_segments_validation: 500
+  lora:
+    r: 16
+    lora_alpha: 32
+    lora_dropout: 0.05
+    target_modules:
+      - "q_proj"
+      - "k_proj"
+      - "v_proj"
+      - "o_proj"
