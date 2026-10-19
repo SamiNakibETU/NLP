@@ -1,0 +1,60 @@
+# Configuration des systèmes S1 (sans LoRA) et S2 (cascade avec LoRA)
+
+systeme: "S2"
+graine: 42
+
+briques:
+  modele_ecoute_id: "openai/whisper-large-v3"
+  modele_llm_id: "Qwen/Qwen3-4B"
+  modele_llm_leger_id: "Qwen/Qwen3-1.7B"
+  lexique_noms_csv: "donnees/noms/noms_v1.csv"
+
+proportions_melange:
+  d_transcription_manuelle: 0.40
+  d_sortie_ecoute: 0.30
+  p_presse: 0.20
+  d6_debut_phrase: 0.10
+
+consigne_systeme: >
+  Tu es un système de sous-titrage français pour journaux télévisés en arabe.
+  Produis un sous-titre français composé de phrases complètes, avec les noms propres
+  dans leur forme française, les chiffres écrits en chiffres, sans aucun ajout ni commentaire.
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+entrainement:
+  learning_rate: 0.0002
+  lr_scheduler_type: "cosine"
+  warmup_ratio: 0.03
+  lot_effectif: 16
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8
+  num_train_epochs: 2
+  max_seq_length: 512
+  precision_t4: "float16"
+  quantification_4bits: true
+  bnb_4bit_quant_type: "nf4"
+  sauvegarde_toutes_les_etapes: 500
+  eval_toutes_les_etapes: 500
+  nb_segments_validation: 500
+  quota_hebdo_kaggle_h: 30.0
+  nb_exemples_cible_complet: 50000
+
+inference:
+  temperature: 0.0
+  do_sample: false
+  max_new_tokens: 128
+  nb_phrases_contexte: 2
+  duree_max_segment_s: 30.0
+  silence_min_coupure_s: 0.5
+  seuil_energie_db: -38.0
