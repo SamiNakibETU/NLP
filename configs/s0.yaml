@@ -1,0 +1,25 @@
+# Configuration du système de base S0 (Whisper small + Opus-MT arabe-français)
+systeme:
+  code: "S0"
+  description: "Baseline sans entraînement : Whisper small + Opus-MT arabe-français"
+
+ecoute:
+  modele_id: "openai/whisper-small"
+  modele_repli_local: "openai/whisper-tiny"
+  langue: "ar"
+  tache: "transcribe"
+  frequence_echantillonnage_hz: 16000
+  duree_max_segment_s: 30.0
+
+traduction:
+  modele_id: "Helsinki-NLP/opus-mt-ar-fr"
+  temperature: 0.0
+  num_beams: 1
+  max_new_tokens: 128
+
+vad:
+  outil: "silero_vad"
+  seuil_energie_db: -38.0
+  silence_min_coupure_s: 0.5
+  duree_min_segment_s: 1.0
+  duree_max_segment_s: 30.0
