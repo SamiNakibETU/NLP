@@ -43,3 +43,7 @@ comptes-rendus/
 *.pdf
 *.png
 *.svg
+**/lisezmoi.md
+donnees/manifeste.csv
+donnees/noms/noms_manuel_modele.csv
+donnees/test/guide-annotation.md

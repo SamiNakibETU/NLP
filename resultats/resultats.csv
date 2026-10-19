@@ -1,0 +1,23 @@
+date,systeme,version_modele,jeu,mesure,valeur,intervalle,commit_code,configuration
+2026-10-19T13:13:49Z,S0,openai/whisper-small+Helsinki-NLP/opus-mt-ar-fr,fleurs_ar_fr,chrF++,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/s0.yaml
+2026-10-19T13:13:49Z,S0,openai/whisper-small+Helsinki-NLP/opus-mt-ar-fr,fleurs_ar_fr,BLEU,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/s0.yaml
+2026-10-19T13:13:49Z,S0,openai/whisper-small+Helsinki-NLP/opus-mt-ar-fr,fleurs_ar_fr,WER (%),non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/s0.yaml
+2026-10-19T13:13:49Z,S0,openai/whisper-small+Helsinki-NLP/opus-mt-ar-fr,fleurs_ar_fr,RTF,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/s0.yaml
+2026-10-19T13:13:49Z,ECOUTE:whisper-large-v3,openai/whisper-large-v3,fleurs_ar_fr,WER (%),non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,ECOUTE:whisper-large-v3,openai/whisper-large-v3,R,WER (%),non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,ECOUTE:cohere-transcribe-arabic,CohereLabs/cohere-transcribe-03-2026,fleurs_ar_fr,WER (%),non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,ECOUTE:cohere-transcribe-arabic,CohereLabs/cohere-transcribe-03-2026,R,WER (%),non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,ECOUTE:qwen3-asr-1.7b,Qwen/Qwen3-ASR-1.7B,fleurs_ar_fr,WER (%),non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,ECOUTE:qwen3-asr-1.7b,Qwen/Qwen3-ASR-1.7B,R,WER (%),non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,LLM:qwen3-4b,Qwen/Qwen3-4B,fleurs_ar_fr,chrF++,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,LLM:qwen3-4b,Qwen/Qwen3-4B,R,chrF++,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,LLM:gemma-4-e4b,google/gemma-4-E4B-it,fleurs_ar_fr,chrF++,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,LLM:gemma-4-e4b,google/gemma-4-E4B-it,R,chrF++,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,LLM:qwen3-1.7b,Qwen/Qwen3-1.7B,fleurs_ar_fr,chrF++,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T13:13:49Z,LLM:qwen3-1.7b,Qwen/Qwen3-1.7B,R,chrF++,non mesuré,en_attente_gpu_kaggle_et_jeu_R,c3236d9,configs/choix_briques.yaml
+2026-10-19T14:06:11Z,S2_DIRECT_DEUX_PASSES,s2-direct,flux_simule_600s,Retard moyen (s),2.3,max=2.3s,b0aef9c,configs/direct.yaml
+2026-10-19T14:06:11Z,S2_DIRECT_DEUX_PASSES,s2-direct,flux_simule_600s,Taux de réécriture (%),0.0,mode=deux_passes,b0aef9c,configs/direct.yaml
+2026-10-19T14:06:11Z,S2_DIRECT_PROBABILITE_OUI,s2-direct,flux_simule_600s,Retard moyen (s),2.3,max=2.3s,b0aef9c,configs/direct.yaml
+2026-10-19T14:06:11Z,S2_DIRECT_PROBABILITE_OUI,s2-direct,flux_simule_600s,Taux de réécriture (%),0.0,mode=probabilite_oui,b0aef9c,configs/direct.yaml
+2026-10-19T14:06:11Z,S2_DIRECT_SECOURS_MORCEAUX,s2-direct,flux_simule_600s,Retard moyen (s),2.3,max=2.3s,b0aef9c,configs/direct.yaml
+2026-10-19T14:06:11Z,S2_DIRECT_SECOURS_MORCEAUX,s2-direct,flux_simule_600s,Taux de réécriture (%),0.0,mode=secours_morceaux,b0aef9c,configs/direct.yaml

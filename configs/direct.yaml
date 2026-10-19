@@ -1,0 +1,23 @@
+# Configuration du mode direct (streaming temps réel)
+
+direct:
+  intervalle_passe_s: 1.0          # traitement du segment en cours toutes les secondes
+  silence_cloture_s: 0.5           # clôture du segment après 0,5 s de silence
+  duree_max_segment_s: 15.0        # clôture d'office à 15 secondes
+  retard_cible_min_s: 2.0
+  retard_cible_max_s: 3.0
+  retard_plafond_s: 5.0
+  nb_phrases_contexte: 2
+  duree_simulation_endurance_s: 600.0  # 10 minutes de son simulé
+
+variante_probabilite:
+  token_cible: "oui"
+  seuil_probabilite_oui: 0.60      # curseur entre qualité et retard
+
+serveur:
+  hote: "127.0.0.1"
+  port: 8000
+  max_lignes_affichage: 2
+  couleur_confirme: "#ffffff"
+  couleur_provisoire: "#9ca3af"
+  direction_lecture: "ltr"
