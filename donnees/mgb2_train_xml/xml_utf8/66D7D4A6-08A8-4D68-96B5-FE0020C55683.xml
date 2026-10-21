@@ -1,0 +1,1997 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<transcript xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="transcript.xsd">
+  <head>
+    <recording date="2012/09/23" detail="unknown" episode="unknown" filename="66D7D4A6-08A8-4D68-96B5-FE0020C55683" genre="unknown" service_name="Al Jazeera" time="unknown" title="lqA' Alywm" type="unknown"/>
+    <annotations>
+      <annotation date="unknown" detail="forced-alignment of the original transcription" id="transcript_aligned" type="automatic"/>
+      <annotation date="unknown" detail="Output of the parsing of the original transcription files provided by the AL Jazeera" id="transcript_orig" type="unknown"/>
+      <annotation date="unknown" detail="output of the lightly supervised decoding" id="transcript_lsdecode" type="automatic"/>
+    </annotations>
+    <speakers>
+      <speaker id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align" name="nwr Aldyn bw zyAn"/>
+      <speaker id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align" name="bytr mwryr"/>
+    </speakers>
+  </head>
+  <body>
+    <segments annotation_id="transcript_align">
+      <segment AWD="2.81" PMER="0.0" WMER="0.0" endtime="22.4" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_1_align" starttime="17.07" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1_align" type="word">سيداتي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w2_align" type="word">وسادتي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w3_align" type="word">أسعد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w4_align" type="word">الله</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w5_align" type="word">أوقاتكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w6_align" type="word">وأهلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w7_align" type="word">بكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w8_align" type="word">وسهلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w9_align" type="word">بكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w10_align" type="word">جميعا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w11_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w12_align" type="word">هذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w13_align" type="word">اللقاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w14_align" type="word">الذي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w15_align" type="word">يجمعني</element>
+      </segment>
+      <segment AWD="2.42" PMER="25.0" WMER="36.0" endtime="28.15" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_2_align" starttime="22.77" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w16_align" type="word">بالسيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w17_align" type="word">بيتر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w18_align" type="word">مورير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w19_align" type="word">وهو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w20_align" type="word">رئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w21_align" type="word">اللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w22_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w23_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w24_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w25_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w26_align" type="word">السيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w27_align" type="word">بيتر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w28_align" type="word">مورير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w29_align" type="word">في</element>
+      </segment>
+      <segment AWD="1.87" PMER="0.0" WMER="0.0" endtime="43.31" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_3_align" starttime="29.43" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w30_align" type="word">البداية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w31_align" type="word">أهلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w32_align" type="word">وسهلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w33_align" type="word">بك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w34_align" type="word">لعل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w35_align" type="word">السؤال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w36_align" type="word">الذي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w37_align" type="word">يمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w38_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w39_align" type="word">نبدأ</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w40_align" type="word">به</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w41_align" type="word">هذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w42_align" type="word">اللقاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w43_align" type="word">هو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w44_align" type="word">عدتم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w45_align" type="word">مؤخرا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w46_align" type="word">فقط</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w47_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w48_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w49_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w50_align" type="word">هي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w51_align" type="word">شهاداتكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w52_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w53_align" type="word">ماذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w54_align" type="word">لاحظتم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w55_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w56_align" type="word">ماذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w57_align" type="word">رأيتم</element>
+      </segment>
+      <segment AWD="1.79" PMER="0.0" WMER="0.0" endtime="52.46" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_4_align" starttime="43.51" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w58_align" type="word">هل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w59_align" type="word">لكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w60_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w61_align" type="word">تقدموا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w62_align" type="word">لنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w63_align" type="word">صورة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w64_align" type="word">عن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w65_align" type="word">الأوضاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w66_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w67_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w68_align" type="word">يعيشها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w69_align" type="word">المدنيون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w70_align" type="word">السوريون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w71_align" type="word">ضحايا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w72_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w73_align" type="word">يجري</element>
+      </segment>
+      <segment AWD="0.94" PMER="0.0" WMER="0.0" endtime="63.2" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_5_align" starttime="52.58" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w74_align" type="word">الآن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w75_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w76_align" type="word">بلدهم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w77_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w78_align" type="word">إضافة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w79_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w80_align" type="word">لقاءاتي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w81_align" type="word">بالمسؤولين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w82_align" type="word">أثناء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w83_align" type="word">زيارتي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w84_align" type="word">لسوريا</element>
+      </segment>
+      <segment AWD="1.82" PMER="0.0" WMER="0.0" endtime="74.45" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_6_align" starttime="63.49" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w85_align" type="word">استطعت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w86_align" type="word">زيارة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w87_align" type="word">ضواحي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w88_align" type="word">مدينة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w89_align" type="word">دمشق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w90_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w91_align" type="word">وقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w92_align" type="word">بدا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w93_align" type="word">لي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w94_align" type="word">فيها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w95_align" type="word">واضحا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w96_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w97_align" type="word">سمات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w98_align" type="word">النزاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w99_align" type="word">المسلح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w100_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w101_align" type="word">مناطق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w102_align" type="word">ذات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w103_align" type="word">كثافة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w104_align" type="word">سكانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w105_align" type="word">عالية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w106_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.57" PMER="0.0" WMER="0.0" endtime="79.86" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_7_align" starttime="75.4" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w107_align" type="word">شاهدت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w108_align" type="word">فيها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w109_align" type="word">الدمار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w110_align" type="word">الذي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w111_align" type="word">أصاب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w112_align" type="word">منازلها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w113_align" type="word">وأحياءها</element>
+      </segment>
+      <segment AWD="1.43" PMER="0.0" WMER="0.0" endtime="96.93" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_8_align" starttime="80.12" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w114_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w115_align" type="word">شاهدت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w116_align" type="word">المستشفيات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w117_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w118_align" type="word">تعج</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w119_align" type="word">بالمصابين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w120_align" type="word">والأطباء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w121_align" type="word">المرهقين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w122_align" type="word">لكثرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w123_align" type="word">عملهم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w124_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w125_align" type="word">ولمست</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w126_align" type="word">مدى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w127_align" type="word">شح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w128_align" type="word">خزين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w129_align" type="word">الأدوية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w130_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w131_align" type="word">وشاهدت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w132_align" type="word">جروح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w133_align" type="word">المصابين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w134_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w135_align" type="word">تدل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w136_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w137_align" type="word">وجود</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w138_align" type="word">حرب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w139_align" type="word">استهدفتهم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w140_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.51" PMER="0.0" WMER="0.0" endtime="108.58" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_9_align" starttime="97.98" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w141_align" type="word">أي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w142_align" type="word">أننا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w143_align" type="word">شاهدنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w144_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w145_align" type="word">شيء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w146_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w147_align" type="word">فحتى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w148_align" type="word">المساجد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w149_align" type="word">تعرضت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w150_align" type="word">للهجوم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w151_align" type="word">وأصابتها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w152_align" type="word">القنابل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w153_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w154_align" type="word">أصابت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w155_align" type="word">المستشفيات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w156_align" type="word">والمراكز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w157_align" type="word">الطبية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w158_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.97" PMER="0.0" WMER="0.0" endtime="114.98" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_10_align" starttime="109.41" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w159_align" type="word">إذن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w160_align" type="word">فقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w161_align" type="word">شاهدنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w162_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w163_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w164_align" type="word">يمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w165_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w166_align" type="word">يحصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w167_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w168_align" type="word">نزاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w169_align" type="word">مسلح</element>
+      </segment>
+      <segment AWD="1.46" PMER="0.0" WMER="0.0" endtime="119.4" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_11_align" starttime="115.29" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w170_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w171_align" type="word">مناطق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w172_align" type="word">ذات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w173_align" type="word">كثافة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w174_align" type="word">سكانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w175_align" type="word">عالية</element>
+      </segment>
+      <segment AWD="1.61" PMER="0.0" WMER="0.0" endtime="143.44" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_12_align" starttime="119.77" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w176_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w177_align" type="word">ضواحي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w178_align" type="word">دمشق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w179_align" type="word">.</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w180_align" type="word">سلفكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w181_align" type="word">زار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w182_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w183_align" type="word">أبريل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w184_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w185_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w186_align" type="word">أظن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w187_align" type="word">دمشق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w188_align" type="word">وقال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w189_align" type="word">أيضا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w190_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w191_align" type="word">نظام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w192_align" type="word">بشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w193_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w194_align" type="word">تعهد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w195_align" type="word">بالسماح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w196_align" type="word">لمنظمتكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w197_align" type="word">بالعمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w198_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w199_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w200_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w201_align" type="word">وتعهد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w202_align" type="word">أيضا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w203_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w204_align" type="word">بالسماح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w205_align" type="word">لكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w206_align" type="word">بالوصول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w207_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w208_align" type="word">ضحايا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w209_align" type="word">النزاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w210_align" type="word">المسلح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w211_align" type="word">الجاري</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w212_align" type="word">الآن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w213_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w214_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w215_align" type="word">لكن</element>
+      </segment>
+      <segment AWD="1.13" PMER="0.0" WMER="0.0" endtime="159.61" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_13_align" starttime="143.68" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w216_align" type="word">الآن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w217_align" type="word">بعد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w218_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w219_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w220_align" type="word">الأشهر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w221_align" type="word">لا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w222_align" type="word">نكاد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w223_align" type="word">نرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w224_align" type="word">فعلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w225_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w226_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w227_align" type="word">الدولي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w228_align" type="word">يشتغل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w229_align" type="word">ويعمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w230_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w231_align" type="word">يريد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w232_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w233_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w234_align" type="word">.</element>
+      </segment>
+      <segment AWD="1.51" PMER="0.0" WMER="0.0" endtime="165.79" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_14_align" starttime="160.5" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w235_align" type="word">دور</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w236_align" type="word">المنظمات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w237_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w238_align" type="word">ليس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w239_align" type="word">إصدار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w240_align" type="word">الأحكام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w241_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w242_align" type="word">الآخرين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w243_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.37" PMER="0.0" WMER="0.0" endtime="173.77" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_15_align" starttime="166.45" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w244_align" type="word">فمهمتنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w245_align" type="word">هي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w246_align" type="word">إيجاد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w247_align" type="word">الوسائل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w248_align" type="word">والطرق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w249_align" type="word">للاتصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w250_align" type="word">بالرئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w251_align" type="word">بشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w252_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w253_align" type="word">وحكومته</element>
+      </segment>
+      <segment AWD="1.22" PMER="0.0" WMER="0.0" endtime="188.75" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_16_align" starttime="174.01" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w254_align" type="word">لنتمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w255_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w256_align" type="word">إيصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w257_align" type="word">المساعدات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w258_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w259_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w260_align" type="word">يحتاجها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w261_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w262_align" type="word">وقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w263_align" type="word">ذكرت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w264_align" type="word">للسيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w265_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w266_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w267_align" type="word">هي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w268_align" type="word">المعايير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w269_align" type="word">اللازم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w270_align" type="word">توفيرها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w271_align" type="word">لتسهيل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w272_align" type="word">عملنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w273_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.65" PMER="0.0" WMER="0.0" endtime="196.01" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_17_align" starttime="189.34" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w274_align" type="word">لقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w275_align" type="word">استطاعت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w276_align" type="word">اللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w277_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w278_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w279_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w280_align" type="word">بالتعاون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w281_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w282_align" type="word">الهلال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w283_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w284_align" type="word">السوري</element>
+      </segment>
+      <segment AWD="1.43" PMER="0.0" WMER="0.0" endtime="206.02" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_18_align" starttime="196.26" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w285_align" type="word">تحقيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w286_align" type="word">الكثير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w287_align" type="word">مؤخرا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w288_align" type="word">فقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w289_align" type="word">قدمنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w290_align" type="word">خدماتنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w291_align" type="word">لأكثر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w292_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w293_align" type="word">800</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w294_align" type="word">ألف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w295_align" type="word">شخص</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w296_align" type="word">خلال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w297_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w298_align" type="word">السنة</element>
+      </segment>
+      <segment AWD="1.45" PMER="7.0" WMER="9.0" endtime="213.21" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_19_align" starttime="206.33" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w299_align" type="word">بتقديم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w300_align" type="word">الغذاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w301_align" type="word">والدواء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w302_align" type="word">لهم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w303_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w304_align" type="word">إلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w305_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w306_align" type="word">النزاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w307_align" type="word">تصاعد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w308_align" type="word">واشتد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w309_align" type="word">حدة</element>
+      </segment>
+      <segment AWD="1.8" PMER="0.0" WMER="0.0" endtime="222.8" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_20_align" starttime="213.36" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w310_align" type="word">بحيث</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w311_align" type="word">ازدادت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w312_align" type="word">الحاجات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w313_align" type="word">مما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w314_align" type="word">يعني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w315_align" type="word">أنه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w316_align" type="word">لا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w317_align" type="word">بد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w318_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w319_align" type="word">تغيير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w320_align" type="word">طريقة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w321_align" type="word">عمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w322_align" type="word">تسهيل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w323_align" type="word">دخول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w324_align" type="word">المواد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w325_align" type="word">والمعدات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w326_align" type="word">الطبية</element>
+      </segment>
+      <segment AWD="1.49" PMER="0.0" WMER="0.0" endtime="243.32" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_21_align" starttime="223.16" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w327_align" type="word">وتسهيل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w328_align" type="word">عمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w329_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w330_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w331_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w332_align" type="word">بحيث</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w333_align" type="word">نستطيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w334_align" type="word">الوصول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w335_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w336_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w337_align" type="word">مناطق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w338_align" type="word">البلاد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w339_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w340_align" type="word">وقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w341_align" type="word">شرحت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w342_align" type="word">للرئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w343_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w344_align" type="word">وحكومته</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w345_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w346_align" type="word">هي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w347_align" type="word">أساليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w348_align" type="word">العمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w349_align" type="word">وأعتقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w350_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w351_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w352_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w353_align" type="word">تستطيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w354_align" type="word">أي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w355_align" type="word">منظمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w356_align" type="word">إنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w357_align" type="word">القيام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w358_align" type="word">به</element>
+      </segment>
+      <segment AWD="1.88" PMER="0.0" WMER="0.0" endtime="250.39" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_22_align" starttime="243.48" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w359_align" type="word">هو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w360_align" type="word">التذكير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w361_align" type="word">بالمبادئ</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w362_align" type="word">والقانون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w363_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w364_align" type="word">شرح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w365_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w366_align" type="word">ينبغي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w367_align" type="word">عمله</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w368_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w369_align" type="word">مثل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w370_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w371_align" type="word">الحالات</element>
+      </segment>
+      <segment AWD="1.04" PMER="0.0" WMER="0.0" endtime="257.4" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_23_align" starttime="250.68" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w372_align" type="word">بناءا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w373_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w374_align" type="word">تجاربنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w375_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w376_align" type="word">مناطق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w377_align" type="word">نزاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w378_align" type="word">أخرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w379_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.8" PMER="0.0" WMER="0.0" endtime="266.54" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_24_align" starttime="258.19" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w380_align" type="word">ولكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w381_align" type="word">يتبقى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w382_align" type="word">الأمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w383_align" type="word">بعد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w384_align" type="word">ذلك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w385_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w386_align" type="word">عاتق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w387_align" type="word">الحكومات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w388_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w389_align" type="word">تطبق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w390_align" type="word">ذلك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w391_align" type="word">وأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w392_align" type="word">توفر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w393_align" type="word">لنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w394_align" type="word">الإطار</element>
+      </segment>
+      <segment AWD="0.94" PMER="0.0" WMER="0.0" endtime="278.36" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_25_align" starttime="266.69" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w395_align" type="word">الذي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w396_align" type="word">نستطيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w397_align" type="word">العمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w398_align" type="word">فيه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w399_align" type="word">كمنظمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w400_align" type="word">إنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w401_align" type="word">مستقلة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w402_align" type="word">.</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w403_align" type="word">ألا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w404_align" type="word">تخشون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w405_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w406_align" type="word">أن</element>
+      </segment>
+      <segment AWD="1.45" PMER="0.0" WMER="0.0" endtime="317.2" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_26_align" starttime="278.47" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w407_align" type="word">يجيّر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w408_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w409_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w410_align" type="word">يستغل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w411_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w412_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w413_align" type="word">يوظّف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w414_align" type="word">نظام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w415_align" type="word">دمشق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w416_align" type="word">زيارتكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w417_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w418_align" type="word">محادثاتكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w419_align" type="word">والمهمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w420_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w421_align" type="word">قمتم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w422_align" type="word">بها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w423_align" type="word">مؤخرا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w424_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w425_align" type="word">دمشق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w426_align" type="word">ليقول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w427_align" type="word">أنه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w428_align" type="word">منفتح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w429_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w430_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w431_align" type="word">المنظمات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w432_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w433_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w434_align" type="word">وأنه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w435_align" type="word">ليس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w436_align" type="word">هو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w437_align" type="word">العقبة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w438_align" type="word">كأداة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w439_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w440_align" type="word">الطريق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w441_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w442_align" type="word">نجدة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w443_align" type="word">المدنيين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w444_align" type="word">ودخول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w445_align" type="word">المنظمات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w446_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w447_align" type="word">للعمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w448_align" type="word">بطريقة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w449_align" type="word">حرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w450_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w451_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w452_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w453_align" type="word">لا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w454_align" type="word">أرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w455_align" type="word">أين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w456_align" type="word">تكمن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w457_align" type="word">المصلحة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w458_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w459_align" type="word">كسب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w460_align" type="word">الوقت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w461_align" type="word">فما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w462_align" type="word">ظهر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w463_align" type="word">لنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w464_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w465_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w466_align" type="word">اللقاءات</element>
+      </segment>
+      <segment AWD="1.53" PMER="0.0" WMER="0.0" endtime="321.28" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_27_align" starttime="317.35" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w467_align" type="word">هو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w468_align" type="word">وجود</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w469_align" type="word">إرادة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w470_align" type="word">لتحسين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w471_align" type="word">ظروف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w472_align" type="word">عملنا</element>
+      </segment>
+      <segment AWD="1.54" PMER="0.0" WMER="0.0" endtime="325.33" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_28_align" starttime="321.44" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w473_align" type="word">والسماح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w474_align" type="word">لنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w475_align" type="word">بالوصول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w476_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w477_align" type="word">السكان</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w478_align" type="word">المدنيين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w479_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.66" PMER="0.0" WMER="0.0" endtime="332.6" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_29_align" starttime="325.97" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w480_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w481_align" type="word">لاحظنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w482_align" type="word">رغبتهم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w483_align" type="word">بالتعاون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w484_align" type="word">بشكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w485_align" type="word">أكبر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w486_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w487_align" type="word">اللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w488_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w489_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w490_align" type="word">الأحمر</element>
+      </segment>
+      <segment AWD="2.46" PMER="41.0" WMER="50.0" endtime="335.86" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_30_align" starttime="333.01" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w491_align" type="word">لتحقيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w492_align" type="word">بعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w493_align" type="word">الأهداف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w494_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w495_align" type="word">اقترحناها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w496_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w497_align" type="word">ولا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w498_align" type="word">بد</element>
+      </segment>
+      <segment AWD="0.88" PMER="14.0" WMER="17.0" endtime="343.29" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_31_align" starttime="336.47" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w499_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w500_align" type="word">القول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w501_align" type="word">بكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w502_align" type="word">نزاهة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w503_align" type="word">أنه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w504_align" type="word">بعد</element>
+      </segment>
+      <segment AWD="1.79" PMER="0.0" WMER="0.0" endtime="348.13" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_32_align" starttime="343.66" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w505_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w506_align" type="word">اللقاءات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w507_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w508_align" type="word">الرئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w509_align" type="word">السوري</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w510_align" type="word">ومع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w511_align" type="word">كبار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w512_align" type="word">المسؤولين</element>
+      </segment>
+      <segment AWD="1.18" PMER="0.0" WMER="0.0" endtime="367.2" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_33_align" starttime="348.57" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w513_align" type="word">كانت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w514_align" type="word">تظهر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w515_align" type="word">أمامنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w516_align" type="word">صعوبات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w517_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w518_align" type="word">التطبيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w519_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w520_align" type="word">وسوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w521_align" type="word">ليست</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w522_align" type="word">البلد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w523_align" type="word">الوحيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w524_align" type="word">أو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w525_align" type="word">النزاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w526_align" type="word">الوحيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w527_align" type="word">الذي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w528_align" type="word">يواجه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w529_align" type="word">صعوبات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w530_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w531_align" type="word">التطبيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w532_align" type="word">لكننا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w533_align" type="word">نتحلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w534_align" type="word">بالإرادة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w535_align" type="word">اللازمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w536_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.61" PMER="0.0" WMER="0.0" endtime="376.94" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_34_align" starttime="367.6" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w537_align" type="word">وقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w538_align" type="word">أعددنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w539_align" type="word">آلية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w540_align" type="word">لتطبيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w541_align" type="word">التعاون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w542_align" type="word">وخطوات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w543_align" type="word">محددة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w544_align" type="word">يمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w545_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w546_align" type="word">نبدأ</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w547_align" type="word">تطبيقها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w548_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w549_align" type="word">الأيام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w550_align" type="word">والأسابيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w551_align" type="word">القادمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w552_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.67" PMER="0.0" WMER="0.0" endtime="383.12" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_35_align" starttime="377.72" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w553_align" type="word">لنبيّن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w554_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w555_align" type="word">ثمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w556_align" type="word">أمورا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w557_align" type="word">جيدة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w558_align" type="word">تحصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w559_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w560_align" type="word">الاتجاه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w561_align" type="word">الصحيح</element>
+      </segment>
+      <segment AWD="1.99" PMER="8.0" WMER="13.0" endtime="387.94" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_36_align" starttime="383.91" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w562_align" type="word">وأعتقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w563_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w564_align" type="word">هذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w565_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w566_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w567_align" type="word">يمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w568_align" type="word">توقعه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w569_align" type="word">من</element>
+      </segment>
+      <segment AWD="1.32" PMER="43.0" WMER="38.0" endtime="398.82" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_37_align" starttime="388.2" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w570_align" type="word">مثل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w571_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w572_align" type="word">الزيارة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w573_align" type="word">واللقاءات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w574_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w575_align" type="word">أجريتها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w576_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w577_align" type="word">الرئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w578_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w579_align" type="word">.</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w580_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w581_align" type="word">وتعهداته</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w582_align" type="word">بشأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w583_align" type="word">المساعدات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w584_align" type="word">الإنسانية</element>
+      </segment>
+      <segment AWD="1.62" PMER="0.0" WMER="0.0" endtime="411.32" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_38_align" starttime="399.57" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w585_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w586_align" type="word">حال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w587_align" type="word">لم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w588_align" type="word">يلتزم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w589_align" type="word">بما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w590_align" type="word">وعدكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w591_align" type="word">به</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w592_align" type="word">بشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w593_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w594_align" type="word">وسمح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w595_align" type="word">لكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w596_align" type="word">بإيصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w597_align" type="word">المساعدات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w598_align" type="word">الغذائية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w599_align" type="word">والطبية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w600_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w601_align" type="word">المدنيين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w602_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w603_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w604_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.66" PMER="0.0" WMER="0.0" endtime="437.87" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_39_align" starttime="411.44" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w605_align" type="word">هل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w606_align" type="word">تنوون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w607_align" type="word">العودة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w608_align" type="word">مرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w609_align" type="word">أخرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w610_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w611_align" type="word">دمشق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w612_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w613_align" type="word">مهمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w614_align" type="word">جديدة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w615_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w616_align" type="word">هل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w617_align" type="word">حددتم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w618_align" type="word">مهلة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w619_align" type="word">معينة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w620_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w621_align" type="word">لنظام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w622_align" type="word">بشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w623_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w624_align" type="word">لكي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w625_align" type="word">يترجم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w626_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w627_align" type="word">الوعود</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w628_align" type="word">ويحولها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w629_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w630_align" type="word">وعود</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w631_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w632_align" type="word">شيء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w633_align" type="word">ملموس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w634_align" type="word">يساعد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w635_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w636_align" type="word">منظمتكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w637_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w638_align" type="word">التحرك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w639_align" type="word">بحرية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w640_align" type="word">وفي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w641_align" type="word">كامل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w642_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w643_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w644_align" type="word">لم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w645_align" type="word">نحدد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w646_align" type="word">أي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w647_align" type="word">مواعيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w648_align" type="word">نهائية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w649_align" type="word">أو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w650_align" type="word">إنذارات</element>
+      </segment>
+      <segment AWD="1.13" PMER="0.0" WMER="0.0" endtime="443.75" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_40_align" starttime="438.42" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w651_align" type="word">فقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w652_align" type="word">وضعنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w653_align" type="word">آلية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w654_align" type="word">مشتركة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w655_align" type="word">للمراقبة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w656_align" type="word">والتطبيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w657_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.41" PMER="0.0" WMER="0.0" endtime="451.73" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_41_align" starttime="444.63" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w658_align" type="word">ولا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w659_align" type="word">مجال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w660_align" type="word">لإثارة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w661_align" type="word">مشاكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w662_align" type="word">بين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w663_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w664_align" type="word">واللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w665_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w666_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w667_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w668_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.41" PMER="0.0" WMER="0.0" endtime="461.9" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_42_align" starttime="452.69" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w669_align" type="word">فكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w670_align" type="word">طرف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w671_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w672_align" type="word">الجانبين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w673_align" type="word">سيعيّن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w674_align" type="word">نقاط</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w675_align" type="word">اتصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w676_align" type="word">حول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w677_align" type="word">بعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w678_align" type="word">المجالات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w679_align" type="word">والأهداف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w680_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w681_align" type="word">اقترحناها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w682_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.54" PMER="0.0" WMER="0.0" endtime="467.42" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_43_align" starttime="463.52" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w683_align" type="word">وسيكون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w684_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w685_align" type="word">واجب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w686_align" type="word">نقاط</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w687_align" type="word">الاتصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w688_align" type="word">هذه</element>
+      </segment>
+      <segment AWD="0.92" PMER="0.0" WMER="0.0" endtime="471.02" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_44_align" starttime="467.76" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w689_align" type="word">الاتصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w690_align" type="word">بنظرائهم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w691_align" type="word">السوريين</element>
+      </segment>
+      <segment AWD="1.43" PMER="0.0" WMER="0.0" endtime="474.79" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_45_align" starttime="471.29" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w692_align" type="word">لتجاوز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w693_align" type="word">أي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w694_align" type="word">مشاكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w695_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w696_align" type="word">التطبيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w697_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.86" PMER="0.0" WMER="0.0" endtime="481.23" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_46_align" starttime="476.94" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w698_align" type="word">ولكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w699_align" type="word">إذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w700_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w701_align" type="word">لاحظنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w702_align" type="word">بعد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w703_align" type="word">فترة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w704_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w705_align" type="word">الزمن</element>
+      </segment>
+      <segment AWD="1.39" PMER="0.0" WMER="0.0" endtime="487.99" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_47_align" starttime="481.51" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w706_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w707_align" type="word">الآلية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w708_align" type="word">غير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w709_align" type="word">ناجحة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w710_align" type="word">وأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w711_align" type="word">إرادة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w712_align" type="word">تطبيقها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w713_align" type="word">غير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w714_align" type="word">كافية</element>
+      </segment>
+      <segment AWD="1.14" PMER="0.0" WMER="0.0" endtime="495.5" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_48_align" starttime="488.48" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w715_align" type="word">فإنني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w716_align" type="word">بالتأكيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w717_align" type="word">سأتوجه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w718_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w719_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w720_align" type="word">مرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w721_align" type="word">أخرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w722_align" type="word">آنذاك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w723_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.33" PMER="0.0" WMER="0.0" endtime="502.6" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_49_align" starttime="497.33" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w724_align" type="word">وسوف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w725_align" type="word">نتابع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w726_align" type="word">أسلوب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w727_align" type="word">تحسين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w728_align" type="word">العمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w729_align" type="word">خطوة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w730_align" type="word">خطوة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w731_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.51" PMER="0.0" WMER="0.0" endtime="509.35" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_50_align" starttime="503.39" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w732_align" type="word">وآمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w733_align" type="word">أننا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w734_align" type="word">نستطيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w735_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w736_align" type="word">نعمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w737_align" type="word">بشكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w738_align" type="word">أفضل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w739_align" type="word">بهذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w740_align" type="word">الأسلوب</element>
+      </segment>
+      <segment AWD="1.02" PMER="0.0" WMER="0.0" endtime="515.38" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_51_align" starttime="509.52" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w741_align" type="word">لتقديم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w742_align" type="word">العون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w743_align" type="word">للسوريين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w744_align" type="word">الذين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w745_align" type="word">يحتاجون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w746_align" type="word">مساعداتنا</element>
+      </segment>
+      <segment AWD="1.12" PMER="0.0" WMER="0.0" endtime="525.53" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_52_align" starttime="515.68" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w747_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w748_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w749_align" type="word">أنحاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w750_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w751_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w752_align" type="word">إنني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w753_align" type="word">بوصفي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w754_align" type="word">رئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w755_align" type="word">اللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w756_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w757_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w758_align" type="word">الأحمر</element>
+      </segment>
+      <segment AWD="1.85" PMER="0.0" WMER="0.0" endtime="529.79" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_53_align" starttime="526.01" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w759_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w760_align" type="word">هو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w761_align" type="word">حال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w762_align" type="word">كل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w763_align" type="word">رئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w764_align" type="word">لهذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w765_align" type="word">اللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w766_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.33" PMER="0.0" WMER="0.0" endtime="536.78" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_54_align" starttime="530.77" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w767_align" type="word">أميل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w768_align" type="word">للمطالبة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w769_align" type="word">بالحد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w770_align" type="word">الأقصى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w771_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w772_align" type="word">العون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w773_align" type="word">الإنساني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w774_align" type="word">للسكان</element>
+      </segment>
+      <segment AWD="1.27" PMER="0.0" WMER="0.0" endtime="548.2" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_55_align" starttime="537.99" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w775_align" type="word">ولكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w776_align" type="word">لا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w777_align" type="word">بد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w778_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w779_align" type="word">القول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w780_align" type="word">أيضا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w781_align" type="word">بأنني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w782_align" type="word">أقدر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w783_align" type="word">اللهجة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w784_align" type="word">المباشرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w785_align" type="word">والواقعية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w786_align" type="word">وغير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w787_align" type="word">الجدلية</element>
+      </segment>
+      <segment AWD="1.32" PMER="0.0" WMER="0.0" endtime="556.32" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_56_align" starttime="548.75" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w788_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w789_align" type="word">خاطبني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w790_align" type="word">بها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w791_align" type="word">الرئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w792_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w793_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w794_align" type="word">ومناقشته</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w795_align" type="word">للمواضيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w796_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w797_align" type="word">طرحتها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w798_align" type="word">عليه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w799_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.46" PMER="0.0" WMER="0.0" endtime="561.89" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_57_align" starttime="557.11" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w800_align" type="word">وموافقته</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w801_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w802_align" type="word">تحسين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w803_align" type="word">ظروف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w804_align" type="word">عمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w805_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w806_align" type="word">الأحمر</element>
+      </segment>
+      <segment AWD="1.41" PMER="0.0" WMER="0.0" endtime="572.64" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_58_align" starttime="563.44" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w807_align" type="word">وإنني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w808_align" type="word">آمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w809_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w810_align" type="word">تنجح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w811_align" type="word">الآليات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w812_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w813_align" type="word">وضعناها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w814_align" type="word">للتطبيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w815_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w816_align" type="word">بعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w817_align" type="word">التغيرات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w818_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w819_align" type="word">اقترحناها</element>
+      </segment>
+      <segment AWD="1.42" PMER="0.0" WMER="0.0" endtime="584.59" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_59_align" starttime="573.36" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w820_align" type="word">ومنها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w821_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w822_align" type="word">سبيل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w823_align" type="word">المثال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w824_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w825_align" type="word">يتمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w826_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w827_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w828_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w829_align" type="word">العمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w830_align" type="word">باستخدام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w831_align" type="word">وسائل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w832_align" type="word">الاتصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w833_align" type="word">الضرورية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w834_align" type="word">لأداء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w835_align" type="word">عملنا</element>
+      </segment>
+      <segment AWD="1.26" PMER="0.0" WMER="0.0" endtime="591.92" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_60_align" starttime="584.78" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w836_align" type="word">والانتشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w837_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w838_align" type="word">المناطق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w839_align" type="word">المختلفة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w840_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w841_align" type="word">وقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w842_align" type="word">طلبنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w843_align" type="word">فتح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w844_align" type="word">طريق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w845_align" type="word">سريع</element>
+      </segment>
+      <segment AWD="1.15" PMER="0.0" WMER="0.0" endtime="597.32" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_61_align" starttime="592.09" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w846_align" type="word">لنقل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w847_align" type="word">المواد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w848_align" type="word">الغذائية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w849_align" type="word">والأدوية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w850_align" type="word">والمعدات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w851_align" type="word">الطبية</element>
+      </segment>
+      <segment AWD="1.55" PMER="0.0" WMER="0.0" endtime="604.76" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_62_align" starttime="597.66" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w852_align" type="word">وهو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w853_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w854_align" type="word">يمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w855_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w856_align" type="word">يسهّل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w857_align" type="word">ويسرّع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w858_align" type="word">دخول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w859_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w860_align" type="word">المواد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w861_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w862_align" type="word">سوريا</element>
+      </segment>
+      <segment AWD="1.46" PMER="0.0" WMER="0.0" endtime="613.5" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_63_align" starttime="605.95" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w863_align" type="word">دون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w864_align" type="word">مواجهة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w865_align" type="word">عقوبات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w866_align" type="word">بيروقراطية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w867_align" type="word">تمنع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w868_align" type="word">ملء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w869_align" type="word">المخازن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w870_align" type="word">ووصول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w871_align" type="word">الأدوية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w872_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w873_align" type="word">المستشفيات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w874_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.59" PMER="0.0" WMER="0.0" endtime="621.37" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_64_align" starttime="613.8" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w875_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w876_align" type="word">طلبنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w877_align" type="word">السماح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w878_align" type="word">بمقابلة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w879_align" type="word">السجناء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w880_align" type="word">ومناقشة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w881_align" type="word">الجيش</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w882_align" type="word">السوري</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w883_align" type="word">حول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w884_align" type="word">تصرفه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w885_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w886_align" type="word">القتال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w887_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.96" PMER="38.0" WMER="38.0" endtime="633.02" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_65_align" starttime="621.77" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w888_align" type="word">وآمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w889_align" type="word">أننا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w890_align" type="word">سنرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w891_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w892_align" type="word">الأيام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w893_align" type="word">والأسابيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w894_align" type="word">القادمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w895_align" type="word">خطوات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w896_align" type="word">تطبيقية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w897_align" type="word">ملموسة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w898_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w899_align" type="word">مجال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w900_align" type="word">المساعدات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w901_align" type="word">والحماية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w902_align" type="word">.</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w903_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w904_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w905_align" type="word">وحق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w906_align" type="word">الوصول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w907_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w908_align" type="word">المعتقلين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w909_align" type="word">بالسجون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w910_align" type="word">السورية</element>
+      </segment>
+      <segment AWD="1.23" PMER="0.0" WMER="0.0" endtime="670.03" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_66_align" starttime="648.91" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w911_align" type="word">هل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w912_align" type="word">سمح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w913_align" type="word">لكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w914_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w915_align" type="word">نظام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w916_align" type="word">بشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w917_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w918_align" type="word">بزيارة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w919_align" type="word">المعتقلين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w920_align" type="word">وخاصة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w921_align" type="word">الذين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w922_align" type="word">يتعرضون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w923_align" type="word">للتعذيب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w924_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w925_align" type="word">مراكز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w926_align" type="word">تابعة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w927_align" type="word">للاستخبارات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w928_align" type="word">السورية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w929_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w930_align" type="word">يقول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w931_align" type="word">الكثير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w932_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w933_align" type="word">المنظمات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w934_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w935_align" type="word">الحقوقية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w936_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w937_align" type="word">؟</element>
+      </segment>
+      <segment AWD="1.72" PMER="0.0" WMER="0.0" endtime="676.88" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_67_align" starttime="670.5" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w938_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w939_align" type="word">تعلمون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w940_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w941_align" type="word">اللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w942_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w943_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w944_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w945_align" type="word">استطاعت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w946_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w947_align" type="word">الشهور</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w948_align" type="word">الماضية</element>
+      </segment>
+      <segment AWD="1.37" PMER="0.0" WMER="0.0" endtime="681.5" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_68_align" starttime="677.11" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w949_align" type="word">زيارة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w950_align" type="word">السجون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w951_align" type="word">المركزية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w952_align" type="word">السورية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w953_align" type="word">لأول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w954_align" type="word">مرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w955_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.45" PMER="0.0" WMER="0.0" endtime="686.85" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_69_align" starttime="682.03" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w956_align" type="word">وقدمنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w957_align" type="word">تقريرنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w958_align" type="word">الأولي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w959_align" type="word">عنها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w960_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w961_align" type="word">الحكومة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w962_align" type="word">السورية</element>
+      </segment>
+      <segment AWD="1.7" PMER="0.0" WMER="0.0" endtime="692.67" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_70_align" starttime="687.39" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w963_align" type="word">وطبعا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w964_align" type="word">ننتظر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w965_align" type="word">الآن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w966_align" type="word">ردا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w967_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w968_align" type="word">التوصيات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w969_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w970_align" type="word">قدمناها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w971_align" type="word">لهم</element>
+      </segment>
+      <segment AWD="1.96" PMER="0.0" WMER="0.0" endtime="697.82" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_71_align" starttime="693.23" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w972_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w973_align" type="word">تعلمون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w974_align" type="word">أيضا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w975_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w976_align" type="word">السماح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w977_align" type="word">لنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w978_align" type="word">بزيارة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w979_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w980_align" type="word">السجون</element>
+      </segment>
+      <segment AWD="1.39" PMER="0.0" WMER="0.0" endtime="704.45" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_72_align" starttime="697.97" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w981_align" type="word">يفرض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w982_align" type="word">المحافظة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w983_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w984_align" type="word">سريّة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w985_align" type="word">كاملة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w986_align" type="word">لهذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w987_align" type="word">الزيارة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w988_align" type="word">وسنلتزم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w989_align" type="word">بذلك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w990_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.83" PMER="0.0" WMER="0.0" endtime="715.9" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_73_align" starttime="704.98" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w991_align" type="word">وبالتالي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w992_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w993_align" type="word">قلت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w994_align" type="word">لكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w995_align" type="word">حصلنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w996_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w997_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w998_align" type="word">التجربة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w999_align" type="word">الأولى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1000_align" type="word">وقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1001_align" type="word">طلبت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1002_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1003_align" type="word">الرئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1004_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1005_align" type="word">الموافقة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1006_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1007_align" type="word">تسريع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1008_align" type="word">برنامج</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1009_align" type="word">زيارة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1010_align" type="word">السجون</element>
+      </segment>
+      <segment AWD="0.8" PMER="0.0" WMER="0.0" endtime="724.77" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_74_align" starttime="716.05" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1011_align" type="word">وتوسيعه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1012_align" type="word">ليشمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1013_align" type="word">مراكز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1014_align" type="word">اعتقال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1015_align" type="word">أخرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1016_align" type="word">غير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1017_align" type="word">السجون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1018_align" type="word">.</element>
+      </segment>
+      <segment AWD="1.43" PMER="0.0" WMER="0.0" endtime="751.61" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_75_align" starttime="725.74" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1019_align" type="word">لكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1020_align" type="word">نظام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1021_align" type="word">بشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1022_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1023_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1024_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1025_align" type="word">يبدو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1026_align" type="word">لم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1027_align" type="word">يلتزم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1028_align" type="word">صراحة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1029_align" type="word">بالسماح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1030_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1031_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1032_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1033_align" type="word">بتفقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1034_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1035_align" type="word">يوجدون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1036_align" type="word">الآن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1037_align" type="word">وراء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1038_align" type="word">القضبان</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1039_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1040_align" type="word">مراكز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1041_align" type="word">تقول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1042_align" type="word">مصادر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1043_align" type="word">حقوقية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1044_align" type="word">ومنظمات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1045_align" type="word">حقوقية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1046_align" type="word">دولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1047_align" type="word">بأنهم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1048_align" type="word">يتعرضون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1049_align" type="word">للتعذيب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1050_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1051_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1052_align" type="word">مراكز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1053_align" type="word">تابعة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1054_align" type="word">للاستخبارات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1055_align" type="word">السورية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1056_align" type="word">.</element>
+      </segment>
+      <segment AWD="1.97" PMER="0.0" WMER="0.0" endtime="757.48" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_76_align" starttime="751.9" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1057_align" type="word">ليس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1058_align" type="word">فقط</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1059_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1060_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1061_align" type="word">بل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1062_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1063_align" type="word">دول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1064_align" type="word">أخرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1065_align" type="word">كثيرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1066_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1067_align" type="word">العالم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1068_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.48" PMER="0.0" WMER="0.0" endtime="761.1" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_77_align" starttime="757.73" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1069_align" type="word">نعلم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1070_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1071_align" type="word">المشاكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1072_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1073_align" type="word">الحادة</element>
+      </segment>
+      <segment AWD="1.61" PMER="0.0" WMER="0.0" endtime="765.83" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_78_align" starttime="761.48" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1074_align" type="word">تبدأ</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1075_align" type="word">بالظهور</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1076_align" type="word">منذ</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1077_align" type="word">لحظة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1078_align" type="word">اعتقال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1079_align" type="word">أي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1080_align" type="word">شخص</element>
+      </segment>
+      <segment AWD="2.2" PMER="8.0" WMER="25.0" endtime="769.31" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_79_align" starttime="766.13" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1081_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1082_align" type="word">حين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1083_align" type="word">نقله</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1084_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1085_align" type="word">سجن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1086_align" type="word">اعتيادي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1087_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1088_align" type="word">إذ</element>
+      </segment>
+      <segment AWD="1.63" PMER="0.0" WMER="0.0" endtime="775.27" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_80_align" starttime="770.36" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1089_align" type="word">غالبا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1090_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1091_align" type="word">تحصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1092_align" type="word">حالات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1093_align" type="word">سوء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1094_align" type="word">المعاملة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1095_align" type="word">أو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1096_align" type="word">التعذيب</element>
+      </segment>
+      <segment AWD="1.42" PMER="4.0" WMER="11.0" endtime="786.66" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_81_align" starttime="775.42" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1097_align" type="word">خلال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1098_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1099_align" type="word">الفترة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1100_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1101_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1102_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1103_align" type="word">الانتهاكات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1104_align" type="word">تحصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1105_align" type="word">غالبا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1106_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1107_align" type="word">مراكز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1108_align" type="word">الاعتقال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1109_align" type="word">ليس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1110_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1111_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1112_align" type="word">فقط</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1113_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1114_align" type="word">لأن</element>
+      </segment>
+      <segment AWD="1.42" PMER="0.0" WMER="0.0" endtime="793.15" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_82_align" starttime="786.8" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1115_align" type="word">البنى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1116_align" type="word">التحتية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1117_align" type="word">لمراكز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1118_align" type="word">الاعتقال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1119_align" type="word">لا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1120_align" type="word">تتوافق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1121_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1122_align" type="word">المعايير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1123_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1124_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.75" PMER="0.0" WMER="0.0" endtime="798.69" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_83_align" starttime="794.11" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1125_align" type="word">وهنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1126_align" type="word">أيضا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1127_align" type="word">سنحت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1128_align" type="word">لي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1129_align" type="word">الفرصة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1130_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1131_align" type="word">أشرح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1132_align" type="word">للرئيس</element>
+      </segment>
+      <segment AWD="1.95" PMER="0.0" WMER="0.0" endtime="812.78" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_84_align" starttime="798.92" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1133_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1134_align" type="word">يمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1135_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1136_align" type="word">يتضمنه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1137_align" type="word">برنامج</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1138_align" type="word">زياراتنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1139_align" type="word">لمثل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1140_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1141_align" type="word">المراكز</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1142_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1143_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1144_align" type="word">.</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1145_align" type="word">طريقة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1146_align" type="word">التواصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1147_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1148_align" type="word">الجيش</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1149_align" type="word">السوري</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1150_align" type="word">الحر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1151_align" type="word">تتحدثون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1152_align" type="word">عن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1153_align" type="word">اتصالات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1154_align" type="word">وقنوات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1155_align" type="word">اتصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1156_align" type="word">بينكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1157_align" type="word">وبين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1158_align" type="word">دمشق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1159_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1160_align" type="word">ماذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1161_align" type="word">عن</element>
+      </segment>
+      <segment AWD="1.73" PMER="0.0" WMER="0.0" endtime="821.56" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_85_align" starttime="812.9" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1162_align" type="word">التواصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1163_align" type="word">أو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1164_align" type="word">دعني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1165_align" type="word">أقول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1166_align" type="word">تحركاتكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1167_align" type="word">باتجاه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1168_align" type="word">الطرف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1169_align" type="word">الآخر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1170_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1171_align" type="word">النزاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1172_align" type="word">أي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1173_align" type="word">الجيش</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1174_align" type="word">السوري</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1175_align" type="word">الحر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1176_align" type="word">أو</element>
+      </segment>
+      <segment AWD="1.75" PMER="0.0" WMER="0.0" endtime="837.84" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_86_align" starttime="821.8" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1177_align" type="word">التنظيمات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1178_align" type="word">الأخرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1179_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1180_align" type="word">تقاتل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1181_align" type="word">نظام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1182_align" type="word">بشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1183_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1184_align" type="word">خاصة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1185_align" type="word">وأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1186_align" type="word">هناك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1187_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1188_align" type="word">يتهمها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1189_align" type="word">بأنها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1190_align" type="word">ربما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1191_align" type="word">لا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1192_align" type="word">تحترم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1193_align" type="word">حقوق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1194_align" type="word">الإنسان</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1195_align" type="word">وأنها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1196_align" type="word">ترتكب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1197_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1198_align" type="word">تقول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1199_align" type="word">بعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1200_align" type="word">الجهات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1201_align" type="word">تجاوزات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1202_align" type="word">تطال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1203_align" type="word">الحقوق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1204_align" type="word">الأساسية</element>
+      </segment>
+      <segment AWD="1.22" PMER="0.0" WMER="0.0" endtime="848.7" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_87_align" starttime="838.08" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1205_align" type="word">للسوريين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1206_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1207_align" type="word">لدينا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1208_align" type="word">اتصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1209_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1210_align" type="word">المعارضة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1211_align" type="word">المسلحة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1212_align" type="word">السورية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1213_align" type="word">عن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1214_align" type="word">طريق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1215_align" type="word">مندوبينا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1216_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1217_align" type="word">الدول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1218_align" type="word">المجاورة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1219_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.59" PMER="0.0" WMER="0.0" endtime="859.36" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_88_align" starttime="849.28" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1220_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1221_align" type="word">لدينا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1222_align" type="word">اتصالات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1223_align" type="word">معهم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1224_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1225_align" type="word">جنيف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1226_align" type="word">وفي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1227_align" type="word">عواصم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1228_align" type="word">دول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1229_align" type="word">المنطقة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1230_align" type="word">وغيرها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1231_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1232_align" type="word">فكما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1233_align" type="word">تعلمون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1234_align" type="word">أنتم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1235_align" type="word">أفضل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1236_align" type="word">مني</element>
+      </segment>
+      <segment AWD="1.69" PMER="0.0" WMER="0.0" endtime="864.08" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_89_align" starttime="859.95" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1237_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1238_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1239_align" type="word">المعارضة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1240_align" type="word">منقسمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1241_align" type="word">جدا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1242_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1243_align" type="word">نفسها</element>
+      </segment>
+      <segment AWD="1.99" PMER="0.0" WMER="0.0" endtime="869.88" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_90_align" starttime="864.85" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1244_align" type="word">وأنه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1245_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1246_align" type="word">الصعب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1247_align" type="word">معرفة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1248_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1249_align" type="word">يمثل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1250_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1251_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1252_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1253_align" type="word">المعارضة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1254_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.56" PMER="0.0" WMER="0.0" endtime="874.31" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_91_align" starttime="871.1" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1255_align" type="word">ولكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1256_align" type="word">اللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1257_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1258_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1259_align" type="word">الأحمر</element>
+      </segment>
+      <segment AWD="1.63" PMER="0.0" WMER="0.0" endtime="878.38" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_92_align" starttime="874.7" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1260_align" type="word">بذلت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1261_align" type="word">جهودا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1262_align" type="word">كبيرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1263_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1264_align" type="word">الأسابيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1265_align" type="word">الماضية</element>
+      </segment>
+      <segment AWD="1.46" PMER="0.0" WMER="0.0" endtime="888.44" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_93_align" starttime="878.86" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1266_align" type="word">لفتح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1267_align" type="word">قنوات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1268_align" type="word">الاتصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1269_align" type="word">معها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1270_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1271_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1272_align" type="word">لدي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1273_align" type="word">الانطباع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1274_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1275_align" type="word">الرئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1276_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1277_align" type="word">وغيره</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1278_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1279_align" type="word">المسؤولين</element>
+      </segment>
+      <segment AWD="1.41" PMER="0.0" WMER="0.0" endtime="897.28" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_94_align" starttime="888.76" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1280_align" type="word">يقدرون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1281_align" type="word">أنه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1282_align" type="word">فيما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1283_align" type="word">يتعلق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1284_align" type="word">بمواضيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1285_align" type="word">مثل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1286_align" type="word">طرق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1287_align" type="word">التصرف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1288_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1289_align" type="word">النزاعات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1290_align" type="word">ومعاملة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1291_align" type="word">السجناء</element>
+      </segment>
+      <segment AWD="1.59" PMER="0.0" WMER="0.0" endtime="904.7" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_95_align" starttime="897.78" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1292_align" type="word">فإن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1293_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1294_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1295_align" type="word">يتصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1296_align" type="word">ليس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1297_align" type="word">فقط</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1298_align" type="word">بالحكومة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1299_align" type="word">السورية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1300_align" type="word">بل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1301_align" type="word">بالمعارضة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1302_align" type="word">أيضا</element>
+      </segment>
+      <segment AWD="1.24" PMER="0.0" WMER="0.0" endtime="917.22" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_96_align" starttime="906.71" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1303_align" type="word">لذلك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1304_align" type="word">سنواصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1305_align" type="word">هذه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1306_align" type="word">الاتصالات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1307_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1308_align" type="word">محاولة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1309_align" type="word">منا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1310_align" type="word">لإيجاد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1311_align" type="word">الطريق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1312_align" type="word">المناسب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1313_align" type="word">لتحسين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1314_align" type="word">احترام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1315_align" type="word">الحقوق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1316_align" type="word">.</element>
+      </segment>
+      <segment AWD="1.47" PMER="0.0" WMER="0.0" endtime="950.43" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_97_align" starttime="917.74" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1317_align" type="word">البعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1318_align" type="word">يتخوف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1319_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1320_align" type="word">حدوث</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1321_align" type="word">كارثة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1322_align" type="word">إنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1323_align" type="word">غير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1324_align" type="word">مسبوقة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1325_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1326_align" type="word">لماذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1327_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1328_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1329_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1330_align" type="word">لم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1331_align" type="word">يجاهر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1332_align" type="word">ويطلب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1333_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1334_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1335_align" type="word">تطلب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1336_align" type="word">بعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1337_align" type="word">الجهات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1338_align" type="word">وبعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1339_align" type="word">الحكومات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1340_align" type="word">بإقامة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1341_align" type="word">ممرات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1342_align" type="word">آمنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1343_align" type="word">إنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1344_align" type="word">لحماية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1345_align" type="word">هؤلاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1346_align" type="word">المدنيين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1347_align" type="word">ولإيصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1348_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1349_align" type="word">المؤن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1350_align" type="word">والأدوية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1351_align" type="word">ولإنقاذ</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1352_align" type="word">ونجدة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1353_align" type="word">هؤلاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1354_align" type="word">المدنيين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1355_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1356_align" type="word">لقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1357_align" type="word">شاهدتم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1358_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1359_align" type="word">فكرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1360_align" type="word">الممرات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1361_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1362_align" type="word">غير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1363_align" type="word">مقبولة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1364_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1365_align" type="word">الصعيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1366_align" type="word">السياسي</element>
+      </segment>
+      <segment AWD="1.68" PMER="0.0" WMER="0.0" endtime="958.37" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_98_align" starttime="950.64" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1367_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1368_align" type="word">قبل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1369_align" type="word">الأطراف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1370_align" type="word">السياسية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1371_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1372_align" type="word">وأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1373_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1374_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1375_align" type="word">يعمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1376_align" type="word">بطرق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1377_align" type="word">أخرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1378_align" type="word">غير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1379_align" type="word">الممرات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1380_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1381_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.76" PMER="0.0" WMER="0.0" endtime="965.53" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_99_align" starttime="959.29" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1382_align" type="word">فكما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1383_align" type="word">تعلمون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1384_align" type="word">فإننا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1385_align" type="word">نتصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1386_align" type="word">بكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1387_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1388_align" type="word">يحمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1389_align" type="word">السلاح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1390_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1391_align" type="word">بعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1392_align" type="word">الأحياء</element>
+      </segment>
+      <segment AWD="1.22" PMER="0.0" WMER="0.0" endtime="972.22" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_100_align" starttime="965.65" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1393_align" type="word">للتوصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1394_align" type="word">والاتفاق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1395_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1396_align" type="word">ترتيبات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1397_align" type="word">يستطيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1398_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1399_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1400_align" type="word">بموجبها</element>
+      </segment>
+      <segment AWD="1.55" PMER="0.0" WMER="0.0" endtime="983.39" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_101_align" starttime="972.41" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1401_align" type="word">الوصول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1402_align" type="word">لكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1403_align" type="word">السكان</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1404_align" type="word">السوريين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1405_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1406_align" type="word">وقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1407_align" type="word">اقترحت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1408_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1409_align" type="word">الرئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1410_align" type="word">الأسد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1411_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1412_align" type="word">يتمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1413_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1414_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1415_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1416_align" type="word">العمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1417_align" type="word">بنفس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1418_align" type="word">الطريقة</element>
+      </segment>
+      <segment AWD="1.69" PMER="0.0" WMER="0.0" endtime="989.54" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_102_align" starttime="983.63" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1419_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1420_align" type="word">ثبت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1421_align" type="word">أنها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1422_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1423_align" type="word">الأرجح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1424_align" type="word">أكثر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1425_align" type="word">نجاحا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1426_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1427_align" type="word">الطرق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1428_align" type="word">الأخرى</element>
+      </segment>
+      <segment AWD="1.7" PMER="0.0" WMER="0.0" endtime="993.85" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_103_align" starttime="989.74" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1429_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1430_align" type="word">الوصول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1431_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1432_align" type="word">السكان</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1433_align" type="word">الذين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1434_align" type="word">يحتاجون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1435_align" type="word">للمساعدة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1436_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.74" PMER="0.0" WMER="0.0" endtime="1002.5" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_104_align" starttime="994.44" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1437_align" type="word">وأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1438_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1439_align" type="word">نرغب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1440_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1441_align" type="word">نفعله</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1442_align" type="word">هو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1443_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1444_align" type="word">نستطيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1445_align" type="word">توسيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1446_align" type="word">الرقعة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1447_align" type="word">الجغرافية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1448_align" type="word">لعملنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1449_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1450_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1451_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.75" PMER="0.0" WMER="0.0" endtime="1008.71" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_105_align" starttime="1003.01" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1452_align" type="word">لنكون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1453_align" type="word">أكثر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1454_align" type="word">تواجدا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1455_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1456_align" type="word">بعض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1457_align" type="word">المدن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1458_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1459_align" type="word">حصلت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1460_align" type="word">فيها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1461_align" type="word">المعارك</element>
+      </segment>
+      <segment AWD="1.68" PMER="0.0" WMER="0.0" endtime="1013.26" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_106_align" starttime="1009.1" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1462_align" type="word">وأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1463_align" type="word">نستطيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1464_align" type="word">التفاوض</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1465_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1466_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1467_align" type="word">يحمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1468_align" type="word">السلاح</element>
+      </segment>
+      <segment AWD="1.15" PMER="0.0" WMER="0.0" endtime="1016.95" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_107_align" starttime="1013.47" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1469_align" type="word">للسماح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1470_align" type="word">بإيصال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1471_align" type="word">المساعدات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1472_align" type="word">الإنسانية</element>
+      </segment>
+      <segment AWD="1.77" PMER="0.0" WMER="0.0" endtime="1025.05" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_108_align" starttime="1017.69" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1473_align" type="word">لكنني</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1474_align" type="word">أعتقد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1475_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1476_align" type="word">الصعوبة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1477_align" type="word">تكمن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1478_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1479_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1480_align" type="word">الوضع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1481_align" type="word">يختلف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1482_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1483_align" type="word">مدينة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1484_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1485_align" type="word">أخرى</element>
+      </segment>
+      <segment AWD="1.62" PMER="0.0" WMER="0.0" endtime="1035.33" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_109_align" starttime="1025.48" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1486_align" type="word">مما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1487_align" type="word">سيجعل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1488_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1489_align" type="word">الضروري</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1490_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1491_align" type="word">يكون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1492_align" type="word">تحركنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1493_align" type="word">أيضا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1494_align" type="word">مختلفا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1495_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1496_align" type="word">مدينة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1497_align" type="word">إلى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1498_align" type="word">أخرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1499_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1500_align" type="word">هذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1501_align" type="word">البلد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1502_align" type="word">.</element>
+      </segment>
+      <segment AWD="2.13" PMER="0.0" WMER="0.0" endtime="1042.31" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_110_align" starttime="1036.21" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1503_align" type="word">هل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1504_align" type="word">يمكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1505_align" type="word">القول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1506_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1507_align" type="word">نهاية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1508_align" type="word">هذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1509_align" type="word">اللقاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1510_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1511_align" type="word">خلال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1512_align" type="word">معاينتكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1513_align" type="word">للأوضاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1514_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1515_align" type="word">سوريا</element>
+      </segment>
+      <segment AWD="1.24" PMER="0.0" WMER="0.0" endtime="1073.31" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_111_align" starttime="1042.58" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1516_align" type="word">وفي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1517_align" type="word">حال</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1518_align" type="word">استمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1519_align" type="word">تدهور</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1520_align" type="word">الأوضاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1521_align" type="word">الإنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1522_align" type="word">واشتدت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1523_align" type="word">الحرب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1524_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1525_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1526_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1527_align" type="word">القصف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1528_align" type="word">يومي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1529_align" type="word">بالطيران</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1530_align" type="word">بالمدفعية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1531_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1532_align" type="word">هل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1533_align" type="word">مثلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1534_align" type="word">الآن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1535_align" type="word">ينتابكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1536_align" type="word">قلق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1537_align" type="word">خوف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1538_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1539_align" type="word">لديكم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1540_align" type="word">هاجس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1541_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1542_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1543_align" type="word">تحدث</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1544_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1545_align" type="word">سوريا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1546_align" type="word">كارثة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1547_align" type="word">إنسانية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1548_align" type="word">غير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1549_align" type="word">مسبوقة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1550_align" type="word">؟</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1551_align" type="word">المشكلة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1552_align" type="word">الكبرى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1553_align" type="word">التي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1554_align" type="word">نواجهها</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1555_align" type="word">اليوم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1556_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1557_align" type="word">سوريا</element>
+      </segment>
+      <segment AWD="1.32" PMER="0.0" WMER="0.0" endtime="1079.21" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_112_align" starttime="1073.9" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1558_align" type="word">هي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1559_align" type="word">أننا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1560_align" type="word">نعلم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1561_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1562_align" type="word">الحاجات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1563_align" type="word">كبيرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1564_align" type="word">ومتزايدة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1565_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.45" PMER="0.0" WMER="0.0" endtime="1092.07" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_113_align" starttime="1080.33" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1566_align" type="word">وأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1567_align" type="word">النزاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1568_align" type="word">المسلح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1569_align" type="word">يتصاعد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1570_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1571_align" type="word">لكننا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1572_align" type="word">لا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1573_align" type="word">نملك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1574_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1575_align" type="word">يكفي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1576_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1577_align" type="word">مصادر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1578_align" type="word">لنعرف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1579_align" type="word">أي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1580_align" type="word">نوع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1581_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1582_align" type="word">المشاكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1583_align" type="word">سنواجه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1584_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.75" PMER="0.0" WMER="0.0" endtime="1100.81" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_114_align" starttime="1093.94" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1585_align" type="word">وهو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1586_align" type="word">ما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1587_align" type="word">لا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1588_align" type="word">نستطيع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1589_align" type="word">معرفته</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1590_align" type="word">إلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1591_align" type="word">إذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1592_align" type="word">أتيح</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1593_align" type="word">لنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1594_align" type="word">المزيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1595_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1596_align" type="word">القدرة</element>
+      </segment>
+      <segment AWD="1.21" PMER="0.0" WMER="0.0" endtime="1105.92" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_115_align" starttime="1100.98" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1597_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1598_align" type="word">الحركة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1599_align" type="word">والانتشار</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1600_align" type="word">للدخول</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1601_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1602_align" type="word">المستشفيات</element>
+      </segment>
+      <segment AWD="1.43" PMER="0.0" WMER="0.0" endtime="1111.23" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_116_align" starttime="1106.32" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1603_align" type="word">لمعرفة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1604_align" type="word">عدد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1605_align" type="word">الجرحى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1606_align" type="word">وما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1607_align" type="word">يحصل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1608_align" type="word">بشكل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1609_align" type="word">ملموس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1610_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.52" PMER="0.0" WMER="0.0" endtime="1121.19" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_117_align" starttime="1114.59" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1611_align" type="word">وينبغي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1612_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1613_align" type="word">نكون</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1614_align" type="word">حذرين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1615_align" type="word">دائما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1616_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1617_align" type="word">وصف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1618_align" type="word">الوضع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1619_align" type="word">بأنه</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1620_align" type="word">كارثي</element>
+      </segment>
+      <segment AWD="1.01" PMER="0.0" WMER="0.0" endtime="1127.36" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_118_align" starttime="1121.41" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1621_align" type="word">بالحديث</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1622_align" type="word">عن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1623_align" type="word">الأرقام</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1624_align" type="word">فنحن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1625_align" type="word">نعلم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1626_align" type="word">جميعا</element>
+      </segment>
+      <segment AWD="1.35" PMER="0.0" WMER="0.0" endtime="1134.26" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_119_align" starttime="1127.61" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1627_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1628_align" type="word">أفضل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1629_align" type="word">طريقة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1630_align" type="word">لإيقاف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1631_align" type="word">التأثيرات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1632_align" type="word">السلبية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1633_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1634_align" type="word">السكان</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1635_align" type="word">المدنيين</element>
+      </segment>
+      <segment AWD="1.47" PMER="0.0" WMER="0.0" endtime="1138.7" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_120_align" starttime="1134.63" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1636_align" type="word">هي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1637_align" type="word">توقف</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1638_align" type="word">المعارك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1639_align" type="word">وهذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1640_align" type="word">هو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1641_align" type="word">المهم</element>
+      </segment>
+      <segment AWD="1.69" PMER="0.0" WMER="0.0" endtime="1145.51" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_121_align" starttime="1140.78" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1642_align" type="word">ولكن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1643_align" type="word">ذلك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1644_align" type="word">ليس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1645_align" type="word">بالأمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1646_align" type="word">الواقعي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1647_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1648_align" type="word">الوقت</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1649_align" type="word">الحالي</element>
+      </segment>
+      <segment AWD="2.07" PMER="0.0" WMER="0.0" endtime="1150.64" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_122_align" starttime="1146.29" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1650_align" type="word">ولا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1651_align" type="word">يبدو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1652_align" type="word">قابلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1653_align" type="word">للتطبيق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1654_align" type="word">من</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1655_align" type="word">هذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1656_align" type="word">الجانب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1657_align" type="word">أو</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1658_align" type="word">ذاك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1659_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.41" PMER="0.0" WMER="0.0" endtime="1168.73" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_123_align" starttime="1150.95" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker2_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1660_align" type="word">وبالتالي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1661_align" type="word">علينا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1662_align" type="word">العمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1663_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1664_align" type="word">أساس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1665_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1666_align" type="word">المعارك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1667_align" type="word">ستستمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1668_align" type="word">وأن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1669_align" type="word">الاحتياجات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1670_align" type="word">ستتزايد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1671_align" type="word">مع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1672_align" type="word">محاولاتنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1673_align" type="word">الدائمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1674_align" type="word">وقدر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1675_align" type="word">المستطاع</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1676_align" type="word">برمجة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1677_align" type="word">عمل</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1678_align" type="word">ونشاطات</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1679_align" type="word">لجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1680_align" type="word">الصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1681_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1682_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1683_align" type="word">الأزمة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1684_align" type="word">السورية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1685_align" type="word">.</element>
+      </segment>
+      <segment AWD="2.26" PMER="0.0" WMER="0.0" endtime="1178.69" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_124_align" starttime="1168.96" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1686_align" type="word">سيد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1687_align" type="word">بيتر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1688_align" type="word">مورير</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1689_align" type="word">رئيس</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1690_align" type="word">اللجنة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1691_align" type="word">الدولية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1692_align" type="word">للصليب</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1693_align" type="word">الأحمر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1694_align" type="word">،</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1695_align" type="word">لم</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1696_align" type="word">يبق</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1697_align" type="word">لي</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1698_align" type="word">إلا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1699_align" type="word">أن</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1700_align" type="word">أشكرك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1701_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1702_align" type="word">تلبيتك</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1703_align" type="word">دعوة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1704_align" type="word">قناة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1705_align" type="word">الجزيرة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1706_align" type="word">والرد</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1707_align" type="word">على</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1708_align" type="word">أسئلتنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1709_align" type="word">،</element>
+      </segment>
+      <segment AWD="1.9" PMER="0.0" WMER="0.0" endtime="1185.16" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_125_align" starttime="1178.84" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1710_align" type="word">كما</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1711_align" type="word">أشكر</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1712_align" type="word">السادة</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1713_align" type="word">المشاهدين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1714_align" type="word">الذين</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1715_align" type="word">تفضلوا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1716_align" type="word">بالبقاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1717_align" type="word">معنا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1718_align" type="word">حتى</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1719_align" type="word">نهاية</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1720_align" type="word">هذا</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1721_align" type="word">اللقاء</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1722_align" type="word">،</element>
+      </segment>
+      <segment AWD="2.83" PMER="0.0" WMER="0.0" endtime="1186.58" id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_utt_126_align" starttime="1185.52" who="66D7D4A6_08A8_4D68_96B5_FE0020C55683_speaker1_align">
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1723_align" type="word">في</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1724_align" type="word">أمان</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1725_align" type="word">الله</element>
+        <element id="66D7D4A6_08A8_4D68_96B5_FE0020C55683_w1726_align" type="word">.</element>
+      </segment>
+    </segments>
+  </body>
+</transcript>
