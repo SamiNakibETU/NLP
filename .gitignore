@@ -14,6 +14,10 @@ donnees/presse/rejets.csv
 *.flac
 *.wav
 
+# Clone local du dépôt privé data/mgb2 (audio hors dépôt)
+donnees/externe/
+.cache/
+
 # Cache Python et notebooks
 __pycache__/
 *.pyc
@@ -47,3 +51,4 @@ comptes-rendus/
 donnees/manifeste.csv
 donnees/noms/noms_manuel_modele.csv
 donnees/test/guide-annotation.md
+*.zip

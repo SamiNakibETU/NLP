@@ -1,0 +1,50 @@
+# Benchmark des traducteurs arabe -> français (choix du modèle qui traduira le corpus MGB-2)
+
+donnees:
+  # Jeu commun du groupe : les blocs <<id | début-fin>> envoyés par Paulo, tous gardés.
+  # La traduction française (mêmes blocs) est cherchée à côté, ou donnée par marque_fr.
+  marque_ar: "donnees/marque/5331FFF2-358E-445E-BA71-74B745387304.marque.txt"
+  marque_fr: null
+  jeu: "bench_trad_5331FFF2"
+  dossier_sortie: "resultats/traduction/5331FFF2"
+  # Ancien tirage : vider marque_ar pour tirer nb_segments dans tous les *.xml de ce dossier.
+  dossier_xml: "donnees"
+
+selection:
+  nb_segments: 60
+  graine: 42
+  duree_min_s: 5.0
+  duree_max_s: 25.0
+  mots_min: 6
+  wmer_max: 15.0                   # écart texte / audio mesuré par MGB-2 ; au-delà le texte est souvent tronqué
+  nb_phrases_contexte: 2
+
+candidats:
+  - nom: "nllb-1.3b"
+    modele_id: "facebook/nllb-200-distilled-1.3B"
+    type: "nllb"
+    licence: "CC-BY-NC 4.0"
+  - nom: "qwen2.5-7b"
+    modele_id: "Qwen/Qwen2.5-7B-Instruct"
+    type: "llm"
+    licence: "Apache 2.0"
+  - nom: "aya-expanse-8b"
+    modele_id: "CohereLabs/aya-expanse-8b"
+    type: "llm"
+    licence: "CC-BY-NC 4.0 (licence à accepter sur Hugging Face)"
+
+generation:
+  max_new_tokens: 256
+  quantification_4bits: true       # LLM seulement, sur GPU CUDA
+  taille_lot_nllb: 8
+
+consigne_llm: >
+  Tu es un traducteur professionnel de journaux télévisés arabes vers le français.
+  Traduis fidèlement le segment arabe en français. Écris les noms propres dans leur
+  forme française usuelle et les nombres en chiffres. N'ajoute ni commentaire, ni
+  explication, ni guillemets. Le contexte sert seulement à comprendre : ne le traduis pas.
+
+decision:
+  echec_dur_max_pct: 5.0           # au-delà, le modèle est écarté (vide, arabe restant, méta-texte, pas du français)
+  nb_tirages_bootstrap: 1000
+  nb_segments_cible_corpus: 50000  # pour projeter la durée de traduction du reste des données
