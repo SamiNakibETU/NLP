@@ -68,23 +68,22 @@ Sous Windows (PowerShell) : `$env:PORTEPAROLE_LIVE = "factice"; python -m uvico
 
 ## Structure du dépôt
 
-| Dossier | Contenu | Auteur principal | Branche d'origine |
-|---|---|---|---|
-| `speech_app/` | application Kalam : API FastAPI, pages web, direct, rapport, Docker, notebooks Colab | Paul Douat (socle), Sami Nakib (direct, rapport, interface) | `docker`, `integration` |
-| `code/projecteur/`, `code/ecoute/` | S3 : encodage Cohere, projecteur, entraînement du temps 1, transcription | Nicolas Wujczak | `benchmarking` |
-| `code/direct/` | segmentation du flux, double passe, mesure du retard | Sami Nakib, Nicolas Wujczak | `main`, `benchmarking` |
-| `code/donnees/`, `code/mesures/`, `code/demo/`, `code/cascade/` | données MGB-2 et OPUS, métriques et bootstrap, baseline S0, cascade LoRA | Sami Nakib | `main` |
-| `code/seamless/`, `code/traduction/` | benchmarks SeamlessM4T et traducteurs sur MGB-2 | Fatima Aguel | `benchmarking-projecteurv1` |
-| `projecteur_v1/` | premier prototype de projecteur Whisper vers Qwen | équipe | `projecteurv1` |
-| `notebooks/` | notebooks d'analyse ; `embeddinggemma_*` et `cometkiwi_comparaison` : Hanine Attia | équipe | toutes |
-| `kaggle/` | kernels d'évaluation sur FLEURS (GPU T4) | Sami Nakib | `integration` |
-| `resultats/` | mesures brutes : `kaggle/` (FLEURS), `direct/` (Al Jazeera) | Sami Nakib | `integration` |
-| `modeles/s3_temps1_50k/` | projecteur S3 entraîné (35 Mo) et son évaluation | Nicolas Wujczak | `benchmarking` |
-| `configs/` | réglages YAML (S0, S3, direct, traduction) | équipe | toutes |
-| `rapport/` | rapport du projet (PDF, 5 pages, et source LaTeX) | Paul Douat | `integration` |
-| `tp/` | travaux pratiques du cours (notebooks) | équipe | `integration` |
+| Dossier | Contenu | Branche d'origine |
+|---|---|---|
+| `speech_app/` | application Kalam : API FastAPI, pages web, direct, rapport, Docker, notebooks Colab | `docker`, `integration` |
+| `code/projecteur/`, `code/ecoute/` | S3 : encodage Cohere, projecteur, entraînement du temps 1, transcription | `benchmarking` |
+| `code/direct/` | segmentation du flux, double passe, mesure du retard | `main`, `benchmarking` |
+| `code/donnees/`, `code/mesures/`, `code/demo/`, `code/cascade/` | données MGB-2 et OPUS, métriques et bootstrap, baseline S0, cascade LoRA | `main` |
+| `code/seamless/`, `code/traduction/` | benchmarks SeamlessM4T et traducteurs sur MGB-2 | `benchmarking-projecteurv1` |
+| `projecteur_v1/` | premier prototype de projecteur Whisper vers Qwen | `projecteurv1` |
+| `notebooks/` | notebooks d'analyse ; `embeddinggemma_*` et `cometkiwi_comparaison` : Hanine Attia | toutes |
+| `kaggle/` | kernels d'évaluation sur FLEURS (GPU T4) | `integration` |
+| `resultats/` | mesures brutes : `kaggle/` (FLEURS), `direct/` (Al Jazeera) | `integration` |
+| `modeles/s3_temps1_50k/` | projecteur S3 entraîné (35 Mo) et son évaluation | `benchmarking` |
+| `configs/` | réglages YAML (S0, S3, direct, traduction) | toutes |
+| `rapport/` | rapport du projet (PDF, 5 pages, et source LaTeX) | `integration` |
+| `tp/` | travaux pratiques du cours (notebooks) | `integration` |
 
-Sami Nakib a coordonné le projet et assuré l'intégration et l'évaluation finale. Paul Douat a rédigé le rapport.
 
 ## Documentation
 

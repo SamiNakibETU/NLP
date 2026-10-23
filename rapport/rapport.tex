@@ -34,7 +34,7 @@
 {\Large\bfseries Sous-titrage automatique de journaux arabes en français}\\[2pt]
 {\normalsize Cascade (S0), traduction directe de la parole (SeamlessM4T v2) et projecteur audio-texte (S3), évalués sur FLEURS et testés en direct}\\[4pt]
 Sami Nakib, Fatima Aguel, Nicolas Wujczak, Paul Douat et Hanine Attia\\
-{\small Rédaction : Paul Douat. CY Tech, cours de NLP, 23 octobre 2026}
+{\small CY Tech, cours de NLP, 23 octobre 2026}
 \end{center}
 
 \begin{abstract}
@@ -166,7 +166,7 @@ Seul, le traducteur progresse sur toutes les mesures (tableau~\ref{tab:lora}) et
 
 \section{Produit et mode direct : Kalam}
 \label{sec:direct}
-L'application de Paul Douat (\texttt{speech\_app}) fournit le socle : une API FastAPI avec une interface Gradio, une image Docker, un registre qui charge les modèles à la demande et n'en garde qu'un groupe en mémoire, et un déploiement sur Colab (T4) derrière un tunnel Cloudflare. Kalam y ajoute le direct (figure~\ref{fig:archi}) : S3 transcrit chaque segment, Opus-MT affiche aussitôt un texte gris provisoire (0,19\,s par phrase) et NLLB-1.3B le remplace par le texte définitif (0,82\,s), deux traducteurs choisis d'après le tableau~\ref{tab:traducteurs}. En parallèle, des empreintes ECAPA (speechbrain) regroupées en ligne signalent les changements de locuteur, avec un seuil de similarité cosinus de 0,45 en direct et de 0,30 dans le rapport. Sur FLEURS, deux lectures d'une même voix ont en moyenne une similarité de 0,557, contre 0,266 entre voix différentes. En fin de session, un rapport rassemble la diarisation, une relecture ciblée par Qwen2.5-7B (nf4), un résumé et l'export SRT. Pour une vidéo déposée, une minute de journal demande 26\,s de calcul, et Piper peut lire les sous-titres à voix haute.
+L'application \texttt{speech\_app} fournit le socle : une API FastAPI avec une interface Gradio, une image Docker, un registre qui charge les modèles à la demande et n'en garde qu'un groupe en mémoire, et un déploiement sur Colab (T4) derrière un tunnel Cloudflare. Kalam y ajoute le direct (figure~\ref{fig:archi}) : S3 transcrit chaque segment, Opus-MT affiche aussitôt un texte gris provisoire (0,19\,s par phrase) et NLLB-1.3B le remplace par le texte définitif (0,82\,s), deux traducteurs choisis d'après le tableau~\ref{tab:traducteurs}. En parallèle, des empreintes ECAPA (speechbrain) regroupées en ligne signalent les changements de locuteur, avec un seuil de similarité cosinus de 0,45 en direct et de 0,30 dans le rapport. Sur FLEURS, deux lectures d'une même voix ont en moyenne une similarité de 0,557, contre 0,266 entre voix différentes. En fin de session, un rapport rassemble la diarisation, une relecture ciblée par Qwen2.5-7B (nf4), un résumé et l'export SRT. Pour une vidéo déposée, une minute de journal demande 26\,s de calcul, et Piper peut lire les sous-titres à voix haute.
 
 \begin{figure}[htbp]
 \centering
@@ -233,9 +233,7 @@ Kalam ne traduit que dans un sens, de l'arabe vers le français. Une conversatio
 
 Nos résultats invitent surtout à explorer des modèles très spécialisés, qui ne sont pas forcément des LLM. À taille comparable, le traducteur seq2seq NLLB-1.3B dépasse de près de 14 points de BLEU un LLM généraliste, même affiné par LoRA, et le projecteur de S3, avec 8,7\,M de paramètres, suffit à rebrancher un encodeur audio sur un décodeur gelé. La suite consiste donc à distiller ou à affiner un traducteur spécialisé sur des journaux arabes, puis à terminer le temps 2 de S3 pour traduire directement depuis l'audio. Il faudra en parallèle constituer une référence française sur des journaux télévisés récents, en commençant par les 217 segments déjà extraits de MGB-2, et conduire une évaluation humaine, d'abord sur la grille de 24 requêtes.
 
-\section{Contributions et licences}
-Sami Nakib a assuré la coordination, la préparation des données, les mesures, le mode direct, l'intégration et l'évaluation finale. Nicolas Wujczak a construit le temps 1 de S3, de l'encodage Cohere à l'entraînement du projecteur et à la transcription. Fatima Aguel a conduit les benchmarks de Seamless et de la traduction de texte, Hanine Attia la comparaison entre EmbeddingGemma et COMETKiwi. Paul Douat a écrit l'application \texttt{speech\_app} et rédigé ce rapport.
-
+\section{Licences}
 MGB-2, SeamlessM4T et NLLB-200 sont réservés à la recherche non commerciale, et les données de MGB-2 ne sont pas versionnées. La police ABC Areal de l'interface n'est pas redistribuée. Les extraits d'Al Jazeera servent à un usage académique, mais le résumé passe par un service externe (ScaleDown). Comme les sous-titres peuvent contenir des noms faux (section~\ref{sec:llm}), ils ne doivent pas être diffusés sans relecture.
 
 \section*{Références}
