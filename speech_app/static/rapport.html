@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f2f2f0">
+<title>Kalam · Rapport</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/static/icone-180.png">
+<link rel="icon" href="/static/icone.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kalam">
+<link rel="stylesheet" href="/static/base.css">
+<link rel="stylesheet" href="/static/rapport.css">
+</head>
+<body>
+<div class="ecran">
+  <header class="entete"></header>
+  <div class="tete-page">
+    <h1 id="titre">Rapport</h1>
+    <p id="meta" class="meta"></p>
+    <div id="onglets" class="seg" role="tablist" aria-label="Sections du rapport" hidden>
+      <button type="button" role="tab" data-valeur="resume" aria-selected="true">Résumé</button>
+      <button type="button" role="tab" data-valeur="transcript" aria-selected="false">Transcript</button>
+      <button type="button" role="tab" data-valeur="details" aria-selected="false">Détails</button>
+    </div>
+  </div>
+
+  <!-- état : absent / en cours / erreur -->
+  <section id="etat" class="etat-bloc" hidden aria-live="polite">
+    <div id="etat-absent" hidden>
+      <p class="meta">Le rapport indique qui parle, relit la traduction et résume le contenu. Il utilise le GPU : compte quelques minutes.</p>
+      <div class="options">
+        <label class="option"><input id="o-loc" type="checkbox" checked><span>Identifier les locuteurs</span></label>
+        <label class="option"><input id="o-rel" type="checkbox" checked><span>Relire la traduction avec un modèle de langage</span></label>
+        <label class="option"><input id="o-ar" type="checkbox"><span>Joindre le texte arabe</span></label>
+      </div>
+      <div class="bas"><button id="generer" class="rond plein" type="button"><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7l4 4v12H7zM14 4v4h4M10 12h5M10 16h5"/></svg></span><span class="lib">générer</span></button></div>
+    </div>
+    <div id="etat-cours" hidden>
+      <h2 id="etape">En attente du GPU</h2>
+      <div class="barre"><i id="barre"></i></div>
+      <p class="meta"><span id="pct" class="mono">0 %</span> · <span id="temps" class="mono">00:00</span></p>
+    </div>
+    <div id="etat-erreur" hidden>
+      <h2 class="erreur">Le rapport n'a pas pu être généré</h2>
+      <p id="erreur-texte" class="meta"></p>
+      <div class="bas"><button id="reessayer" class="rond" type="button"><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a7 7 0 107-7M5 5v5h5"/></svg></span><span class="lib">réessayer</span></button></div>
+    </div>
+  </section>
+
+  <main id="rapport" class="defile" hidden>
+    <div id="p-resume" role="tabpanel">
+      <p id="voix-erreur" class="erreur msg" role="alert" hidden></p>
+      <div id="resume" class="resume"></div>
+    </div>
+    <div id="p-transcript" role="tabpanel" hidden>
+      <ul id="avertissements" class="avertissements" hidden></ul>
+      <div id="transcript" class="transcript"></div>
+    </div>
+    <div id="p-details" role="tabpanel" hidden>
+      <dl id="details-liste" class="details"></dl>
+    </div>
+  </main>
+
+  <div id="commandes" class="commandes" hidden>
+    <button id="options-rapport" class="texte caps" type="button" aria-expanded="false">Options</button>
+    <button id="ecouter" class="rond plein" type="button" hidden aria-pressed="false"><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h3l5 4V5L8 9zM16.5 9a4 4 0 010 6"/></svg></span><span class="lib">écouter</span></button>
+  </div>
+  <audio id="audio" preload="none"></audio>
+</div>
+<script src="/static/marque.js"></script>
+<script src="/static/commun.js"></script>
+<script src="/static/rapport.js"></script>
+</body>
+</html>

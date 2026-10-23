@@ -615,6 +615,8 @@ def creer_app(factice: bool = False):
         configurer(factice=True)
     app = FastAPI(title="Le Porte-Parole : direct")
     app.include_router(router)
+    import pages                                        # accueil, vidéo, rapport et /static, comme dans api.py
+    app.include_router(pages.router)
     try:                                                # rapport de fin de session, écrit par ailleurs
         import session_api
         app.include_router(session_api.router)

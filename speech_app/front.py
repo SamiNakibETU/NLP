@@ -24,17 +24,38 @@ from sessions import Session
 
 TASKS = [("Traduire en français", "st"), ("Transcrire en arabe", "asr")]
 CSS = """
-.gradio-container {max-width: 1100px !important; margin: auto}
-.arabic textarea {direction: rtl; font-size: 1.1rem}
-.warn {border-left: 4px solid #b45309; padding: .6rem 1rem; background: #fef3c7; color: #451a03; border-radius: 6px}
-.live-link {display: inline-block; padding: .55rem 1rem; border-radius: 8px; background: #047857; color: #fff !important;
-  font-weight: 600; text-decoration: none; transition-property: background-color, scale; transition-duration: .15s}
-.live-link:hover {background: #065f46}
-.live-link:active {scale: .96}
-.live-link:focus-visible {outline: 3px solid #064e3b; outline-offset: 2px}
+@font-face {font-family: "Kalam Areal"; src: local("ABC Areal Superfamily Variable"), local("ABCArealSuperfamilyVariable-Regular"), local("ABC Areal"), local("ABCAreal-Regular"); font-weight: 400 700}
+.gradio-container {max-width: 1040px !important; margin: auto; font-family: "Kalam Areal", "Helvetica Neue", Helvetica, Arial, sans-serif !important; -webkit-font-smoothing: antialiased}
+.gradio-container h1 {font-weight: 600; letter-spacing: -.03em}
+.gradio-container, .gradio-container .block, .gradio-container .form, .gradio-container .panel {box-shadow: none !important}
+.gradio-container button {border-radius: 999px !important}
+.gradio-container input, .gradio-container textarea {border-radius: 8px !important}
+.gradio-container, gradio-app {background: #f2f2f0 !important}
+.gradio-container label.selected, .gradio-container label {background: #fff !important}
+.arabic textarea {direction: rtl; font-size: 1.1rem; font-family: "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", sans-serif}
+.warn {border-left: 2px solid #0a0a0a; padding: .5rem 1rem; background: #fff; color: #6b7280}
+.live-link {display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.5rem; border-radius: 999px; background: #0a0a0a; color: #fff !important;
+  font-weight: 550; text-decoration: none; transition: opacity .15s}
+.live-link:hover {opacity: .85}
+.live-link:active {opacity: .7}
+.live-link:focus-visible {outline: 2px solid #0a0a0a; outline-offset: 2px}
+.back-link {color: #6b7280; font-size: .875rem; margin-left: 1rem}
 @media (prefers-reduced-motion: reduce) {.live-link {transition: none}}
 """
-THEME = gr.themes.Soft(primary_hue=gr.themes.colors.emerald, neutral_hue=gr.themes.colors.slate)
+_BLANC = "#ffffff"
+THEME = gr.themes.Base(primary_hue=gr.themes.colors.neutral, neutral_hue=gr.themes.colors.neutral,
+                       font=["Kalam Areal", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], radius_size=gr.themes.sizes.radius_sm).set(
+    body_background_fill="#f2f2f0", background_fill_primary=_BLANC, background_fill_secondary=_BLANC,
+    block_background_fill=_BLANC, input_background_fill=_BLANC, block_shadow="none", block_border_width="1px",
+    border_color_primary="#e5e5e5", block_border_color="#e5e5e5", input_border_color="#e5e5e5",
+    body_text_color="#0a0a0a", body_text_color_subdued="#6b7280",
+    checkbox_label_background_fill=_BLANC, checkbox_label_background_fill_hover=_BLANC,
+    checkbox_label_background_fill_selected=_BLANC, checkbox_label_border_color="#e5e5e5",
+    checkbox_label_border_color_selected="#0a0a0a", checkbox_label_text_color_selected="#0a0a0a",
+    button_primary_background_fill="#0a0a0a", button_primary_background_fill_hover="#2b2b2b",
+    button_primary_text_color="#ffffff", button_secondary_background_fill=_BLANC,
+    button_secondary_background_fill_hover=_BLANC, button_secondary_text_color="#0a0a0a",
+    button_secondary_border_color="#0a0a0a")
 AGE_MAX_TEMP_S = 3600                                  # dossiers temporaires gardés une heure
 MSG_COMPARER = ("Chaque moteur est chargé puis déchargé à tour de rôle (trois groupes de modèles). "
                 "Compte plusieurs minutes sur un T4, et le premier clic télécharge les modèles.")
@@ -172,7 +193,8 @@ def build_front(engines: dict, real: bool = True) -> gr.Blocks:
         gr.Markdown("# Sous-titres français pour la parole arabe\n"
                     "Dépose une vidéo ou un audio, choisis un moteur, récupère les sous-titres (.srt, .vtt), "
                     "puis un rapport avec qui parle et un résumé.")
-        gr.HTML('<a class="live-link" href="/live">Écouter en direct (micro ou flux)</a>')
+        gr.HTML('<a class="live-link" href="/live">Écouter en direct (micro ou flux)</a> '
+                "<a class=\"back-link\" href=\"/\">Retour à l'accueil</a>")
         if not real:
             gr.Markdown("> **Mode démonstration** : aucun modèle n'est chargé, les textes sont des exemples fixes.")
         sid = gr.State(None)

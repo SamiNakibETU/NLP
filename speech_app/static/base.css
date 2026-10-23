@@ -1,0 +1,160 @@
+/* Base commune, style suisse : fond #f2f2f0, noir et gris, un seul accent orange réservé au direct.
+   Police : ABC Areal si elle est installée sur la machine (jamais servie : licence), sinon Helvetica / Arial.
+   Tailles : 11 (capitales espacées), 13 (repères), 15 (courant), 24 (transcript), 40 (titres). Grille de 8 px. */
+@font-face {
+  font-family: "Kalam Areal";
+  src: local("ABC Areal Superfamily Variable"), local("ABCArealSuperfamilyVariable-Regular"), local("ABC Areal"), local("ABCAreal-Regular");
+  font-weight: 400 700;
+  font-style: normal;
+}
+:root {
+  --fond: #f2f2f0;
+  --carte: #ffffff;
+  --texte: #111111;
+  --encre: #3a3a3a;            /* texte définitif */
+  --texte-2: #6b6b6b;          /* secondaire : 4,6:1 sur le fond */
+  --gris-clair: #a3a3a3;       /* texte provisoire */
+  --filet: #d6d6d2;
+  --orange: #ff4f00;           /* le direct : point, mot en cours, tête de lecture */
+
+  --police: "Kalam Areal", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --police-mono: "Kalam Areal", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --police-ar: "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
+
+  --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s5: 48px; --s6: 64px;
+  --marge: 24px;
+  --largeur: 960px;
+  --nav-h: 56px;
+
+  --d-rapide: 0.12s;
+  --d-moyen: 0.24s;
+  --d-lent: 0.45s;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  color-scheme: light;
+}
+@media (min-width: 720px) { :root { --nav-h: 0px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overscroll-behavior: none; }
+body {
+  margin: 0; height: 100vh; height: 100dvh; background: var(--fond); color: var(--texte); overflow: hidden;
+  font: 400 15px/1.5 var(--police); font-variation-settings: "MONO" 0;
+}
+[hidden] { display: none !important; }
+h1, h2, h3, p, ul, ol, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+h1 { font-size: 40px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
+h2, h3 { font-size: 15px; font-weight: 600; }
+p { text-wrap: pretty; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { touch-action: manipulation; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; cursor: pointer; }
+input, select, textarea { font-size: 16px; }
+[lang="ar"], .ar { font-family: var(--police-ar); }
+:focus-visible { outline: 2px solid var(--texte); outline-offset: 2px; }
+
+/* capitales espacées et repères : même famille, axe MONO à 100 */
+.caps, .mono { font-family: var(--police-mono); font-variation-settings: "MONO" 100; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--texte-2); font-weight: 400; line-height: 1.4; }
+.mono { font-size: 13px; text-transform: none; letter-spacing: 0; font-variant-numeric: tabular-nums; }
+.nombres { font-variant-numeric: tabular-nums; }
+
+.visuellement-cache { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.lien-evitement { position: absolute; left: var(--marge); top: -64px; z-index: 60; padding: var(--s1) var(--s2); background: var(--texte); color: #fff; }
+.lien-evitement:focus { top: var(--s1); }
+
+/* ---- structure : chaque écran tient dans la hauteur du téléphone ; seule la zone de contenu défile */
+.ecran { height: calc(100dvh - var(--nav-h) - env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; max-width: var(--largeur); margin-inline: auto; padding-top: env(safe-area-inset-top, 0px); }
+@media (min-width: 720px) { .ecran { height: 100dvh; } }
+.ecran > * { padding-inline: max(var(--marge), env(safe-area-inset-left, 0px)) max(var(--marge), env(safe-area-inset-right, 0px)); }
+.defile { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+
+/* ---- en-tête : KALAM à gauche, navigation à droite (desktop) */
+.entete { display: flex; align-items: center; justify-content: space-between; min-height: 56px; flex: none; }
+.logo { display: inline-flex; align-items: center; gap: var(--s1); text-decoration: none; min-height: 44px; color: var(--texte); }
+.logo .caps { color: var(--texte); }
+.logo-ar { font-size: 15px; color: var(--texte-2); }
+
+/* ---- navigation : trois destinations ; barre basse fine sur mobile, en haut à droite sur desktop */
+.nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: grid; grid-template-columns: repeat(3, 1fr); background: var(--fond); border-top: 1px solid var(--filet); padding: 0 var(--s1) env(safe-area-inset-bottom, 0px); }
+.nav a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: var(--nav-h); text-decoration: none; color: var(--texte-2); font-family: var(--police-mono); font-variation-settings: "MONO" 100; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; transition: color var(--d-rapide) var(--ease); }
+.nav a svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.nav a[aria-current="page"] { color: var(--texte); }
+@media (min-width: 720px) {
+  .nav { position: static; display: flex; gap: var(--s3); background: none; border: 0; padding: 0; }
+  .nav a { flex-direction: row; height: 44px; }
+  .nav a svg { display: none; }
+  .nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+}
+@media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--texte); } }
+
+/* ---- bouton rond : une seule forme dans toute l'appli */
+.rond { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; padding: 0; border: 0; background: none; color: var(--texte); text-decoration: none; min-width: 64px; }
+.rond .disque { width: 56px; height: 56px; border-radius: 50%; background: var(--carte); border: 1px solid var(--texte); display: grid; place-items: center; transition: transform var(--d-rapide) var(--ease), background-color var(--d-rapide) var(--ease), color var(--d-rapide) var(--ease); }
+.rond .lib { font-family: var(--police-mono); font-variation-settings: "MONO" 100; font-size: 11px; letter-spacing: 0.04em; color: var(--texte-2); }
+.rond svg, .ico { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.rond:active .disque { transform: scale(0.94); }
+.rond[disabled], .rond[aria-disabled="true"] { opacity: 0.35; pointer-events: none; }
+.rond.plein .disque { background: var(--texte); color: #fff; }
+@media (hover: hover) and (pointer: fine) { .rond:hover .disque { background: var(--texte); color: #fff; } }
+
+/* texte cliquable discret (capitales) */
+.texte { min-height: 44px; padding: 0; border: 0; background: none; color: var(--texte); text-decoration: none; display: inline-flex; align-items: center; }
+.texte[disabled], .texte[aria-disabled="true"] { opacity: 0.35; pointer-events: none; }
+@media (hover: hover) and (pointer: fine) { .texte:hover { text-decoration: underline; text-underline-offset: 4px; } }
+
+/* ---- contrôle segmenté : la pastille noire glisse (transform) */
+.seg { --n: 2; --i: 0; position: relative; display: grid; grid-template-columns: repeat(var(--n), 1fr); padding: 3px; border: 1px solid var(--texte); border-radius: 999px; background: var(--carte); isolation: isolate; }
+.seg::before { content: ""; position: absolute; z-index: -1; top: 3px; bottom: 3px; left: 3px; width: calc((100% - 6px) / var(--n)); border-radius: 999px; background: var(--texte); transform: translateX(calc(var(--i) * 100%)); transition: transform var(--d-moyen) var(--ease); }
+.seg > button { min-height: 40px; padding: 0 var(--s2); border: 0; border-radius: 999px; background: none; color: var(--texte); font-size: 13px; font-weight: 500; transition: color var(--d-moyen) var(--ease); white-space: nowrap; }
+.seg > button[aria-checked="true"], .seg > button[aria-selected="true"] { color: #fff; }
+.seg > button[hidden] { display: none; }
+
+/* ---- feuille qui monte du bas : le seul menu */
+.feuille { position: fixed; inset: 0; z-index: 50; visibility: hidden; transition: visibility 0s var(--d-moyen); }
+.feuille[data-ouvert="true"] { visibility: visible; transition: none; }
+.feuille .voile { position: absolute; inset: 0; background: rgba(17, 17, 17, 0.28); opacity: 0; transition: opacity var(--d-moyen) ease-out; }
+.feuille[data-ouvert="true"] .voile { opacity: 1; }
+.feuille .corps { position: absolute; left: 0; right: 0; bottom: 0; max-width: 520px; margin-inline: auto; max-height: 88dvh; overflow-y: auto; overscroll-behavior: contain; background: var(--carte); border-radius: 16px 16px 0 0; padding: 0 var(--marge) calc(var(--s3) + env(safe-area-inset-bottom, 0px)); transform: translateY(100%); transition: transform 240ms ease-out; }
+.feuille[data-ouvert="true"] .corps { transform: none; }
+.feuille .corps.glisse { transition: none; }
+.feuille .poignee { display: block; width: 100%; height: 32px; padding: 14px 0 0; border: 0; background: none; touch-action: none; cursor: grab; }
+.feuille .poignee::after { content: ""; display: block; width: 32px; height: 4px; margin: 0 auto; border-radius: 2px; background: var(--filet); }
+.feuille .titre-feuille { margin-bottom: var(--s2); }
+.ligne-opt { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); width: 100%; min-height: 48px; padding: 0; border: 0; border-top: 1px solid var(--filet); background: none; text-align: left; font-size: 15px; }
+.ligne-opt .val { font-family: var(--police-mono); font-variation-settings: "MONO" 100; font-size: 13px; color: var(--texte-2); }
+button.ligne-opt[aria-pressed] .val::before { content: "désactivé"; }
+button.ligne-opt[aria-pressed="true"] .val::before { content: "activé"; color: var(--texte); }
+.ligne-opt:active { opacity: 0.55; }
+
+/* ---- liste datée (motif « Latest ») : heure à gauche, titre gras à droite */
+.fil li > a, .fil li > div { display: grid; grid-template-columns: 104px 1fr; gap: var(--s2); padding: var(--s2) 0; border-top: 1px solid var(--filet); text-decoration: none; color: inherit; }
+.fil .quand { white-space: nowrap; padding-top: 1px; color: var(--texte-2); }
+.fil .recent .quand { color: var(--orange); }
+.fil b { display: block; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.fil .meta { display: block; color: var(--texte-2); font-size: 13px; margin-top: 2px; }
+
+.champ { width: 100%; min-height: 48px; padding: 0 var(--s2); border: 1px solid var(--filet); border-radius: 8px; background: var(--carte); color: var(--texte); }
+.champ:focus { border-color: var(--texte); outline: none; }
+input[type="file"]::file-selector-button { min-height: 32px; margin-right: var(--s2); padding: 0 var(--s2); border: 1px solid var(--texte); border-radius: 16px; background: var(--carte); color: var(--texte); font: inherit; font-size: 13px; cursor: pointer; }
+
+/* ---- états */
+.vide { padding: var(--s2) 0; color: var(--texte-2); max-width: 46ch; }
+.vide b { display: block; color: var(--texte); font-weight: 600; margin-bottom: 4px; }
+.erreur { color: var(--texte); font-weight: 600; }
+.squelette { background: var(--filet); border-radius: 2px; min-height: 1em; animation: respire 1.4s ease-in-out infinite; }
+@keyframes respire { 50% { opacity: 0.4; } }
+.lien-bas { align-self: flex-end; padding-block: var(--s2); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .apparait { animation: apparait var(--d-lent) var(--ease) both; animation-delay: calc(var(--i, 0) * 60ms); }
+  @keyframes apparait { from { opacity: 0; transform: translateY(4px); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+@media (max-width: 480px) { h1 { font-size: 32px; } }
+
+/* ---- tête de page : titre et contrôle segmenté, hors de la zone qui défile */
+.tete-page { flex: none; display: grid; gap: var(--s2); padding-block: var(--s1) var(--s2); }
+.tete-page .meta { color: var(--texte-2); font-size: 13px; }
+.defile > .lien-bas { display: flex; justify-content: flex-end; }

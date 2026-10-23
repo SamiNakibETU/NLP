@@ -1,16 +1,17 @@
-// Page de sous-titres en direct. Vanilla JS, aucune dépendance.
+// Écran Direct : transcript qui coule, une seule commande, options dans une feuille. Vanilla JS, aucune dépendance.
 (() => {
   "use strict";
   const $ = (id) => document.getElementById(id);
   const params = new URLSearchParams(location.search);
   const JETON = params.get("token") || "";
-  const MAX_LIGNES = 3;
+  const K = window.Kalam;
 
   const el = {
-    scene: $("scene"), invite: $("invite"), pastille: $("pastille"), etatTexte: $("etat-texte"), retard: $("retard"),
-    niveau: $("niveau"), duree: $("duree"), principal: $("principal"), champUrl: $("champ-url"),
-    champFichier: $("champ-fichier"), aide: $("aide-source"), zoneVideo: $("zone-video"), video: $("video"),
-    rapport: $("rapport"), bilan: $("bilan"), resultat: $("resultat"), optVoix: $("opt-voix"), optLien: $("opt-lien"),
+    scene: $("scene"), flux: $("flux"), invite: $("invite"), arabeCourant: $("ar-courant"), pastille: $("pastille"),
+    etatTexte: $("etat-texte"), retard: $("retard"), niveau: $("niveau"), duree: $("duree"), principal: $("principal"),
+    champUrl: $("champ-url"), champFichier: $("champ-fichier"), aide: $("aide-source"), zoneVideo: $("zone-video"),
+    video: $("video"), rapport: $("rapport"), bilan: $("bilan"), resultat: $("resultat"), optVoix: $("opt-voix"),
+    optLien: $("opt-lien"), tete: $("tete"), date: $("date"), segmentSource: $("segment-source"),
   };
 
   const etat = {
@@ -28,46 +29,82 @@
   const wsUrl = (chemin) => (location.protocol === "https:" ? "wss://" : "ws://") + location.host + url(chemin);
   const entetes = () => (JETON ? { Authorization: "Bearer " + JETON } : {});
   const secondes = (s) => (s == null ? "–" : s.toLocaleString("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " s");
-  const horloge = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  const horloge = (s) => K.horlogeLongue(s);
+  const reduit = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const api = K.api;
 
-  async function api(chemin, options = {}) {
-    const r = await fetch(url(chemin), { ...options, headers: { ...entetes(), ...(options.headers || {}) } });
-    if (!r.ok) {
-      let detail = r.statusText;
-      try { const j = await r.json(); detail = j.detail || JSON.stringify(j); } catch (e) { /* pas de JSON */ }
-      throw new Error(typeof detail === "string" ? detail : JSON.stringify(detail));
-    }
-    return r;
-  }
-
-  // ---------------------------------------------------------------- affichage
+  // ---------------------------------------------------------------- état affiché
   const ETATS = {
     repos: "Prêt", chargement: "Chargement des modèles…", pret: "Modèles prêts", en_cours: "En direct",
     termine: "Terminé", erreur: "Erreur",
   };
   function montrerEtat(cle, message) {
     el.pastille.dataset.etat = cle;
+    el.etatTexte.dataset.etat = cle;
     el.etatTexte.textContent = message || ETATS[cle] || cle;
   }
+
+  function majDate() {
+    const d = new Date();
+    el.date.textContent = d.toLocaleDateString("fr-FR", { day: "numeric", month: "long" }) + "  " + d.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
+  }
+
+  // ---------------------------------------------------------------- transcript qui coule
+  // Une ligne = un segment, un <span> dans le paragraphe. Le gris ne réécrit que sa fin ; le dernier mot est orange,
+  // suivi d'un curseur. Le passage au définitif est un fondu de couleur (CSS) : rien ne bouge.
+  const MAX_SEGMENTS = 10;
+
+  function prefixeCommun(a, b) {
+    let i = 0;
+    while (i < a.length && i < b.length && a[i] === b[i]) i++;
+    const coupe = a.slice(0, i);
+    return i === a.length || i === b.length ? coupe : coupe.replace(/\S*$/, "");     // jamais au milieu d'un mot
+  }
+  const poser = (n, t) => { if (n.textContent !== t) n.textContent = t; };
 
   function ligne(id) {
     let l = etat.lignes.get(id);
     if (l) return l;
-    if (el.invite) { el.invite.remove(); el.invite = null; }
-    const racine = document.createElement("div");
-    racine.className = "ligne";
-    const ar = document.createElement("p"); ar.className = "ar"; ar.lang = "ar"; ar.dir = "rtl";
-    const fr = document.createElement("p"); fr.className = "fr"; fr.lang = "fr";
-    racine.append(ar, fr);
-    el.scene.append(racine);
-    l = { racine, ar, fr };
+    if (el.invite) el.invite.hidden = true;
+    document.body.classList.remove("ecoute");
+    etat.lignes.forEach((v) => v.racine.classList.remove("encours"));
+    const racine = document.createElement("span");
+    racine.className = "tseg encours";
+    const stable = document.createElement("span"), queue = document.createElement("span"), mot = document.createElement("span");
+    mot.className = "mot";
+    racine.append(stable, queue, mot);
+    el.flux.append(racine, " ");
+    l = { racine, stable, queue, mot, texte: "", blanc: false };
     etat.lignes.set(id, l);
-    while (etat.lignes.size > MAX_LIGNES) {
-      const [ancien, valeur] = etat.lignes.entries().next().value;
+    while (etat.lignes.size > MAX_SEGMENTS) {                     // les plus anciens sont hors de vue, sous le fondu du haut
+      const [ancien, v] = etat.lignes.entries().next().value;
       etat.lignes.delete(ancien);
-      valeur.racine.remove();
+      const suivant = v.racine.nextSibling;
+      v.racine.remove(); if (suivant && suivant.nodeType === 3) suivant.remove();
     }
     return l;
+  }
+
+  function poserGris(l, msg) {
+    if (l.blanc) return;                                // un segment confirmé ne revient pas en gris
+    const fr = msg.fr || "";
+    let stable = typeof msg.fr_stable === "string" ? msg.fr_stable : prefixeCommun(l.texte, fr);
+    if (!fr.startsWith(stable)) stable = prefixeCommun(stable, fr);
+    const m = /\S+\s*$/.exec(fr);
+    const iMot = m ? m.index : fr.length;
+    const avant = fr.slice(0, iMot);
+    const s = Math.min(stable.length, avant.length);
+    poser(l.stable, avant.slice(0, s)); poser(l.queue, avant.slice(s)); poser(l.mot, fr.slice(iMot));
+    l.texte = fr;
+  }
+
+  function poserDefinitif(l, msg) {
+    const fr = msg.fr || "";
+    if (l.blanc && l.texte === fr) return;
+    l.blanc = true; l.texte = fr;
+    l.racine.textContent = fr;                          // une seule couleur : le fondu gris -> foncé est une transition CSS
+    l.racine.classList.remove("encours");
+    l.racine.classList.add("definitif");
   }
 
   function afficher(msg) {
@@ -77,13 +114,25 @@
       return;
     }
     const l = ligne(msg.id_segment);
-    l.fr.textContent = msg.fr || "";
-    l.ar.textContent = msg.ar || "";
-    l.racine.classList.toggle("definitif", msg.type === "definitif");
+    if (msg.ar != null) poser(el.arabeCourant, msg.ar);
     if (msg.type === "definitif") {
+      poserDefinitif(l, msg);
       if (msg.retard_s != null) el.retard.textContent = secondes(msg.retard_s);
-      parler(msg.fr);
-    }
+      parler(msg.fr);                                   // seulement les définitifs, et seulement si la voix est activée
+    } else poserGris(l, msg);
+  }
+
+  // Le texte pousse les anciennes lignes vers le haut : elles glissent (transform) au lieu de sauter.
+  let hauteurFlux = 0;
+  if (window.ResizeObserver) {
+    new ResizeObserver(() => {
+      const h = el.flux.offsetHeight;
+      const d = h - hauteurFlux;
+      hauteurFlux = h;
+      if (d > 2 && !reduit() && el.flux.animate && hauteurFlux > d) {
+        el.flux.animate([{ transform: `translateY(${d}px)` }, { transform: "none" }], { duration: 200, easing: "cubic-bezier(0.2, 0, 0, 1)" });
+      }
+    }).observe(el.flux);
   }
 
   function traiter(msg) {
@@ -99,27 +148,28 @@
   function traiterEtat(m) {
     if (m.sid && !etat.sid) { etat.sid = m.sid; montrerLien(); }
     if (m.etat === "pret" || m.etat === "en_cours") { etat.pret = true; }
-    const suffixe = m.factice ? " (moteur factice)" : "";
+    const suffixe = m.factice ? " · démo" : "";
     montrerEtat(m.etat, m.etat === "erreur" ? "Erreur : " + (m.message || "") : (ETATS[m.etat] || m.etat) + suffixe);
     if (m.niveau_db != null && etat.source !== "micro" && etat.source !== "onglet") niveauDb(m.niveau_db);
     if (m.duree_s) el.duree.textContent = horloge(m.duree_s);
-    if (m.retard_moyen_s != null) el.retard.textContent = secondes(m.retard_moyen_s) + " en moyenne";
+    if (m.retard_moyen_s != null) el.retard.textContent = secondes(m.retard_moyen_s);
     if (m.etat === "erreur") { arretLocal(); }
     if (m.etat === "pret" && etat.attendLecture) { etat.attendLecture = false; el.video.play().catch(() => {}); }
     if (m.etat === "pret" && etat.source === "fichier") el.aide.textContent = "Modèles prêts : lance la lecture de la vidéo.";
   }
 
-  function niveauDb(db) { el.niveau.style.width = Math.max(0, Math.min(100, ((db + 60) / 60) * 100)) + "%"; }
+  // niveau du son : 0 à 1, lu par la sphère d'écoute et les sept pastilles
+  function niveauDb(db) {
+    const v = Math.max(0, Math.min(1, (db + 60) / 60));
+    document.documentElement.style.setProperty("--niveau", v.toFixed(3));
+  }
 
   function finir(m) {
     etat.termine = true;
-    if (m.bilan && m.bilan.nb_segments) {
-      const b = m.bilan;
-      el.bilan.hidden = false;
-      el.bilan.innerHTML = `<b>${b.nb_segments}</b> segments · retard moyen <b>${secondes(b.retard_moyen_s)}</b>, ` +
-        `maximum <b>${secondes(b.retard_max_s)}</b> · réécriture du gris au blanc <b>${String(b.taux_reecriture_pct).replace(".", ",")} %</b>`;
+    if (m.bilan && m.bilan.nb_segments && etat.sid) {      // le bilan chiffré va dans le rapport, pas sur cet écran
+      try { sessionStorage.setItem("kalam.bilan." + etat.sid, JSON.stringify(m.bilan)); } catch (e) { /* stockage indisponible */ }
     }
-    if (etat.sid) el.rapport.hidden = false;
+    if (etat.sid) el.rapport.disabled = false;
     if (!etat.stopVolontaire) montrerEtat("termine", m.erreur ? "Erreur : " + m.erreur : "Terminé");
     basculerActif(false);
   }
@@ -207,23 +257,32 @@
       try { await api("/api/live/" + r.sid + "/demarrer", { method: "POST" }); } catch (e) { montrerEtat("erreur", e.message); }
     };
     el.video.addEventListener("play", surLecture);
+    el.video.addEventListener("timeupdate", () => { if (el.video.duration) el.tete.style.left = (100 * el.video.currentTime / el.video.duration) + "%"; });
     el.video.addEventListener("ended", () => { if (etat.actif) arreter(); });
   }
 
   // ---------------------------------------------------------------- démarrer / arrêter
+  function libelle(bouton, texte) { const n = bouton.querySelector(".lib, .lib-opt"); if (n) n.textContent = texte; }
+
   function basculerActif(actif) {
     etat.actif = actif;
-    el.principal.textContent = actif ? "Arrêter" : "Démarrer";
+    libelle(el.principal, actif ? "arrêter" : "démarrer");
+    el.principal.setAttribute("aria-label", actif ? "Arrêter l'écoute" : "Démarrer l'écoute");
     el.principal.classList.toggle("actif", actif);
+    document.body.classList.toggle("actif", actif);
+    document.body.classList.toggle("ecoute", actif && etat.lignes.size === 0);
+    if (actif) feuille.fermer();                // en direct, les options se replient : place aux sous-titres
     document.querySelectorAll(".source").forEach((b) => (b.disabled = actif));
     if (actif) verrouEcran(); else relacherEcran();
   }
 
   function reinitialiser() {
     etat.lignes.forEach((l) => l.racine.remove()); etat.lignes.clear();
+    el.flux.replaceChildren(); hauteurFlux = 0;
+    poser(el.arabeCourant, "");
     etat.sid = null; etat.pret = false; etat.termine = false; etat.stopVolontaire = false; etat.attendLecture = false;
-    el.bilan.hidden = true; el.resultat.hidden = true; el.rapport.hidden = true;
-    el.retard.textContent = "–"; el.duree.textContent = "0:00"; el.niveau.style.width = "0";
+    el.bilan.hidden = true; el.resultat.hidden = true; el.rapport.disabled = true;
+    el.retard.textContent = ""; el.duree.textContent = "00:00:00"; niveauDb(-60);
   }
 
   async function demarrer() {
@@ -238,6 +297,7 @@
     } catch (e) {
       montrerEtat("erreur", e.message || String(e));
       arretLocal();
+      feuille.ouvrir();
     }
   }
 
@@ -264,55 +324,19 @@
     if (ws) try { ws.close(); } catch (e) { /* fermé */ }
   }
 
-  // ---------------------------------------------------------------- rapport
-  // POST /api/sessions/{sid}/rapport lance la génération (202) ; on interroge GET jusqu'à « pret » ou « erreur ».
-  const pause = (ms) => new Promise((r) => setTimeout(r, ms));
-
+  // ---------------------------------------------------------------- export : on clôt la session, la page /rapport prend le relais
   async function genererRapport() {
     if (!etat.sid) return;
     const sid = etat.sid;
     el.rapport.disabled = true;
-    el.resultat.hidden = false;
-    el.resultat.textContent = "Fin de la session…";
     try {
       if (etat.actif || !etat.termine) await arreter();
-      await api("/api/sessions/" + sid + "/rapport", { method: "POST", headers: { "Content-Type": "application/json" }, body: "{}" });
-      for (;;) {
-        const j = await (await api("/api/sessions/" + sid + "/rapport")).json();
-        if (j.etat === "pret") { montrerRapport(sid, j); break; }
-        if (j.etat === "erreur") throw new Error(j.erreur || "échec de la génération");
-        el.resultat.textContent = (j.etape || "Génération du rapport") + (j.progression ? " (" + Math.round(j.progression * 100) + " %)" : "…");
-        await pause(1500);
-      }
+      location.href = url("/rapport?sid=" + encodeURIComponent(sid) + "&generer=1");
     } catch (e) {
-      el.resultat.textContent = /404|Not Found/.test(e.message)
-        ? "Le rapport n'est pas disponible sur ce serveur."
-        : /409/.test(e.message) || /aucun segment/.test(e.message) ? "Aucun segment à résumer : la session est vide."
-        : "Rapport impossible : " + e.message;
-    } finally {
+      el.resultat.hidden = false;
+      el.resultat.textContent = "Fin de session impossible : " + e.message;
       el.rapport.disabled = false;
     }
-  }
-
-  function montrerRapport(sid, j) {
-    const rapport = j.rapport || j;
-    el.resultat.replaceChildren();
-    const titre = document.createElement("div");
-    titre.innerHTML = "<b>Rapport prêt</b>";
-    el.resultat.append(titre);
-    if (rapport.resume_markdown) {
-      const pre = document.createElement("pre");
-      pre.textContent = rapport.resume_markdown;
-      el.resultat.append(pre);
-    }
-    const liens = document.createElement("div");
-    for (const nom of rapport.fichiers || ["transcript.md", "resume.md", "sous_titres.srt"]) {
-      const a = document.createElement("a");
-      a.href = url("/api/sessions/" + sid + "/fichiers/" + nom);
-      a.target = "_blank"; a.rel = "noopener"; a.textContent = nom;
-      liens.append(a, document.createTextNode("  "));
-    }
-    el.resultat.append(liens);
   }
 
   // ---------------------------------------------------------------- écran, voix, partage
@@ -345,18 +369,20 @@
     el.optLien.hidden = false;
   }
 
-  // ---------------------------------------------------------------- commandes
+  // ---------------------------------------------------------------- options
+  const AIDES = {
+    micro: "Micro de cet appareil. Pose le téléphone près du haut-parleur de la télévision.",
+    onglet: "Son d'un onglet Chrome : coche « Partager l'audio de l'onglet ».",
+    url: "Le serveur écoute le lien (YouTube en direct, flux HLS).",
+    fichier: "Le fichier est rejoué en temps réel, avec la vidéo au-dessus.",
+  };
   function choisirSource(s) {
     etat.source = s;
     document.querySelectorAll(".source").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.source === s)));
+    K.segment(el.segmentSource, s);
     el.champUrl.hidden = s !== "url";
     el.champFichier.hidden = s !== "fichier";
-    el.aide.textContent = {
-      micro: "Micro de cet appareil. Pose le téléphone près du haut-parleur de la télévision.",
-      onglet: "Son d'un onglet Chrome (ordinateur) : coche « Partager l'audio de l'onglet ».",
-      url: "Le serveur écoute le lien (YouTube en direct, flux HLS) : son propre, plusieurs écrans possibles.",
-      fichier: "Le fichier est rejoué en temps réel, avec la vidéo et les sous-titres en dessous.",
-    }[s];
+    el.aide.textContent = AIDES[s];
     el.zoneVideo.hidden = true;
     pref.ecrire("source", s);
   }
@@ -368,15 +394,27 @@
     appliquer(v);
   }
 
+  let feuille;
   function init() {
+    feuille = K.lierFeuille($("panneau"), $("bascule"));
+    document.querySelectorAll("[data-nav]").forEach((a) => (a.href = K.lien(a.getAttribute("href"))));
+    const M = window.MARQUE;
+    if (M) {
+      document.title = M.nom + " · Direct";
+      document.querySelectorAll("[data-marque]").forEach((n) => { n.textContent = M[n.dataset.marque] || ""; });
+    }
+    majDate(); setInterval(majDate, 20000);
+
+    // Onglet : seulement là où le navigateur sait le capturer (ordinateur) ; sinon Micro · Lien · Fichier
+    const ongletOk = navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia && !matchMedia("(pointer: coarse)").matches;
+    if (!ongletOk) document.querySelector('[data-source="onglet"]').hidden = true;
     document.querySelectorAll(".source").forEach((b) => b.addEventListener("click", () => choisirSource(b.dataset.source)));
-    if (!(navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia)) document.querySelector('[data-source="onglet"]').hidden = true;
     el.principal.addEventListener("click", () => (etat.actif ? arreter() : demarrer()));
     el.rapport.addEventListener("click", genererRapport);
 
     let echelle = pref.lire("echelle", 1);
     const appliquerEchelle = () => { document.documentElement.style.setProperty("--echelle", echelle); pref.ecrire("echelle", echelle); };
-    $("opt-plus").addEventListener("click", () => { echelle = Math.min(1.8, +(echelle + 0.1).toFixed(2)); appliquerEchelle(); });
+    $("opt-plus").addEventListener("click", () => { echelle = Math.min(1.6, +(echelle + 0.1).toFixed(2)); appliquerEchelle(); });
     $("opt-moins").addEventListener("click", () => { echelle = Math.max(0.7, +(echelle - 0.1).toFixed(2)); appliquerEchelle(); });
     appliquerEchelle();
 
@@ -384,8 +422,7 @@
     arabe.addEventListener("click", () => basculer(arabe, "arabe", (v) => document.body.classList.toggle("arabe", v)));
     if (pref.lire("arabe", false)) { arabe.setAttribute("aria-pressed", "true"); document.body.classList.add("arabe"); }
 
-    const epure = $("opt-epure");
-    epure.addEventListener("click", () => { document.body.classList.add("epure"); });
+    $("opt-epure").addEventListener("click", () => { feuille.fermer(); document.body.classList.add("epure"); });
     el.scene.addEventListener("click", () => document.body.classList.remove("epure"));
 
     el.optVoix.addEventListener("click", () => basculer(el.optVoix, "voix", (v) => {
@@ -394,14 +431,15 @@
     }));
     el.optLien.addEventListener("click", async () => {
       const lien = location.origin + "/live?sid=" + etat.sid + (JETON ? "&token=" + encodeURIComponent(JETON) : "");
-      try { await navigator.clipboard.writeText(lien); el.optLien.textContent = "Lien copié"; } catch (e) { prompt("Lien à ouvrir sur l'autre écran :", lien); }
-      setTimeout(() => (el.optLien.textContent = "Copier le lien"), 2000);
+      try { await navigator.clipboard.writeText(lien); libelle(el.optLien, "Lien copié"); } catch (e) { prompt("Lien à ouvrir sur l'autre écran :", lien); }
+      setTimeout(() => libelle(el.optLien, "Copier le lien"), 2000);
     });
 
     // La lecture vocale n'apparaît que si le serveur sait parler (GET /api/tts fourni par ailleurs).
     fetch(url("/openapi.json")).then((r) => r.json()).then((o) => { if (o.paths && o.paths["/api/tts"]) el.optVoix.hidden = false; }).catch(() => {});
 
     choisirSource(pref.lire("source", "micro"));
+    if (!document.querySelector(`.source[data-source="${etat.source}"]:not([hidden])`)) choisirSource("micro");
     if (etat.sid) {                                      // lien partagé : on regarde, on ne diffuse pas
       document.body.classList.add("spectateur");
       el.optLien.hidden = false;
@@ -411,6 +449,7 @@
       fetch(url("/api/live/precharger"), { method: "POST", headers: entetes() }).catch(() => {});   // charge les modèles pendant qu'on choisit
       fetch(url("/api/live/statut"), { headers: entetes() }).then((r) => r.json()).then((s) => {
         if (!s.moteur_disponible) montrerEtat("erreur", s.raison || "Moteur indisponible");
+        $("modeles").textContent = s.factice ? "démonstration" : s.groupe_charge ? "chargés" : "à charger";
       }).catch(() => {});
     }
   }

@@ -1,0 +1,46 @@
+.vue { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.msg { margin-top: var(--s2); font-size: 15px; }
+.meta { font-size: 13px; color: var(--texte-2); }
+.bas { flex: none; margin-top: auto; display: flex; justify-content: center; padding-block: var(--s2); }
+
+.zone { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center; min-height: 128px; padding: var(--s3); border: 1px dashed var(--gris-clair); border-radius: 12px; cursor: pointer; transition: border-color var(--d-moyen) var(--ease), background-color var(--d-moyen) var(--ease); }
+.zone-titre { font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
+.zone.survol, .zone:focus-within, .zone.rempli { border-color: var(--texte); background: var(--carte); }
+.zone.rempli, .zone.survol { border-style: solid; }
+.moteur { display: grid; gap: var(--s1); margin-top: var(--s3); }
+.aide-moteur { font-size: 13px; color: var(--texte-2); min-height: 3.2em; max-width: 52ch; }
+
+.etapes { border-bottom: 1px solid var(--filet); }
+.etapes li { display: flex; justify-content: space-between; gap: var(--s2); min-height: 44px; align-items: center; border-top: 1px solid var(--filet); color: var(--gris-clair); }
+.etapes li[data-etat="cours"] { color: var(--texte); font-weight: 600; }
+.etapes li[data-etat="fait"] { color: var(--texte-2); }
+.etapes .valeur { font-family: var(--police-mono); font-variation-settings: "MONO" 100; font-size: 13px; font-weight: 400; }
+.barre { height: 2px; background: var(--filet); overflow: hidden; margin: var(--s2) 0; }
+.barre i { display: block; height: 100%; width: 100%; background: var(--texte); transform-origin: left; transform: scaleX(0); transition: transform var(--d-moyen) var(--ease); }
+.barre.indetermine i { width: 35%; transform: none; animation: glisse 1.4s var(--ease) infinite; }
+@keyframes glisse { from { transform: translateX(-100%); } to { transform: translateX(300%); } }
+
+/* résultat : vidéo en haut, transcript qui défile dessous */
+.duo { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: var(--s2); }
+.cadre { flex: none; }
+.cadre video { width: 100%; max-height: 30dvh; display: block; background: #000; border-radius: 12px; }
+.transcript { padding: 0; }
+.segment { display: grid; grid-template-columns: 56px 1fr; gap: var(--s2); padding: var(--s2) 0; border-top: 1px solid var(--filet); transition: box-shadow var(--d-moyen) var(--ease); }
+.segment[data-actif="true"] { box-shadow: inset 2px 0 0 var(--texte); padding-left: var(--s1); }
+.segment .t { min-height: 24px; align-self: start; padding: 0; border: 0; background: none; text-align: left; color: var(--texte-2); }
+.segment[data-actif="true"] .t { color: var(--orange); }
+.segment .fr { line-height: 1.4; }
+.segment .ar { margin-top: 4px; font-size: 15px; line-height: 1.8; color: var(--texte-2); text-align: right; }
+.commandes { flex: none; display: flex; justify-content: space-between; align-items: center; padding-block: var(--s2) var(--s1); }
+.commandes .rond .disque { width: 48px; height: 48px; }
+.vue .tete-page { padding-bottom: var(--s1); }
+#rapport-note { text-align: right; padding-bottom: var(--s1); }
+
+.liste-fichiers .ligne-opt { text-decoration: none; color: inherit; }
+
+@media (min-width: 860px) {
+  .duo { flex-direction: row; gap: var(--s4); }
+  .cadre { flex: 5; position: sticky; top: 0; align-self: flex-start; }
+  .transcript { flex: 6; }
+  .cadre video { max-height: 60dvh; }
+}

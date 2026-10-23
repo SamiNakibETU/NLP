@@ -6,6 +6,8 @@
     GET  /api/jobs/{id}                 état et résultat d'un travail lancé avec wait=false
     GET  /api/jobs/{id}/subtitles.srt   sous-titres d'un travail terminé (ou .vtt)
     GET  /live                          sous-titres en direct (micro, onglet, lien YouTube/HLS, fichier) : voir live.py
+    GET  /  /video  /rapport  /sessions pages de l'interface : voir pages.py
+    GET  /atelier                       interface Gradio (comparaison des moteurs, démonstration technique)
 
 Les modèles sont chargés au premier appel du moteur demandé ; un seul reste en mémoire (voir lazy_engines.py).
 Un jeton facultatif protège l'API : variable PORTEPAROLE_API_TOKEN, en-tête `Authorization: Bearer <jeton>`.
@@ -14,7 +16,6 @@ from __future__ import annotations
 
 import os
 import shutil
-import subprocess
 import tempfile
 import threading
 import uuid
@@ -29,6 +30,8 @@ import app as ui
 import front
 import live
 import media
+import pages
+import session_report
 from engines import Result, to_srt, to_vtt
 
 TOKEN = os.environ.get("PORTEPAROLE_API_TOKEN") or None
@@ -66,15 +69,23 @@ def to_wav(src: str, folder: str) -> str:
         raise HTTPException(500 if "n'est pas installé" in str(exc) else 400, str(exc))
 
 
-def run_engine(engine: str, wav: str, task: str) -> dict:
-    return result_json(ui.ENGINES[engine].run(wav, task))
+def run_engine(engine: str, wav: str, task: str, titre: str = "") -> dict:
+    """Lance le moteur sous le verrou GPU global, puis garde audio et segments dans une Session (champ `sid`)."""
+    with session_report.verrou_gpu():
+        res = ui.ENGINES[engine].run(wav, task)
+    out = result_json(res)
+    try:
+        out["sid"] = front.creer_session(res, wav, titre).sid
+    except Exception:                                         # noqa: BLE001 : les sous-titres restent utilisables sans rapport
+        out["sid"] = None
+    return out
 
 
-def execute(job_id: str, engine: str, wav: str, task: str, folder: str) -> None:
+def execute(job_id: str, engine: str, wav: str, task: str, folder: str, titre: str = "") -> None:
     with JOBS_LOCK:
         JOBS[job_id]["status"] = "running"
     try:
-        out = run_engine(engine, wav, task)
+        out = run_engine(engine, wav, task, titre)
         with JOBS_LOCK:
             JOBS[job_id].update(status="done", result=out)
     except Exception as exc:                                  # noqa: BLE001 : on renvoie l'erreur au client
@@ -94,7 +105,7 @@ def engines():
     loaded = getattr(next((e.pool for e in ui.ENGINES.values() if hasattr(e, "pool")), None), "loaded", None)
     return {"loaded_group": loaded, "engines": [
         {"name": n, "label": e.label, "description": e.blurb, "produces_arabic": e.produces_arabic,
-         "status": e.status} for n, e in ui.ENGINES.items()]}
+         "status": e.status, "group": getattr(e, "group", None)} for n, e in ui.ENGINES.items()]}
 
 
 @api.post("/api/translate", dependencies=[Depends(check_token)])
@@ -123,7 +134,7 @@ async def translate(file: UploadFile = File(...), engine: str = Form(None), task
     job_id = uuid.uuid4().hex[:12]
     with JOBS_LOCK:
         JOBS[job_id] = {"id": job_id, "engine": engine, "task": task, "status": "queued"}
-    fut = POOL.submit(execute, job_id, engine, wav, task, folder)
+    fut = POOL.submit(execute, job_id, engine, wav, task, folder, src.name)
     if wait.lower() in ("false", "0", "no", "non"):
         return {"job_id": job_id, "status": "queued", "poll": f"/api/jobs/{job_id}"}
     await __import__("asyncio").get_running_loop().run_in_executor(None, fut.result)
@@ -153,7 +164,9 @@ def job_subtitles(job_id: str, ext: str):
     return PlainTextResponse(j["result"][ext])
 
 
-# Direct : /live, /ws/live, /ws/regarder/{sid}, /api/live/*  (doit être monté avant l'interface Gradio, qui prend « / »)
+# Pages (accueil, vidéo, rapport) et fichiers statiques
+api.include_router(pages.router)
+# Direct : /live, /ws/live, /ws/regarder/{sid}, /api/live/*  (à monter avant l'interface Gradio)
 api.include_router(live.router)
 try:                                                        # rapport de fin de session, écrit à part
     import session_api
@@ -164,6 +177,6 @@ except ImportError:
 if os.environ.get("PORTEPAROLE_FRONT") == "old":          # ancienne interface (presse, vidéos, atelier…)
     if not ui.FROZEN:
         ui.start_background()
-    app = gr.mount_gradio_app(api, ui.build_app(), path="/", **ui.launch_kwargs())
+    app = gr.mount_gradio_app(api, ui.build_app(), path="/atelier", **ui.launch_kwargs())
 else:                                                       # interface simple : on dépose un mp4 ou un audio
-    app = gr.mount_gradio_app(api, front.build_front(ui.ENGINES, ui.REAL), path="/", **front.launch_kwargs())
+    app = gr.mount_gradio_app(api, front.build_front(ui.ENGINES, ui.REAL), path="/atelier", **front.launch_kwargs())

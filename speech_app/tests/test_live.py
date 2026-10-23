@@ -75,7 +75,7 @@ class TestLive(unittest.TestCase):
     def test_page_et_ressources(self):
         r = self.client.get("/live")
         self.assertEqual(r.status_code, 200)
-        self.assertIn("Porte-Parole", r.text)
+        self.assertIn("marque.js", r.text)          # le nom vit dans static/marque.js
         for nom in ("live.js", "live.css", "pcm-worklet.js"):
             self.assertEqual(self.client.get(f"/live/assets/{nom}").status_code, 200, nom)
         self.assertEqual(self.client.get("/live/assets/../live.py").status_code, 404)

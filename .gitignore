@@ -73,3 +73,6 @@ design_inspiration/
 speech_app/static/fonts/
 *.woff2
 *.otf
+# Icones de l'appli (PWA) : exception aux regles *.png / *.svg ci-dessus
+!speech_app/static/icone-*.png
+!speech_app/static/icone.svg

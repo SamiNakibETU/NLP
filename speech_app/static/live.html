@@ -3,65 +3,97 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-<meta name="theme-color" content="#0b0d10">
-<meta name="color-scheme" content="dark">
-<title>Porte-Parole, sous-titres en direct</title>
+<meta name="theme-color" content="#f2f2f0">
+<meta name="color-scheme" content="light">
+<title>Kalam · Direct</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/static/icone-180.png">
+<link rel="icon" href="/static/icone.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kalam">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="/static/base.css">
 <link rel="stylesheet" href="/live/assets/live.css">
 </head>
 <body>
-<div class="app">
-  <header class="barre">
-    <div class="marque">Porte-Parole <span>en direct</span></div>
-    <div class="etat" role="status">
-      <span id="pastille" class="pastille" data-etat="repos"></span>
-      <span id="etat-texte">Prêt</span>
-    </div>
+<div class="ecran">
+  <header class="entete">
+    <a id="logo" class="logo" href="/" data-nav aria-label="Kalam, accueil">
+      <span class="caps" data-marque="nom">Kalam</span><span class="logo-ar" data-marque="arabe" lang="ar" dir="rtl">كلام</span>
+    </a>
+    <nav class="nav" aria-label="Navigation">
+      <a href="/" data-nav aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10v4M9 7v10M13 4v16M17 8v8M21 11v2"/></svg><span>Direct</span></a>
+      <a href="/video" data-nav><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M10 9.5v5l4-2.5z" fill="currentColor"/></svg><span>Vidéo</span></a>
+      <a href="/sessions" data-nav><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h9"/></svg><span>Sessions</span></a>
+    </nav>
   </header>
+
+  <div class="statut" role="status">
+    <p id="date" class="mono"></p>
+    <p class="etat"><span id="pastille" class="pastille" data-etat="repos"></span><span id="etat-texte" class="caps" data-etat="repos">Prêt</span><span class="retard-groupe caps"><span aria-hidden="true">·</span><span id="retard" class="nombres"></span></span></p>
+  </div>
 
   <section id="zone-video" class="zone-video" hidden>
     <video id="video" controls playsinline></video>
   </section>
 
   <main id="scene" class="scene" aria-live="polite" aria-label="Sous-titres">
-    <p id="invite" class="invite">Choisis une source, puis appuie sur Démarrer.<br>Les sous-titres français apparaissent ici : gris pendant que la phrase se construit, blanc quand elle est confirmée.</p>
+    <p id="invite" class="invite">Appuie sur démarrer.<br>Les sous-titres français s'écrivent ici, au fil de la parole.</p>
+    <div id="ecoute" class="ecoute" aria-hidden="true"><span class="sphere"></span><span class="caps">À l'écoute</span></div>
+    <p id="ar-courant" class="ar-courant" lang="ar" dir="rtl"></p>
+    <div id="flux" class="flux" lang="fr"></div>
   </main>
 
-  <div class="mesures" aria-label="Mesures">
-    <span>Retard <b id="retard">–</b></span>
-    <span class="niveau" title="Niveau sonore"><i id="niveau"></i></span>
-    <span id="duree">0:00</span>
+  <div class="repere">
+    <span id="niveau" class="niveau" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <span id="duree" class="mono">00:00:00</span>
   </div>
+  <div class="regle" aria-hidden="true"><span id="tete" class="tete"></span></div>
 
-  <section id="panneau" class="panneau">
-    <div id="bloc-sources">
-      <div class="sources" role="radiogroup" aria-label="Source audio">
-        <button class="source" role="radio" data-source="micro" aria-checked="true">Micro</button>
-        <button class="source" role="radio" data-source="onglet" aria-checked="false">Onglet</button>
-        <button class="source" role="radio" data-source="url" aria-checked="false">Lien</button>
-        <button class="source" role="radio" data-source="fichier" aria-checked="false">Fichier</button>
+  <div class="commandes">
+    <button id="bascule" class="texte caps" type="button" aria-expanded="false" aria-controls="reglages">Options</button>
+    <button id="principal" class="rond" type="button" aria-label="Démarrer l'écoute">
+      <span class="disque">
+        <svg class="ico-start" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg>
+        <svg class="ico-stop" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1" fill="currentColor"/></svg>
+      </span>
+      <span class="lib">démarrer</span>
+    </button>
+    <button id="rapport" class="texte caps" type="button" disabled>Exporter</button>
+  </div>
+  <div id="bilan" hidden></div>
+  <p id="resultat" class="aide" hidden></p>
+</div>
+
+<!-- Options : la feuille qui monte du bas -->
+<div id="panneau" class="feuille" role="dialog" aria-modal="true" aria-label="Options" data-ouvert="false">
+  <div class="voile"></div>
+  <div id="reglages" class="corps" tabindex="-1">
+    <button class="poignee" type="button" aria-label="Fermer"></button>
+    <p class="caps titre-feuille">Options</p>
+    <div id="bloc-sources" class="bloc-sources">
+      <div id="segment-source" class="seg" role="radiogroup" aria-label="Source audio">
+        <button class="source" type="button" role="radio" data-source="micro" aria-checked="true">Micro</button>
+        <button class="source" type="button" role="radio" data-source="url" aria-checked="false">Lien</button>
+        <button class="source" type="button" role="radio" data-source="fichier" aria-checked="false">Fichier</button>
+        <button class="source" type="button" role="radio" data-source="onglet" aria-checked="false">Onglet</button>
       </div>
       <p id="aide-source" class="aide"></p>
       <input id="champ-url" class="champ" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" hidden
              placeholder="Lien YouTube en direct ou flux .m3u8" aria-label="Lien de la vidéo ou du direct">
       <input id="champ-fichier" class="champ" type="file" accept="audio/*,video/*" hidden aria-label="Fichier audio ou vidéo">
     </div>
-
-    <button id="principal" class="principal" type="button">Démarrer</button>
-
-    <div class="options">
-      <button id="opt-arabe" class="puce" type="button" aria-pressed="false">Arabe</button>
-      <button id="opt-moins" class="puce" type="button" aria-label="Texte plus petit">A−</button>
-      <button id="opt-plus" class="puce" type="button" aria-label="Texte plus grand">A+</button>
-      <button id="opt-voix" class="puce" type="button" aria-pressed="false" hidden>Lecture vocale</button>
-      <button id="opt-lien" class="puce" type="button" hidden>Copier le lien</button>
-      <button id="opt-epure" class="puce" type="button" aria-pressed="false">Masquer</button>
-    </div>
-
-    <button id="rapport" class="secondaire" type="button" hidden>Terminer et générer le rapport</button>
-    <div id="bilan" class="bilan" hidden></div>
-    <div id="resultat" class="bilan" hidden></div>
-  </section>
+    <button id="opt-arabe" class="ligne-opt" type="button" aria-pressed="false"><span>Texte arabe</span><span class="val"></span></button>
+    <div class="ligne-opt"><span>Taille du texte</span><span class="taille"><button id="opt-moins" type="button" aria-label="Texte plus petit">A−</button><button id="opt-plus" type="button" aria-label="Texte plus grand">A+</button></span></div>
+    <button id="opt-voix" class="ligne-opt" type="button" aria-pressed="false" hidden><span>Lecture vocale</span><span class="val"></span></button>
+    <button id="opt-lien" class="ligne-opt" type="button" hidden><span class="lib-opt">Copier le lien</span></button>
+    <button id="opt-epure" class="ligne-opt" type="button"><span>Plein écran</span></button>
+    <div class="ligne-opt"><span>Modèles</span><span id="modeles" class="val">–</span></div>
+  </div>
 </div>
+<script src="/static/marque.js"></script>
+<script src="/static/commun.js"></script>
 <script src="/live/assets/live.js"></script>
 </body>
 </html>

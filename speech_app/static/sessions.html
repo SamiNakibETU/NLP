@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f2f2f0">
+<title>Kalam · Sessions</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/static/icone-180.png">
+<link rel="icon" href="/static/icone.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kalam">
+<link rel="stylesheet" href="/static/base.css">
+</head>
+<body>
+<div class="ecran">
+  <header class="entete"></header>
+  <div class="tete-page">
+    <h1>Sessions</h1>
+    <div id="filtre" class="seg" role="radiogroup" aria-label="Filtre">
+      <button type="button" role="radio" data-valeur="toutes" aria-checked="true">Toutes</button>
+      <button type="button" role="radio" data-valeur="rapport" aria-checked="false">Avec rapport</button>
+    </div>
+  </div>
+  <main id="contenu" class="defile" aria-busy="true">
+    <ul id="liste" class="fil"><li class="squelette" style="height:64px"></li></ul>
+    <a class="texte caps lien-bas" href="/atelier" data-nav>Atelier technique &rsaquo;</a>
+  </main>
+</div>
+<script src="/static/marque.js"></script>
+<script src="/static/commun.js"></script>
+<script src="/static/sessions.js"></script>
+</body>
+</html>
