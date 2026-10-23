@@ -25,7 +25,14 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Poids de modèles entraînés et dossiers temporaires d'essai
-modeles/
+modeles/*
+# Sauf le projecteur S3 du temps 1 retenu (35 Mo) et ses mesures ; pas reprise.pt (état de l'optimiseur,
+# 104 Mo) ni hypotheses_test*.jsonl (textes MGB-2)
+!modeles/s3_temps1_50k/
+modeles/s3_temps1_50k/*
+!modeles/s3_temps1_50k/projecteur_meilleur.pt
+!modeles/s3_temps1_50k/evaluation_test.json
+!modeles/s3_temps1_50k/metriques.jsonl
 resultats/essai_*/
 resultats/resultats_essai.csv
 
