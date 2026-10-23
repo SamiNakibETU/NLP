@@ -8,6 +8,8 @@ Projet de groupe du cours de NLP, CY Tech, octobre 2026.
 
 Rapport : [rapport/rapport.pdf](rapport/rapport.pdf) (source LaTeX : [rapport/rapport.tex](rapport/rapport.tex)).
 
+Vidéo de présentation (3 min, démonstration sur le direct d'Al Jazeera) : [video/kalam-pitch.mp4](video/kalam-pitch.mp4).
+
 ## Architecture
 
 ```text
