@@ -1,0 +1,13 @@
+# API + modèles (en plus de requirements.txt). torch est déjà présent sur Colab et dans l'image CUDA.
+fastapi
+uvicorn[standard]
+python-multipart
+transformers>=5.4.0
+accelerate
+peft
+sentencepiece
+protobuf
+librosa
+pyyaml
+sacremoses
+brotli>=1.2          # httpx2 (huggingface_hub 2.x) appelle Brotli avec output_buffer_limit, absent de brotli 1.1
