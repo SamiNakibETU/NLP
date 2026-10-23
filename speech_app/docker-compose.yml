@@ -9,7 +9,7 @@ services:
       PORTEPAROLE_API_TOKEN: ${PORTEPAROLE_API_TOKEN:-}
     volumes:
       - ./hf_cache:/cache
-      - ${NLP_REPO_DIR}:/nlp:ro                 # clone de SamiNakibETU/NLP, branche benchmarking
+      - ${NLP_REPO_DIR}:/nlp:ro                 # clone de SamiNakibETU/NLP, branche integration
     deploy:
       resources:
         reservations:
