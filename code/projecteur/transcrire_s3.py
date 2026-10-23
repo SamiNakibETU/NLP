@@ -104,11 +104,15 @@ class TranscripteurS3:
         """Vrais modèles (HF_TOKEN dans .env pour l'encodeur) ; aucun repli vers des modèles factices."""
         config_s3 = yaml.safe_load(CHEMIN_CONFIG_S3.read_text(encoding="utf-8"))
         config_encodage = yaml.safe_load(CHEMIN_CONFIG_ENCODAGE.read_text(encoding="utf-8"))
-        reglages = config_s3[section]
+        reglages = dict(config_s3[section])
         chemin = Path(chemin_projecteur or chemin_projet(reglages["sortie"]) / "projecteur_meilleur.pt")
         if not chemin.is_file():
             raise FileNotFoundError(f"projecteur introuvable : {chemin} (lancer entrainer_temps1.py)")
         appareil = choisir_appareil()
+        # Entraîné en bf16 sur Mac ; un T4 (avant Ampere) n'a pas de bf16 natif, on passe en fp16.
+        if (appareil.type == "cuda" and reglages["precision_llm"] == "bfloat16"
+                and torch.cuda.get_device_capability(appareil)[0] < 8):
+            reglages["precision_llm"] = "float16"
         encodage = config_encodage["encodage"]
         encodeur = EncodeurS3.charger(encodage["modele_id"], appareil, PRECISIONS[encodage["precision"]])
         modele = construire_modele(config_s3, reglages, encodeur.d_enc, appareil)
@@ -179,6 +183,30 @@ class TranscripteurS3:
         for i, fr in zip(a_reprendre, self._generer_traductions([textes[i] for i in a_reprendre], t["gabarit_secours"])):
             traductions[i] = fr
         return traductions
+
+    @torch.no_grad()
+    def traduire_avec_contexte(self, texte: str, contexte: List[str]) -> str:
+        """Traduit ``texte`` en donnant au LLM les phrases arabes précédentes (``gabarit_contexte``).
+
+        Sert au mode direct : les pronoms et les noms propres se lèvent mieux avec les deux phrases d'avant.
+        Sans contexte, ou sans ``gabarit_contexte`` dans la config, c'est ``traduire`` ordinaire. Si de
+        l'arabe reste dans la sortie, repli sur ``gabarit_secours`` sans contexte.
+        """
+        if self.traduction is None:
+            raise ValueError("réglages de traduction absents (section traduction_texte de s3.yaml)")
+        if not texte.strip():
+            return ""
+        t = self.traduction
+        contexte = [c.strip() for c in contexte if c and c.strip()][-int(t.get("nb_phrases_contexte", 2)):]
+        if not contexte or "gabarit_contexte" not in t:
+            return self.traduire([texte])[0]
+        # Les accolades du contexte ne doivent pas être prises pour des champs par str.format.
+        bloc = "\n".join(contexte).replace("{", "{{").replace("}", "}}")
+        gabarit = t["gabarit_contexte"].replace("{contexte}", bloc)
+        fr = self._generer_traductions([texte], gabarit)[0]
+        if MOTIF_ARABE.search(fr):
+            fr = self._generer_traductions([texte], t["gabarit_secours"])[0]
+        return fr
 
     def _generer_traductions(self, textes: List[str], gabarit: str) -> List[str]:
         from transformers import LogitsProcessorList
