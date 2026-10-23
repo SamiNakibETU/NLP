@@ -32,13 +32,15 @@ Mesures sur FLEURS `ar_eg` → `fr_fr` (267 phrases, GPU T4), sauf mention contr
 | Système | Entrée | WER (%) | BLEU | chrF++ | COMET |
 |---|---|---:|---:|---:|---:|
 | S0 : Whisper small + Opus-MT | parole | 46,41 | 11,81 | 35,04 | 0,548 |
+| **S3 + NLLB-200 1,3B (chaîne de Kalam)** | parole | 21,12 | **24,57** | **48,79** | n.m. |
 | SeamlessM4T v2 large | parole | 8,58 | 17,38 | 46,22 | 0,690 |
+| S3 + Qwen2.5-1.5B | parole | 21,12 | 12,16 | 37,52 | n.m. |
 | NLLB-200 distillé 1,3B | texte arabe de référence | n.a. | 31,26 | 55,19 | 0,826 |
 | Opus-MT ar-fr | texte arabe de référence | n.a. | 24,31 | 49,58 | 0,761 |
 | Qwen2.5-1.5B-Instruct + LoRA | texte arabe de référence | n.a. | 17,33 | 42,05 | 0,763 |
 | S3 (transcription seule) | parole, test MGB-2 (1 000 segments) | 14,26 | n.a. | n.a. | n.a. |
 
-S3 est évalué en transcription sur le test MGB-2 ; le kernel `kaggle/nlp-eval-s3` permet de le mesurer aussi sur FLEURS. En direct sur Al Jazeera (Colab T4, essai final avec NLLB), le texte définitif s'affiche avec un retard médian de 2,9 s (moyen 3,8 s).
+La chaîne de Kalam, S3 suivi de NLLB-1.3B, obtient le meilleur score de bout en bout, bien que S3 transcrive FLEURS (parole lue, arabe égyptien) moins bien que son domaine d'entraînement (21,1 % de WER contre 14,3 % sur MGB-2). n.m. : non mesuré. En direct sur Al Jazeera (Colab T4, essai final avec NLLB), le texte définitif s'affiche avec un retard médian de 2,9 s (moyen 3,8 s).
 
 ## Tester en 10 minutes (Google Colab)
 

@@ -54,7 +54,16 @@ Bootstrap apparié (même fichier) :
 
 Seamless dépasse S0 sur toutes les mesures de qualité, avec des intervalles qui excluent zéro. L'écart vient surtout de la reconnaissance : Whisper small se trompe sur près d'un mot sur deux, et Opus-MT ne peut pas rattraper ces erreurs. Whisper-large-v3 transcrit presque aussi bien que Seamless (1,07 point de WER d'écart, significatif mais petit) et obtient le meilleur CER.
 
-**S3 est évalué en transcription sur MGB-2** (section suivante). Le kernel `kaggle/nlp-eval-s3` mesure S3 de bout en bout sur FLEURS ; il exige que le secret Kaggle `HF_TOKEN` soit attaché au notebook depuis l'interface Kaggle (un lancement en ligne de commande ne le transmet pas), ce qui explique l'absence de S3 dans `nlp-eval-systemes`.
+**S3 sur FLEURS** (`resultats/kaggle/nlp-eval-s3/resultats_s3.json`, kernel lancé depuis l'interface Kaggle, seul moyen de lui transmettre le secret `HF_TOKEN`) : WER 21,12 %, CER 10,91 %, RTF de bout en bout 0,365 (transcription 0,208, traduction par Qwen 0,157), pic de VRAM 7,06 Go. Le texte arabe produit par S3 a ensuite été traduit par quatre traducteurs :
+
+| Traduction du texte arabe de S3 | BLEU | chrF++ | Sorties en arabe (%) |
+|---|---:|---:|---:|
+| NLLB-200 1,3B | **24,57** | **48,79** | 0 |
+| Opus-MT ar-fr | 18,21 | 43,68 | 0 |
+| Qwen2.5-1.5B + LoRA | 13,53 | 37,83 | 0 |
+| Qwen2.5-1.5B | 12,16 | 37,23 | 5,6 |
+
+La chaîne de Kalam (S3 puis NLLB-1.3B) dépasse donc SeamlessM4T v2 de bout en bout (24,57 BLEU contre 17,38 ; 48,79 chrF++ contre 46,22), alors que S3 transcrit FLEURS moins bien (21,12 % contre 8,58 % de WER) : cette parole lue en arabe égyptien sort de son domaine d'entraînement, MGB-2, où son WER est de 14,26 %. Appliqué au texte de référence, NLLB-1.3B atteint 31,26 BLEU : les erreurs de reconnaissance coûtent environ sept points.
 
 ## 3. Traducteurs de texte
 

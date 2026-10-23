@@ -38,7 +38,7 @@ Sami Nakib, Fatima Aguel, Nicolas Wujczak, Paul Douat et Hanine Attia\\
 \end{center}
 
 \begin{abstract}
-\noindent Nous comparons trois chaînes de sous-titrage français pour des journaux télévisés arabes : une cascade Whisper small puis Opus-MT (S0), le traducteur de la parole SeamlessM4T v2, et S3, qui relie un encodeur audio gelé à Qwen2.5-1.5B par un projecteur entraîné. S3 transcrit l'arabe de MGB-2 avec un WER de 14,26\,\% sur un test filtré. Comme MGB-2 n'a pas de français, la traduction est évaluée sur FLEURS (267 phrases, références humaines), où Seamless dépasse S0 de 11,2 points de chrF++. Sur le texte arabe, le traducteur spécialisé NLLB-1.3B obtient 31,3 BLEU, alors que Qwen2.5-1.5B affiné par LoRA passe seulement de 15,2 à 17,3. L'application Kalam, construite à partir de ces mesures, a sous-titré le direct d'Al Jazeera avec un retard moyen de 3,8\,s lors d'un essai de cinq minutes.
+\noindent Nous comparons trois chaînes de sous-titrage français pour des journaux télévisés arabes : une cascade Whisper small puis Opus-MT (S0), le traducteur de la parole SeamlessM4T v2, et S3, qui relie un encodeur audio gelé à Qwen2.5-1.5B par un projecteur entraîné. S3 transcrit l'arabe de MGB-2 avec un WER de 14,26\,\% sur un test filtré. Comme MGB-2 n'a pas de français, la traduction est évaluée sur FLEURS (267 phrases, références humaines), où Seamless dépasse S0 de 11,2 points de chrF++. Sur le texte arabe, le traducteur spécialisé NLLB-1.3B obtient 31,3 BLEU, alors que Qwen2.5-1.5B affiné par LoRA passe seulement de 15,2 à 17,3. De bout en bout sur FLEURS, la chaîne S3 suivie de NLLB-1.3B atteint 24,6 BLEU, contre 17,4 pour Seamless. L'application Kalam, construite sur cette chaîne, a sous-titré le direct d'Al Jazeera avec un retard moyen de 3,8\,s lors d'un essai de cinq minutes.
 \end{abstract}
 
 \section{Introduction}
@@ -76,11 +76,13 @@ Les calculs ont tourné sur Kaggle (GPU T4, fp16) : BLEU et chrF++ avec sacreBLE
 Système & {WER (\%)} & {CER (\%)} & {BLEU} & {chrF++} & {COMET} & {RTF} & {VRAM (Go)}\\
 \midrule
 S0 : Whisper small + Opus-MT & 46.41 & 24.04 & 11.81 & 35.04 & 0.5477 & \bfseries 0.088 & \bfseries 0.73\\
-SeamlessM4T v2 large & \bfseries 8.58\rlap{$^a$} & 4.79\rlap{$^a$} & \bfseries 17.38 & \bfseries 46.22 & \bfseries 0.6901 & 0.146 & 3.48\\
+SeamlessM4T v2 large & \bfseries 8.58\rlap{$^a$} & 4.79\rlap{$^a$} & 17.38 & 46.22 & \bfseries 0.6901 & 0.146 & 3.48\\
 Whisper-large-v3 (transcription seule) & 9.65 & \bfseries 3.41 & {n.a.} & {n.a.} & {n.a.} & 0.157 & 3.37\\
+S3 : Cohere + projecteur + Qwen2.5-1.5B & 21.12 & 10.91 & 12.16 & 37.52 & {n.m.} & 0.365 & 7.06\\
+S3 + NLLB-1.3B (chaîne de Kalam) & 21.12 & 10.91 & \bfseries 24.57 & \bfseries 48.79 & {n.m.} & {n.m.} & {n.m.}\\
 \bottomrule
 \end{tabular}\\[2pt]
-{\footnotesize $^a$ Transcription arabe de Seamless (langue cible arabe, RTF 0,113). n.a. : sans objet.}
+{\footnotesize $^a$ Transcription arabe de Seamless (langue cible arabe, RTF 0,113). n.a. : sans objet ; n.m. : non mesuré.}
 \end{table}
 
 \begin{table}[htbp]
@@ -101,7 +103,7 @@ Qwen2.5-7B-Instruct nf4, 150 phrases & 24.27 & 50.80 & 0.8013 & 2.27 & 0.7 & 6.0
 \end{tabular}
 \end{table}
 
-Seamless bat S0 sur toutes les mesures de qualité, et le bootstrap le confirme : +11,18 points de chrF++ (de +9,19 à +13,57), +5,57 points de BLEU (de +3,19 à +7,71) et 37,8 points de WER en moins. La faiblesse de S0 tient à sa reconnaissance, car Whisper small se trompe sur près d'un mot sur deux et Opus-MT ne peut pas rattraper ces erreurs. Whisper-large-v3 transcrit presque aussi bien que Seamless : l'écart de WER, 1,07 point, est significatif mais petit, et Whisper a le meilleur CER. Côté texte, NLLB-1.3B l'emporte sur les trois métriques, Opus-MT est le plus rapide, et Qwen2.5-1.5B recopie l'arabe dans 8,2\,\% des cas. Ainsi, le meilleur système de bout en bout (17,4 BLEU) reste loin du meilleur traducteur de texte (31,3). La reconnaissance et la segmentation coûtent donc plus de dix points. FLEURS a aussi ses biais : la parole y est lue, en arabe standard, sur des thèmes encyclopédiques, et nos empreintes ECAPA n'y trouvent que des voix féminines. Ces scores ne valent donc qu'en partie pour un journal télévisé.
+Seamless bat S0 sur toutes les mesures de qualité, et le bootstrap le confirme : +11,18 points de chrF++ (de +9,19 à +13,57), +5,57 points de BLEU (de +3,19 à +7,71) et 37,8 points de WER en moins. La faiblesse de S0 tient à sa reconnaissance, car Whisper small se trompe sur près d'un mot sur deux et Opus-MT ne peut pas rattraper ces erreurs. Whisper-large-v3 transcrit presque aussi bien que Seamless : l'écart de WER, 1,07 point, est significatif mais petit, et Whisper a le meilleur CER. Côté texte, NLLB-1.3B l'emporte sur les trois métriques, Opus-MT est le plus rapide, et Qwen2.5-1.5B recopie l'arabe dans 8,2\,\% des cas. S3 transcrit FLEURS moins bien que Seamless (21,1\,\% de WER contre 8,6\,\%), car cette parole lue en arabe égyptien sort de son domaine d'entraînement, MGB-2, où il obtient 14,3\,\%. Pourtant, suivi de NLLB-1.3B, il donne le meilleur résultat de bout en bout, 24,6 BLEU et 48,8 chrF++, contre 17,4 et 46,2 pour Seamless : la qualité du traducteur compense une reconnaissance moins précise. Le même traducteur appliqué au texte de référence atteint 31,3 BLEU, si bien que les erreurs de reconnaissance coûtent environ sept points. Avec Qwen2.5-1.5B comme traducteur, la cascade S3 tombe à 12,2 BLEU. FLEURS a aussi ses biais : la parole y est lue, en arabe standard, sur des thèmes encyclopédiques, et nos empreintes ECAPA n'y trouvent que des voix féminines. Ces scores ne valent donc qu'en partie pour un journal télévisé.
 
 \section{Analyse du LLM}
 \label{sec:llm}
@@ -225,7 +227,7 @@ Session où le GPU saturait & 60 & 5.0 & {n.m.} & 10.6\\
 \end{table}
 
 \section{Limites et suite à donner}
-L'évaluation gagnerait à être élargie. Un jeu de test plus vaste, tiré de journaux télévisés récents et accompagné d'une notation humaine, mesurerait mieux la fidélité sur les noms propres et les chiffres que des métriques automatiques calculées sur de la parole lue. Il permettrait aussi de comparer d'autres modèles de reconnaissance et de traduction dans des conditions identiques, notamment la chaîne complète S3 suivie de NLLB. Un GPU plus puissant que la T4 ouvrirait d'autres pistes : prolonger l'entraînement du projecteur au-delà de 0,56 passage, essayer des décodeurs plus grands et réduire le retard du direct. La validation de S3, tirée du jeu d'entraînement, et le seuil de locuteurs, calibré sur des voix féminines, seraient à reprendre sur des données plus variées. Le produit a par ailleurs des limites d'usage.
+L'évaluation gagnerait à être élargie. Un jeu de test plus vaste, tiré de journaux télévisés récents et accompagné d'une notation humaine, mesurerait mieux la fidélité sur les noms propres et les chiffres que des métriques automatiques calculées sur de la parole lue. Il permettrait aussi de comparer d'autres modèles de reconnaissance et de traduction dans des conditions identiques. Un GPU plus puissant que la T4 ouvrirait d'autres pistes : prolonger l'entraînement du projecteur au-delà de 0,56 passage, essayer des décodeurs plus grands et réduire le retard du direct. La validation de S3, tirée du jeu d'entraînement, et le seuil de locuteurs, calibré sur des voix féminines, seraient à reprendre sur des données plus variées. Le produit a par ailleurs des limites d'usage.
 
 Kalam ne traduit que dans un sens, de l'arabe vers le français. Une conversation dans les deux sens, lors d'un entretien sur le terrain par exemple, demanderait le sens inverse, du français vers l'arabe, avec sa propre évaluation. La lecture vocale repose sur Piper, avec une voix générique que nous n'avons pas entraînée. Les dialectes restent par ailleurs hors du domaine d'entraînement : MGB-2 en contient une partie, mais FLEURS n'en a pas, et sur notre phrase piège en libanais les deux modèles rendent «~depuis le matin~» par «~dans l'après-midi~» ou «~à l'aube~».
 
