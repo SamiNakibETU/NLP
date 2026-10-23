@@ -1,46 +1,60 @@
+/* Écran Vidéo : une zone de dépôt, un menu, un bouton ; puis le lecteur et le transcript synchronisé. */
 .vue { flex: 1; min-height: 0; display: flex; flex-direction: column; }
-.msg { margin-top: var(--s2); font-size: 15px; }
-.meta { font-size: 13px; color: var(--texte-2); }
-.bas { flex: none; margin-top: auto; display: flex; justify-content: center; padding-block: var(--s2); }
+.msg { margin-top: 12px; font-size: 15px; }
+.actions { flex: none; display: grid; justify-items: center; gap: 12px; padding-block: 16px 20px; }
+.actions .grande { width: min(100%, 360px); }
 
-.zone { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; text-align: center; min-height: 128px; padding: var(--s3); border: 1px dashed var(--gris-clair); border-radius: 12px; cursor: pointer; transition: border-color var(--d-moyen) var(--ease), background-color var(--d-moyen) var(--ease); }
-.zone-titre { font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
-.zone.survol, .zone:focus-within, .zone.rempli { border-color: var(--texte); background: var(--carte); }
-.zone.rempli, .zone.survol { border-style: solid; }
-.moteur { display: grid; gap: var(--s1); margin-top: var(--s3); }
-.aide-moteur { font-size: 13px; color: var(--texte-2); min-height: 3.2em; max-width: 52ch; }
+.zone {
+  position: relative; flex: 1; min-height: 220px; max-height: 460px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 24px; text-align: center;
+  border-radius: 28px; cursor: pointer;
+  transition: transform 200ms var(--sortie), background-color 200ms ease;
+}
+.zone::before { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 1.5px dashed rgba(0, 0, 0, 0.16); transition: border-color 200ms ease; pointer-events: none; }
+.zone-icone { display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 10px; border-radius: 50%; background: var(--voile); transition: transform 240ms var(--ressort), background-color 200ms ease, color 200ms ease; }
+.zone-icone svg { width: 24px; height: 24px; }
+.zone-titre { font-size: 20px; font-weight: 600; letter-spacing: -0.015em; overflow-wrap: anywhere; max-width: 100%; }
+.zone-aide { font-size: 15px; color: var(--texte-2); }
+.zone:active { transform: scale(0.985); }
+.zone.survol { transform: scale(1.01); }
+.zone.survol::before, .zone:focus-within::before { border-color: var(--texte); border-style: solid; }
+.zone.survol .zone-icone { transform: translateY(-3px); background: var(--texte); color: #fff; }
+.zone.rempli::before { border-style: solid; border-color: var(--filet); }
+.zone.rempli .zone-icone { background: var(--texte); color: #fff; }
+@media (hover: hover) and (pointer: fine) { .zone:hover .zone-icone { transform: translateY(-2px); } }
 
-.etapes { border-bottom: 1px solid var(--filet); }
-.etapes li { display: flex; justify-content: space-between; gap: var(--s2); min-height: 44px; align-items: center; border-top: 1px solid var(--filet); color: var(--gris-clair); }
-.etapes li[data-etat="cours"] { color: var(--texte); font-weight: 600; }
-.etapes li[data-etat="fait"] { color: var(--texte-2); }
-.etapes .valeur { font-family: var(--police-mono); font-variation-settings: "MONO" 100; font-size: 13px; font-weight: 400; }
-.barre { height: 2px; background: var(--filet); overflow: hidden; margin: var(--s2) 0; }
-.barre i { display: block; height: 100%; width: 100%; background: var(--texte); transform-origin: left; transform: scaleX(0); transition: transform var(--d-moyen) var(--ease); }
-.barre.indetermine i { width: 35%; transform: none; animation: glisse 1.4s var(--ease) infinite; }
-@keyframes glisse { from { transform: translateX(-100%); } to { transform: translateX(300%); } }
+/* progression : une étape en texte, une fine barre */
+.prog { display: grid; gap: 12px; padding-top: 8px; max-width: 560px; }
+.prog-ligne { display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500; }
+#prog-valeur { color: var(--texte-2); font-weight: 400; }
 
 /* résultat : vidéo en haut, transcript qui défile dessous */
-.duo { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: var(--s2); }
+.res-titre { font-size: 26px; }
+@media (min-width: 720px) { .res-titre { font-size: 32px; } }
+.duo { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px; }
 .cadre { flex: none; }
-.cadre video { width: 100%; max-height: 30dvh; display: block; background: #000; border-radius: 12px; }
+.cadre video { width: 100%; max-height: 32dvh; display: block; background: #000; border-radius: 18px; }
 .transcript { padding: 0; }
-.segment { display: grid; grid-template-columns: 56px 1fr; gap: var(--s2); padding: var(--s2) 0; border-top: 1px solid var(--filet); transition: box-shadow var(--d-moyen) var(--ease); }
-.segment[data-actif="true"] { box-shadow: inset 2px 0 0 var(--texte); padding-left: var(--s1); }
-.segment .t { min-height: 24px; align-self: start; padding: 0; border: 0; background: none; text-align: left; color: var(--texte-2); }
-.segment[data-actif="true"] .t { color: var(--orange); }
-.segment .fr { line-height: 1.4; }
-.segment .ar { margin-top: 4px; font-size: 15px; line-height: 1.8; color: var(--texte-2); text-align: right; }
-.commandes { flex: none; display: flex; justify-content: space-between; align-items: center; padding-block: var(--s2) var(--s1); }
-.commandes .rond .disque { width: 48px; height: 48px; }
-.vue .tete-page { padding-bottom: var(--s1); }
-#rapport-note { text-align: right; padding-bottom: var(--s1); }
-
-.liste-fichiers .ligne-opt { text-decoration: none; color: inherit; }
+.segment { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 8px 0; }
+.segment .t {
+  position: relative; align-self: start; min-height: 24px; padding: 0; border: 0; background: none; text-align: left;
+  color: var(--texte-2); font-size: 13px; font-variant-numeric: tabular-nums; line-height: 24px; transition: color 160ms ease;
+}
+.segment .t::after { content: ""; position: absolute; inset: -10px -8px; }      /* zone de toucher de 44 px */
+.segment .fr { font-size: 17px; line-height: 1.45; color: var(--texte-2); transition: color 200ms ease; }
+.segment[data-actif="true"] .t { color: var(--orange-texte); }
+.segment[data-actif="true"] .fr { color: var(--texte); }
+.segment .ar { margin-top: 4px; font-size: 17px; line-height: 1.8; color: var(--texte-2); text-align: right; }
+.transcript.sans-lecture .segment .fr { color: var(--texte); }
+@media (hover: hover) and (pointer: fine) { .segment .t:hover { color: var(--texte); } }
+.actions.bas { padding-top: 12px; }
 
 @media (min-width: 860px) {
-  .duo { flex-direction: row; gap: var(--s4); }
-  .cadre { flex: 5; position: sticky; top: 0; align-self: flex-start; }
-  .transcript { flex: 6; }
-  .cadre video { max-height: 60dvh; }
+  .duo { flex-direction: row; gap: 40px; }
+  .cadre { flex: 6; align-self: flex-start; }
+  .transcript { flex: 5; }
+  .cadre video { max-height: 62dvh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .zone:active, .zone.survol, .zone.survol .zone-icone, .zone:hover .zone-icone { transform: none; }
 }

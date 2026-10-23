@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f2f2f0">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
 <title>Kalam · Rapport</title>
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="apple-touch-icon" href="/static/icone-180.png">
@@ -11,6 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Kalam">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="stylesheet" href="/static/base.css">
 <link rel="stylesheet" href="/static/rapport.css">
 </head>
@@ -18,55 +20,51 @@
 <div class="ecran">
   <header class="entete"></header>
   <div class="tete-page">
-    <h1 id="titre">Rapport</h1>
-    <p id="meta" class="meta"></p>
+    <div class="titre-rangee"><h1 id="titre" class="titre">Rapport</h1><button id="options-rapport" class="icone-btn" type="button" aria-label="Exports et options" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="19" cy="12" r="1.6" fill="currentColor"/></svg></button></div>
+    <p id="meta" class="meta nombres"></p>
     <div id="onglets" class="seg" role="tablist" aria-label="Sections du rapport" hidden>
-      <button type="button" role="tab" data-valeur="resume" aria-selected="true">Résumé</button>
-      <button type="button" role="tab" data-valeur="transcript" aria-selected="false">Transcript</button>
-      <button type="button" role="tab" data-valeur="details" aria-selected="false">Détails</button>
+      <button id="o-resume" type="button" role="tab" data-valeur="resume" aria-selected="true" aria-controls="p-resume">Résumé</button>
+      <button id="o-transcript" type="button" role="tab" data-valeur="transcript" aria-selected="false" aria-controls="p-transcript" tabindex="-1">Transcript</button>
+      <button id="o-details" type="button" role="tab" data-valeur="details" aria-selected="false" aria-controls="p-details" tabindex="-1">Détails</button>
     </div>
   </div>
 
   <!-- état : absent / en cours / erreur -->
   <section id="etat" class="etat-bloc" hidden aria-live="polite">
     <div id="etat-absent" hidden>
-      <p class="meta">Le rapport indique qui parle, relit la traduction et résume le contenu. Il utilise le GPU : compte quelques minutes.</p>
-      <div class="options">
-        <label class="option"><input id="o-loc" type="checkbox" checked><span>Identifier les locuteurs</span></label>
-        <label class="option"><input id="o-rel" type="checkbox" checked><span>Relire la traduction avec un modèle de langage</span></label>
-        <label class="option"><input id="o-ar" type="checkbox"><span>Joindre le texte arabe</span></label>
+      <p class="intro">Le rapport distingue les voix, relit la traduction et résume ce qui a été dit. Compte quelques minutes de calcul.</p>
+      <div class="actions">
+        <button id="choix-options" class="pilule" type="button"><span>Options</span><svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke-width="1.6"/></svg></button>
+        <button id="generer" class="pilule noire grande" type="button">Générer le rapport</button>
       </div>
-      <div class="bas"><button id="generer" class="rond plein" type="button"><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7l4 4v12H7zM14 4v4h4M10 12h5M10 16h5"/></svg></span><span class="lib">générer</span></button></div>
     </div>
     <div id="etat-cours" hidden>
-      <h2 id="etape">En attente du GPU</h2>
+      <p class="prog-ligne"><span id="etape" class="swap">En attente du calcul</span><span id="pct" class="nombres">0 %</span></p>
       <div class="barre"><i id="barre"></i></div>
-      <p class="meta"><span id="pct" class="mono">0 %</span> · <span id="temps" class="mono">00:00</span></p>
+      <p class="petit"><span id="temps" class="nombres">00:00</span> écoulées</p>
     </div>
     <div id="etat-erreur" hidden>
-      <h2 class="erreur">Le rapport n'a pas pu être généré</h2>
-      <p id="erreur-texte" class="meta"></p>
-      <div class="bas"><button id="reessayer" class="rond" type="button"><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a7 7 0 107-7M5 5v5h5"/></svg></span><span class="lib">réessayer</span></button></div>
+      <p class="intro"><b>Le rapport n'a pas pu être généré.</b> <span id="erreur-texte"></span></p>
+      <div class="actions"><button id="reessayer" class="pilule" type="button">Réessayer</button></div>
     </div>
   </section>
 
   <main id="rapport" class="defile" hidden>
-    <div id="p-resume" role="tabpanel">
-      <p id="voix-erreur" class="erreur msg" role="alert" hidden></p>
+    <div id="p-resume" role="tabpanel" aria-labelledby="o-resume" tabindex="0">
+      <p id="voix-erreur" class="msg erreur" role="alert" hidden></p>
       <div id="resume" class="resume"></div>
     </div>
-    <div id="p-transcript" role="tabpanel" hidden>
-      <ul id="avertissements" class="avertissements" hidden></ul>
+    <div id="p-transcript" role="tabpanel" aria-labelledby="o-transcript" tabindex="0" hidden>
       <div id="transcript" class="transcript"></div>
     </div>
-    <div id="p-details" role="tabpanel" hidden>
+    <div id="p-details" role="tabpanel" aria-labelledby="o-details" tabindex="0" hidden>
       <dl id="details-liste" class="details"></dl>
     </div>
   </main>
 
-  <div id="commandes" class="commandes" hidden>
-    <button id="options-rapport" class="texte caps" type="button" aria-expanded="false">Options</button>
-    <button id="ecouter" class="rond plein" type="button" hidden aria-pressed="false"><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h3l5 4V5L8 9zM16.5 9a4 4 0 010 6"/></svg></span><span class="lib">écouter</span></button>
+  <div id="lecture" class="lecture" hidden>
+    <span class="lecture-point" aria-hidden="true"></span><span id="lecture-temps" class="nombres">00:00</span>
+    <button id="lecture-stop" class="lecture-stop" type="button">Arrêter</button>
   </div>
   <audio id="audio" preload="none"></audio>
 </div>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
-<meta name="theme-color" content="#f2f2f0">
+<meta name="theme-color" content="#ffffff">
 <meta name="color-scheme" content="light">
 <title>Kalam · Direct</title>
 <link rel="manifest" href="/manifest.webmanifest">
@@ -17,79 +17,66 @@
 <link rel="stylesheet" href="/live/assets/live.css">
 </head>
 <body>
-<div class="ecran">
+<div class="ecran direct">
   <header class="entete">
-    <a id="logo" class="logo" href="/" data-nav aria-label="Kalam, accueil">
-      <span class="caps" data-marque="nom">Kalam</span><span class="logo-ar" data-marque="arabe" lang="ar" dir="rtl">كلام</span>
-    </a>
-    <nav class="nav" aria-label="Navigation">
-      <a href="/" data-nav aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10v4M9 7v10M13 4v16M17 8v8M21 11v2"/></svg><span>Direct</span></a>
-      <a href="/video" data-nav><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M10 9.5v5l4-2.5z" fill="currentColor"/></svg><span>Vidéo</span></a>
-      <a href="/sessions" data-nav><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h9"/></svg><span>Sessions</span></a>
-    </nav>
+    <div class="entete-droite">
+      <p id="indicateur" class="indicateur"><span id="pastille" class="pastille" data-etat="repos" aria-hidden="true"></span><span id="indic-texte">En direct</span><span id="duree" class="nombres">00:00</span><span id="retard" class="retard nombres"></span></p>
+    </div>
   </header>
-
-  <div class="statut" role="status">
-    <p id="date" class="mono"></p>
-    <p class="etat"><span id="pastille" class="pastille" data-etat="repos"></span><span id="etat-texte" class="caps" data-etat="repos">Prêt</span><span class="retard-groupe caps"><span aria-hidden="true">·</span><span id="retard" class="nombres"></span></span></p>
-  </div>
 
   <section id="zone-video" class="zone-video" hidden>
     <video id="video" controls playsinline></video>
   </section>
 
-  <main id="scene" class="scene" aria-live="polite" aria-label="Sous-titres">
-    <p id="invite" class="invite">Appuie sur démarrer.<br>Les sous-titres français s'écrivent ici, au fil de la parole.</p>
-    <div id="ecoute" class="ecoute" aria-hidden="true"><span class="sphere"></span><span class="caps">À l'écoute</span></div>
-    <p id="ar-courant" class="ar-courant" lang="ar" dir="rtl"></p>
-    <div id="flux" class="flux" lang="fr"></div>
+  <main id="contenu" class="scene">
+    <div id="accueil" class="accueil">
+      <div id="orbe" class="orbe" aria-hidden="true">
+        <div id="orbe-niveau" class="orbe-niveau">
+          <span class="orbe-corps"></span><span id="orbe-chaud" class="orbe-chaud"></span><span class="orbe-reflet"></span>
+        </div>
+      </div>
+      <h1 id="phrase" class="phrase swap" data-marque="signature">La parole arabe, sous-titrée en français.</h1>
+      <p id="etat-texte" class="etat-texte" role="status"></p>
+    </div>
+    <div id="transcript" class="transcript" aria-label="Sous-titres">
+      <p id="ar-courant" class="ar-courant" lang="ar" dir="rtl"></p>
+      <div id="flux" class="flux" lang="fr"></div>
+    </div>
+    <p id="annonce" class="visuellement-cache" aria-live="polite"></p>
   </main>
 
-  <div class="repere">
-    <span id="niveau" class="niveau" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-    <span id="duree" class="mono">00:00:00</span>
-  </div>
-  <div class="regle" aria-hidden="true"><span id="tete" class="tete"></span></div>
-
   <div class="commandes">
-    <button id="bascule" class="texte caps" type="button" aria-expanded="false" aria-controls="reglages">Options</button>
-    <button id="principal" class="rond" type="button" aria-label="Démarrer l'écoute">
-      <span class="disque">
-        <svg class="ico-start" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg>
-        <svg class="ico-stop" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1" fill="currentColor"/></svg>
-      </span>
-      <span class="lib">démarrer</span>
-    </button>
-    <button id="rapport" class="texte caps" type="button" disabled>Exporter</button>
-  </div>
-  <div id="bilan" hidden></div>
-  <p id="resultat" class="aide" hidden></p>
-</div>
-
-<!-- Options : la feuille qui monte du bas -->
-<div id="panneau" class="feuille" role="dialog" aria-modal="true" aria-label="Options" data-ouvert="false">
-  <div class="voile"></div>
-  <div id="reglages" class="corps" tabindex="-1">
-    <button class="poignee" type="button" aria-label="Fermer"></button>
-    <p class="caps titre-feuille">Options</p>
-    <div id="bloc-sources" class="bloc-sources">
-      <div id="segment-source" class="seg" role="radiogroup" aria-label="Source audio">
-        <button class="source" type="button" role="radio" data-source="micro" aria-checked="true">Micro</button>
-        <button class="source" type="button" role="radio" data-source="url" aria-checked="false">Lien</button>
-        <button class="source" type="button" role="radio" data-source="fichier" aria-checked="false">Fichier</button>
-        <button class="source" type="button" role="radio" data-source="onglet" aria-checked="false">Onglet</button>
+    <div id="bloc-source" class="bloc-source">
+      <button id="choix-source" class="pilule" type="button"><span id="source-lib">Micro</span><svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke-width="1.6"/></svg></button>
+      <div id="champ-zone" class="champ-zone" data-ouvert="false">
+        <div class="champ-interieur">
+          <div id="zone-url" class="zone-url" hidden>
+            <input id="champ-url" class="champ" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go"
+                   value="https://www.youtube.com/live/bNyUyrR0PHo" placeholder="Lien YouTube en direct ou flux .m3u8" aria-label="Lien de la chaîne" aria-describedby="url-aide">
+            <p id="url-aide" class="petit">Al Jazeera en direct</p>
+          </div>
+          <div id="zone-fichier" class="zone-fichier" hidden>
+            <label class="pilule" for="champ-fichier"><span id="fichier-lib">Choisir une vidéo</span></label>
+            <input id="champ-fichier" class="visuellement-cache" type="file" accept="audio/*,video/*">
+          </div>
+        </div>
       </div>
-      <p id="aide-source" class="aide"></p>
-      <input id="champ-url" class="champ" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" hidden
-             placeholder="Lien YouTube en direct ou flux .m3u8" aria-label="Lien de la vidéo ou du direct">
-      <input id="champ-fichier" class="champ" type="file" accept="audio/*,video/*" hidden aria-label="Fichier audio ou vidéo">
     </div>
-    <button id="opt-arabe" class="ligne-opt" type="button" aria-pressed="false"><span>Texte arabe</span><span class="val"></span></button>
-    <div class="ligne-opt"><span>Taille du texte</span><span class="taille"><button id="opt-moins" type="button" aria-label="Texte plus petit">A−</button><button id="opt-plus" type="button" aria-label="Texte plus grand">A+</button></span></div>
-    <button id="opt-voix" class="ligne-opt" type="button" aria-pressed="false" hidden><span>Lecture vocale</span><span class="val"></span></button>
-    <button id="opt-lien" class="ligne-opt" type="button" hidden><span class="lib-opt">Copier le lien</span></button>
-    <button id="opt-epure" class="ligne-opt" type="button"><span>Plein écran</span></button>
-    <div class="ligne-opt"><span>Modèles</span><span id="modeles" class="val">–</span></div>
+
+    <div class="rangee">
+      <span></span>
+      <button id="principal" class="principal" type="button" aria-label="Démarrer l'écoute">
+        <span class="disque"><span class="ico ico-start" aria-hidden="true"></span><span class="ico ico-stop" aria-hidden="true"></span></span>
+        <span class="lib swap">Démarrer</span>
+      </button>
+      <span class="cote"><button id="plus" class="icone-btn" type="button" aria-label="Options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="19" cy="12" r="1.6" fill="currentColor"/></svg></button></span>
+    </div>
+
+    <div id="fin" class="carte-fin" hidden>
+      <div class="fin-texte"><p class="fin-titre">Session terminée</p><p id="fin-meta" class="petit nombres"></p></div>
+      <a id="rapport" class="pilule noire" href="/sessions" data-nav>Voir le rapport</a>
+      <button id="nouvelle" class="texte" type="button">Nouvelle écoute</button>
+    </div>
   </div>
 </div>
 <script src="/static/marque.js"></script>

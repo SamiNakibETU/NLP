@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f2f2f0">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
 <title>Kalam · Vidéo</title>
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="apple-touch-icon" href="/static/icone-180.png">
@@ -11,6 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Kalam">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="stylesheet" href="/static/base.css">
 <link rel="stylesheet" href="/static/video.css">
 </head>
@@ -19,44 +21,44 @@
   <header class="entete"></header>
 
   <!-- 1. dépôt -->
-  <section id="depot" class="vue">
-    <div class="tete-page"><h1>Vidéo</h1><p class="meta">Dépose un fichier audio ou vidéo : les sous-titres français arrivent synchronisés.</p></div>
+  <main id="depot" class="vue">
+    <div class="tete-page"><h1 class="titre">Sous-titrer une vidéo</h1></div>
     <label id="zone" class="zone" for="fichier">
       <input id="fichier" class="visuellement-cache" type="file" accept="video/*,audio/*">
-      <span id="zone-titre" class="zone-titre">Glisse un fichier ici</span>
-      <span id="zone-aide" class="caps">ou touche pour le choisir</span>
+      <span class="zone-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V5M7.5 9.5L12 5l4.5 4.5M5 19h14"/></svg></span>
+      <span id="zone-titre" class="zone-titre">Dépose une vidéo</span>
+      <span id="zone-aide" class="zone-aide">ou touche pour la choisir</span>
     </label>
-    <p id="erreur-depot" class="erreur msg" role="alert" hidden></p>
-    <div class="moteur">
-      <p class="caps">Moteur</p>
-      <div id="choix-moteurs" class="seg" role="radiogroup" aria-label="Moteur"></div>
-      <p id="aide-moteur" class="aide-moteur"></p>
+    <p id="erreur-depot" class="msg erreur" role="alert" hidden></p>
+    <div class="actions">
+      <button id="choix-moteur" class="pilule" type="button"><span class="discret">Moteur</span><span id="moteur-lib">S3</span><svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke-width="1.6"/></svg></button>
+      <button id="lancer" class="pilule noire grande" type="button">Sous-titrer</button>
     </div>
-    <div class="bas"><button id="lancer" class="rond plein" type="button"><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lib">sous-titrer</span></button></div>
-  </section>
+  </main>
 
   <!-- 2. progression -->
-  <section id="progression" class="vue" hidden aria-live="polite">
-    <div class="tete-page"><h1 id="prog-titre">En cours</h1></div>
-    <ol id="etapes" class="etapes"></ol>
-    <div class="barre" aria-hidden="true"><i id="barre"></i></div>
-    <p class="meta"><span id="prog-temps" class="mono">00:00</span> · la durée dépend du moteur et de la machine</p>
-    <p id="prog-erreur" class="erreur msg" role="alert" hidden></p>
-    <div class="bas"><button id="reessayer" class="rond" type="button" hidden><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12a7 7 0 107-7M5 5v5h5"/></svg></span><span class="lib">recommencer</span></button></div>
+  <section id="progression" class="vue" hidden>
+    <div class="tete-page"><h1 id="prog-titre" class="titre">En cours</h1></div>
+    <div class="prog" aria-live="polite">
+      <p class="prog-ligne"><span id="prog-etape" class="swap">Envoi du fichier</span><span id="prog-valeur" class="nombres"></span></p>
+      <div id="barre-cadre" class="barre"><i id="barre"></i></div>
+      <p class="petit"><span id="prog-temps" class="nombres">00:00</span> écoulées · la durée dépend du moteur et de la machine</p>
+      <p id="prog-erreur" class="msg erreur" role="alert" hidden></p>
+    </div>
+    <div class="actions"><button id="reessayer" class="pilule" type="button" hidden>Recommencer</button></div>
   </section>
 
   <!-- 3. résultat -->
   <section id="resultat" class="vue" hidden>
-    <div class="tete-page"><h1 id="res-titre">Vidéo</h1><p id="res-meta" class="meta"></p></div>
+    <div class="tete-page">
+      <div class="titre-rangee"><h1 id="res-titre" class="titre res-titre">Vidéo</h1><button id="options-res" class="icone-btn" type="button" aria-label="Exports et options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="19" cy="12" r="1.6" fill="currentColor"/></svg></button></div>
+      <p id="res-meta" class="petit"></p>
+    </div>
     <div class="duo">
       <div class="cadre"><video id="lecteur" controls playsinline preload="metadata"></video></div>
       <div id="transcript" class="defile transcript"><ol id="segments" class="segments"></ol></div>
     </div>
-    <div class="commandes">
-      <button id="options-res" class="texte caps" type="button" aria-expanded="false">Options</button>
-      <a id="rapport" class="rond plein" href="#"><span class="disque"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h7l4 4v12H7zM14 4v4h4M10 12h5M10 16h5"/></svg></span><span class="lib">rapport</span></a>
-    </div>
-    <p id="rapport-note" class="meta" hidden></p>
+    <div class="actions bas"><a id="rapport" class="pilule noire grande" href="#">Rapport</a></div>
   </section>
 </div>
 <script src="/static/marque.js"></script>

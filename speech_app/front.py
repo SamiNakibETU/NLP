@@ -44,8 +44,8 @@ CSS = """
 """
 _BLANC = "#ffffff"
 THEME = gr.themes.Base(primary_hue=gr.themes.colors.neutral, neutral_hue=gr.themes.colors.neutral,
-                       font=["Kalam Areal", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], radius_size=gr.themes.sizes.radius_sm).set(
-    body_background_fill="#f2f2f0", background_fill_primary=_BLANC, background_fill_secondary=_BLANC,
+                       font=["Kalam Areal", "-apple-system", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"], radius_size=gr.themes.sizes.radius_sm).set(
+    body_background_fill=_BLANC, background_fill_primary=_BLANC, background_fill_secondary=_BLANC,
     block_background_fill=_BLANC, input_background_fill=_BLANC, block_shadow="none", block_border_width="1px",
     border_color_primary="#e5e5e5", block_border_color="#e5e5e5", input_border_color="#e5e5e5",
     body_text_color="#0a0a0a", body_text_color_subdued="#6b7280",
