@@ -140,7 +140,7 @@ Sans les anti-boucles, le WER médian par segment est de 10,5 % et 203 segments
 
 ## 6. Mode direct sur Al Jazeera
 
-Essais du 23 octobre 2026 sur le direct YouTube d'Al Jazeera (<https://www.youtube.com/live/bNyUyrR0PHo>), audio tiré par `yt-dlp` sur le serveur, Colab T4, tunnel Cloudflare. Le retard est mesuré de l'arrivée de la fin de la parole à l'affichage du texte définitif.
+Essais sur le direct YouTube d'Al Jazeera (<https://www.youtube.com/live/bNyUyrR0PHo>), audio tiré par `yt-dlp` sur le serveur, Colab T4, tunnel Cloudflare. Le retard est mesuré de l'arrivée de la fin de la parole à l'affichage du texte définitif.
 
 | Configuration | Segments | Retard moyen (s) | Retard médian (s) | p95 (s) | Source |
 |---|---:|---:|---:|---:|---|
