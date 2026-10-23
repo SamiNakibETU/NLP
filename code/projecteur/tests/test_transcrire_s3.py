@@ -16,7 +16,7 @@ DOSSIER_PROJECTEUR = RACINE_PROJET / "code" / "projecteur"
 if str(DOSSIER_PROJECTEUR) not in sys.path:
     sys.path.insert(0, str(DOSSIER_PROJECTEUR))
 
-from transcrire_s3 import charger_audio, decouper, main, nettoyer_traduction, transcripteur_factice  # noqa: E402
+from transcrire_s3 import TranscripteurS3, charger_audio, decouper, main, nettoyer_traduction, transcripteur_factice  # noqa: E402
 
 SR = 16000
 REGLAGES = {"duree_max_morceau_s": 20, "recherche_coupure_s": 5, "fenetre_energie_s": 0.1, "duree_min_morceau_s": 2}
@@ -120,3 +120,13 @@ class TestNotebook(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestContexteNul(unittest.TestCase):
+    def test_zero_phrase_de_contexte_ne_rend_pas_tout_l_historique(self):
+        t = TranscripteurS3.__new__(TranscripteurS3)
+        t.traduction = {"nb_phrases_contexte": 0, "gabarit_contexte": "{contexte}|{texte}"}
+        vus = []
+        t.traduire = lambda textes: vus.append(textes) or ["sans contexte"]
+        self.assertEqual(t.traduire_avec_contexte("texte", ["a", "b"]), "sans contexte")
+        self.assertEqual(vus, [["texte"]])

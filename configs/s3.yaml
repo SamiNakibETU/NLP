@@ -97,7 +97,9 @@ traduction_texte:
   gabarit_secours: "Traduis en français le texte arabe suivant. Donne uniquement la traduction.\n\n{texte}"
   # Direct et LoRA : les phrases arabes précédentes aident pour les pronoms et les noms (contrôle de l'historique).
   gabarit_contexte: "Contexte (phrases précédentes, à ne pas traduire) :\n{contexte}\n\nTexte :\n{texte}\n\nTraduis ce texte en français."
-  nb_phrases_contexte: 2
+  # 0 : sur le direct d'Al Jazeera (23/10, 28 phrases), Qwen2.5-1.5B mêlait le contexte à la phrase traduite
+  # (« Le projet américain-israélien… » à la place de « Nétanyahou… »). À remonter avec un traducteur plus fort.
+  nb_phrases_contexte: 0
   ratio_tokens: 2.0                # limite = 2 x tokens du texte arabe + marge
   tokens_marge: 20
   max_nouveaux_tokens: 300

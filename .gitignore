@@ -66,3 +66,10 @@ donnees/test/guide-annotation.md
 # Sessions d'écoute (audio, segments, rapports) et caches de modèles de la démo
 speech_app/sessions/
 speech_app/cache/
+
+# Planches d'inspiration (images de tiers, non versionnees)
+design_inspiration/
+# Polices commerciales (licence Dinamo : interdites dans un depot public)
+speech_app/static/fonts/
+*.woff2
+*.otf

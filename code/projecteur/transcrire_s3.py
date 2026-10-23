@@ -197,7 +197,8 @@ class TranscripteurS3:
         if not texte.strip():
             return ""
         t = self.traduction
-        contexte = [c.strip() for c in contexte if c and c.strip()][-int(t.get("nb_phrases_contexte", 2)):]
+        n = int(t.get("nb_phrases_contexte", 2))
+        contexte = [c.strip() for c in contexte if c and c.strip()][-n:] if n > 0 else []   # [-0:] rendrait tout
         if not contexte or "gabarit_contexte" not in t:
             return self.traduire([texte])[0]
         # Les accolades du contexte ne doivent pas être prises pour des champs par str.format.
