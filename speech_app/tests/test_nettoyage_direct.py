@@ -24,7 +24,7 @@ class FauxOpus:
 
 def moteur(sortie_qwen):
     m = MoteurDirectS3.__new__(MoteurDirectS3)
-    m.t, m.opus, m.lora_actif = FauxTranscripteur(sortie_qwen), FauxOpus(), False
+    m.t, m.opus, m.lora_actif, m.blanc = FauxTranscripteur(sortie_qwen), FauxOpus(), False, None
     return m
 
 
@@ -73,6 +73,19 @@ class TestRepetitions(unittest.TestCase):
     def test_phrases_differentes_gardees(self):
         from live_moteurs import sans_repetitions
         self.assertEqual(sans_repetitions("Oui, non. Oui."), "Oui, non. Oui.")
+
+
+class TestTraducteurBlanc(unittest.TestCase):
+    def test_blanc_par_nllb_et_qwen_ignore(self):
+        m = moteur("ceci ne doit pas sortir")
+        m.blanc = type("N", (), {"traduire": lambda self, ar: "Le ministre est arrivé à Beyrouth hier."})()
+        self.assertEqual(m.traduire_definitif("وصل الوزير", ["contexte"]), "Le ministre est arrivé à Beyrouth hier.")
+
+    def test_sans_blanc_reste_sur_qwen(self):
+        m = moteur("Le ministre est arrivé hier soir à Beyrouth.")
+        m.blanc = None
+        self.assertEqual(m.traduire_definitif("...", []), "Le ministre est arrivé hier soir à Beyrouth.")
+
 
 if __name__ == "__main__":
     unittest.main()

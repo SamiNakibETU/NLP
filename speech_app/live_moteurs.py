@@ -106,17 +106,44 @@ class OpusMT:
         return self.tok.decode(sortie[0], skip_special_tokens=True).strip()
 
 
+class NLLB:
+    """facebook/nllb-200-distilled-1.3B : traducteur du texte blanc. Sur FLEURS (267 phrases, T4), BLEU 31,3 et
+    chrF++ 55,2 en 0,82 s par phrase, contre 15,2 / 40,2 en 1,6 s pour le Qwen 1,5B de S3 (nlp-eval-traducteurs)."""
+    MODELE = "facebook/nllb-200-distilled-1.3B"
+
+    def __init__(self, model_id: str = MODELE, device: str | None = None):
+        import torch
+        from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+        self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+        self.tok = AutoTokenizer.from_pretrained(model_id, src_lang="arb_Arab")
+        modele = AutoModelForSeq2SeqLM.from_pretrained(model_id)
+        if self.device == "cuda":
+            modele = modele.half()
+        self.model = modele.to(self.device).eval()
+        self.cible = self.tok.convert_tokens_to_ids("fra_Latn")
+
+    def traduire(self, ar: str) -> str:
+        import torch
+        if not ar.strip():
+            return ""
+        entree = self.tok([ar], return_tensors="pt", truncation=True, max_length=256).to(self.device)
+        with torch.inference_mode():       # mêmes réglages que la mesure Kaggle : glouton, 256 tokens au plus
+            sortie = self.model.generate(**entree, num_beams=1, max_new_tokens=256, forced_bos_token_id=self.cible)
+        return self.tok.decode(sortie[0], skip_special_tokens=True).strip()
+
+
 class MoteurDirectS3:
-    """S3 (transcription arabe et traduction soignée) + Opus-MT (traduction provisoire).
+    """S3 (transcription arabe) + Opus-MT (texte gris) + NLLB-1.3B (texte blanc).
 
-    ``lora_dir`` : adaptateur PEFT facultatif posé sur le Qwen de S3. Il est actif pour TRADUIRE et désactivé
-    pour TRANSCRIRE : le projecteur a été entraîné sur le Qwen de base, l'adaptateur le dérouterait.
+    ``blanc`` : traducteur du texte blanc ; None garde l'ancien chemin, le Qwen de S3 (avec le ``lora_dir``
+    facultatif, actif pour TRADUIRE et désactivé pour TRANSCRIRE, le projecteur ayant appris sur le Qwen de base).
     """
-    nom = "S3 + Opus-MT"
+    nom = "S3 + Opus-MT + NLLB"
 
-    def __init__(self, transcripteur, opus, lora_dir: str | Path | None = None):
+    def __init__(self, transcripteur, opus, lora_dir: str | Path | None = None, blanc=None):
         self.t = transcripteur
         self.opus = opus
+        self.blanc = blanc
         self.lora_actif = False
         if lora_dir:
             self.lora_actif = self._poser_lora(Path(lora_dir))
@@ -142,8 +169,8 @@ class MoteurDirectS3:
         return nettoyer_sous_titre(self.opus.traduire(ar))
 
     def traduire_definitif(self, ar: str, contexte: list[str]) -> str:
-        fr = self.t.traduire_avec_contexte(ar, contexte)
-        if part_arabe(fr) > PART_ARABE_MAX:     # Qwen a recopié l'arabe malgré la consigne de secours
+        fr = self.blanc.traduire(ar) if self.blanc is not None else self.t.traduire_avec_contexte(ar, contexte)
+        if part_arabe(fr) > PART_ARABE_MAX:     # le traducteur a recopié l'arabe
             fr = self.opus.traduire(ar)
         return nettoyer_sous_titre(fr)
 
@@ -163,7 +190,9 @@ def charger_moteur_direct(nlp_repo: str, s3_ckpt: str | None = None, lora_dir: s
     import transcrire_s3
     transcripteur = transcrire_s3.TranscripteurS3.charger("temps_1_50k", Path(s3_ckpt) if s3_ckpt else None)
     lora_dir = lora_dir if lora_dir is not None else (os.environ.get("PORTEPAROLE_LORA") or None)
-    return MoteurDirectS3(transcripteur, OpusMT(), lora_dir)
+    # PORTEPAROLE_TRAD_BLANC=qwen : retour au Qwen de S3 (avec LoRA éventuel) pour le texte blanc
+    blanc = None if os.environ.get("PORTEPAROLE_TRAD_BLANC", "nllb") == "qwen" else NLLB()
+    return MoteurDirectS3(transcripteur, OpusMT(), lora_dir, blanc)
 
 
 # ---------------------------------------------------------------- factice
