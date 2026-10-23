@@ -62,3 +62,7 @@ donnees/test/guide-annotation.md
 # Environnement Python local
 .venv/
 .DS_Store
+
+# Sessions d'écoute (audio, segments, rapports) et caches de modèles de la démo
+speech_app/sessions/
+speech_app/cache/

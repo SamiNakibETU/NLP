@@ -11,3 +11,16 @@ librosa
 pyyaml
 sacremoses
 brotli>=1.2          # httpx2 (huggingface_hub 2.x) appelle Brotli avec output_buffer_limit, absent de brotli 1.1
+
+# --- Rapport de session (session_report.py, tts.py) ---
+# Conflits possibles : Cohere/S3 exige transformers>=5.4 ; pyannote.audio 4 et speechbrain 1.x acceptent torch>=2.x mais
+# vérifie `pip check` après installation. bitsandbytes>=0.45 exige un GPU CUDA (Linux/Colab) ; absent -> LLM 1.5B fp16 puis résumé extractif.
+# Sur Colab, installer pyannote.audio en dernier : il épingle torch/torchaudio et peut réinstaller une autre version de torch.
+pyannote.audio>=4.0        # diarisation community-1 (HF_TOKEN, accès à accepter sur Hugging Face) ; facultatif
+speechbrain>=1.0           # repli libre : embeddings ECAPA
+bitsandbytes>=0.45         # Qwen2.5-7B en 4 bits nf4 (T4 : calcul fp16)
+piper-tts>=1.2             # lecture vocale locale (voix fr_FR-siwis-medium, CPU)
+edge-tts>=6.1              # repli de la lecture vocale (réseau requis)
+python-docx                # export Word du transcript (facultatif)
+numpy
+# scikit-learn : non requis, le regroupement agglomératif est écrit en numpy.
