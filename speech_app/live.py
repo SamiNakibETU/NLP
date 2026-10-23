@@ -55,6 +55,7 @@ _SESSIONS_LOCK = threading.Lock()
 _CONFIG: dict = {"fournisseur": None}      # tests : configurer(fournisseur=...)
 _MOTEUR_FACTICE = None
 TEMPS_REEL = True       # les sources serveur (fichier, replay) vont au rythme de l'audio ; les tests le coupent
+RELANCES_DIRECT = 5     # un lien en direct qui s'interrompt est rouvert (yt-dlp) jusqu'à 5 fois
 
 
 # ---------------------------------------------------------------- moteur
@@ -311,9 +312,17 @@ def commande_ffmpeg(entree: str, temps_reel: bool = True) -> list[str]:
     cmd = ["ffmpeg", "-nostdin", "-hide_banner", "-loglevel", "error"]
     if temps_reel:
         cmd.append("-re")
+    if entree.startswith(("http://", "https://")):              # coupure réseau : ffmpeg se reconnecte seul
+        cmd += ["-reconnect", "1", "-reconnect_streamed", "1", "-reconnect_delay_max", "5"]
     if ".m3u8" in entree:
         cmd += ["-live_start_index", "-1"]                          # direct HLS : on part du bord du direct
     return cmd + ["-i", entree, "-vn", "-ac", "1", "-ar", "16000", "-f", "s16le", "pipe:1"]
+
+
+def est_flux_direct(cible: str) -> bool:
+    """Playlist HLS/DASH ou flux RTMP : la source avance d'elle-même au rythme du direct (pas de -re)."""
+    c = cible.lower()
+    return any(m in c for m in (".m3u8", ".mpd", "/manifest/", "hls_playlist")) or c.startswith(("rtmp", "rtsp", "srt:"))
 
 
 def _binaire_ytdlp() -> list[str]:
@@ -340,22 +349,31 @@ def _alimenter(live: SessionLive, entree: str | Path, resoudre: bool, temps_reel
         live.pret.wait()                                             # en direct, on n'accumule pas d'audio pendant le chargement
         if live.arret.is_set():
             return
-        cible = resoudre_url(str(entree)) if resoudre else str(entree)
-        with tempfile.TemporaryFile() as err:
-            proc = subprocess.Popen(commande_ffmpeg(cible, temps_reel), stdout=subprocess.PIPE, stderr=err)
-            live.sous_processus = proc
-            recu = 0
-            while not live.arret.is_set():
-                octets = proc.stdout.read(PAQUET_OCTETS)
-                if not octets:
-                    break
-                recu += len(octets)
-                live.pousser(octets)
-            proc.kill()
-            proc.wait()
-            if recu == 0 and not live.arret.is_set():
-                err.seek(0)
-                raise RuntimeError("aucun audio reçu : " + err.read().decode("utf-8", "replace").strip()[-300:])
+        # Un lien (direct YouTube, HLS) arrive déjà au rythme du direct : -re le ferait dériver derrière la playlist
+        # jusqu'à ce que ses morceaux expirent. -re ne sert qu'à rejouer un fichier.
+        relances = RELANCES_DIRECT if resoudre else 0
+        recu = 0
+        while True:
+            cible = resoudre_url(str(entree)) if resoudre else str(entree)
+            rythme = temps_reel and not est_flux_direct(cible)
+            with tempfile.TemporaryFile() as err:
+                proc = subprocess.Popen(commande_ffmpeg(cible, rythme), stdout=subprocess.PIPE, stderr=err)
+                live.sous_processus = proc
+                while not live.arret.is_set():
+                    octets = proc.stdout.read(PAQUET_OCTETS)
+                    if not octets:
+                        break
+                    recu += len(octets)
+                    live.pousser(octets)
+                proc.kill()
+                proc.wait()
+                if recu == 0 and not live.arret.is_set():
+                    err.seek(0)
+                    raise RuntimeError("aucun audio reçu : " + err.read().decode("utf-8", "replace").strip()[-300:])
+            if live.arret.is_set() or relances == 0:
+                break
+            relances -= 1                                            # le direct s'est interrompu : on rouvre le lien
+            live._publier_etat("en_cours", "Flux interrompu, reconnexion…")
     except FileNotFoundError:
         live.erreur = "ffmpeg n'est pas installé sur le serveur"
     except Exception as exc:                                         # noqa: BLE001

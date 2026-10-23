@@ -50,5 +50,18 @@ class TestNettoyage(unittest.TestCase):
         self.assertEqual(m.traduire_provisoire("..."), "Le président a dit")
 
 
+class TestSourceDirect(unittest.TestCase):
+    def test_direct_hls_sans_re_fichier_avec_re(self):
+        from live import commande_ffmpeg, est_flux_direct
+        hls = "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1/index.m3u8"
+        self.assertTrue(est_flux_direct(hls))
+        self.assertFalse(est_flux_direct("https://rr1.googlevideo.com/videoplayback?mime=audio%2Fmp4"))
+        self.assertFalse(est_flux_direct("/tmp/jt.mp4"))
+        cmd = commande_ffmpeg(hls, temps_reel=not est_flux_direct(hls))
+        self.assertNotIn("-re", cmd)
+        self.assertIn("-reconnect", cmd)
+        self.assertIn("-re", commande_ffmpeg("/tmp/jt.mp4", temps_reel=True))
+
+
 if __name__ == "__main__":
     unittest.main()
