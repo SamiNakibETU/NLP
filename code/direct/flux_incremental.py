@@ -31,11 +31,18 @@ from typing import Any, Callable, Dict, List, Optional
 
 import numpy as np
 
-from flux_s3 import FREQUENCE_ATTENDUE, FluxS3, energies_db, reglages_direct_s3  # noqa: E402
+from flux_s3 import FREQUENCE_ATTENDUE, FluxS3, charger_config_direct, energies_db, reglages_direct_s3  # noqa: E402
 from scores import calculer_retard_et_reecriture  # noqa: E402
 
 SR = FREQUENCE_ATTENDUE
 HISTORIQUE_NIVEAU_S = 60.0   # le niveau de parole se mesure sur la dernière minute, pas sur toute l'écoute
+
+
+def reglages_direct_live() -> Dict[str, Any]:
+    """Réglages de la page /live : ceux de direct_s3 (deux passes), complétés par la section direct_live."""
+    reglages = reglages_direct_s3("deux_passes")
+    reglages.update(charger_config_direct().get("direct_live") or {})
+    return reglages
 
 
 class FluxIncremental(FluxS3):
@@ -148,9 +155,15 @@ class FluxIncremental(FluxS3):
         if not ar or ar == self._ar_provisoire:
             return None                      # rien de neuf : on ne retraduit pas, on n'envoie rien
         self._ar_provisoire = ar
+        precedent = self._fr_provisoire.split()
         self._fr_provisoire = self.moteur.traduire_provisoire(ar).strip()
         self._passes_provisoires.append(self._fr_provisoire)
-        return {"type": "provisoire", "id_segment": self._id(), "fr": self._fr_provisoire, "ar": ar,
+        # Début commun aux deux dernières passes : la page peut le figer et ne réécrire que la fin.
+        mots, n = self._fr_provisoire.split(), 0
+        while n < min(len(mots), len(precedent)) and mots[n] == precedent[n]:
+            n += 1
+        return {"type": "provisoire", "id_segment": self._id(), "fr": self._fr_provisoire,
+                "fr_stable": " ".join(mots[:n]), "ar": ar,
                 "debut_s": round(self._debut / SR, 2), "fin_s": round(recu / SR, 2), "retard_s": None}
 
     def _clore(self, coupure: Dict[str, int]) -> Optional[Dict[str, Any]]:

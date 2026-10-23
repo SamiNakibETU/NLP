@@ -57,6 +57,13 @@ class TestFluxIncremental(unittest.TestCase):
             self.assertTrue(all(self.messages.index(p) < index_def for p in avant), "aucun gris après le blanc")
             self.assertNotEqual(avant[-1]["fr"], d["fr"], "le blanc diffère de la traduction rapide")
 
+    def test_debut_stable_du_gris(self):
+        for p in self.provisoires:
+            self.assertIn("fr_stable", p)
+            self.assertTrue(p["fr"].startswith(p["fr_stable"]), "la partie stable est un début du gris")
+        premiers = [p for p in self.provisoires if p["id_segment"] == "seg_0001"]
+        self.assertEqual(premiers[0]["fr_stable"], "", "rien n'est stable à la première passe")
+
     def test_provisoire_grandit(self):
         premier = [m for m in self.provisoires if m["id_segment"] == "seg_0001"]
         longueurs = [len(m["ar"].split()) for m in premier]

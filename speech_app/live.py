@@ -238,7 +238,7 @@ class SessionLive:
             flux_mod = _importer_flux()
             with GPU_LOCK:
                 self.fournisseur()                                   # charge S3 + Opus-MT (ou ne fait rien s'ils le sont)
-            self.flux = flux_mod.FluxIncremental(_Proxy(self.fournisseur), flux_mod.reglages_direct_s3("deux_passes"))
+            self.flux = flux_mod.FluxIncremental(_Proxy(self.fournisseur), flux_mod.reglages_direct_live())
             if self.jeter_avant_pret:
                 self._vider_file()
             self.pret.set()

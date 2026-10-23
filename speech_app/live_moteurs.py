@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import contextlib
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -18,6 +19,20 @@ import numpy as np
 
 OPUS_ID = "Helsinki-NLP/opus-mt-ar-fr"
 SR = 16000
+ARABE = re.compile(r"[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]+")
+PART_ARABE_MAX = 0.3        # au-delà, la traduction soignée est jugée ratée et on prend celle d'Opus-MT
+
+
+def part_arabe(texte: str) -> float:
+    lettres = [c for c in texte if c.isalpha()]
+    return sum(1 for c in lettres if ARABE.match(c)) / len(lettres) if lettres else 0.0
+
+
+def sans_arabe(texte: str) -> str:
+    """Retire ce qui reste en écriture arabe (souvent un nom propre recopié) : un sous-titre français n'en montre pas."""
+    texte = ARABE.sub(" ", texte)
+    texte = re.sub(r"\s+([,.;:!?])", r"\1", re.sub(r"\s{2,}", " ", texte))
+    return texte.strip(" ,;:-")
 
 
 # ---------------------------------------------------------------- réel
@@ -77,10 +92,13 @@ class MoteurDirectS3:
         return " ".join(m["texte"] for m in morceaux).strip()
 
     def traduire_provisoire(self, ar: str) -> str:
-        return self.opus.traduire(ar)
+        return sans_arabe(self.opus.traduire(ar))
 
     def traduire_definitif(self, ar: str, contexte: list[str]) -> str:
-        return self.t.traduire_avec_contexte(ar, contexte)
+        fr = self.t.traduire_avec_contexte(ar, contexte)
+        if part_arabe(fr) > PART_ARABE_MAX:     # Qwen a recopié l'arabe malgré la consigne de secours
+            fr = self.opus.traduire(ar)
+        return sans_arabe(fr)
 
 
 def charger_moteur_direct(nlp_repo: str, s3_ckpt: str | None = None, lora_dir: str | None = None) -> MoteurDirectS3:
