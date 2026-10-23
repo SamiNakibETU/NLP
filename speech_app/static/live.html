@@ -25,7 +25,7 @@
   </header>
 
   <section id="zone-video" class="zone-video" hidden>
-    <video id="video" controls playsinline></video>
+    <div id="cadre-direct" class="cadre-video"><video id="video" controls playsinline></video></div>
   </section>
 
   <main id="contenu" class="scene">
@@ -38,10 +38,13 @@
       <h1 id="phrase" class="phrase swap" data-marque="signature">La parole arabe, sous-titrée en français.</h1>
       <p id="etat-texte" class="etat-texte" role="status"></p>
     </div>
-    <div id="transcript" class="transcript" aria-label="Sous-titres">
-      <p id="ar-courant" class="ar-courant" lang="ar" dir="rtl"></p>
-      <div id="flux" class="flux" lang="fr"></div>
+    <div id="transcript" class="transcript" tabindex="0" aria-label="Sous-titres">
+      <div class="transcript-contenu">
+        <p id="ar-courant" class="ar-courant" lang="ar" dir="rtl"></p>
+        <div id="flux" class="flux" lang="fr"></div>
+      </div>
     </div>
+    <button id="retour-direct" class="pilule-retour" type="button" data-visible="false" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v10M3.5 8.5L8 13l4.5-4.5"/></svg>Revenir au direct</button>
     <p id="annonce" class="visuellement-cache" aria-live="polite"></p>
   </main>
 

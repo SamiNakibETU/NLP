@@ -55,8 +55,11 @@
       <p id="res-meta" class="petit"></p>
     </div>
     <div class="duo">
-      <div class="cadre"><video id="lecteur" controls playsinline preload="metadata"></video></div>
-      <div id="transcript" class="defile transcript"><ol id="segments" class="segments"></ol></div>
+      <div id="cadre" class="cadre"><video id="lecteur" controls playsinline preload="metadata"></video></div>
+      <div class="zone-transcript">
+        <div id="transcript" class="defile transcript" tabindex="0" aria-label="Transcript"><ol id="segments" class="segments"></ol></div>
+        <button id="retour-lecture" class="pilule-retour" type="button" data-visible="false" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v10M3.5 8.5L8 13l4.5-4.5"/></svg>Revenir à la lecture</button>
+      </div>
     </div>
     <div class="actions bas"><a id="rapport" class="pilule noire grande" href="#">Rapport</a></div>
   </section>

@@ -368,8 +368,141 @@
   // La lecture vocale n'est proposée que si le serveur expose /api/tts.
   const voixDisponible = () => fetch(url("/openapi.json")).then((r) => r.json()).then((o) => !!(o.paths && o.paths["/api/tts"])).catch(() => false);
 
+
+  // ---------------------------------------------------------------- suivi d'une zone qui défile
+  // La zone suit le contenu (le bas du direct, la ligne lue) tant que l'utilisateur ne la fait pas défiler lui-même.
+  // Dès qu'il s'en écarte, le suivi s'arrête et une pilule « Revenir… » apparaît ; un toucher reprend le suivi.
+  // Seuls les gestes de l'utilisateur (doigt, molette, clavier) changent l'état : nos propres défilements, non.
+  function suivi(conteneur, bouton, { auBout = null, auRetour } = {}) {
+    let suit = true, geste = 0;
+    const marquer = () => (geste = performance.now());
+    ["wheel", "touchstart", "touchmove", "pointerdown"].forEach((t) => conteneur.addEventListener(t, marquer, { passive: true }));
+    conteneur.addEventListener("keydown", (e) => { if (/^(Arrow|Page|Home|End| )/.test(e.key)) marquer(); });
+    const montrer = (oui) => { bouton.dataset.visible = String(oui); bouton.tabIndex = oui ? 0 : -1; };
+    conteneur.addEventListener("scroll", () => {
+      if (performance.now() - geste > 900) return;
+      const bas = auBout ? auBout() : false;
+      if (bas !== suit) { suit = bas; montrer(!bas); }
+    }, { passive: true });
+    bouton.addEventListener("click", () => { suit = true; montrer(false); if (auRetour) auRetour(); });
+    montrer(false);
+    return {
+      get suit() { return suit; },
+      reprendre() { suit = true; montrer(false); },
+    };
+  }
+  const enBas = (n) => n.scrollHeight - n.scrollTop - n.clientHeight < 32;
+
+  // ---------------------------------------------------------------- sous-titres sur la vidéo
+  // Bandeau « verre » en bas du cadre, rendu par nous (pas les ::cue natifs) : deux couches pour un fondu croisé
+  // de 160 ms, deux lignes au plus. Le plein écran porte sur le cadre entier (vidéo et bandeau). Sur iPhone, où
+  // seul le lecteur natif passe en plein écran, la piste VTT native prend le relais pendant ce temps.
+  const ICONE_PLEIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+  function sousTitres(cadre, video) {
+    cadre.classList.add("cadre-video");
+    const st = el("div", { class: "st", "aria-hidden": "true" });
+    const couches = [el("span", { class: "st-bulle" }), el("span", { class: "st-bulle" })];
+    st.append(...couches);
+    cadre.append(st);
+    let i = 0, texteActuel = "", morceaux = [], dernier = 0, boucle = 0, cues = null;
+
+    const pleinEcranOk = !!(cadre.requestFullscreen || cadre.webkitRequestFullscreen);
+    if (pleinEcranOk) {
+      video.setAttribute("controlslist", "nofullscreen");
+      const b = el("button", { class: "st-plein", type: "button", "aria-label": "Plein écran", html: ICONE_PLEIN });
+      b.addEventListener("click", () => basculerPleinEcran());
+      cadre.append(b);
+    }
+    function basculerPleinEcran() {
+      const actif = document.fullscreenElement || document.webkitFullscreenElement;
+      if (actif) (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+      else if (cadre.requestFullscreen) cadre.requestFullscreen().catch(() => {});
+      else if (cadre.webkitRequestFullscreen) cadre.webkitRequestFullscreen();
+      else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+    }
+    const pisteNative = (mode) => { const t = video.textTracks && video.textTracks[0]; if (t) t.mode = mode; };
+    video.addEventListener("webkitbeginfullscreen", () => pisteNative("showing"));
+    video.addEventListener("webkitendfullscreen", () => pisteNative("hidden"));
+    video.addEventListener("loadedmetadata", () => pisteNative("hidden"));
+    video.addEventListener("play", () => { cadre.classList.remove("en-pause"); if (cues && !boucle) boucle = requestAnimationFrame(tourner); });
+    video.addEventListener("pause", () => cadre.classList.add("en-pause"));
+    cadre.classList.add("en-pause");
+
+    function capacite() {                                  // caractères tenant sur deux lignes
+      const fs = parseFloat(getComputedStyle(couches[0]).fontSize) || 18;
+      const w = Math.min(cadre.clientWidth * 0.92, fs * 34) - 28;
+      return Math.max(28, Math.floor(w / (fs * 0.5)) * 2 - 4);
+    }
+    function poser(texte, { provisoire = false, enPlace = false } = {}) {
+      texte = (texte || "").trim();
+      const c = couches[i];
+      if (texte === texteActuel || (enPlace && texte && texteActuel)) {   // la même phrase qui grandit : pas de fondu
+        if (c.textContent !== texte) c.textContent = texte;
+        c.classList.toggle("provisoire", provisoire);
+        c.classList.toggle("visible", !!texte);
+        texteActuel = texte;
+        return;
+      }
+      c.classList.remove("visible");
+      i = 1 - i;
+      const n = couches[i];
+      n.textContent = texte;
+      n.classList.toggle("provisoire", provisoire);
+      n.classList.toggle("visible", !!texte);
+      texteActuel = texte;
+    }
+    // la fin d'une phrase trop longue pour deux lignes (le direct)
+    function queue(texte) {
+      const cap = capacite();
+      texte = (texte || "").trim();
+      if (texte.length <= cap) return texte;
+      const bout = texte.slice(-cap);
+      return "…" + bout.slice(bout.indexOf(" ") + 1);
+    }
+    // cues {start, end, fr} -> morceaux de deux lignes au plus, la durée répartie selon la longueur
+    function decouper(liste) {
+      const cap = capacite();
+      morceaux = [];
+      for (const c of liste) {
+        const mots = (c.fr || "").trim().split(/\s+/).filter(Boolean);
+        if (!mots.length) continue;
+        const blocs = [];
+        let cour = "";
+        for (const m of mots) {
+          if (cour && (cour + " " + m).length > cap) { blocs.push(cour); cour = m; } else cour = cour ? cour + " " + m : m;
+        }
+        if (cour) blocs.push(cour);
+        const total = blocs.reduce((a, b) => a + b.length, 0);
+        let t = c.start;
+        for (const b of blocs) { const d = (c.end - c.start) * (b.length / total); morceaux.push({ debut: t, fin: t + d, texte: b }); t += d; }
+      }
+      dernier = 0;
+    }
+    function maj() {
+      if (!cues) return;
+      const t = video.currentTime;
+      let k = morceaux[dernier] && morceaux[dernier].debut <= t ? dernier : 0;
+      while (k < morceaux.length && morceaux[k].fin <= t) k++;
+      dernier = Math.min(k, Math.max(0, morceaux.length - 1));
+      const m = morceaux[k];
+      poser(m && m.debut <= t ? m.texte : "");
+    }
+    function tourner() { maj(); boucle = video.paused || !cues ? 0 : requestAnimationFrame(tourner); }
+    ["seeked", "timeupdate", "pause"].forEach((e) => video.addEventListener(e, maj));
+    function suivre(liste) { cues = liste; decouper(liste); maj(); }
+    if (window.ResizeObserver) new ResizeObserver(() => { if (cues) { decouper(cues); maj(); } }).observe(cadre);
+    return {
+      poser, queue, suivre,
+      vider() { cues = null; morceaux = []; poser(""); },
+      mode(sur) { cadre.dataset.st = sur ? "sur" : "sous"; },
+      pleinEcran: basculerPleinEcran,
+      pleinEcranOk,
+    };
+  }
+
   window.Kalam = {
     M, JETON, url, lien, api, entetes, horloge, horlogeLongue, secondes, ilYa, dateCourte, el, icone, vt, changerTexte,
     monter, menu, surligner, segment, lireSessions, parler, arreterVoix, voixDisponible, params, reduit,
+    suivi, enBas, sousTitres,
   };
 })();

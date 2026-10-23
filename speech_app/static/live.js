@@ -70,7 +70,10 @@
   // Un segment = un <span class="tseg"> ; chaque mot est un <span class="w">. Les mots inchangés restent en place,
   // les nouveaux apparaissent (opacité, flou 4 px -> 0, 2 px de montée, 160 ms, décalés de 18 ms). Le dernier mot
   // provisoire est orange ; au définitif, le segment passe du gris au noir par un fondu de couleur.
-  const MAX_SEGMENTS = 14;
+  const MAX_SEGMENTS = 400;                            // on garde l'historique : il se relit en remontant
+  const st = K.sousTitres($("cadre-direct"), $("video"));
+  let stSur = pref.lire("st", true), idSt = null;
+  st.mode(stSur);
 
   function paragraphe(voix) {
     const p = el("div", { class: "para" });
@@ -181,14 +184,28 @@
       if (msg.retard_s != null) d.retard.textContent = K.secondes(msg.retard_s);
       parler(msg.fr);
     } else poserGris(l, msg);
+    // source « Fichier vidéo » : la phrase en cours s'affiche aussi sur la vidéo, en bandeau
+    if (etat.source === "fichier" && stSur && !d.zoneVideo.hidden) {
+      st.poser(st.queue(msg.fr), { provisoire: msg.type !== "definitif", enPlace: msg.id_segment === idSt });
+      idSt = msg.id_segment;
+    }
   }
 
-  // Le texte pousse les anciennes lignes vers le haut : elles glissent (transform) au lieu de sauter.
+  // ---------------------------------------------------------------- défilement du transcript
+  // On suit le bas tant que l'utilisateur y est ; s'il remonte, on le laisse lire et la pilule propose d'y revenir.
+  const zoneT = $("transcript");
+  const suiviDirect = K.suivi(zoneT, $("retour-direct"), {
+    auBout: () => K.enBas(zoneT),
+    auRetour: () => zoneT.scrollTo({ top: zoneT.scrollHeight, behavior: reduit() ? "auto" : "smooth" }),
+  });
+  // Le texte pousse les anciennes lignes vers le haut : quand on suit, elles glissent (transform) au lieu de sauter.
   let hauteurFlux = 0;
   if (window.ResizeObserver) {
     new ResizeObserver(() => {
       const h = d.flux.offsetHeight, dh = h - hauteurFlux;
       hauteurFlux = h;
+      if (!suiviDirect.suit) return;
+      zoneT.scrollTop = zoneT.scrollHeight;
       if (dh > 2 && dh < 200 && !reduit() && d.flux.animate && hauteurFlux > dh) {
         d.flux.animate([{ transform: `translateY(${dh}px)` }, { transform: "none" }], { duration: 220, easing: "cubic-bezier(0.23, 1, 0.32, 1)" });
       }
@@ -344,6 +361,7 @@
     d.flux.replaceChildren(); hauteurFlux = 0;
     etat.para = null; etat.voixCourante = null; etat.voixVues = new Set(); etat.nbDefinitifs = 0; etat.dureeS = 0;
     d.arabeCourant.textContent = ""; d.annonce.textContent = "";
+    st.vider(); idSt = null; suiviDirect.reprendre(); zoneT.scrollTop = 0;
     etat.sid = null; etat.pret = false; etat.termine = false; etat.stopVolontaire = false; etat.attendLecture = false;
     d.retard.textContent = ""; d.duree.textContent = "00:00";
     corps.classList.remove("parle", "termine", "nav-revenue");
@@ -438,6 +456,7 @@
     d.champZone.dataset.ouvert = String(champ);
     if (!champ) setTimeout(() => { if (d.champZone.dataset.ouvert === "false") { d.zoneUrl.hidden = true; d.zoneFichier.hidden = true; } }, 280);
     d.zoneVideo.hidden = true;
+    if (typeof menuPlus !== "undefined") menuPlus.maj("st", { cache: s !== "fichier" });
     pref.ecrire("source", s);
   }
 
@@ -466,6 +485,8 @@
           catch (e) { prompt("Lien à ouvrir sur l'autre écran :", lien); }
           setTimeout(() => menuPlus.maj("lien", { libelle: "Copier le lien de la session" }), 1800);
         } },
+      { id: "st", libelle: "Sous-titres sur la vidéo", type: "case", coche: stSur, garder: true, cache: true,
+        action: (it) => { stSur = it.coche; pref.ecrire("st", stSur); if (!stSur) st.poser(""); } },
       { id: "plein", libelle: "Plein écran", type: "action",
         action: () => {
           corps.classList.add("epure");

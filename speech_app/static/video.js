@@ -20,6 +20,9 @@
   };
 
   let fichier = null, moteur = null, moteurs = [], urlsObjet = [], chrono = null, menuRes = null;
+  const st = K.sousTitres($("cadre"), $("lecteur"));
+  let stSur = pref.lire("st", "sur") !== "sous";
+  st.mode(stSur);
 
   // ---------------------------------------------------------------- dépôt
   const zone = $("zone"), entree = $("fichier");
@@ -127,6 +130,7 @@
   function nettoyer() {
     urlsObjet.forEach((u) => URL.revokeObjectURL(u)); urlsObjet = [];
     const l = $("lecteur"); l.pause(); l.removeAttribute("src"); l.replaceChildren(); l.load();
+    st.vider();
   }
   function blobUrl(texte, type) { const u = URL.createObjectURL(new Blob([texte], { type })); urlsObjet.push(u); return u; }
 
@@ -140,8 +144,9 @@
     const lecteur = $("lecteur");
     const u = URL.createObjectURL(fichier); urlsObjet.push(u);
     lecteur.src = u;                         // le lecteur lit le fichier local : pas de ré-envoi
-    lecteur.append(el("track", { kind: "subtitles", srclang: "fr", label: "Français", default: true, src: blobUrl(res.vtt, "text/vtt") }));
-    lecteur.addEventListener("loadedmetadata", () => { const t = lecteur.textTracks[0]; if (t) t.mode = "showing"; }, { once: true });
+    // la piste native reste cachée : elle ne sert qu'au plein écran natif de l'iPhone ; le bandeau est rendu par Kalam
+    lecteur.append(el("track", { kind: "subtitles", srclang: "fr", label: "Français", src: blobUrl(res.vtt, "text/vtt") }));
+    st.suivre(res.segments || []);
 
     const segs = res.segments || [];
     const rapport = $("rapport");
@@ -162,6 +167,8 @@
       { id: "vtt", libelle: "Sous-titres .vtt", type: "lien", href: blobUrl(res.vtt, "text/vtt"), download: base + ".vtt" },
       { id: "arabe", libelle: "Afficher l'arabe", type: "case", coche: false, garder: true, cache: !segs.some((s) => s.ar),
         action: (it) => document.querySelectorAll("#segments .ar").forEach((n) => (n.hidden = !it.coche)) },
+      { id: "st", libelle: "Sous-titres sur la vidéo", type: "case", coche: stSur, garder: true,
+        action: (it) => { stSur = it.coche; pref.ecrire("st", stSur ? "sur" : "sous"); st.mode(stSur); } },
       { type: "sep", id: "s" },
       { id: "autre", libelle: "Autre vidéo", type: "action", action: () => { nettoyer(); montrer("depot"); } },
     ];
@@ -169,10 +176,16 @@
     else menuRes = K.menu($("options-res"), { etiquette: "Exports et options", alignement: "fin", items });
   }
 
+  // La ligne lue est surlignée et la liste la suit, tant que l'utilisateur ne fait pas défiler lui-même.
+  const conteneurT = $("transcript");
+  let ligneLue = null;
+  const allerLigne = (n) => { if (n) conteneurT.scrollTo({ top: n.offsetTop - conteneurT.clientHeight / 3, behavior: K.reduit() ? "auto" : "smooth" }); };
+  const suiviLecture = K.suivi(conteneurT, $("retour-lecture"), { auRetour: () => allerLigne(ligneLue) });
   function suivre(segs) {
-    const lecteur = $("lecteur"), liste = $("segments"), conteneur = $("transcript");
+    const lecteur = $("lecteur"), liste = $("segments");
     let actif = -1;
-    lecteur.onplay = () => conteneur.classList.remove("sans-lecture");
+    ligneLue = null; suiviLecture.reprendre(); conteneurT.scrollTop = 0;
+    lecteur.onplay = () => conteneurT.classList.remove("sans-lecture");
     lecteur.ontimeupdate = () => {
       const t = lecteur.currentTime;
       const i = segs.findIndex((s) => t >= s.start && t < s.end);
@@ -182,7 +195,8 @@
       const n = liste.children[i];
       if (!n) return;
       n.dataset.actif = "true";
-      conteneur.scrollTo({ top: n.offsetTop - conteneur.offsetTop - conteneur.clientHeight / 3, behavior: K.reduit() ? "auto" : "smooth" });
+      ligneLue = n;
+      if (suiviLecture.suit) allerLigne(n);
     };
   }
   $("rapport").addEventListener("click", (e) => { if (e.currentTarget.getAttribute("aria-disabled")) e.preventDefault(); });

@@ -23,7 +23,8 @@ body.termine.nav-revenue .nav { opacity: 1; pointer-events: auto; }
 body.termine.nav-revenue .indicateur { opacity: 0; }
 
 .zone-video { flex: none; padding-bottom: 12px; }
-.zone-video video { width: 100%; max-height: 28dvh; display: block; background: #000; border-radius: 16px; }
+.zone-video video { width: 100%; max-height: 30dvh; display: block; background: #000; border-radius: 16px; }
+.zone-video .st-bulle { font-size: 17px; }
 
 /* ---- scène : l'accueil et le transcript occupent la même place */
 .scene { flex: 1; min-height: 0; position: relative; }
@@ -74,13 +75,19 @@ body.parle .accueil { opacity: 0; transform: scale(0.96); pointer-events: none; 
 @keyframes orbe-tourne { to { transform: rotate(360deg); } }
 body.actif .orbe-chaud { opacity: 0.5; transition: none; }
 
-/* ---- transcript : le texte coule vers le haut, les anciennes lignes s'estompent sous le bord */
+/* ---- transcript : un vrai conteneur qui défile. Le texte se pose en bas (marge automatique) et coule vers le haut ;
+   on peut remonter librement, au doigt, à la molette ou au clavier. Un fondu court masque le bord du haut. */
 .transcript {
-  position: absolute; inset: 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;
-  padding-inline: inherit; padding-bottom: 8px; opacity: 0; transition: opacity 260ms ease;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 30%); mask-image: linear-gradient(to bottom, transparent 0, #000 30%);
+  position: absolute; inset: 0; min-width: 0; display: flex; flex-direction: column;
+  overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; touch-action: pan-y;
+  scrollbar-width: none; padding-inline: inherit; padding-bottom: 12px; opacity: 0; pointer-events: none; transition: opacity 260ms ease;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 56px); mask-image: linear-gradient(to bottom, transparent 0, #000 56px);
 }
-body.parle .transcript { opacity: 1; }
+.transcript::-webkit-scrollbar { display: none; }
+.transcript:focus-visible { outline: none; }
+.transcript-contenu { margin-top: auto; padding-top: 40px; }
+body.parle .transcript { opacity: 1; pointer-events: auto; }
+body:not(.parle) .pilule-retour { display: none; }
 .flux {
   font-size: calc(26px * var(--echelle)); line-height: 1.32; font-weight: 500; letter-spacing: -0.014em; color: var(--texte);
   max-width: 30em; min-width: 0; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto;
