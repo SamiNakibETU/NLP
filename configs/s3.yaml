@@ -1,17 +1,21 @@
-# Configuration du système S3 (encodeur audio + projecteur MLP + LLM avec LoRA)
+# Configuration du système S3 (encodeur audio gelé + projecteur MLP + LLM avec LoRA)
+# Les vecteurs de l'encodeur sont précalculés par code/ecoute/encoder_s3.py (configs/encodage_s3.yaml).
 
 systeme: "S3"
 graine: 42
 
 briques:
-  modele_ecoute_id: "openai/whisper-large-v3"
-  modele_llm_id: "Qwen/Qwen3-4B"
+  modele_ecoute_id: "CohereLabs/cohere-transcribe-arabic-07-2026"
+  modele_llm_id: "Qwen/Qwen2.5-1.5B-Instruct"
   modele_llm_leger_id: "Qwen/Qwen3-1.7B"
-  facteur_regroupement_k: 4        # 50 Hz / 4 = 12,5 vecteurs/s en entrée du LLM
-  duree_fenetre_encodeur_s: 30.0
-  debit_encodeur_hz: 50.0
+  # Convolutions de pas 2 dans le projecteur. L'encodeur Cohere sort 12,5 vecteurs/s (voir journal_s3.md),
+  # débit déjà adapté au LLM : aucune réduction. d_enc et d_llm sont lus dans les configs des modèles.
+  nb_reductions: 0
+  max_tokens_cible: 256
 
 consignes:
+  # Message système du gabarit ChatML (comparé à apply_chat_template de Qwen2.5 : identique).
+  systeme: "You are a helpful assistant."
   temps_1_transcription: "Transcris en arabe."
   temps_2_traduction: "Traduis en français."
 
@@ -24,6 +28,79 @@ temps_1:
   nb_segments_validation: 200
   patience_arret: 3                # arrêt si le WER ne baisse plus sur 3 mesures de suite
   seuil_alerte_etapes: 5000        # diagnostic si l'erreur n'a pas baissé après 5 000 étapes
+
+# Pilote du temps 1 (code/projecteur/entrainer_temps1.py, notebooks/s3_temps1_pilote.ipynb) :
+# 5 000 segments encodés, entraînement local. Réglages choisis d'après les mesures de journal_s3.md.
+temps_1_pilote:
+  dossier_vecteurs: "donnees/externe/s3_encodage"   # sous-dossiers train/ et test/ (index.jsonl)
+  sortie: "modeles/s3_temps1_pilote"                # ignoré par git
+  precision_llm: "bfloat16"
+  learning_rate: 0.001             # choisi par balayage (journal_s3.md)
+  warmup_steps: 100
+  taille_lot: 16                   # lot effectif (= temps_1.lot_effectif)
+  micro_lot: 4                     # 4 x 4 avec accumulation : au-delà, la mémoire unifiée (24 Go) swappe
+  nb_epoques: 6
+  max_norm_gradient: 1.0
+  eval_toutes_les_etapes: 150
+  nb_segments_validation: 200      # tirés du train, jamais appris
+  nb_segments_wer_validation: 100  # sous-ensemble transcrit à chaque mesure (courbe du WER)
+  patience_arret: 3
+  taille_lot_generation: 16
+  max_nouveaux_tokens: 160
+  repetition_penalty: 1.0          # Qwen2.5 met 1.1 par défaut ; neutre pour une transcription
+  # Anti-boucles de génération (réglés sur les références du train, journal_s3.md) :
+  frequence_vecteurs_hz: 12.5      # débit de l'encodeur (mesuré : 12,54 Hz)
+  tokens_par_seconde_max: 7        # limite = ceil(7 x durée) + 10 tokens : coupe 49 cibles sur 50 000
+  tokens_marge: 10
+  repetitions_boucle: 4            # >= 4 répétitions d'une suite de mots -> 1 ; touche 2 références sur 50 000 (0 = désactivé)
+
+# Temps 1 sur les 50 000 segments (cible du plan, environ 145 h). Mêmes réglages que le pilote,
+# sauf la durée : 2 passages (environ 6 200 pas de 16) et une mesure tous les 300 pas.
+temps_1_50k:
+  dossier_vecteurs: "donnees/externe/s3_encodage"
+  sortie: "modeles/s3_temps1_50k"                   # ignoré par git
+  precision_llm: "bfloat16"
+  learning_rate: 0.001             # balayage sur le pilote (journal_s3.md)
+  warmup_steps: 200
+  taille_lot: 16
+  micro_lot: 4
+  nb_epoques: 2
+  max_norm_gradient: 1.0
+  eval_toutes_les_etapes: 300
+  nb_segments_validation: 200
+  nb_segments_wer_validation: 100
+  patience_arret: 4
+  taille_lot_generation: 16
+  max_nouveaux_tokens: 160
+  repetition_penalty: 1.0
+  frequence_vecteurs_hz: 12.5
+  tokens_par_seconde_max: 7
+  tokens_marge: 10
+  repetitions_boucle: 4
+
+# Transcription d'un fichier audio quelconque (code/projecteur/transcrire_s3.py, notebooks/s3_tester_audio.ipynb).
+# Le modèle a appris sur des segments de 5 à 25 s : on découpe en morceaux de 20 s au plus,
+# coupés au point le plus calme des 5 dernières secondes.
+transcription:
+  duree_max_morceau_s: 20
+  recherche_coupure_s: 5
+  fenetre_energie_s: 0.1
+  duree_min_morceau_s: 2           # un reste plus court est rattaché au morceau précédent
+
+# Traduction du texte arabe transcrit en français par le même Qwen2.5-1.5B-Instruct, sans audio
+# (cascade dans notebooks/s3_tester_audio.ipynb). Le temps 2 apprendra la traduction directe depuis l'audio.
+traduction_texte:
+  # Consignes comparées sur 5 textes (journal_s3.md) : celle-ci traduit tout, sans introduction.
+  systeme: "Tu es un traducteur professionnel de l'arabe vers le français. Tu réponds uniquement par la traduction française, sans introduction, sans guillemets et sans commentaire."
+  gabarit: "{texte}\n\nTraduis ce texte en français."
+  # Seconde tentative si de l'arabe reste dans la sortie :
+  gabarit_secours: "Traduis en français le texte arabe suivant. Donne uniquement la traduction.\n\n{texte}"
+  ratio_tokens: 2.0                # limite = 2 x tokens du texte arabe + marge
+  tokens_marge: 20
+  max_nouveaux_tokens: 300
+  repetition_penalty: 1.0
+  repetitions_boucle: 4
+  taille_lot: 8
 
 temps_2:
   part_rappel_transcription: 0.15  # 15 % des exemples restent de la transcription arabe

@@ -52,3 +52,6 @@ donnees/manifeste.csv
 donnees/noms/noms_manuel_modele.csv
 donnees/test/guide-annotation.md
 *.zip
+# Environnement Python local
+.venv/
+.DS_Store

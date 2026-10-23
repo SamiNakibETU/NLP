@@ -1,5 +1,16 @@
 # Scripts de collecte des donnees (code/donnees)
 pyyaml>=6.0
 
+# Système S3 : encodage Cohere Transcribe Arabic (code/ecoute) et projecteur (code/projecteur)
+# Testé le 22/10/2026 avec Python 3.13 : torch 2.14.1, transformers 5.20.2, peft 0.21.2.
+torch>=2.6
+transformers>=5.4.0     # classe CohereAsrForConditionalGeneration native
+peft>=0.15
+accelerate
+numpy
+soundfile
+librosa                 # filtres Mel du préparateur Cohere
+python-dotenv           # HF_TOKEN lu dans .env
+
 # Les tests passent avec unittest (stdlib), sans installation.
 # pytest>=8.0  # optionnel : lance aussi les memes tests

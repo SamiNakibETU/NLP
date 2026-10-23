@@ -21,3 +21,17 @@ serveur:
   couleur_confirme: "#ffffff"
   couleur_provisoire: "#9ca3af"
   direction_lecture: "ltr"
+
+# Mode direct avec le vrai S3 (code/direct/flux_s3.py, notebooks/s3_direct.ipynb).
+# Reprend intervalle_passe_s, silence_cloture_s et duree_max_segment_s de la section direct.
+direct_s3:
+  section_s3: "temps_1_50k"        # projecteur : le meilleur de cette section de s3.yaml
+  mode: "deux_passes"              # ou "secours_morceaux" : un bloc traduit par segment clos, rien avant
+  fenetre_energie_s: 0.1
+  centile_niveau_parole: 90        # niveau de parole : 90e centile des trames déjà reçues
+  seuil_silence_db: 20             # trame silencieuse sous ce niveau - 20 dB (calé sur un extrait MGB-2 test)
+  plancher_silence_db: -60         # et toujours sous -60 dBFS
+  duree_min_passe_s: 1.0           # pas de passe provisoire sur moins d'1 s d'audio
+  duree_min_segment_s: 2.0         # pas de clôture sur silence avant 2 s : un bout de 0,5 s seul est mal transcrit
+  marge_debut_s: 0.2               # silence gardé avant le début de la parole
+  recherche_coupure_s: 5.0         # coupure d'office : point le plus calme des 5 dernières secondes
