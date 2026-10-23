@@ -76,7 +76,7 @@ Sous Windows (PowerShell) : `$env:PORTEPAROLE_LIVE = "factice"; python -m uvico
 | `code/donnees/`, `code/mesures/`, `code/demo/`, `code/cascade/` | données MGB-2 et OPUS, métriques et bootstrap, baseline S0, cascade LoRA | `main` |
 | `code/seamless/`, `code/traduction/` | benchmarks SeamlessM4T et traducteurs sur MGB-2 | `benchmarking-projecteurv1` |
 | `projecteur_v1/` | premier prototype de projecteur Whisper vers Qwen | `projecteurv1` |
-| `notebooks/` | notebooks d'analyse ; `embeddinggemma_*` et `cometkiwi_comparaison` : Hanine Attia | toutes |
+| `notebooks/` | notebooks d'analyse, dont `embeddinggemma_*` et `cometkiwi_comparaison` | toutes |
 | `kaggle/` | kernels d'évaluation sur FLEURS (GPU T4) | `integration` |
 | `resultats/` | mesures brutes : `kaggle/` (FLEURS), `direct/` (Al Jazeera) | `integration` |
 | `modeles/s3_temps1_50k/` | projecteur S3 entraîné (35 Mo) et son évaluation | `benchmarking` |
