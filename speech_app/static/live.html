@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#0b0d10">
+<meta name="color-scheme" content="dark">
+<title>Porte-Parole, sous-titres en direct</title>
+<link rel="stylesheet" href="/live/assets/live.css">
+</head>
+<body>
+<div class="app">
+  <header class="barre">
+    <div class="marque">Porte-Parole <span>en direct</span></div>
+    <div class="etat" role="status">
+      <span id="pastille" class="pastille" data-etat="repos"></span>
+      <span id="etat-texte">Prêt</span>
+    </div>
+  </header>
+
+  <section id="zone-video" class="zone-video" hidden>
+    <video id="video" controls playsinline></video>
+  </section>
+
+  <main id="scene" class="scene" aria-live="polite" aria-label="Sous-titres">
+    <p id="invite" class="invite">Choisis une source, puis appuie sur Démarrer.<br>Les sous-titres français apparaissent ici : gris pendant que la phrase se construit, blanc quand elle est confirmée.</p>
+  </main>
+
+  <div class="mesures" aria-label="Mesures">
+    <span>Retard <b id="retard">–</b></span>
+    <span class="niveau" title="Niveau sonore"><i id="niveau"></i></span>
+    <span id="duree">0:00</span>
+  </div>
+
+  <section id="panneau" class="panneau">
+    <div id="bloc-sources">
+      <div class="sources" role="radiogroup" aria-label="Source audio">
+        <button class="source" role="radio" data-source="micro" aria-checked="true">Micro</button>
+        <button class="source" role="radio" data-source="onglet" aria-checked="false">Onglet</button>
+        <button class="source" role="radio" data-source="url" aria-checked="false">Lien</button>
+        <button class="source" role="radio" data-source="fichier" aria-checked="false">Fichier</button>
+      </div>
+      <p id="aide-source" class="aide"></p>
+      <input id="champ-url" class="champ" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" hidden
+             placeholder="Lien YouTube en direct ou flux .m3u8" aria-label="Lien de la vidéo ou du direct">
+      <input id="champ-fichier" class="champ" type="file" accept="audio/*,video/*" hidden aria-label="Fichier audio ou vidéo">
+    </div>
+
+    <button id="principal" class="principal" type="button">Démarrer</button>
+
+    <div class="options">
+      <button id="opt-arabe" class="puce" type="button" aria-pressed="false">Arabe</button>
+      <button id="opt-moins" class="puce" type="button" aria-label="Texte plus petit">A−</button>
+      <button id="opt-plus" class="puce" type="button" aria-label="Texte plus grand">A+</button>
+      <button id="opt-voix" class="puce" type="button" aria-pressed="false" hidden>Lecture vocale</button>
+      <button id="opt-lien" class="puce" type="button" hidden>Copier le lien</button>
+      <button id="opt-epure" class="puce" type="button" aria-pressed="false">Masquer</button>
+    </div>
+
+    <button id="rapport" class="secondaire" type="button" hidden>Terminer et générer le rapport</button>
+    <div id="bilan" class="bilan" hidden></div>
+    <div id="resultat" class="bilan" hidden></div>
+  </section>
+</div>
+<script src="/live/assets/live.js"></script>
+</body>
+</html>

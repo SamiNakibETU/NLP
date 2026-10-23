@@ -5,6 +5,7 @@
     POST /api/translate                 fichier audio ou vidéo + engine=... [&task=st|asr] [&format=json|srt|vtt] [&wait=false]
     GET  /api/jobs/{id}                 état et résultat d'un travail lancé avec wait=false
     GET  /api/jobs/{id}/subtitles.srt   sous-titres d'un travail terminé (ou .vtt)
+    GET  /live                          sous-titres en direct (micro, onglet, lien YouTube/HLS, fichier) : voir live.py
 
 Les modèles sont chargés au premier appel du moteur demandé ; un seul reste en mémoire (voir lazy_engines.py).
 Un jeton facultatif protège l'API : variable PORTEPAROLE_API_TOKEN, en-tête `Authorization: Bearer <jeton>`.
@@ -26,6 +27,7 @@ from fastapi.responses import PlainTextResponse
 
 import app as ui
 import front
+import live
 import media
 from engines import Result, to_srt, to_vtt
 
@@ -150,6 +152,14 @@ def job_subtitles(job_id: str, ext: str):
         raise HTTPException(404, "Sous-titres indisponibles")
     return PlainTextResponse(j["result"][ext])
 
+
+# Direct : /live, /ws/live, /ws/regarder/{sid}, /api/live/*  (doit être monté avant l'interface Gradio, qui prend « / »)
+api.include_router(live.router)
+try:                                                        # rapport de fin de session, écrit à part
+    import session_api
+    api.include_router(session_api.router)
+except ImportError:
+    pass
 
 if os.environ.get("PORTEPAROLE_FRONT") == "old":          # ancienne interface (presse, vidéos, atelier…)
     if not ui.FROZEN:
