@@ -1,0 +1,16 @@
+services:
+  porteparole:
+    build: .
+    ports: ["7860:7860"]
+    environment:
+      HF_TOKEN: ${HF_TOKEN}                     # encodeur Cohere Transcribe Arabic (S3), accès contrôlé
+      PORTEPAROLE_NLP_REPO: /nlp
+      PORTEPAROLE_ENGINES: s0,seamless,s3       # sous-ensemble possible
+      PORTEPAROLE_API_TOKEN: ${PORTEPAROLE_API_TOKEN:-}
+    volumes:
+      - ./hf_cache:/cache
+      - ${NLP_REPO_DIR}:/nlp:ro                 # clone de SamiNakibETU/NLP, branche benchmarking
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: 1, capabilities: [gpu]}]
