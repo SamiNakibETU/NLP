@@ -6,7 +6,7 @@ fin de session (session_report.py), qui la relit pour produire transcript, locut
     <PORTEPAROLE_SESSIONS>/<sid>/
         meta.json        {"sid", "source", "moteur", "cree_le", "duree_s", "titre"}
         audio.wav        16 kHz mono int16, tout l'audio reçu
-        segments.jsonl   une ligne par segment clos : {"id", "debut_s", "fin_s", "ar", "fr"}
+        segments.jsonl   une ligne par segment clos : {"id", "debut_s", "fin_s", "ar", "fr", "locuteur"}
         rapport/         sorties du rapport (transcript.md, resume.md, sous_titres.srt, rapport.json)
 """
 from __future__ import annotations
@@ -80,7 +80,7 @@ class Session:
         self.ecrire_meta(meta)
 
     def ajouter_segment(self, segment: dict) -> None:
-        ligne = {k: segment.get(k) for k in ("id", "debut_s", "fin_s", "ar", "fr")}
+        ligne = {k: segment.get(k) for k in ("id", "debut_s", "fin_s", "ar", "fr", "locuteur")}
         with open(self.dossier / "segments.jsonl", "a", encoding="utf-8") as f:
             f.write(json.dumps(ligne, ensure_ascii=False) + "\n")
 

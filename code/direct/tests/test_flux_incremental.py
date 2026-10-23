@@ -92,6 +92,19 @@ class TestFluxIncremental(unittest.TestCase):
             compte.append(len(appels))
         self.assertLess(compte[0], compte[1], "la clôture reprend l arabe de la passe grise")
 
+    def test_changement_de_locuteur(self):
+        reglages = dict(reglages_direct_live(), detecter_locuteurs=True)
+        horloge, moteur = Horloge(), MoteurFactice()
+        flux = FluxIncremental(moteur, reglages, horloge=horloge)
+        signal, pas, definitifs = signal_demo([0, 1, 2], duree_phrase_s=6.0), SR // 4, []
+        for debut in range(0, len(signal), pas):
+            horloge.t += 0.25
+            flux.ajouter(signal[debut: debut + pas])
+            definitifs += [m for m in flux.traiter() if m["type"] == "definitif"]
+        definitifs += [m for m in flux.terminer() if m["type"] == "definitif"]
+        self.assertEqual([m["locuteur"] for m in definitifs], [1, 2, 1])
+        self.assertEqual([m["changement_locuteur"] for m in definitifs], [False, True, True])
+
     def test_provisoire_grandit(self):
         premier = [m for m in self.provisoires if m["id_segment"] == "seg_0001"]
         longueurs = [len(m["ar"].split()) for m in premier]

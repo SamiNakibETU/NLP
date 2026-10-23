@@ -35,6 +35,53 @@ def sans_arabe(texte: str) -> str:
     return texte.strip(" ,;:-")
 
 
+def sans_repetitions(texte: str) -> str:
+    """Supprime les propositions répétées à la suite (boucle du petit LLM : « Ils auront…, ils auront…, ils auront… »)."""
+    morceaux = re.split(r"(?<=[,.;!?])\s+", texte.strip())
+    gardes, precedent = [], None
+    for m in morceaux:
+        cle = re.sub(r"[^\w]+", " ", m.lower()).strip()
+        if cle and cle == precedent:
+            continue
+        gardes.append(m)
+        precedent = cle
+    return " ".join(gardes)
+
+
+def nettoyer_sous_titre(texte: str) -> str:
+    return sans_repetitions(sans_arabe(texte))
+
+
+class EmpreinteVoix:
+    """Embedding de locuteur ECAPA (speechbrain), chargé au premier appel ; None si speechbrain manque."""
+    MODELE = "speechbrain/spkrec-ecapa-voxceleb"
+
+    def __init__(self):
+        self.clf, self.indisponible = None, False
+
+    def __call__(self, signal: np.ndarray):
+        if self.indisponible or len(signal) < SR:          # moins d'1 s : empreinte peu fiable
+            return None
+        try:
+            import torch
+            if self.clf is None:
+                try:
+                    from speechbrain.inference.speaker import EncoderClassifier
+                except ImportError:
+                    from speechbrain.pretrained import EncoderClassifier
+                dossier = Path(os.environ.get("PORTEPAROLE_CACHE", Path(__file__).resolve().parent / "cache")) / "ecapa"
+                self.clf = EncoderClassifier.from_hparams(
+                    source=self.MODELE, savedir=str(dossier),
+                    run_opts={"device": "cuda" if torch.cuda.is_available() else "cpu"})
+            with torch.inference_mode():
+                v = self.clf.encode_batch(torch.from_numpy(np.ascontiguousarray(signal)).float().unsqueeze(0).to(self.clf.device))
+            return v.squeeze().detach().float().cpu().numpy()
+        except Exception as exc:                            # noqa: BLE001 : le direct continue sans locuteurs
+            print(f"[direct] empreinte de voix désactivée : {type(exc).__name__}: {exc}", flush=True)
+            self.indisponible = True
+            return None
+
+
 # ---------------------------------------------------------------- réel
 class OpusMT:
     """Helsinki-NLP/opus-mt-ar-fr : traducteur rapide (quelques dizaines de ms) pour le texte provisoire."""
@@ -92,13 +139,18 @@ class MoteurDirectS3:
         return " ".join(m["texte"] for m in morceaux).strip()
 
     def traduire_provisoire(self, ar: str) -> str:
-        return sans_arabe(self.opus.traduire(ar))
+        return nettoyer_sous_titre(self.opus.traduire(ar))
 
     def traduire_definitif(self, ar: str, contexte: list[str]) -> str:
         fr = self.t.traduire_avec_contexte(ar, contexte)
         if part_arabe(fr) > PART_ARABE_MAX:     # Qwen a recopié l'arabe malgré la consigne de secours
             fr = self.opus.traduire(ar)
-        return sans_arabe(fr)
+        return nettoyer_sous_titre(fr)
+
+    def empreinte(self, signal: np.ndarray):
+        if not hasattr(self, "_voix"):
+            self._voix = EmpreinteVoix()
+        return self._voix(signal)
 
 
 def charger_moteur_direct(nlp_repo: str, s3_ckpt: str | None = None, lora_dir: str | None = None) -> MoteurDirectS3:
@@ -198,3 +250,10 @@ class MoteurFactice:
         if final is None:
             return ar
         return final if n == len(mots_ar) else " ".join(gloses[:n]).capitalize() + "…"
+
+    def empreinte(self, signal: np.ndarray):
+        """Deux voix simulées : les phrases paires et impaires ne sont pas dites par la même personne."""
+        if len(signal) < SR:
+            return None
+        indice = PHRASES.index(self._phrase(signal))
+        return np.array([1.0, 0.0, 0.1]) if indice % 2 == 0 else np.array([0.0, 1.0, 0.1])

@@ -63,5 +63,16 @@ class TestSourceDirect(unittest.TestCase):
         self.assertIn("-re", commande_ffmpeg("/tmp/jt.mp4", temps_reel=True))
 
 
+
+class TestRepetitions(unittest.TestCase):
+    def test_boucle_du_llm_supprimee(self):
+        from live_moteurs import nettoyer_sous_titre
+        fr = "Ils auront une grande récompense, ils auront une grande récompense, ils auront une grande récompense. Je pense que oui."
+        self.assertEqual(nettoyer_sous_titre(fr), "Ils auront une grande récompense, Je pense que oui.")
+
+    def test_phrases_differentes_gardees(self):
+        from live_moteurs import sans_repetitions
+        self.assertEqual(sans_repetitions("Oui, non. Oui."), "Oui, non. Oui.")
+
 if __name__ == "__main__":
     unittest.main()

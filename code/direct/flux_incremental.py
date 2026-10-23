@@ -38,6 +38,29 @@ SR = FREQUENCE_ATTENDUE
 HISTORIQUE_NIVEAU_S = 60.0   # le niveau de parole se mesure sur la dernière minute, pas sur toute l'écoute
 
 
+class SuiviLocuteurs:
+    """Qui parle, en ligne : chaque empreinte de voix rejoint la voix connue la plus proche (similarité cosinus
+    au-dessus du seuil) ou ouvre une nouvelle voix. Le centre de chaque voix suit la moyenne de ses empreintes."""
+
+    def __init__(self, seuil: float = 0.45, max_voix: int = 8):
+        self.seuil, self.max_voix = seuil, max_voix
+        self.centres: List[np.ndarray] = []
+        self.effectifs: List[int] = []
+
+    def attribuer(self, emb: np.ndarray) -> int:
+        v = np.asarray(emb, dtype=np.float64)
+        v = v / (np.linalg.norm(v) or 1.0)
+        sims = [float(c @ v / (np.linalg.norm(c) or 1.0)) for c in self.centres]
+        if sims and (max(sims) >= self.seuil or len(self.centres) >= self.max_voix):
+            i = int(np.argmax(sims))
+            self.centres[i] = self.centres[i] * self.effectifs[i] + v
+            self.effectifs[i] += 1
+            return i + 1
+        self.centres.append(v)
+        self.effectifs.append(1)
+        return len(self.centres)
+
+
 def reglages_direct_live() -> Dict[str, Any]:
     """Réglages de la page /live : ceux de direct_s3 (deux passes), complétés par la section direct_live."""
     reglages = reglages_direct_s3("deux_passes")
@@ -184,6 +207,7 @@ class FluxIncremental(FluxS3):
                 "fin_s": round(fin / SR, 2)}
         if ar:
             fr = self.moteur.traduire_definitif(ar, list(self.contexte_ar)).strip()
+            locuteur = self._locuteur(self._signal[debut:fin])
             maintenant = self.horloge()
             arrivee_fin_parole = self._heure_arrivee(coupure["fin_parole"])
             retard = maintenant - arrivee_fin_parole
@@ -194,6 +218,10 @@ class FluxIncremental(FluxS3):
                 "passes_provisoires": list(self._passes_provisoires), "texte_final": fr, "ar": ar})
             self.contexte_ar.append(ar)
             msg = dict(base, fr=fr, ar=ar, retard_s=round(retard, 3))
+            if locuteur is not None:
+                msg["locuteur"] = locuteur
+                msg["changement_locuteur"] = self._dernier_locuteur is not None and locuteur != self._dernier_locuteur
+                self._dernier_locuteur = locuteur
         else:
             msg = dict(base, fr="", ar="", retard_s=None, vide=True)     # bruit sans parole : efface le gris
         self._debut = coupure["reprise"]
@@ -202,6 +230,16 @@ class FluxIncremental(FluxS3):
         self._ar_provisoire, self._fr_provisoire, self._passes_provisoires = None, "", []
         self._passe_couvre = None
         return msg
+
+    def _locuteur(self, morceau: np.ndarray) -> Optional[int]:
+        """Numéro de voix du segment, ou None (moteur sans empreinte, segment trop court) : on garde alors la voix d'avant."""
+        if not self.reglages.get("detecter_locuteurs", False) or not hasattr(self.moteur, "empreinte"):
+            return None
+        if not hasattr(self, "_suivi"):
+            self._suivi = SuiviLocuteurs(self.reglages.get("seuil_locuteur", 0.45))
+            self._dernier_locuteur = None
+        emb = self.moteur.empreinte(morceau.copy())
+        return self._suivi.attribuer(emb) if emb is not None else self._dernier_locuteur
 
     # ------------------------------------------------------------------ bilan
     def bilan(self) -> Dict[str, Any]:

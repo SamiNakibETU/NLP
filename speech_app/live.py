@@ -104,6 +104,10 @@ class _Proxy:
     def traduire_definitif(self, ar, contexte):
         return self.fournisseur().traduire_definitif(ar, contexte)
 
+    def empreinte(self, signal):
+        moteur = self.fournisseur()
+        return moteur.empreinte(signal) if hasattr(moteur, "empreinte") else None
+
 
 def _importer_flux():
     """Import tardif : le flux importe transcrire_s3, qui place code/demo (un autre app.py) devant sys.path."""

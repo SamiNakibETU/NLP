@@ -42,3 +42,5 @@ direct_live:
   recherche_coupure_s: 3.0
   reutiliser_passe_max_s: 0.6      # clôture : reprend l'arabe de la dernière passe grise si elle s'arrête à moins de 0,6 s
   paquets_retard_max: 4            # plus de 4 paquets (1 s) en attente : calcul en retard, on saute la passe grise
+  detecter_locuteurs: true         # empreinte de voix ECAPA par segment clos : « Voix 2 » à chaque changement
+  seuil_locuteur: 0.45             # similarité cosinus minimale pour rester sur la même voix
