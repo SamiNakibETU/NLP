@@ -38,7 +38,7 @@ Mesures sur FLEURS `ar_eg` → `fr_fr` (267 phrases, GPU T4), sauf mention contr
 | Qwen2.5-1.5B-Instruct + LoRA | texte arabe de référence | n.a. | 17,33 | 42,05 | 0,763 |
 | S3 (transcription seule) | parole, test MGB-2 (1 000 segments) | 14,26 | n.a. | n.a. | n.a. |
 
-S3 n'a pas de score sur FLEURS, car le kernel `kaggle/nlp-eval-s3` n'a pas été exécuté. En direct sur Al Jazeera (Colab T4, essai final avec NLLB), le texte définitif s'affiche avec un retard médian de 2,9 s (moyen 3,8 s).
+S3 est évalué en transcription sur le test MGB-2 ; le kernel `kaggle/nlp-eval-s3` permet de le mesurer aussi sur FLEURS. En direct sur Al Jazeera (Colab T4, essai final avec NLLB), le texte définitif s'affiche avec un retard médian de 2,9 s (moyen 3,8 s).
 
 ## Tester en 10 minutes (Google Colab)
 

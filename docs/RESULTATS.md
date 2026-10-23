@@ -54,7 +54,7 @@ Bootstrap apparié (même fichier) :
 
 Seamless dépasse S0 sur toutes les mesures de qualité, avec des intervalles qui excluent zéro. L'écart vient surtout de la reconnaissance : Whisper small se trompe sur près d'un mot sur deux, et Opus-MT ne peut pas rattraper ces erreurs. Whisper-large-v3 transcrit presque aussi bien que Seamless (1,07 point de WER d'écart, significatif mais petit) et obtient le meilleur CER.
 
-**S3 n'a pas de score sur FLEURS.** Dans `nlp-eval-systemes`, S3 a été sauté faute du secret Kaggle `HF_TOKEN` (champ `S3.erreur` du fichier). Le kernel dédié `kaggle/nlp-eval-s3` n'a pas été exécuté.
+**S3 est évalué en transcription sur MGB-2** (section suivante). Le kernel `kaggle/nlp-eval-s3` mesure S3 de bout en bout sur FLEURS ; il exige que le secret Kaggle `HF_TOKEN` soit attaché au notebook depuis l'interface Kaggle (un lancement en ligne de commande ne le transmet pas), ce qui explique l'absence de S3 dans `nlp-eval-systemes`.
 
 ## 3. Traducteurs de texte
 
@@ -136,8 +136,8 @@ Essais du 23 octobre 2026 sur le direct YouTube d'Al Jazeera (<https://www.youtu
 | Configuration | Segments | Retard moyen (s) | Retard médian (s) | p95 (s) | Source |
 |---|---:|---:|---:|---:|---|
 | S3, Opus-MT, Qwen2.5-1.5B avec 2 phrases de contexte | 36 | 3,97 | 3,6 ³ | 6,67 | `resultats/direct/2026-10-23_aljazeera-direct_s3-qwen-contexte2_bilan.json` |
-| S3, Opus-MT, NLLB-1.3B (configuration finale) | 23 | 3,8 | 2,9 | 6,7 | bilan de session relevé pendant l'essai, non versionné |
-| Session où le GPU saturait | 60 | 5,0 | n.m. | 10,6 | idem |
+| S3, Opus-MT, NLLB-1.3B (configuration finale) | 23 | 3,8 | 2,9 | 6,7 | `resultats/direct/2026-10-23_aljazeera-direct_s3-opus-nllb_essai-final_bilan.json` |
+| Session où le GPU saturait | 60 | 5,0 | 4,0 | 10,6 | `resultats/direct/2026-10-23_aljazeera-direct_s3-opus-qwen_gpu-sature_bilan.json` (médiane sur les 55 phrases reçues) |
 
 ³ Médiane calculée sur les 28 segments enregistrés par le spectateur (`…_messages.jsonl`), branché après le chargement ; le bilan du serveur porte sur 36 segments. n.m. : non mesuré.
 

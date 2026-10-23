@@ -1,0 +1,13 @@
+{
+ "phrases_definitives_recues": 23,
+ "phrases_avec_arabe": 0,
+ "retard_moyen_s": 3.84,
+ "retard_median_s": 2.9,
+ "retard_p95_s": 6.71,
+ "voix": [
+  1,
+  2,
+  3
+ ],
+ "configuration": "S3 + Opus-MT (gris) + NLLB-1.3B (définitif), sans contexte, Colab T4, direct YouTube Al Jazeera ; spectateur WebSocket (connexion fermée par le tunnel après ~23 phrases)"
+}
