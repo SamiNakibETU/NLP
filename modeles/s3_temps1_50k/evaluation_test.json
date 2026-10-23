@@ -1,0 +1,12 @@
+{
+  "wer": 0.142572,
+  "cer": 0.072247,
+  "wer_pct": 14.26,
+  "cer_pct": 7.22,
+  "nb_segments": 1000,
+  "outil": "levenshtein-exact+normaliser_arabe(complet)",
+  "partie": "test",
+  "heures_audio": 2.851,
+  "secondes_calcul": 115.6,
+  "rtf": 0.0113
+}

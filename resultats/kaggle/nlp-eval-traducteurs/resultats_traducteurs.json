@@ -1,0 +1,104 @@
+{
+  "jeux": {
+    "fleurs": 267
+  },
+  "traducteurs": {
+    "opus-mt-ar-fr": {
+      "fleurs": {
+        "bleu": 24.31,
+        "chrf_pp": 49.58,
+        "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+        "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+        "n": 267,
+        "latence_mediane_s": 0.194,
+        "latence_p95_s": 0.367,
+        "part_sorties_arabes": 0.0,
+        "pic_vram_go": 0.17,
+        "comet": null,
+        "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+      }
+    },
+    "nllb-200-distilled-600M": {
+      "fleurs": {
+        "bleu": 29.33,
+        "chrf_pp": 52.96,
+        "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+        "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+        "n": 267,
+        "latence_mediane_s": 0.461,
+        "latence_p95_s": 0.788,
+        "part_sorties_arabes": 0.0,
+        "pic_vram_go": 1.26,
+        "comet": null,
+        "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+      }
+    },
+    "nllb-200-distilled-1.3B": {
+      "fleurs": {
+        "bleu": 31.26,
+        "chrf_pp": 55.19,
+        "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+        "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+        "n": 267,
+        "latence_mediane_s": 0.82,
+        "latence_p95_s": 1.383,
+        "part_sorties_arabes": 0.0,
+        "pic_vram_go": 2.78,
+        "comet": null,
+        "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+      }
+    },
+    "qwen2.5-1.5b-base": {
+      "fleurs": {
+        "bleu": 15.23,
+        "chrf_pp": 40.24,
+        "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+        "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+        "n": 267,
+        "latence_mediane_s": 1.604,
+        "latence_p95_s": 2.81,
+        "part_sorties_arabes": 0.0824,
+        "pic_vram_go": 3.13,
+        "comet": null,
+        "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+      }
+    },
+    "qwen2.5-1.5b-lora": {
+      "fleurs": {
+        "bleu": 17.33,
+        "chrf_pp": 42.05,
+        "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+        "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+        "n": 267,
+        "latence_mediane_s": 2.144,
+        "latence_p95_s": 3.637,
+        "part_sorties_arabes": 0.0,
+        "pic_vram_go": 3.13,
+        "comet": null,
+        "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+      }
+    },
+    "qwen2.5-7b-nf4": {
+      "fleurs": {
+        "bleu": 24.27,
+        "chrf_pp": 50.8,
+        "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+        "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+        "n": 150,
+        "latence_mediane_s": 2.27,
+        "latence_p95_s": 4.083,
+        "part_sorties_arabes": 0.0067,
+        "pic_vram_go": 6.03,
+        "comet": null,
+        "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+      }
+    }
+  },
+  "chargement_s": {
+    "opus-mt-ar-fr": 16.5,
+    "nllb-200-distilled-600M": 38.7,
+    "nllb-200-distilled-1.3B": 43.8,
+    "qwen-1.5b+lora": 27.9,
+    "qwen2.5-7b-nf4": 125.7
+  }
+}

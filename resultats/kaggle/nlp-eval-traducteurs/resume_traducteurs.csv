@@ -1,0 +1,7 @@
+traducteur,jeu,n,bleu,chrf_pp,comet,latence_mediane_s,latence_p95_s,part_sorties_arabes,pic_vram_go
+opus-mt-ar-fr,fleurs,267,24.31,49.58,,0.194,0.367,0.0,0.17
+nllb-200-distilled-600M,fleurs,267,29.33,52.96,,0.461,0.788,0.0,1.26
+nllb-200-distilled-1.3B,fleurs,267,31.26,55.19,,0.82,1.383,0.0,2.78
+qwen2.5-1.5b-base,fleurs,267,15.23,40.24,,1.604,2.81,0.0824,3.13
+qwen2.5-1.5b-lora,fleurs,267,17.33,42.05,,2.144,3.637,0.0,3.13
+qwen2.5-7b-nf4,fleurs,150,24.27,50.8,,2.27,4.083,0.0067,6.03

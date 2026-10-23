@@ -1,0 +1,401 @@
+[{"stream_name":"stderr","time":12.793752025,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":12.793816403,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":12.793823909,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":12.793828186,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":13.601994557,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":13.602024406,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":13.602032617999999,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":13.602040099,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":25.871596,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":25.87162317,"data":"unbabel-comet 2.2.7 requires huggingface-hub\u003c1.0,\u003e=0.19.3, but you have huggingface-hub 1.29.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":25.871628432,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":25.871634236,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.1.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":25.871641524,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":25.871644233,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":25.87164704,"data":"unbabel-comet 2.2.7 requires transformers\u003c5.0,\u003e=4.17, but you have transformers 5.16.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074369251,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":26.074405071,"data":"unbabel-comet 2.2.7 requires huggingface-hub\u003c1.0,\u003e=0.19.3, but you have huggingface-hub 1.29.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074410084,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074413865,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.1.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074417361,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074421226,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074424932,"data":"unbabel-comet 2.2.7 requires transformers\u003c5.0,\u003e=4.17, but you have transformers 5.16.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.07442871,"data":"\n"}
+,{"stream_name":"stderr","time":26.07443183,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":26.074451442,"data":"unbabel-comet 2.2.7 requires huggingface-hub\u003c1.0,\u003e=0.19.3, but you have huggingface-hub 1.29.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074455263,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.07445879,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.1.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074462326,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074465768,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":26.074469582,"data":"unbabel-comet 2.2.7 requires transformers\u003c5.0,\u003e=4.17, but you have transformers 5.16.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":79.167165208,"data":"2.11.0+cu128 5.16.1 0.20.0 Tesla T4\n"}
+,{"stream_name":"stdout","time":80.259374627,"data":"Tu es un traducteur professionnel de l'arabe vers le français. Tu réponds uniquement par la traduction française, sans introduction, sans guillemets et sans commentaire.\n"}
+,{"stream_name":"stdout","time":80.259415487,"data":"'{texte}\\n\\nTraduis ce texte en français.'\n"}
+,{"stream_name":"stdout","time":80.259420957,"data":"'Contexte (phrases précédentes, à ne pas traduire) :\\n{contexte}\\n\\nTexte :\\n{texte}\\n\\nTraduis ce texte en français.'\n"}
+,{"stream_name":"stdout","time":80.750374141,"data":"20500 500\n"}
+,{"stream_name":"stderr","time":81.032509666,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":81.032531777,"data":"\n"}
+,{"stream_name":"stderr","time":81.032536445,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":129.671077165,"data":"exemples 20500 500 rejetés (\u003e LONG_MAX tokens) 0 0 | part avec contexte 0.2895609756097561\n"}
+,{"stream_name":"stdout","time":129.671111622,"data":"\u003c|im_start|\u003esystem\n"}
+,{"stream_name":"stdout","time":129.671117358,"data":"Tu es un traducteur professionnel de l'arabe vers le français. Tu réponds uniquement par la traduction française, sans introduction, sans guillemets et sans commentaire.\u003c|im_end|\u003e\n"}
+,{"stream_name":"stdout","time":129.671127266,"data":"\u003c|im_start|\u003euser\n"}
+,{"stream_name":"stdout","time":129.671133324,"data":"يخبرنا المدون داستان عن القبض على الكلاب على يد الشرطة الإيرانية في التاسع من سبتمبر / أيلول لتخليص البلاد من \"المؤثرات الغربية والفجور\".\n"}
+,{"stream_name":"stdout","time":129.671137463,"data":"\n"}
+,{"stream_name":"stdout","time":129.67114022,"data":"Traduis ce texte en français.\u003c|im_end|\u003e\n"}
+,{"stream_name":"stdout","time":129.671143266,"data":"\u003c|im_start|\u003eassistant\n"}
+,{"stream_name":"stdout","time":129.671146223,"data":"Le blogueur Dastan rapporte que la police iranienne a arrêté des chiens le 9 septembre dernier pour débarrasser le pays d’ “influences occidentales » et d’« immodestie ».\u003c|im_end|\u003e\n"}
+,{"stream_name":"stdout","time":129.671149876,"data":"--- cible (non masquée) : Le blogueur Dastan rapporte que la police iranienne a arrêté des chiens le 9 septembre dernier pour débarrasser le pays d’ “influences occidentales » et d’« immodestie ».\u003c|im_end|\u003e\n"}
+,{"stream_name":"stdout","time":130.256817686,"data":"267 phrases FLEURS appariées ar/fr\n"}
+,{"stream_name":"stdout","time":130.537693991,"data":"trainable params: 4,358,144 || all params: 1,548,072,448 || trainable%: 0.2815\n"}
+,{"stream_name":"stdout","time":256.05465783,"data":"évaluation avant : 125 s\n"}
+,{"stream_name":"stdout","time":256.134847344,"data":"{'bleu': 15.18, 'chrf_pp': 40.25, 'signature_bleu': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'signature_chrf_pp': 'nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0'}\n"}
+,{"stream_name":"stdout","time":289.183172969,"data":"{'pas': 0, 'perte_val': 1.7106, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":332.56127047,"data":"{'pas': 20, 'perte_train': 1.7364, 'lr': 8.23529411764706e-05, 'temps_s': 43, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":377.134825275,"data":"{'pas': 40, 'perte_train': 1.4948, 'lr': 0.00016078431372549022, 'temps_s': 88, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":421.302140772,"data":"{'pas': 60, 'perte_train': 1.4587, 'lr': 0.0001999735804496583, 'temps_s': 132, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":465.740108319,"data":"{'pas': 80, 'perte_train': 1.4344, 'lr': 0.00019972580662641035, 'temps_s': 176, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":510.43598363,"data":"{'pas': 100, 'perte_train': 1.3996, 'lr': 0.0001992178595602131, 'temps_s': 221, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":543.110883972,"data":"{'pas': 100, 'perte_val': 1.4111, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":588.73196148,"data":"{'pas': 120, 'perte_train': 1.4142, 'lr': 0.00019845106442696562, 'temps_s': 299, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":634.222198843,"data":"{'pas': 140, 'perte_train': 1.4681, 'lr': 0.00019742742170761912, 'temps_s': 345, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":678.107944005,"data":"{'pas': 160, 'perte_train': 1.462, 'lr': 0.0001961496019691504, 'temps_s': 389, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":721.749692635,"data":"{'pas': 180, 'perte_train': 1.4828, 'lr': 0.00019462093889735765, 'temps_s': 432, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":765.975298546,"data":"{'pas': 200, 'perte_train': 1.4291, 'lr': 0.00019284542059965477, 'temps_s': 477, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":798.492936404,"data":"{'pas': 200, 'perte_val': 1.393, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":842.43330852,"data":"{'pas': 220, 'perte_train': 1.407, 'lr': 0.00019082767920055452, 'temps_s': 553, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":887.233522561,"data":"{'pas': 240, 'perte_train': 1.4707, 'lr': 0.00018857297875698455, 'temps_s': 598, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":930.72129773,"data":"{'pas': 260, 'perte_train': 1.4104, 'lr': 0.0001860872015249639, 'temps_s': 641, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":974.239994694,"data":"{'pas': 280, 'perte_train': 1.4375, 'lr': 0.00018337683261346875, 'temps_s': 685, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1017.213037513,"data":"{'pas': 300, 'perte_train': 1.4773, 'lr': 0.00018044894306552337, 'temps_s': 728, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1049.809582017,"data":"{'pas': 300, 'perte_val': 1.3808, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":1093.980385521,"data":"{'pas': 320, 'perte_train': 1.4146, 'lr': 0.00017731117141065643, 'temps_s': 805, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1138.066957839,"data":"{'pas': 340, 'perte_train': 1.3759, 'lr': 0.00017397170373684962, 'temps_s': 849, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1181.731885152,"data":"{'pas': 360, 'perte_train': 1.4475, 'lr': 0.00017043925233396854, 'temps_s': 892, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1225.672189985,"data":"{'pas': 380, 'perte_train': 1.4384, 'lr': 0.0001667230329643935, 'temps_s': 936, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1269.569527029,"data":"{'pas': 400, 'perte_train': 1.4005, 'lr': 0.0001628327408201475, 'temps_s': 980, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1302.171290031,"data":"{'pas': 400, 'perte_val': 1.3774, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":1346.566265548,"data":"{'pas': 420, 'perte_train': 1.4184, 'lr': 0.00015877852522924732, 'temps_s': 1057, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1390.464624753,"data":"{'pas': 440, 'perte_train': 1.3761, 'lr': 0.00015457096317726552, 'temps_s': 1101, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1434.774245523,"data":"{'pas': 460, 'perte_train': 1.4123, 'lr': 0.00015022103171318275, 'temps_s': 1145, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1477.798698385,"data":"{'pas': 480, 'perte_train': 1.4341, 'lr': 0.00014574007931152037, 'temps_s': 1188, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1521.737442887,"data":"{'pas': 500, 'perte_train': 1.4201, 'lr': 0.000141139796265466, 'temps_s': 1232, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1554.455631148,"data":"{'pas': 500, 'perte_val': 1.3691, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":1597.238975436,"data":"{'pas': 520, 'perte_train': 1.4085, 'lr': 0.00013643218418823367, 'temps_s': 1308, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1640.931004058,"data":"{'pas': 540, 'perte_train': 1.3617, 'lr': 0.00013162952470222486, 'temps_s': 1352, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1684.639242059,"data":"{'pas': 560, 'perte_train': 1.3771, 'lr': 0.0001267443473976784, 'temps_s': 1395, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1729.668145268,"data":"{'pas': 580, 'perte_train': 1.3656, 'lr': 0.00012178939714439976, 'temps_s': 1440, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1774.42087299,"data":"{'pas': 600, 'perte_train': 1.397, 'lr': 0.00011677760084185123, 'temps_s': 1485, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1807.13476838,"data":"{'pas': 600, 'perte_val': 1.3619, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":1851.179381354,"data":"{'pas': 620, 'perte_train': 1.3965, 'lr': 0.00011172203369434691, 'temps_s': 1562, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1895.511523563,"data":"{'pas': 640, 'perte_train': 1.4093, 'lr': 0.0001066358850993378, 'temps_s': 1606, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1938.701067623,"data":"{'pas': 660, 'perte_train': 1.3896, 'lr': 0.00010153242423777965, 'temps_s': 1649, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":1983.070830317,"data":"{'pas': 680, 'perte_train': 1.4204, 'lr': 9.642496545635498e-05, 'temps_s': 1694, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2025.971006015,"data":"{'pas': 700, 'perte_train': 1.3959, 'lr': 9.132683353186273e-05, 'temps_s': 1737, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2058.629715624,"data":"{'pas': 700, 'perte_val': 1.3563, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":2103.378373742,"data":"{'pas': 720, 'perte_train': 1.4041, 'lr': 8.625132890839707e-05, 'temps_s': 1814, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2147.347879972,"data":"{'pas': 740, 'perte_train': 1.3854, 'lr': 8.121169299800733e-05, 'temps_s': 1858, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2191.427766432,"data":"{'pas': 760, 'perte_train': 1.3971, 'lr': 7.62210736353658e-05, 'temps_s': 1902, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2234.079968206,"data":"{'pas': 780, 'perte_train': 1.4618, 'lr': 7.129249077656843e-05, 'temps_s': 1945, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2277.790833877,"data":"{'pas': 800, 'perte_train': 1.3962, 'lr': 6.64388025315558e-05, 'temps_s': 1988, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2310.477212417,"data":"{'pas': 800, 'perte_val': 1.3523, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":2354.455947117,"data":"{'pas': 820, 'perte_train': 1.4254, 'lr': 6.167267161877251e-05, 'temps_s': 2065, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2398.214493675,"data":"{'pas': 840, 'perte_train': 1.4047, 'lr': 5.7006532329580464e-05, 'temps_s': 2109, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2442.173031953,"data":"{'pas': 860, 'perte_train': 1.4142, 'lr': 5.245255808861268e-05, 'temps_s': 2153, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2486.226271858,"data":"{'pas': 880, 'perte_train': 1.3822, 'lr': 4.8022629694697984e-05, 'temps_s': 2197, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2530.675310345,"data":"{'pas': 900, 'perte_train': 1.3994, 'lr': 4.372830432521373e-05, 'temps_s': 2241, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2563.2116924,"data":"{'pas': 900, 'perte_val': 1.3499, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":2606.33241061,"data":"{'pas': 920, 'perte_train': 1.3747, 'lr': 3.9580785384729444e-05, 'temps_s': 2317, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2650.468493781,"data":"{'pas': 940, 'perte_train': 1.3639, 'lr': 3.559089327660357e-05, 'temps_s': 2361, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2694.862656801,"data":"{'pas': 960, 'perte_train': 1.4358, 'lr': 3.1769037173786375e-05, 'temps_s': 2405, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2738.563304884,"data":"{'pas': 980, 'perte_train': 1.3938, 'lr': 2.812518786247653e-05, 'temps_s': 2449, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2785.129475209,"data":"{'pas': 1000, 'perte_train': 1.3669, 'lr': 2.466885172947816e-05, 'temps_s': 2496, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2817.724077977,"data":"{'pas': 1000, 'perte_val': 1.3474, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":2863.442493148,"data":"{'pas': 1020, 'perte_train': 1.3579, 'lr': 2.1409045961123065e-05, 'temps_s': 2574, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2907.43713118,"data":"{'pas': 1040, 'perte_train': 1.3911, 'lr': 1.8354275018461296e-05, 'temps_s': 2618, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2951.65297398,"data":"{'pas': 1060, 'perte_train': 1.3649, 'lr': 1.5512508450093233e-05, 'temps_s': 2662, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":2994.77676469,"data":"{'pas': 1080, 'perte_train': 1.3884, 'lr': 1.2891160100527222e-05, 'temps_s': 2705, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3039.668219302,"data":"{'pas': 1100, 'perte_train': 1.3455, 'lr': 1.049706876830574e-05, 'temps_s': 2750, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3072.279644799,"data":"{'pas': 1100, 'perte_val': 1.346, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":3116.528623649,"data":"{'pas': 1120, 'perte_train': 1.3904, 'lr': 8.33648036436091e-06, 'temps_s': 2827, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3160.821983348,"data":"{'pas': 1140, 'perte_train': 1.346, 'lr': 6.41503161714595e-06, 'temps_s': 2871, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3206.847583981,"data":"{'pas': 1160, 'perte_train': 1.3576, 'lr': 4.737735367054319e-06, 'temps_s': 2917, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3251.443418184,"data":"{'pas': 1180, 'perte_train': 1.3812, 'lr': 3.3089674884913657e-06, 'temps_s': 2962, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3294.822786929,"data":"{'pas': 1200, 'perte_train': 1.3937, 'lr': 2.1324554737177648e-06, 'temps_s': 3005, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3327.537140557,"data":"{'pas': 1200, 'perte_val': 1.3452, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":3373.134617802,"data":"{'pas': 1220, 'perte_train': 1.3852, 'lr': 1.2112687082477147e-06, 'temps_s': 3084, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3417.645085279,"data":"{'pas': 1240, 'perte_train': 1.4175, 'lr': 5.478104631726711e-07, 'temps_s': 3128, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3461.952134185,"data":"{'pas': 1260, 'perte_train': 1.3743, 'lr': 1.4381162530135993e-07, 'temps_s': 3173, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3506.182062783,"data":"{'pas': 1280, 'perte_train': 1.375, 'lr': 3.2618147384200216e-10, 'temps_s': 3217, 'type': 'train'}\n"}
+,{"stream_name":"stdout","time":3540.924887416,"data":"{'pas': 1281, 'perte_val': 1.3451, 'type': 'val'}\n"}
+,{"stream_name":"stdout","time":3540.958395469,"data":"entraînement 54.2 min ; meilleur pas 1281 perte val 1.3451411149853911\n"}
+,{"stream_name":"stdout","time":3730.764928374,"data":"{\n"}
+,{"stream_name":"stdout","time":3730.764964695,"data":" \"modele\": \"Qwen/Qwen2.5-1.5B-Instruct\",\n"}
+,{"stream_name":"stdout","time":3730.764969352,"data":" \"precision\": \"float16 (T4)\",\n"}
+,{"stream_name":"stdout","time":3730.764972645,"data":" \"nb_train\": 20500,\n"}
+,{"stream_name":"stdout","time":3730.7649756,"data":" \"nb_val\": 500,\n"}
+,{"stream_name":"stdout","time":3730.764978467,"data":" \"pas_total\": 1281,\n"}
+,{"stream_name":"stdout","time":3730.764981327,"data":" \"meilleur_pas\": 1281,\n"}
+,{"stream_name":"stdout","time":3730.764984489,"data":" \"perte_val_initiale\": 1.7106,\n"}
+,{"stream_name":"stdout","time":3730.764987417,"data":" \"perte_val_meilleure\": 1.3451,\n"}
+,{"stream_name":"stdout","time":3730.764990358,"data":" \"duree_entrainement_min\": 54.2,\n"}
+,{"stream_name":"stdout","time":3730.764993287,"data":" \"part_exemples_avec_contexte\": 0.29,\n"}
+,{"stream_name":"stdout","time":3730.764996124,"data":" \"lora\": {\n"}
+,{"stream_name":"stdout","time":3730.764998951,"data":"  \"r\": 16,\n"}
+,{"stream_name":"stdout","time":3730.765001802,"data":"  \"alpha\": 32,\n"}
+,{"stream_name":"stdout","time":3730.76500474,"data":"  \"dropout\": 0.05,\n"}
+,{"stream_name":"stdout","time":3730.765007579,"data":"  \"modules\": [\n"}
+,{"stream_name":"stdout","time":3730.765010365,"data":"   \"q_proj\",\n"}
+,{"stream_name":"stdout","time":3730.765013263,"data":"   \"k_proj\",\n"}
+,{"stream_name":"stdout","time":3730.765016119,"data":"   \"v_proj\",\n"}
+,{"stream_name":"stdout","time":3730.765018884,"data":"   \"o_proj\"\n"}
+,{"stream_name":"stdout","time":3730.765027706,"data":"  ],\n"}
+,{"stream_name":"stdout","time":3730.765030533,"data":"  \"lr\": 0.0002,\n"}
+,{"stream_name":"stdout","time":3730.765033406,"data":"  \"lot_effectif\": 16\n"}
+,{"stream_name":"stdout","time":3730.765036242,"data":" },\n"}
+,{"stream_name":"stdout","time":3730.765038991,"data":" \"fleurs\": {\n"}
+,{"stream_name":"stdout","time":3730.765041771,"data":"  \"n\": 267,\n"}
+,{"stream_name":"stdout","time":3730.765044551,"data":"  \"avant\": {\n"}
+,{"stream_name":"stdout","time":3730.765047543,"data":"   \"bleu\": 15.18,\n"}
+,{"stream_name":"stdout","time":3730.765050476,"data":"   \"chrf_pp\": 40.25,\n"}
+,{"stream_name":"stdout","time":3730.765053467,"data":"   \"signature_bleu\": \"nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0\",\n"}
+,{"stream_name":"stdout","time":3730.765056513,"data":"   \"signature_chrf_pp\": \"nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0\"\n"}
+,{"stream_name":"stdout","time":3730.765059499,"data":"  },\n"}
+,{"stream_name":"stdout","time":3730.765068724,"data":"  \"apres\": {\n"}
+,{"stream_name":"stdout","time":3730.765071162,"data":"   \"bleu\": 17.2,\n"}
+,{"stream_name":"stdout","time":3730.765073457,"data":"   \"chrf_pp\": 41.98,\n"}
+,{"stream_name":"stdout","time":3730.76507586,"data":"   \"signature_bleu\": \"nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0\",\n"}
+,{"stream_name":"stdout","time":3730.765078211,"data":"   \"signature_chrf_pp\": \"nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0\"\n"}
+,{"stream_name":"stdout","time":3730.76508056,"data":"  }\n"}
+,{"stream_name":"stdout","time":3730.76508269,"data":" },\n"}
+,{"stream_name":"stdout","time":3730.765084866,"data":" \"opus_val_sans_contexte\": {\n"}
+,{"stream_name":"stdout","time":3730.765087118,"data":"  \"n\": 200,\n"}
+,{"stream_name":"stdout","time":3730.765089294,"data":"  \"avant\": {\n"}
+,{"stream_name":"stdout","time":3730.765091462,"data":"   \"bleu\": 10.74,\n"}
+,{"stream_name":"stdout","time":3730.765093734,"data":"   \"chrf_pp\": 34.77,\n"}
+,{"stream_name":"stdout","time":3730.765095945,"data":"   \"signature_bleu\": \"nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0\",\n"}
+,{"stream_name":"stdout","time":3730.765098287,"data":"   \"signature_chrf_pp\": \"nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0\"\n"}
+,{"stream_name":"stdout","time":3730.765100707,"data":"  },\n"}
+,{"stream_name":"stdout","time":3730.765102984,"data":"  \"apres\": {\n"}
+,{"stream_name":"stdout","time":3730.765105143,"data":"   \"bleu\": 13.19,\n"}
+,{"stream_name":"stdout","time":3730.765107313,"data":"   \"chrf_pp\": 37.1,\n"}
+,{"stream_name":"stdout","time":3730.765109532,"data":"   \"signature_bleu\": \"nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0\",\n"}
+,{"stream_name":"stdout","time":3730.765111942,"data":"   \"signature_chrf_pp\": \"nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0\"\n"}
+,{"stream_name":"stdout","time":3730.765114256,"data":"  }\n"}
+,{"stream_name":"stdout","time":3730.765116365,"data":" },\n"}
+,{"stream_name":"stdout","time":3730.76511847,"data":" \"opus_val_avec_contexte\": {\n"}
+,{"stream_name":"stdout","time":3730.765120754,"data":"  \"n\": 200,\n"}
+,{"stream_name":"stdout","time":3730.765122911,"data":"  \"avant\": {\n"}
+,{"stream_name":"stdout","time":3730.765125047,"data":"   \"bleu\": 9.66,\n"}
+,{"stream_name":"stdout","time":3730.765127241,"data":"   \"chrf_pp\": 34.36,\n"}
+,{"stream_name":"stdout","time":3730.765129499,"data":"   \"signature_bleu\": \"nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0\",\n"}
+,{"stream_name":"stdout","time":3730.765131824,"data":"   \"signature_chrf_pp\": \"nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0\"\n"}
+,{"stream_name":"stdout","time":3730.765134138,"data":"  },\n"}
+,{"stream_name":"stdout","time":3730.76513625,"data":"  \"apres\": {\n"}
+,{"stream_name":"stdout","time":3730.765138473,"data":"   \"bleu\": 13.21,\n"}
+,{"stream_name":"stdout","time":3730.76514065,"data":"   \"chrf_pp\": 36.4,\n"}
+,{"stream_name":"stdout","time":3730.765142827,"data":"   \"signature_bleu\": \"nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0\",\n"}
+,{"stream_name":"stdout","time":3730.765145422,"data":"   \"signature_chrf_pp\": \"nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0\"\n"}
+,{"stream_name":"stdout","time":3730.765147822,"data":"  }\n"}
+,{"stream_name":"stdout","time":3730.765149932,"data":" }\n"}
+,{"stream_name":"stdout","time":3730.76515205,"data":"}\n"}
+,{"stream_name":"stderr","time":3733.727994687,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.728033838,"data":"\n"}
+,{"stream_name":"stderr","time":3733.728038896,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.791440142,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/tree/2760a223ac957f30acfb18c8aa649b01cf1d75f2?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.791459332,"data":"\n"}
+,{"stream_name":"stderr","time":3733.791463538,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/tree/2760a223ac957f30acfb18c8aa649b01cf1d75f2?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.916220034,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3733.916242562,"data":"\n"}
+,{"stream_name":"stderr","time":3733.916246636,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3733.933291105,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.933310526,"data":"\n"}
+,{"stream_name":"stderr","time":3733.93331488,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.951804048,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.951823253,"data":"\n"}
+,{"stream_name":"stderr","time":3733.951827649,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.981328823,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3733.981357966,"data":"\n"}
+,{"stream_name":"stderr","time":3733.981362143,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3733.982433091,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3733.982449585,"data":"\n"}
+,{"stream_name":"stderr","time":3733.982454756,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3733.985110885,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3733.985126891,"data":"\n"}
+,{"stream_name":"stderr","time":3733.98513128,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3733.995629626,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/xet-read-token/2760a223ac957f30acfb18c8aa649b01cf1d75f2 \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.995648151,"data":"\n"}
+,{"stream_name":"stderr","time":3733.995652352,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/xet-read-token/2760a223ac957f30acfb18c8aa649b01cf1d75f2 \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.999057445,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3733.999074962,"data":"\n"}
+,{"stream_name":"stderr","time":3733.999079512,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.001687923,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.00170392,"data":"\n"}
+,{"stream_name":"stderr","time":3734.001707999,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.002679348,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.002704058,"data":"\n"}
+,{"stream_name":"stderr","time":3734.002749572,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.022542582,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.02255944,"data":"\n"}
+,{"stream_name":"stderr","time":3734.022585739,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.02625045,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.026267785,"data":"\n"}
+,{"stream_name":"stderr","time":3734.02627196,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.029435871,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3734.02945137,"data":"\n"}
+,{"stream_name":"stderr","time":3734.029455141,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3750.035863031,"data":"/usr/local/lib/python3.13/dist-packages/comet/models/__init__.py:101: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":3750.035909908,"data":"  import pkg_resources\n"}
+,{"stream_name":"stderr","time":3750.035916152,"data":"\n"}
+,{"stream_name":"stderr","time":3750.035920814,"data":"/usr/local/lib/python3.13/dist-packages/comet/models/__init__.py:101: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":3750.035926469,"data":"  import pkg_resources\n"}
+,{"stream_name":"stderr","time":3751.601518346,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":3751.601557575,"data":"\n"}
+,{"stream_name":"stderr","time":3751.601586171,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":3751.71507378,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3751.715103311,"data":"\n"}
+,{"stream_name":"stderr","time":3751.715108551,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3751.767553349,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3751.76762792,"data":"\n"}
+,{"stream_name":"stderr","time":3751.767633429,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3751.823650388,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3751.823678706,"data":"\n"}
+,{"stream_name":"stderr","time":3751.82368159,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3751.873053729,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3751.873085623,"data":"\n"}
+,{"stream_name":"stderr","time":3751.873090025,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3751.920528133,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3751.920584125,"data":"\n"}
+,{"stream_name":"stderr","time":3751.920591158,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3751.969854409,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3751.96990775,"data":"\n"}
+,{"stream_name":"stderr","time":3751.96991289,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.018696078,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/sentencepiece.bpe.model \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.018729477,"data":"\n"}
+,{"stream_name":"stderr","time":3752.018734186,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/sentencepiece.bpe.model \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.073208919,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/sentencepiece.bpe.model \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.073237097,"data":"\n"}
+,{"stream_name":"stderr","time":3752.073241759,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/sentencepiece.bpe.model \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.224314823,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.224338797,"data":"\n"}
+,{"stream_name":"stderr","time":3752.224343182,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.277472575,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.27751261,"data":"\n"}
+,{"stream_name":"stderr","time":3752.277517902,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3752.541103639,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/added_tokens.json \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3752.541129363,"data":"\n"}
+,{"stream_name":"stderr","time":3752.541133614,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/added_tokens.json \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3752.589553921,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/special_tokens_map.json \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3752.58959185,"data":"\n"}
+,{"stream_name":"stderr","time":3752.589596676,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/special_tokens_map.json \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3752.641761127,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/chat_template.jinja \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3752.641792799,"data":"\n"}
+,{"stream_name":"stderr","time":3752.641799808,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/chat_template.jinja \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3755.222410145,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3755.222452512,"data":"\n"}
+,{"stream_name":"stderr","time":3755.222457605,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3755.270516109,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3755.270550771,"data":"\n"}
+,{"stream_name":"stderr","time":3755.270555673,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3755.334150649,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3755.334173467,"data":"\n"}
+,{"stream_name":"stderr","time":3755.3341785,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3755.396626486,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3755.39664766,"data":"\n"}
+,{"stream_name":"stderr","time":3755.396651335,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3762.510842597,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":3762.510874374,"data":"\n"}
+,{"stream_name":"stderr","time":3762.510880961,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":3763.058903699,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":3763.058932757,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":3763.058937945,"data":"\n"}
+,{"stream_name":"stderr","time":3763.058942457,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":3763.058947908,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":3763.059852558,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":3763.059872154,"data":"\n"}
+,{"stream_name":"stderr","time":3763.059876893,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":3763.060640119,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":3763.060659401,"data":"\n"}
+,{"stream_name":"stderr","time":3763.060664477,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":3763.062754736,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":3763.06277117,"data":"\n"}
+,{"stream_name":"stderr","time":3763.062776481,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":3763.063433199,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":3763.063445761,"data":"\n"}
+,{"stream_name":"stderr","time":3763.063450224,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":3763.833829501,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":3763.833864954,"data":"\n"}
+,{"stream_name":"stderr","time":3763.833869459,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":3763.923223168,"data":"\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":3763.966654791,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":3763.970986383,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":3767.141646525,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3767.141673331,"data":"\n"}
+,{"stream_name":"stderr","time":3767.141684575,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3768.565373713,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":3768.565406725,"data":"\n"}
+,{"stream_name":"stderr","time":3768.565411042,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":3768.617575945,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3768.617604277,"data":"\n"}
+,{"stream_name":"stderr","time":3768.617619987,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3768.664381257,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3768.664407504,"data":"\n"}
+,{"stream_name":"stderr","time":3768.66441059,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3768.71267292,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3768.712693548,"data":"\n"}
+,{"stream_name":"stderr","time":3768.712698133,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":3768.762858881,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3768.76289345,"data":"\n"}
+,{"stream_name":"stderr","time":3768.762896941,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3768.812348977,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3768.812368321,"data":"\n"}
+,{"stream_name":"stderr","time":3768.812372647,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3770.643470638,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:06\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":3771.051627949,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:06\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":3771.051660306,"data":"\n"}
+,{"stream_name":"stderr","time":3771.051665235,"data":"\n"}
+,{"stream_name":"stderr","time":3771.82541523,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3771.82544967,"data":"\n"}
+,{"stream_name":"stderr","time":3771.825454076,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":3771.869614038,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3771.869633915,"data":"\n"}
+,{"stream_name":"stderr","time":3771.869638869,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3771.934587062,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3771.934614077,"data":"\n"}
+,{"stream_name":"stderr","time":3771.934619229,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":3778.479791137,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":3778.479826973,"data":"\n"}
+,{"stream_name":"stderr","time":3778.479831654,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":3779.013421379,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":3779.013454187,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":3779.013459405,"data":"\n"}
+,{"stream_name":"stderr","time":3779.01346284,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":3779.013467406,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":3779.014191303,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":3779.014209855,"data":"\n"}
+,{"stream_name":"stderr","time":3779.014214625,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":3779.015236607,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":3779.015274392,"data":"\n"}
+,{"stream_name":"stderr","time":3779.015279493,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":3779.017499654,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":3779.017516821,"data":"\n"}
+,{"stream_name":"stderr","time":3779.017521758,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":3779.019170322,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":3779.019184574,"data":"\n"}
+,{"stream_name":"stderr","time":3779.019188197,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":3779.72496436,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":3779.724996109,"data":"\n"}
+,{"stream_name":"stderr","time":3779.725001097,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":3779.828451789,"data":"\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":3779.858615949,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":3779.862193928,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":3782.946748437,"data":"{'n': 267, 'avant': {'bleu': 15.18, 'chrf_pp': 40.25, 'signature_bleu': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'signature_chrf_pp': 'nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0', 'comet': None}, 'apres': {'bleu': 17.2, 'chrf_pp': 41.98, 'signature_bleu': 'nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0', 'signature_chrf_pp': 'nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0', 'comet': None}, 'comet_motif': 'COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)'}\n"}
+,{"stream_name":"stderr","time":3789.167385395,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":3789.167425305,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":3789.383625708,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":3789.383655053,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":3790.278735883,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":3790.405053957,"data":"[NbConvertApp] Writing 279585 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":3792.991790352,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":3793.63729929,"data":"[NbConvertApp] Writing 566807 bytes to __results__.html\n"}
+]

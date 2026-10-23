@@ -1,0 +1,72 @@
+/* Rapport : titre, une ligne de méta, trois onglets ; exports et lecture vocale dans « ⋯ ». */
+.msg { margin: 0 0 16px; font-size: 15px; }
+.tete-page .seg { margin-top: 10px; max-width: 420px; }
+.tete-page .titre { overflow-wrap: anywhere; }
+
+.etat-bloc { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.etat-bloc > div { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.etat-bloc[hidden], .etat-bloc > div[hidden] { display: none; }
+.intro { font-size: 17px; line-height: 1.45; max-width: 34em; color: var(--texte-2); }
+.intro b { color: var(--texte); font-weight: 600; }
+.actions { margin-top: auto; display: grid; justify-items: center; gap: 12px; padding-block: 16px 20px; }
+.actions .grande { width: min(100%, 360px); }
+.prog-ligne { display: flex; justify-content: space-between; gap: 16px; font-size: 17px; font-weight: 500; max-width: 560px; }
+#pct { color: var(--texte-2); font-weight: 400; }
+.etat-bloc .barre { max-width: 560px; }
+
+#rapport { padding-top: 8px; padding-bottom: 96px; }
+[role="tabpanel"] { animation: apparait 240ms var(--sortie) both; }
+[role="tabpanel"]:focus-visible { outline-offset: 6px; }
+
+/* résumé */
+.resume { max-width: 36em; font-size: 17px; line-height: 1.55; }
+.resume h3 { font-size: 13px; font-weight: 600; color: var(--texte-2); margin: 28px 0 8px; }
+.resume h3:first-child { margin-top: 4px; }
+.resume ul { display: grid; gap: 12px; margin-bottom: 14px; }
+.resume li { position: relative; padding-left: 20px; }
+.resume li::before { content: "▸"; position: absolute; left: 0; top: 1px; font-size: 11px; color: var(--gris-clair); }
+.resume p { margin: 0 0 14px; }
+.resume .note { color: var(--texte-2); font-size: 15px; }
+.t {
+  position: relative; display: inline-block; min-height: 24px; padding: 0 2px; border: 0; border-radius: 6px; background: none;
+  color: var(--texte-2); font-size: 13px; font-variant-numeric: tabular-nums; vertical-align: 1px;
+  transition: color 140ms ease, background-color 140ms ease;
+}
+button.t::after { content: ""; position: absolute; inset: -10px -4px; }   /* zone de toucher de 44 px */
+button.t:active { background: var(--voile); }
+button.t[data-joue="true"] { color: var(--orange-texte); }
+@media (hover: hover) and (pointer: fine) { button.t:hover { color: var(--texte); background: var(--voile); } }
+
+/* transcript par voix */
+.transcript { max-width: 40em; }
+.tour { padding: 4px 0 16px; }
+.replique { display: grid; grid-template-columns: 52px 1fr; gap: 12px; padding: 5px 0; }
+.replique .t { justify-self: start; align-self: start; margin-top: 2px; }
+.replique p { font-size: 17px; line-height: 1.5; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+.replique .ar { display: none; margin-top: 4px; line-height: 1.8; color: var(--texte-2); text-align: right; }
+.avec-arabe .replique .ar { display: block; }
+.replique.actif .t { color: var(--orange-texte); }
+
+/* détails techniques : tableau sobre */
+.details { max-width: 640px; }
+.details > div { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--filet); font-size: 15px; }
+.details dt { color: var(--texte-2); }
+.details dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; max-width: 30ch; }
+
+/* lecture d'un passage : une pilule flottante, en bas */
+.lecture {
+  position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 40;
+  display: flex; align-items: center; gap: 10px; padding: 6px 6px 6px 16px; border-radius: 999px;
+  background: var(--texte); color: #fff; font-size: 15px; font-weight: 500;
+  transform: translateX(-50%); animation: lecture-entre 240ms var(--ressort) both;
+  box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.4);
+}
+.lecture-point { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); animation: pouls 1.2s ease-in-out infinite; }
+.lecture-stop { min-height: 36px; padding: 0 14px; border: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.14); color: #fff; font-size: 15px; transition: transform 140ms var(--sortie); }
+.lecture-stop:active { transform: scale(0.96); }
+@keyframes lecture-entre { from { opacity: 0; transform: translate(-50%, 12px); } }
+@keyframes fondu { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .lecture { animation-name: fondu; }
+  [role="tabpanel"] { animation-name: fondu; }
+}

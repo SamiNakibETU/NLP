@@ -1,0 +1,9 @@
+torch
+transformers
+peft
+librosa
+soundfile
+sacrebleu
+sentencepiece
+accelerate
+pytest

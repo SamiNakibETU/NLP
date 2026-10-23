@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-23",
+  "source": "https://www.youtube.com/live/bNyUyrR0PHo (direct Al Jazeera arabe, tire par yt-dlp sur le serveur)",
+  "materiel": "Google Colab, GPU T4, tunnel Cloudflare",
+  "commit": "018a306",
+  "reglages": {"asr": "S3 temps_1_50k (Cohere + projecteur + Qwen2.5-1.5B-Instruct, fp16)", "gris": "Helsinki-NLP/opus-mt-ar-fr", "blanc": "Qwen2.5-1.5B-Instruct de base, gabarit_contexte, 2 phrases arabes precedentes", "lora": null, "duree_max_segment_s": 10.0},
+  "bilan_serveur": {"retard_moyen_s": 3.965, "retard_p95_s": 6.674, "retard_max_s": 6.825, "taux_reecriture_pct": 67.82, "nb_segments": 36},
+  "observe_sur_28_segments_enregistres": {"segments_avec_ecriture_arabe_dans_le_blanc": 0, "duree_moyenne_segment_s": 7.4, "duree_max_segment_s": 9.9},
+  "messages": "2026-10-23_aljazeera-direct_s3-qwen-contexte2_messages.jsonl (spectateur branche apres le chargement : 28 des 36 segments)"
+}

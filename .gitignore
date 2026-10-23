@@ -14,6 +14,10 @@ donnees/presse/rejets.csv
 *.flac
 *.wav
 
+# Clone local du dépôt privé data/mgb2 (audio hors dépôt)
+donnees/externe/
+.cache/
+
 # Cache Python et notebooks
 __pycache__/
 *.pyc
@@ -21,7 +25,14 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Poids de modèles entraînés et dossiers temporaires d'essai
-modeles/
+modeles/*
+# Sauf le projecteur S3 du temps 1 retenu (35 Mo) et ses mesures ; pas reprise.pt (état de l'optimiseur,
+# 104 Mo) ni hypotheses_test*.jsonl (textes MGB-2)
+!modeles/s3_temps1_50k/
+modeles/s3_temps1_50k/*
+!modeles/s3_temps1_50k/projecteur_meilleur.pt
+!modeles/s3_temps1_50k/evaluation_test.json
+!modeles/s3_temps1_50k/metriques.jsonl
 resultats/essai_*/
 resultats/resultats_essai.csv
 
@@ -34,7 +45,7 @@ benchmark-architectures.md
 benchmark-recherche-complete.md
 plan-donnees.md
 plan-specifications.md
-architecture.md
+/architecture.md
 specifications.md
 journal-donnees.md
 journal-projet.md
@@ -47,3 +58,25 @@ comptes-rendus/
 donnees/manifeste.csv
 donnees/noms/noms_manuel_modele.csv
 donnees/test/guide-annotation.md
+*.zip
+# Environnement Python local
+.venv/
+.DS_Store
+
+# Sessions d'écoute (audio, segments, rapports) et caches de modèles de la démo
+speech_app/sessions/
+speech_app/cache/
+
+# Planches d'inspiration (images de tiers, non versionnees)
+design_inspiration/
+# Polices commerciales (licence Dinamo : interdites dans un depot public)
+speech_app/static/fonts/
+*.woff2
+*.otf
+# Icones de l'appli (PWA) : exception aux regles *.png / *.svg ci-dessus
+!speech_app/static/icone-*.png
+!speech_app/static/icone.svg
+
+# Donnees FLEURS telechargees par les kernels (publiques, ~400 Mo) et caches Python
+resultats/kaggle/*/fleurs/
+kaggle/**/__pycache__/

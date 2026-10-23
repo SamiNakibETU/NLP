@@ -1,0 +1,115 @@
+briques:
+  max_tokens_cible: 256
+  modele_ecoute_id: CohereLabs/cohere-transcribe-arabic-07-2026
+  modele_llm_id: Qwen/Qwen2.5-1.5B-Instruct
+  modele_llm_leger_id: Qwen/Qwen3-1.7B
+  nb_reductions: 0
+consignes:
+  systeme: You are a helpful assistant.
+  temps_1_transcription: Transcris en arabe.
+  temps_2_traduction: Traduis en français.
+graine: 42
+systeme: S3
+temps_1:
+  eval_toutes_les_etapes: 1000
+  learning_rate: 0.0001
+  lot_effectif: 16
+  nb_segments_validation: 200
+  optimiseur: AdamW
+  patience_arret: 3
+  seuil_alerte_etapes: 5000
+  warmup_steps: 1000
+temps_1_50k:
+  dossier_vecteurs: donnees/externe/s3_encodage
+  eval_toutes_les_etapes: 300
+  frequence_vecteurs_hz: 12.5
+  learning_rate: 0.001
+  max_norm_gradient: 1.0
+  max_nouveaux_tokens: 160
+  micro_lot: 4
+  nb_epoques: 2
+  nb_segments_validation: 200
+  nb_segments_wer_validation: 100
+  patience_arret: 4
+  precision_llm: float16
+  repetition_penalty: 1.0
+  repetitions_boucle: 4
+  sortie: modeles/s3_temps1_50k
+  taille_lot: 16
+  taille_lot_generation: 16
+  tokens_marge: 10
+  tokens_par_seconde_max: 7
+  warmup_steps: 200
+temps_1_pilote:
+  dossier_vecteurs: donnees/externe/s3_encodage
+  eval_toutes_les_etapes: 150
+  frequence_vecteurs_hz: 12.5
+  learning_rate: 0.001
+  max_norm_gradient: 1.0
+  max_nouveaux_tokens: 160
+  micro_lot: 4
+  nb_epoques: 6
+  nb_segments_validation: 200
+  nb_segments_wer_validation: 100
+  patience_arret: 3
+  precision_llm: float16
+  repetition_penalty: 1.0
+  repetitions_boucle: 4
+  sortie: modeles/s3_temps1_pilote
+  taille_lot: 16
+  taille_lot_generation: 16
+  tokens_marge: 10
+  tokens_par_seconde_max: 7
+  warmup_steps: 100
+temps_2:
+  eval_toutes_les_etapes: 500
+  learning_rate_lora: 0.0001
+  learning_rate_projecteur: 5.0e-05
+  lora:
+    lora_alpha: 32
+    lora_dropout: 0.05
+    r: 16
+    target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+  lot_effectif: 16
+  nb_segments_validation: 500
+  part_rappel_transcription: 0.15
+traduction_texte:
+  gabarit: '{texte}
+
+
+    Traduis ce texte en français.'
+  gabarit_contexte: 'Contexte (phrases précédentes, à ne pas traduire) :
+
+    {contexte}
+
+
+    Texte :
+
+    {texte}
+
+
+    Traduis ce texte en français.'
+  gabarit_secours: 'Traduis en français le texte arabe suivant. Donne uniquement la
+    traduction.
+
+
+    {texte}'
+  max_nouveaux_tokens: 300
+  nb_phrases_contexte: 2
+  ratio_tokens: 2.0
+  repetition_penalty: 1.0
+  repetitions_boucle: 4
+  systeme: Tu es un traducteur professionnel de l'arabe vers le français. Tu réponds
+    uniquement par la traduction française, sans introduction, sans guillemets et
+    sans commentaire.
+  taille_lot: 8
+  tokens_marge: 20
+transcription:
+  duree_max_morceau_s: 20
+  duree_min_morceau_s: 2
+  fenetre_energie_s: 0.1
+  recherche_coupure_s: 5

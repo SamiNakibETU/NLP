@@ -1,0 +1,165 @@
+{
+  "n": 267,
+  "systemes": {
+    "S0+Qwen": {
+      "bleu": 8.32,
+      "chrf_pp": 30.96,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null,
+      "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+    },
+    "S0+Qwen+LoRA": {
+      "bleu": 9.01,
+      "chrf_pp": 30.49,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null,
+      "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+    },
+    "SEAMLESS+Qwen": {
+      "bleu": 14.74,
+      "chrf_pp": 39.42,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null,
+      "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+    },
+    "SEAMLESS+Qwen+LoRA": {
+      "bleu": 15.68,
+      "chrf_pp": 40.58,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null,
+      "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+    },
+    "WHISPER_L3+Qwen": {
+      "bleu": 14.18,
+      "chrf_pp": 39.02,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null,
+      "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+    },
+    "WHISPER_L3+Qwen+LoRA": {
+      "bleu": 15.36,
+      "chrf_pp": 39.95,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null,
+      "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+    }
+  },
+  "wer_asr": {
+    "S0": {
+      "wer_pct": 46.41,
+      "cer_pct": 24.04
+    },
+    "SEAMLESS": {
+      "wer_pct": 8.58,
+      "cer_pct": 4.79
+    },
+    "WHISPER_L3": {
+      "wer_pct": 9.65,
+      "cer_pct": 3.41
+    }
+  },
+  "bootstrap": [
+    {
+      "a": "S0+Qwen",
+      "b": "S0+Qwen+LoRA",
+      "metrique": "chrf++",
+      "n_tirages": 300,
+      "score_a": 30.96,
+      "score_b": 30.49,
+      "ecart_observe": -0.47,
+      "ic_95_bas": -1.8315,
+      "ic_95_haut": 1.1552,
+      "intervalle_texte": "[-1.83, +1.16]",
+      "contient_zero": true,
+      "exclut_zero": false,
+      "graine": 42,
+      "conclusion": "écart non significatif (l'intervalle à 95 % contient zéro)"
+    },
+    {
+      "a": "S0+Qwen",
+      "b": "S0+Qwen+LoRA",
+      "metrique": "bleu",
+      "n_tirages": 300,
+      "score_a": 8.32,
+      "score_b": 9.01,
+      "ecart_observe": 0.69,
+      "ic_95_bas": -0.2853,
+      "ic_95_haut": 2.0653,
+      "intervalle_texte": "[-0.29, +2.07]",
+      "contient_zero": true,
+      "exclut_zero": false,
+      "graine": 42,
+      "conclusion": "écart non significatif (l'intervalle à 95 % contient zéro)"
+    },
+    {
+      "a": "SEAMLESS+Qwen",
+      "b": "SEAMLESS+Qwen+LoRA",
+      "metrique": "chrf++",
+      "n_tirages": 300,
+      "score_a": 39.42,
+      "score_b": 40.58,
+      "ecart_observe": 1.16,
+      "ic_95_bas": -0.19,
+      "ic_95_haut": 2.9767,
+      "intervalle_texte": "[-0.19, +2.98]",
+      "contient_zero": true,
+      "exclut_zero": false,
+      "graine": 42,
+      "conclusion": "écart non significatif (l'intervalle à 95 % contient zéro)"
+    },
+    {
+      "a": "SEAMLESS+Qwen",
+      "b": "SEAMLESS+Qwen+LoRA",
+      "metrique": "bleu",
+      "n_tirages": 300,
+      "score_a": 14.74,
+      "score_b": 15.68,
+      "ecart_observe": 0.94,
+      "ic_95_bas": -0.371,
+      "ic_95_haut": 2.551,
+      "intervalle_texte": "[-0.37, +2.55]",
+      "contient_zero": true,
+      "exclut_zero": false,
+      "graine": 42,
+      "conclusion": "écart non significatif (l'intervalle à 95 % contient zéro)"
+    },
+    {
+      "a": "WHISPER_L3+Qwen",
+      "b": "WHISPER_L3+Qwen+LoRA",
+      "metrique": "chrf++",
+      "n_tirages": 300,
+      "score_a": 39.02,
+      "score_b": 39.95,
+      "ecart_observe": 0.93,
+      "ic_95_bas": -0.41,
+      "ic_95_haut": 2.5652,
+      "intervalle_texte": "[-0.41, +2.57]",
+      "contient_zero": true,
+      "exclut_zero": false,
+      "graine": 42,
+      "conclusion": "écart non significatif (l'intervalle à 95 % contient zéro)"
+    },
+    {
+      "a": "WHISPER_L3+Qwen",
+      "b": "WHISPER_L3+Qwen+LoRA",
+      "metrique": "bleu",
+      "n_tirages": 300,
+      "score_a": 14.18,
+      "score_b": 15.36,
+      "ecart_observe": 1.18,
+      "ic_95_bas": -0.1105,
+      "ic_95_haut": 2.8225,
+      "intervalle_texte": "[-0.11, +2.82]",
+      "contient_zero": true,
+      "exclut_zero": false,
+      "graine": 42,
+      "conclusion": "écart non significatif (l'intervalle à 95 % contient zéro)"
+    }
+  ]
+}

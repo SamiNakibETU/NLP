@@ -1,0 +1,73 @@
+{
+  "modele": "Qwen/Qwen2.5-1.5B-Instruct",
+  "precision": "float16 (T4)",
+  "nb_train": 20500,
+  "nb_val": 500,
+  "pas_total": 1281,
+  "meilleur_pas": 1281,
+  "perte_val_initiale": 1.7106,
+  "perte_val_meilleure": 1.3451,
+  "duree_entrainement_min": 54.2,
+  "part_exemples_avec_contexte": 0.29,
+  "lora": {
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "lr": 0.0002,
+    "lot_effectif": 16
+  },
+  "fleurs": {
+    "n": 267,
+    "avant": {
+      "bleu": 15.18,
+      "chrf_pp": 40.25,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null
+    },
+    "apres": {
+      "bleu": 17.2,
+      "chrf_pp": 41.98,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null
+    },
+    "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+  },
+  "opus_val_sans_contexte": {
+    "n": 200,
+    "avant": {
+      "bleu": 10.74,
+      "chrf_pp": 34.77,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0"
+    },
+    "apres": {
+      "bleu": 13.19,
+      "chrf_pp": 37.1,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0"
+    }
+  },
+  "opus_val_avec_contexte": {
+    "n": 200,
+    "avant": {
+      "bleu": 9.66,
+      "chrf_pp": 34.36,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0"
+    },
+    "apres": {
+      "bleu": 13.21,
+      "chrf_pp": 36.4,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0"
+    }
+  }
+}

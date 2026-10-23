@@ -1,0 +1,19 @@
+{
+  "id": "codingod/nlp-lora-traduction",
+  "title": "nlp-lora-traduction",
+  "code_file": "nlp-lora-traduction.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "codingod/nlp-code",
+    "codingod/nlp-opus"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,9 @@
+{
+ "phrases_definitives_recues": 55,
+ "phrases_avec_arabe": 0,
+ "retard_moyen_s": 5.01,
+ "retard_median_s": 3.99,
+ "retard_p95_s": 10.58,
+ "voix": [],
+ "configuration": "S3 + Opus-MT + Qwen2.5-1.5B sans contexte, avant l'optimisation de la passe grise ; session de 60 phrases (spectateur branché sur les 2 dernières minutes)"
+}

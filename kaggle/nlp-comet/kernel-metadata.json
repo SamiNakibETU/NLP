@@ -1,0 +1,21 @@
+{
+  "id": "codingod/nlp-comet",
+  "title": "nlp-comet",
+  "code_file": "nlp-comet.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [
+    "codingod/nlp-lora-traduction",
+    "codingod/nlp-eval-systemes",
+    "codingod/nlp-eval-s3-lora",
+    "codingod/nlp-eval-traducteurs"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
