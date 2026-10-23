@@ -51,6 +51,22 @@ class TestModeDirect(unittest.TestCase):
         r3 = conf.mettre_a_jour("seg_1", "Un ministre annonce une mesure urgente", est_clos=False, horodatage_s=3.0)
         self.assertTrue(r3["texte_confirme"].startswith("Le ministre annonce"))
 
+    def test_cloture_remplace_le_provisoire_sans_doublon(self):
+        """À la clôture, le texte final remplace le provisoire même si son début a changé (pas de mots recollés)."""
+        conf = ConfirmateurDeuxPasses()
+        conf.mettre_a_jour("seg_1", "Le ministre annonce une", est_clos=False, horodatage_s=1.0)
+        r2 = conf.mettre_a_jour("seg_1", "Le ministre annonce une mesure", est_clos=False, horodatage_s=2.0)
+        self.assertEqual(r2["texte_confirme"], "Le ministre annonce une")
+        final = conf.mettre_a_jour("seg_1", "Le chef du gouvernement annonce une mesure urgente", est_clos=True,
+                                   horodatage_s=3.0)
+        self.assertEqual(final["texte_confirme"], "Le chef du gouvernement annonce une mesure urgente")
+        self.assertEqual(final["texte_provisoire"], "")
+        # Final plus court que les mots confirmés : aucun reste des anciens mots confirmés.
+        conf2 = ConfirmateurDeuxPasses()
+        conf2.mettre_a_jour("s", "a b c d", False, 1.0)
+        conf2.mettre_a_jour("s", "a b c d", False, 2.0)
+        self.assertEqual(conf2.mettre_a_jour("s", "a b", True, 3.0)["texte_confirme"], "a b")
+
     def test_variante_probabilite_oui(self):
         """Vérifie le calcul softmax de P('oui') et le déclenchement au-dessus du seuil."""
         dec = DecideurProbabiliteOui(seuil_probabilite_oui=0.65)
