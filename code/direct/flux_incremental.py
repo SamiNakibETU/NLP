@@ -105,8 +105,11 @@ class FluxIncremental(FluxS3):
         return self._arrivees_t[min(i, len(self._arrivees_t) - 1)] if self._arrivees_t else self.horloge()
 
     # ------------------------------------------------------------------ traitement
-    def traiter(self, final: bool = False) -> List[Dict[str, Any]]:
-        """Traite l'audio reçu : clôt tous les segments qui peuvent l'être, puis fait au plus une passe provisoire."""
+    def traiter(self, final: bool = False, provisoire: bool = True) -> List[Dict[str, Any]]:
+        """Traite l'audio reçu : clôt tous les segments qui peuvent l'être, puis fait au plus une passe provisoire.
+
+        ``provisoire=False`` saute la passe grise : l'appelant le demande quand l'audio s'accumule (calcul en retard),
+        pour rattraper le direct avant de raffiner le gris."""
         r = self.reglages
         fenetre = int(r["fenetre_energie_s"] * SR)
         sortie: List[Dict[str, Any]] = []
@@ -130,7 +133,7 @@ class FluxIncremental(FluxS3):
             msg = self._clore(coupure)
             if msg is not None:
                 sortie.append(msg)
-        if not final:
+        if not final and provisoire:
             msg = self._passe_provisoire()
             if msg is not None:
                 sortie.append(msg)
@@ -152,6 +155,7 @@ class FluxIncremental(FluxS3):
             return None
         self._t_derniere_passe = recu / SR
         ar = self.moteur.transcrire(self._signal[self._debut:recu].copy()).strip()
+        self._passe_couvre = (self._debut, recu, ar)            # pour la clôture : arabe déjà transcrit sur [debut, recu]
         if not ar or ar == self._ar_provisoire:
             return None                      # rien de neuf : on ne retraduit pas, on n'envoie rien
         self._ar_provisoire = ar
@@ -168,7 +172,13 @@ class FluxIncremental(FluxS3):
 
     def _clore(self, coupure: Dict[str, int]) -> Optional[Dict[str, Any]]:
         debut, fin = self._debut, coupure["coupure"]
-        ar = self.moteur.transcrire(self._signal[debut:fin].copy()).strip()
+        # La dernière passe grise couvre presque tout le segment : on reprend son arabe au lieu de tout retranscrire.
+        couvre = getattr(self, "_passe_couvre", None)
+        marge = int(self.reglages.get("reutiliser_passe_max_s", 0.0) * SR)
+        if couvre and couvre[2] and couvre[0] == debut and 0 <= fin - couvre[1] <= marge:
+            ar = couvre[2]
+        else:
+            ar = self.moteur.transcrire(self._signal[debut:fin].copy()).strip()
         identifiant = self._id()
         base = {"type": "definitif", "id_segment": identifiant, "debut_s": round(debut / SR, 2),
                 "fin_s": round(fin / SR, 2)}
@@ -190,6 +200,7 @@ class FluxIncremental(FluxS3):
         self._numero += 1
         self._t_derniere_passe = self._debut / SR
         self._ar_provisoire, self._fr_provisoire, self._passes_provisoires = None, "", []
+        self._passe_couvre = None
         return msg
 
     # ------------------------------------------------------------------ bilan

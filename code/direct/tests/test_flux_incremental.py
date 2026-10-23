@@ -11,7 +11,7 @@ for dossier in (RACINE_PROJET / "code" / "direct", RACINE_PROJET / "speech_app")
     if str(dossier) not in sys.path:
         sys.path.insert(0, str(dossier))
 
-from flux_incremental import FluxIncremental  # noqa: E402
+from flux_incremental import FluxIncremental, reglages_direct_live  # noqa: E402
 from live_moteurs import PHRASES, SR, MoteurFactice, signal_demo  # noqa: E402
 
 
@@ -63,6 +63,34 @@ class TestFluxIncremental(unittest.TestCase):
             self.assertTrue(p["fr"].startswith(p["fr_stable"]), "la partie stable est un début du gris")
         premiers = [p for p in self.provisoires if p["id_segment"] == "seg_0001"]
         self.assertEqual(premiers[0]["fr_stable"], "", "rien n'est stable à la première passe")
+
+    def test_sans_passe_grise_quand_en_retard(self):
+        flux = FluxIncremental(MoteurFactice(), horloge=Horloge())
+        signal = signal_demo([0], duree_phrase_s=6.0)
+        flux.ajouter(signal[: 4 * SR])
+        self.assertEqual(flux.traiter(provisoire=False), [], "pas de gris quand on rattrape le retard")
+        self.assertTrue(any(m["type"] == "provisoire" for m in flux.traiter()))
+
+    def test_cloture_reprend_l_arabe_de_la_derniere_passe(self):
+        moteur = MoteurFactice()
+        appels = []
+        transcrire = moteur.transcrire
+        moteur.transcrire = lambda s: appels.append(len(s)) or transcrire(s)
+        reglages = dict(reglages_direct_live(), reutiliser_passe_max_s=0.6)
+        sans = dict(reglages, reutiliser_passe_max_s=0.0)
+        compte = []
+        for r in (reglages, sans):
+            appels.clear()
+            horloge = Horloge()
+            flux = FluxIncremental(moteur, r, horloge=horloge)
+            signal, pas = signal_demo([0, 1], duree_phrase_s=6.0), SR // 4
+            for debut in range(0, len(signal), pas):
+                horloge.t += 0.25
+                flux.ajouter(signal[debut: debut + pas])
+                flux.traiter()
+            flux.terminer()
+            compte.append(len(appels))
+        self.assertLess(compte[0], compte[1], "la clôture reprend l arabe de la passe grise")
 
     def test_provisoire_grandit(self):
         premier = [m for m in self.provisoires if m["id_segment"] == "seg_0001"]

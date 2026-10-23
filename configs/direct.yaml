@@ -40,3 +40,5 @@ direct_s3:
 direct_live:
   duree_max_segment_s: 10.0        # deux lignes de sous-titre au plus ; 15 s faisait des blocs qui sautent
   recherche_coupure_s: 3.0
+  reutiliser_passe_max_s: 0.6      # clôture : reprend l'arabe de la dernière passe grise si elle s'arrête à moins de 0,6 s
+  paquets_retard_max: 4            # plus de 4 paquets (1 s) en attente : calcul en retard, on saute la passe grise

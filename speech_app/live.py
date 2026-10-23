@@ -262,8 +262,10 @@ class SessionLive:
                         fini = True
                     else:
                         self.flux.ajouter_pcm16(b)
+                # Beaucoup d'audio en attente : le calcul est en retard, on clôt d'abord et on saute le gris.
+                a_jour = len(lot) <= self.flux.reglages.get("paquets_retard_max", 4)
                 with GPU_LOCK:
-                    messages = self.flux.traiter()
+                    messages = self.flux.traiter(provisoire=a_jour)
                 self._diffuser(messages)
                 if messages or time.monotonic() - self._dernier_etat > 0.5:
                     self._publier_etat("en_cours")
