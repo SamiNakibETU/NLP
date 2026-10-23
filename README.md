@@ -83,6 +83,7 @@ Sous Windows (PowerShell) : `$env:PORTEPAROLE_LIVE = "factice"; python -m uvico
 | `configs/` | réglages YAML (S0, S3, direct, traduction) | toutes |
 | `rapport/` | rapport du projet (PDF, 5 pages, et source LaTeX) | `integration` |
 | `tp/` | travaux pratiques du cours (notebooks) | `integration` |
+| `video/` | vidéo de présentation du projet (3 min) | `integration` |
 
 
 ## Documentation
