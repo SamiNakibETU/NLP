@@ -510,6 +510,40 @@ SYSTEME_RESUME = (
     "## Chiffres\n- chaque chiffre avec son contexte et [mm:ss] (ou « aucun chiffre cité »)")
 MORCEAU_MAX = 6000                                       # caractères de transcript par appel (carte-réduction au-delà)
 
+# Résumé par l'API ScaleDown (modèle de résumé abstractif) à partir de l'ARABE transcrit par S3 : les erreurs de
+# traduction ne se propagent plus au résumé. Sur le direct d'Al Jazeera du 23/10 (60 segments), 2,2 s contre
+# environ 110 s pour Qwen2.5-7B en local. Clé : SCALEDOWN_API_KEY ; sans clé, le résumé reste local.
+SCALEDOWN_URL = os.environ.get("SCALEDOWN_API_BASE", "https://api.scaledown.xyz") + "/summarization/abstractive"
+CONSIGNE_SCALEDOWN = (
+    "Tu es journaliste francophone. Le texte est la transcription ARABE d'un journal télévisé, une ligne par passage, "
+    "précédée de son horodatage [mm:ss] et du numéro de voix. Écris le résumé EN FRANÇAIS, sans rien inventer, en "
+    "gardant les chiffres exacts. Chaque point clé et chaque chiffre finit par l'horodatage [mm:ss] du passage source, "
+    "recopié tel quel. Format exact :\n"
+    "## Sujet\nune phrase\n\n## Points clés\n- 3 à 6 puces courtes, chacune finissant par [mm:ss]\n\n"
+    "## Personnes, organisations, lieux cités\n- un nom par puce\n\n"
+    "## Chiffres\n- chaque chiffre avec son contexte et [mm:ss] (ou « aucun chiffre cité »)")
+
+
+def resume_scaledown(segments: list[dict], locuteurs: list[int | None], cle: str, delai_s: float = 90) -> str:
+    """Résumé français par ScaleDown à partir de l'arabe horodaté ; lève une exception si l'API échoue."""
+    import urllib.request
+    lignes = [f"[{horodatage(s.get('debut_s') or 0)}] (voix {l or '?'}) {s.get('ar') or ''}".strip()
+              for s, l in zip(segments, locuteurs) if (s.get("ar") or "").strip()]
+    if not lignes:
+        raise ValueError("pas de texte arabe dans la session")
+    corps = json.dumps({"text": "\n".join(lignes), "instructions": CONSIGNE_SCALEDOWN, "max_tokens": 700}).encode()
+    requete = urllib.request.Request(SCALEDOWN_URL, data=corps, method="POST",
+                                     headers={"x-api-key": cle, "Content-Type": "application/json"})
+    with urllib.request.urlopen(requete, timeout=delai_s) as r:
+        resume = json.loads(r.read()).get("summary") or ""
+    if not resume.strip() or MOTIF_ARABE_RESUME.search(resume):
+        raise ValueError("résumé vide ou pas en français")
+    # Les puces « * » ou « • » du modèle deviennent les « - » attendus par la page du rapport.
+    return re.sub(r"(?m)^\s*[*•]\s+", "- ", resume).strip()
+
+
+MOTIF_ARABE_RESUME = re.compile(r"[؀-ۿ]{12,}")    # une phrase entière en arabe : le modèle n'a pas traduit
+
 
 def lignes_transcript(segments: list[dict], textes: list[str], locuteurs: list[int | None]) -> list[str]:
     return [f"[{horodatage(s.get('debut_s') or 0)}] Locuteur {l or '?'} : {t}" for s, t, l in zip(segments, textes, locuteurs) if t]
@@ -762,7 +796,20 @@ def generer_rapport(session: Session, options: dict | None = None) -> dict:
             if opt["resume"]:
                 prog(0.8, "Rédaction du résumé")
                 t_resume = time.time()
-                if llm is not None:
+                cle_api = opt.get("scaledown_cle", os.environ.get("SCALEDOWN_API_KEY", "")).strip()
+                if cle_api and not sans_fr:
+                    try:
+                        resume_md = re.sub(r"(?m)^\s*[*•]\s+", "- ", resume_scaledown(segments, locuteurs, cle_api))
+                        methode_res = "ScaleDown (résumé abstractif) depuis la transcription arabe"
+                    except Exception as exc:             # noqa: BLE001 : réseau, quota… on retombe sur le local
+                        avert.append(f"résumé ScaleDown échoué ({type(exc).__name__}: {str(exc)[:120]}) : résumé local")
+                        resume_md = ""
+                if resume_md:
+                    resume_md, nb_rattaches = rattacher_horodatages(resume_md, segments, textes)
+                    if nb_rattaches:
+                        avert.append(f"{nb_rattaches} point(s) du résumé sans horodatage valide : rattachés au segment le plus proche")
+                    controle = verifier_horodatages(resume_md, segments)
+                elif llm is not None:
                     try:
                         resume_md = resume_llm(lignes_transcript(segments, textes, locuteurs), llm)
                         resume_md, nb_rattaches = rattacher_horodatages(resume_md, segments, textes)

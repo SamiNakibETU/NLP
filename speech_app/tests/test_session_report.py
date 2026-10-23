@@ -141,6 +141,28 @@ class TestRapport(unittest.TestCase):
         self.assertTrue(r["methode_resume"].startswith("extractif"))
         self.assertTrue(all(not s["modifie"] for s in r["segments"]))
 
+    def test_resume_par_scaledown_depuis_l_arabe(self):
+        vu = {}
+
+        def faux_scaledown(segments, locuteurs, cle):
+            vu["cle"], vu["ar"] = cle, segments[0]["ar"]
+            return "## Sujet\nL'économie.\n\n## Points clés\n* Harold Wilson parle de l'économie [00:00]\n* Sans horodatage"
+        with mock.patch.object(sr, "resume_scaledown", faux_scaledown):
+            r = self.rapport(llm=FauxLLM(), scaledown_cle="cle-test")
+        self.assertEqual(vu["cle"], "cle-test")
+        self.assertIn("هارولد", vu["ar"])                                         # résumé fait sur l'arabe
+        self.assertTrue(r["methode_resume"].startswith("ScaleDown"))
+        self.assertEqual(r["controle_horodatages"]["invalides"], [])
+        self.assertRegex(r["resume_markdown"], r"Sans horodatage \[\d\d:\d\d\]")    # puce rattachée d'office
+
+    def test_scaledown_en_panne_repli_local(self):
+        def casse(*a, **k):
+            raise TimeoutError("réseau")
+        with mock.patch.object(sr, "resume_scaledown", casse):
+            r = self.rapport(llm=FauxLLM(), scaledown_cle="cle-test")
+        self.assertEqual(r["methode_resume"], "LLM")
+        self.assertTrue(any("ScaleDown échoué" in a for a in r["avertissements"]))
+
     def test_session_vide_refusee(self):
         vide = Session.creer("test", "faux")
         with self.assertRaises(ValueError):
