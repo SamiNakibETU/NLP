@@ -43,10 +43,11 @@ def _ouvrir(sid: str) -> Session:
 
 
 def _pool():
-    """Pool des moteurs de l'interface, à décharger avant le LLM ; None si introuvable."""
+    """Pool des moteurs, à décharger avant le LLM. Le Pool de lazy_engines est partagé par le direct, l'API et
+    l'interface : on le prend directement, sans passer par les moteurs de l'interface (il peut n'y en avoir aucun)."""
     try:
-        import app as ui
-        return next((e.pool for e in ui.ENGINES.values() if hasattr(e, "pool")), None)
+        import lazy_engines
+        return lazy_engines.POOL
     except Exception:                                      # noqa: BLE001
         return None
 

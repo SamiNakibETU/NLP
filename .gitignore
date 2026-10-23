@@ -76,3 +76,7 @@ speech_app/static/fonts/
 # Icones de l'appli (PWA) : exception aux regles *.png / *.svg ci-dessus
 !speech_app/static/icone-*.png
 !speech_app/static/icone.svg
+
+# Donnees FLEURS telechargees par les kernels (publiques, ~400 Mo) et caches Python
+resultats/kaggle/*/fleurs/
+kaggle/**/__pycache__/

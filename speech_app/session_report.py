@@ -46,11 +46,13 @@ FICHIERS = ("transcript.md", "resume.md", "sous_titres.srt", "rapport.json", "tr
 OPTIONS_DEFAUT = {
     "diarisation": "auto",        # auto | pyannote | ecapa | off
     "nb_locuteurs": None,         # connu à l'avance ? sinon estimé
-    "seuil_similarite": 0.40,     # ECAPA : deux segments de même voix ont une similarité cosinus au-dessus
+    "seuil_similarite": 0.30,     # ECAPA : mesuré sur FLEURS, même voix = 0,56 en moyenne (p5 0,34), voix différentes = 0,27
     "revision": True,             # relecture par LLM
     "resume": True,
     "inclure_arabe": False,       # arabe dans transcript.md
     "docx": True,
+    "revision_ciblee": True,      # ne relire que les segments avec nom, chiffre, mot répété ou majuscule suspecte
+    "taille_lot_revision": 8,     # segments relus par appel generate
     "contexte_avant": 2,
     "contexte_apres": 1,
 }
@@ -165,7 +167,7 @@ def entites_du_texte(ar: str, lexique: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------- a. diarisation
-def regrouper_embeddings(emb: np.ndarray, seuil_similarite: float = 0.40, nb_locuteurs: int | None = None) -> list[int]:
+def regrouper_embeddings(emb: np.ndarray, seuil_similarite: float = 0.30, nb_locuteurs: int | None = None) -> list[int]:
     """Regroupement agglomératif (lien moyen, distance cosinus). S'arrête quand la meilleure paire a une
     similarité < seuil, ou quand il reste `nb_locuteurs` groupes. Renvoie une étiquette par ligne."""
     n = len(emb)
@@ -192,6 +194,25 @@ def regrouper_embeddings(emb: np.ndarray, seuil_similarite: float = 0.40, nb_loc
         for i in g:
             etiquettes[i] = k
     return etiquettes
+
+
+def absorber_singletons(emb: np.ndarray, etiquettes: list[int], nb_min_segments: int = 4) -> list[int]:
+    """Un segment court isolé donne un embedding bruité et fabrique un faux locuteur : s'il est seul dans son groupe, il
+    rejoint le groupe de plus grande similarité moyenne (seulement quand il y a assez de segments pour juger)."""
+    if len(etiquettes) < nb_min_segments:
+        return etiquettes
+    e = emb / np.maximum(np.linalg.norm(emb, axis=1, keepdims=True), 1e-9)
+    et = list(etiquettes)
+    tailles = Counter(et)
+    for i, g in enumerate(et):
+        if tailles[g] == 1 and len(tailles) > 1:
+            meilleur = max((k for k in tailles if k != g), key=lambda k: float(np.mean([e[i] @ e[j] for j, kj in enumerate(et) if kj == k])))
+            tailles[g] -= 1
+            if not tailles[g]:
+                del tailles[g]
+            et[i] = meilleur
+            tailles[meilleur] += 1
+    return et
 
 
 def attribuer_locuteurs(segments: list[dict], tours: list[tuple[float, float, str]]) -> list[str | None]:
@@ -248,7 +269,7 @@ def diariser_pyannote(chemin_audio: Path, nb_locuteurs: int | None = None) -> li
     return tours
 
 
-def diariser_ecapa(chemin_audio: Path, segments: list[dict], seuil_similarite: float = 0.40,
+def diariser_ecapa(chemin_audio: Path, segments: list[dict], seuil_similarite: float = 0.30,
                    nb_locuteurs: int | None = None) -> list[int]:
     """Repli libre : un embedding ECAPA par segment, regroupement agglomératif. Une étiquette par segment."""
     import torch
@@ -274,7 +295,10 @@ def diariser_ecapa(chemin_audio: Path, segments: list[dict], seuil_similarite: f
         embs.append(v.squeeze().detach().cpu().numpy())
     del clf
     liberer_gpu()
-    return regrouper_embeddings(np.stack(embs), seuil_similarite, nb_locuteurs) if embs else []
+    if not embs:
+        return []
+    etiquettes = regrouper_embeddings(np.stack(embs), seuil_similarite, nb_locuteurs)
+    return etiquettes if nb_locuteurs else absorber_singletons(np.stack(embs), etiquettes)
 
 
 def etape_diarisation(session: Session, segments: list[dict], options: dict, avertissements: list[str]) -> tuple[list[int | None], str]:
@@ -295,10 +319,13 @@ def etape_diarisation(session: Session, segments: list[dict], options: dict, ave
         except Exception as exc:                         # noqa: BLE001 : repli sur ECAPA, cause gardée
             avertissements.append(f"pyannote indisponible ({type(exc).__name__}: {str(exc)[:150]}) : repli ECAPA")
     try:
-        et = diariser_ecapa(session.chemin_audio, segments, options.get("seuil_similarite", 0.40), options.get("nb_locuteurs"))
-        return _numeroter(et), f"ECAPA speechbrain + regroupement agglomératif (seuil {options.get('seuil_similarite', 0.40)})"
+        et = diariser_ecapa(session.chemin_audio, segments, options.get("seuil_similarite", 0.30), options.get("nb_locuteurs"))
+        return _numeroter(et), f"ECAPA speechbrain + regroupement agglomératif (seuil {options.get('seuil_similarite', 0.30)})"
     except Exception as exc:                             # noqa: BLE001
-        avertissements.append(f"diarisation ECAPA impossible ({type(exc).__name__}: {str(exc)[:150]}) : un seul locuteur supposé")
+        avertissements.append(f"diarisation ECAPA impossible ({type(exc).__name__}: {str(exc)[:150]})")
+        direct = [s.get("locuteur") for s in segments]
+        if any(l is not None for l in direct):           # étiquettes posées pendant le direct (SuiviLocuteurs)
+            return _numeroter(direct), "empreinte ECAPA en direct"
         return [1] * len(segments), "aucune (échec des deux méthodes)"
 
 
@@ -348,6 +375,23 @@ class LLMLocal:
                                           repetition_penalty=1.05, pad_token_id=self.tokenizer.eos_token_id)
         return self.tokenizer.decode(sortie[0][entree["input_ids"].shape[1]:], skip_special_tokens=True).strip()
 
+    def batch(self, lots_messages: list[list[dict]], max_new_tokens: int = 256) -> list[str]:
+        """Plusieurs conversations en un seul generate (rembourrage à gauche) : bien plus rapide que n appels séparés."""
+        import torch
+        self.charger()
+        textes = [self.tokenizer.apply_chat_template(m, tokenize=False, add_generation_prompt=True) for m in lots_messages]
+        ancien = self.tokenizer.padding_side
+        self.tokenizer.padding_side = "left"
+        try:
+            entree = self.tokenizer(textes, return_tensors="pt", padding=True).to(self.modele.device)
+        finally:
+            self.tokenizer.padding_side = ancien
+        with torch.inference_mode():
+            sortie = self.modele.generate(**entree, max_new_tokens=max_new_tokens, do_sample=False,
+                                          repetition_penalty=1.05, pad_token_id=self.tokenizer.pad_token_id or self.tokenizer.eos_token_id)
+        debut = entree["input_ids"].shape[1]
+        return [self.tokenizer.decode(o[debut:], skip_special_tokens=True).strip() for o in sortie]
+
     def decharger(self) -> None:
         self.modele = self.tokenizer = None
         liberer_gpu()
@@ -390,37 +434,68 @@ def sortie_acceptable(original: str, revise: str) -> bool:
     return Counter(re.findall(r"\d+", original)) == Counter(re.findall(r"\d+", revise))
 
 
+TAILLE_LOT_REVISION = 8
+
+
+def a_relire(texte: str, entites: list) -> bool:
+    """Relecture ciblée : seuls les segments qui contiennent un nom du lexique, un chiffre, un mot répété ou une majuscule
+    en milieu de phrase (nom propre possible) passent par le LLM ; les autres n'ont rien d'évident à corriger."""
+    if entites or re.search(r"\d", texte):
+        return True
+    if re.search(r"\b(\w+)\s+\1\b", texte, re.I):
+        return True
+    return bool(re.search(r"(?<=[a-zàâçéèêëîïôûùü,;:] )[A-ZÀÂÇÉÈÊËÎÏÔÛÙÜ][\wÀ-ÿ'’-]+", texte))
+
+
 def etape_revision(segments: list[dict], llm: Callable, lexique: list[dict], options: dict,
                    progress: Callable | None = None) -> tuple[list[dict], dict]:
-    """Renvoie (un dict par segment : fr_original, fr_revise, modifie, entites, raison), bilan du lexique."""
-    revises: list[str] = []
-    out = []
-    appliques = {}
-    for i, seg in enumerate(segments):
-        original = texte_de(seg)
-        ent = entites_du_texte(seg.get("ar") or "", lexique)
-        for e in ent:
-            appliques[e["fr"]] = e
-        raison, final = "vide", original
-        if original:
-            try:
-                brut = _nettoyer_sortie(llm(prompt_revision(segments, i, revises, ent, options.get("contexte_avant", 2),
-                                                            options.get("contexte_apres", 1)),
-                                            max_new_tokens=int(len(original) * 0.8) + 40))
-            except Exception as exc:                     # noqa: BLE001 : un segment raté garde son original
-                brut, raison = "", f"erreur LLM : {type(exc).__name__}"
-            if brut and sortie_acceptable(original, brut):
-                final, raison = brut, ("modifie" if brut != original else "inchange")
+    """Renvoie (un dict par segment : fr_original, fr_revise, modifie, entites, raison), bilan du lexique.
+
+    Les segments à relire partent par lots (``llm.batch`` : un seul generate par lot) ; dans un lot, le contexte « avant »
+    est le texte déjà relu des lots précédents et le texte d'origine des voisins du même lot."""
+    ents = [entites_du_texte(s.get("ar") or "", lexique) for s in segments]
+    appliques = {e["fr"]: e for ent in ents for e in ent}
+    originaux = [texte_de(s) for s in segments]
+    finals = list(originaux)
+    raisons = ["vide" if not o else "non relu (rien d'évident à corriger)" for o in originaux]
+    ciblee = options.get("revision_ciblee", True)
+    a_traiter = [i for i, o in enumerate(originaux) if o and (not ciblee or a_relire(o, ents[i]))]
+    taille = max(1, int(options.get("taille_lot_revision", TAILLE_LOT_REVISION)))
+    fait = 0
+    for d in range(0, len(a_traiter), taille):
+        lot = a_traiter[d:d + taille]
+        prompts = [prompt_revision(segments, i, finals[:i], ents[i], options.get("contexte_avant", 2),
+                                   options.get("contexte_apres", 1)) for i in lot]
+        limite = max(int(len(originaux[i]) * 0.8) + 40 for i in lot)
+        try:
+            if hasattr(llm, "batch") and len(lot) > 1:
+                bruts = llm.batch(prompts, max_new_tokens=limite)
+            else:
+                bruts = [llm(p, max_new_tokens=int(len(originaux[i]) * 0.8) + 40) for p, i in zip(prompts, lot)]
+            erreur = None
+        except Exception as exc:                         # noqa: BLE001 : un lot raté garde ses originaux
+            bruts, erreur = [""] * len(lot), f"erreur LLM : {type(exc).__name__}"
+        for i, brut in zip(lot, bruts):
+            brut = _nettoyer_sortie(brut)
+            if erreur:
+                raisons[i] = erreur
+            elif brut and sortie_acceptable(originaux[i], brut):
+                finals[i], raisons[i] = brut, ("modifie" if brut != originaux[i] else "inchange")
             elif brut:
-                raison = "rejete (garde-fou) : original conservé"
-        manquants = [e["fr"] for e in ent if e["fr"].lower() not in final.lower()]
-        out.append({"fr_original": original, "fr_revise": final, "modifie": final != original, "raison": raison,
-                    "entites": [e["fr"] for e in ent], "entites_absentes_du_texte": manquants})
-        revises.append(final)
+                raisons[i] = "rejete (garde-fou) : original conservé"
+            else:
+                raisons[i] = "sortie vide : original conservé"
+        fait += len(lot)
         if progress:
-            progress((i + 1) / len(segments), f"Relecture {i + 1}/{len(segments)}")
+            progress(fait / max(1, len(a_traiter)), f"Relecture {fait}/{len(a_traiter)}")
+    out = []
+    for i in range(len(segments)):
+        manquants = [e["fr"] for e in ents[i] if e["fr"].lower() not in finals[i].lower()]
+        out.append({"fr_original": originaux[i], "fr_revise": finals[i], "modifie": finals[i] != originaux[i],
+                    "raison": raisons[i], "entites": [e["fr"] for e in ents[i]], "entites_absentes_du_texte": manquants})
     bilan = {"entites_detectees": sorted(appliques), "n_entites": len(appliques),
-             "a_verifier": sorted({m for o in out for m in o["entites_absentes_du_texte"]})}
+             "a_verifier": sorted({m for o in out for m in o["entites_absentes_du_texte"]}),
+             "segments_relus": len(a_traiter), "segments_total": len(segments)}
     return out, bilan
 
 
@@ -430,7 +505,7 @@ SYSTEME_RESUME = (
     "résumé en français. N'utilise AUCUNE information extérieure, n'invente rien : si une information manque, "
     "écris « non précisé ». Chaque point clé se termine par l'horodatage [mm:ss] du segment qui le fonde, "
     "recopié tel quel depuis le transcript. Format exact :\n"
-    "## Sujet\nune phrase\n\n## Points clés\n- 3 à 6 puces, chacune finissant par [mm:ss]\n\n"
+    "## Sujet\nune phrase\n\n## Points clés\n- 3 à 6 puces COURTES (une phrase), chacune finissant par [mm:ss]\n\n"
     "## Personnes, organisations, lieux cités\n- noms tels qu'ils figurent dans le transcript\n\n"
     "## Chiffres\n- chaque chiffre avec son contexte et [mm:ss] (ou « aucun chiffre cité »)")
 MORCEAU_MAX = 6000                                       # caractères de transcript par appel (carte-réduction au-delà)
@@ -469,12 +544,44 @@ def resume_llm(lignes: list[str], llm: Callable) -> str:
         corps = "NOTES PAR MORCEAU (extraites du transcript) :\n" + "\n\n".join(notes)
     else:
         corps = "TRANSCRIPT :\n" + "\n".join(blocs[0] if blocs else [])
-    return llm([{"role": "system", "content": SYSTEME_RESUME}, {"role": "user", "content": corps}], max_new_tokens=900).strip()
+    return llm([{"role": "system", "content": SYSTEME_RESUME}, {"role": "user", "content": corps}], max_new_tokens=500).strip()
 
 
 _MOTS_VIDES = set("""le la les un une des de du et en à au aux ce cet cette ces il elle ils elles on nous vous je tu qui que quoi dont
 où pour par sur dans avec sans sous est sont été être a ont avoir fait faire plus moins très aussi mais ou donc car se sa son ses leur leurs
 y ne pas comme entre vers chez cela ceci celui celle ceux selon après avant""".split())
+
+
+_HORO = re.compile(r"\[(\d{1,3}:\d{2}(?::\d{2})?)\]")
+_VIDE = re.compile(r"^(non précisé|aucun chiffre|aucune?\b.{0,25}$)|^\W*$", re.I)
+
+
+def _mots_utiles(t: str) -> set[str]:
+    return {m for m in re.findall(r"\w{4,}", t.lower()) if m not in _MOTS_VIDES}
+
+
+def rattacher_horodatages(markdown: str, segments: list[dict], textes: list[str]) -> tuple[str, int]:
+    """Filet pour les petits LLM : chaque puce du résumé sans horodatage valide reçoit celui du segment dont le texte
+    partage le plus de mots avec elle (à défaut, le segment de même rang relatif). Renvoie (markdown, nb de puces corrigées)."""
+    valides = {horodatage(s.get("debut_s") or 0) for s in segments}
+    if not segments:
+        return markdown, 0
+    mots_seg = [_mots_utiles(t) for t in textes]
+    puces = [i for i, l in enumerate(markdown.splitlines()) if l.lstrip().startswith("- ")]
+    lignes, corrigees = markdown.splitlines(), 0
+    for rang, i in enumerate(puces):
+        ligne = lignes[i]
+        cites = _HORO.findall(ligne)
+        corps = _HORO.sub("", ligne.lstrip()[2:]).strip()
+        if (cites and all(c in valides for c in cites)) or _VIDE.search(corps):
+            continue
+        mots = _mots_utiles(corps)
+        scores = [len(mots & m) for m in mots_seg]
+        k = max(range(len(segments)), key=lambda j: scores[j]) if mots and max(scores) > 0 \
+            else min(len(segments) - 1, int(rang / max(1, len(puces)) * len(segments)))
+        lignes[i] = f"{_HORO.sub('', ligne).rstrip()} [{horodatage(segments[k].get('debut_s') or 0)}]"
+        corrigees += 1
+    return "\n".join(lignes), corrigees
 
 
 def resume_extractif(segments: list[dict], textes: list[str], lexique_ent: list[str], n_points: int = 5) -> str:
@@ -600,23 +707,46 @@ def generer_rapport(session: Session, options: dict | None = None) -> dict:
 
     with verrou_gpu():
         liberer_gpu(opt.get("pool"))
-        # a. diarisation
-        prog(0.05, "Identification des locuteurs")
-        locuteurs, methode_diar = etape_diarisation(session, segments, opt, avert)
-        # b. révision
+        temps: dict[str, float] = {}
         llm, llm_proprietaire, methode_rev = opt.get("llm"), False, "aucune (désactivée)"
         veut_llm = (opt["revision"] or opt["resume"]) and os.environ.get("PORTEPAROLE_LLM_RAPPORT", "").lower() != "off"
+        # Le LLM se charge (disque + quantification, souvent plus d'une minute) pendant la diarisation, pas après.
+        chargement: dict = {}
+        fil_llm = None
         if llm is None and veut_llm:
-            try:
-                llm = LLMLocal().charger()
-                llm_proprietaire = True
-            except Exception as exc:                     # noqa: BLE001 : pas de GPU, mémoire, accès au modèle…
+            def charger_llm():
+                t = time.time()
+                try:
+                    chargement["llm"] = LLMLocal().charger()
+                except Exception as exc:                 # noqa: BLE001 : pas de GPU, mémoire, accès au modèle…
+                    chargement["erreur"] = exc
+                chargement["duree"] = time.time() - t
+            fil_llm = threading.Thread(target=charger_llm, name="chargement-llm", daemon=True)
+            fil_llm.start()
+        # a. diarisation
+        prog(0.05, "Identification des locuteurs")
+        t = time.time()
+        locuteurs, methode_diar = etape_diarisation(session, segments, opt, avert)
+        temps["diarisation_s"] = round(time.time() - t, 1)
+        # b. révision
+        if fil_llm is not None:
+            if fil_llm.is_alive():
+                prog(0.2, "Chargement du modèle de relecture")
+            t = time.time()
+            fil_llm.join()
+            temps["attente_chargement_llm_s"] = round(time.time() - t, 1)
+            temps["chargement_llm_s"] = round(chargement.get("duree", 0.0), 1)
+            if "llm" in chargement:
+                llm, llm_proprietaire = chargement["llm"], True
+            else:
+                exc = chargement.get("erreur")
                 avert.append(f"LLM local indisponible ({type(exc).__name__}: {str(exc)[:150]}) : pas de relecture, résumé extractif")
-                llm = None
         try:
             if opt["revision"] and llm is not None and not sans_fr:
                 prog(0.25, "Relecture de la traduction")
+                t = time.time()
                 revision, bilan_lex = etape_revision(segments, llm, lexique, opt, lambda f, d: prog(0.25 + 0.5 * f, d))
+                temps["revision_s"] = round(time.time() - t, 1)
                 methode_rev = f"LLM {getattr(llm, 'nom', 'fourni')}"
             else:
                 revision = [{"fr_original": texte_de(s), "fr_revise": texte_de(s), "modifie": False, "raison": "non relu",
@@ -631,9 +761,13 @@ def generer_rapport(session: Session, options: dict | None = None) -> dict:
             resume_md, methode_res, controle = "", "aucun", {"cites": 0, "invalides": []}
             if opt["resume"]:
                 prog(0.8, "Rédaction du résumé")
+                t_resume = time.time()
                 if llm is not None:
                     try:
                         resume_md = resume_llm(lignes_transcript(segments, textes, locuteurs), llm)
+                        resume_md, nb_rattaches = rattacher_horodatages(resume_md, segments, textes)
+                        if nb_rattaches:
+                            avert.append(f"{nb_rattaches} point(s) du résumé sans horodatage valide : rattachés au segment le plus proche")
                         controle = verifier_horodatages(resume_md, segments)
                         methode_res = "LLM"
                         if controle["invalides"]:
@@ -646,6 +780,8 @@ def generer_rapport(session: Session, options: dict | None = None) -> dict:
                 if not resume_md:
                     resume_md = resume_extractif(segments, textes, bilan_lex["entites_detectees"])
                     methode_res = "extractif (sans modèle de langage)"
+                    controle = verifier_horodatages(resume_md, segments)
+                temps["resume_s"] = round(time.time() - t_resume, 1)
         finally:
             if llm_proprietaire:
                 llm.decharger()
@@ -662,7 +798,7 @@ def generer_rapport(session: Session, options: dict | None = None) -> dict:
         fichiers.append("transcript.docx")
     rapport = {
         "sid": session.sid, "genere_le": time.strftime("%Y-%m-%dT%H:%M:%S"), "duree_calcul_s": round(time.time() - t0, 1),
-        "methode_diarisation": methode_diar, "methode_revision": methode_rev, "methode_resume": methode_res,
+        "temps_etapes_s": temps, "methode_diarisation": methode_diar, "methode_revision": methode_rev, "methode_resume": methode_res,
         "n_locuteurs": len({l["locuteur"] for l in lignes if l["locuteur"]}),
         "lexique": bilan_lex, "controle_horodatages": controle, "avertissements": avert,
         "segments": lignes, "resume_markdown": resume_md, "fichiers": fichiers,
