@@ -19,12 +19,16 @@ from model_engine import SAMPLE_RATE, subtitle_lines, windows
 
 SEAMLESS_ID = "facebook/seamless-m4t-v2-large"
 
+# Un seul verrou pour TOUT appel modèle (chargement ET inférence) : interface Gradio, API HTTP et direct passent par lui,
+# sinon deux modèles se retrouvent en VRAM en même temps (OOM sur le T4). Réentrant : `run` appelle `Pool.get`.
+GPU_LOCK = threading.RLock()
+
 
 class Pool:
     """Garde au plus un groupe de modèles chargé ; `get` décharge les autres avant de charger."""
 
     def __init__(self):
-        self._lock = threading.Lock()
+        self._lock = GPU_LOCK
         self._group: str | None = None
         self._engines: dict[str, Engine] = {}
 
@@ -49,6 +53,9 @@ class Pool:
         return self._group
 
 
+POOL = Pool()          # partagé par tous les moteurs et par le direct (live.py) : un seul groupe en mémoire
+
+
 class LazyEngine(Engine):
     available = True
     status = "Chargé à la demande"
@@ -60,7 +67,8 @@ class LazyEngine(Engine):
     def run(self, path: str, task: str = "st", progress=None) -> Result:
         if progress:
             progress(0.02, desc=f"Chargement de {self.label}")
-        return self.pool.get(self.group, self.name, self.build).run(path, task, progress=progress)
+        with GPU_LOCK:
+            return self.pool.get(self.group, self.name, self.build).run(path, task, progress=progress)
 
 
 def _load_wav(path: str) -> np.ndarray:
@@ -173,7 +181,7 @@ class SeamlessEngine(Engine):
 def build_lazy_engines(nlp_repo: str, s3_ckpt: str | None = None, only: set[str] | None = None) -> dict[str, Engine]:
     """Moteurs à la demande. `nlp_repo` : racine du dépôt de l'équipe (branche benchmarking).
     `only` : sous-ensemble de {"s0", "seamless", "s3", "s3_direct"} ; par défaut s0, seamless et s3."""
-    pool = Pool()
+    pool = POOL
     want = only or {"s0", "seamless", "s3"}
     out: dict[str, Engine] = {}
     if "s0" in want:
@@ -187,15 +195,23 @@ def build_lazy_engines(nlp_repo: str, s3_ckpt: str | None = None, only: set[str]
 
         def build_s3():
             return s3_engine.load_s3_engines(nlp_repo, s3_ckpt)
-        # Le temps 2 n'est pas prévu : le français direct recopie l'arabe. La solution S3 est donc la cascade
-        # (encodeur + projecteur + Qwen pour la transcription, puis Qwen pour la traduction du texte), nommée `s3`.
+        # Un nom = un moteur. Le temps 2 n'est pas prévu : le français direct recopie l'arabe, donc la solution S3
+        # est la cascade (transcription arabe par S3, puis traduction du texte par son Qwen), nommée `s3`.
+        # Le français direct n'existe que comme essai explicite, `s3_direct`.
         if "s3" in want:
-            out["s3"] = LazyEngine(pool, "s3", "s3_cascade", "S3 (encodeur + projecteur + décodeur)",
-                                   s3_engine.BLURB["cascade"], build_s3, True)
-        if "s3_direct" in want:                      # essai seulement, à demander explicitement
-            out["s3_direct"] = LazyEngine(pool, "s3", "s3", "S3, français direct (essai)",
+            out["s3"] = LazyEngine(pool, "s3", "s3", "S3, via le texte arabe", s3_engine.BLURB["cascade"], build_s3, True)
+        if "s3_direct" in want:
+            out["s3_direct"] = LazyEngine(pool, "s3", "s3_direct", "S3, français direct (essai)",
                                           s3_engine.BLURB["direct"], build_s3, False)
     return out
+
+
+def build_direct_engine(nlp_repo: str, s3_ckpt: str | None = None):
+    """Moteur du mode direct (S3 + Opus-MT, LoRA facultatif), dans le Pool partagé. À appeler sous GPU_LOCK."""
+    def build():
+        import live_moteurs
+        return {"direct": live_moteurs.charger_moteur_direct(nlp_repo, s3_ckpt)}
+    return POOL.get("direct", "direct", build)
 
 
 def engines_from_env() -> dict[str, Engine]:

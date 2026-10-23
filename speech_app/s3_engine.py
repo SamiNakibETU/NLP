@@ -2,8 +2,8 @@
 
 Le code du modèle est celui du dépôt de l'équipe (branche `benchmarking` de SamiNakibETU/NLP) : donner la racine de
 son dossier à `load_s3_engines`. Deux moteurs partagent les mêmes modèles chargés une seule fois :
-  s3          français DIRECT : vecteurs audio projetés + consigne « Traduis en français. », sans texte arabe
-  s3_cascade  cascade : transcription arabe, puis traduction du texte par le même Qwen (pour comparer)
+  s3          cascade (par défaut) : transcription arabe, puis traduction du texte par le même Qwen
+  s3_direct   français DIRECT (essai) : vecteurs audio projetés + consigne « Traduis en français. », sans texte arabe
 Tâche « asr » (transcrire en arabe) : identique pour les deux.
 Le projecteur chargé est celui du temps 1 (entraîné à transcrire). Dans `notebooks/s3_tester_audio.ipynb` de l'équipe, le
 test de traduction directe sans temps 2 donne « arabe dans la sortie : 100 % » : le moteur `s3` avertit donc quand il recopie
@@ -92,7 +92,7 @@ class S3Engine(Engine):
 
 def load_s3_engines(repo_dir: str | Path, checkpoint: str | Path | None = None,
                     section: str = "temps_1_50k") -> dict[str, S3Engine]:
-    """Charge les vrais modèles (HF_TOKEN requis pour l'encodeur Cohere) et renvoie les moteurs `s3` et `s3_cascade`."""
+    """Charge les vrais modèles (HF_TOKEN requis pour l'encodeur Cohere) et renvoie les moteurs `s3` (cascade) et `s3_direct` (essai)."""
     repo = Path(repo_dir)
     code = repo / "code" / "projecteur"
     if not (code / "transcrire_s3.py").is_file():
@@ -102,5 +102,5 @@ def load_s3_engines(repo_dir: str | Path, checkpoint: str | Path | None = None,
 
     t = transcrire_s3.TranscripteurS3.charger(section, Path(checkpoint) if checkpoint else None)
     # la cascade d'abord : c'est elle qui produit du français aujourd'hui (moteur par défaut dans l'interface)
-    return {"s3_cascade": S3Engine("s3_cascade", "S3, via le texte arabe", "cascade", t),
-            "s3": S3Engine("s3", "S3, français direct (essai)", "direct", t)}
+    return {"s3": S3Engine("s3", "S3, via le texte arabe", "cascade", t),
+            "s3_direct": S3Engine("s3_direct", "S3, français direct (essai)", "direct", t)}
