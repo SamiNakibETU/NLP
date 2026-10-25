@@ -48,7 +48,7 @@ La chaîne de Kalam, S3 suivi de NLLB-1.3B, obtient le meilleur score de bout en
 
 Il faut un compte Google et un compte Hugging Face qui a accepté les conditions du modèle [`CohereLabs/cohere-transcribe-arabic-07-2026`](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026).
 
-1. Ouvrir [`speech_app/colab_live.ipynb` dans Colab](https://colab.research.google.com/github/SamiNakibETU/NLP/blob/integration/speech_app/colab_live.ipynb).
+1. Ouvrir [`speech_app/colab_live.ipynb` dans Colab](https://colab.research.google.com/github/SamiNakibETU/NLP/blob/main/speech_app/colab_live.ipynb).
 2. Exécution > Modifier le type d'exécution > GPU T4.
 3. Ajouter le secret Colab `HF_TOKEN` (jeton Hugging Face en lecture) et activer son accès au notebook. `SCALEDOWN_API_KEY` est facultatif.
 4. Exécution > Tout exécuter, puis ouvrir le lien `https://….trycloudflare.com/live` affiché (ou scanner le QR code).

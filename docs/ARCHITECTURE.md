@@ -1,6 +1,6 @@
 # Architecture
 
-Ce document décrit les composants de Kalam, leurs échanges, l'API HTTP et WebSocket et les variables d'environnement. Il est établi à partir du code de la branche `integration`.
+Ce document décrit les composants de Kalam, leurs échanges, l'API HTTP et WebSocket et les variables d'environnement. Il est établi à partir du code de la branche `main`.
 
 ## Sommaire
 

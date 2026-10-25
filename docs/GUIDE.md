@@ -33,7 +33,7 @@ Préparer le compte Hugging Face :
 
 C'est la configuration dans laquelle l'équipe a fait ses démonstrations et ses mesures du direct.
 
-1. Ouvrir le notebook : <https://colab.research.google.com/github/SamiNakibETU/NLP/blob/integration/speech_app/colab_live.ipynb>.
+1. Ouvrir le notebook : <https://colab.research.google.com/github/SamiNakibETU/NLP/blob/main/speech_app/colab_live.ipynb>.
 2. Exécution > Modifier le type d'exécution > **GPU T4** > Enregistrer.
 3. Ouvrir le panneau des secrets (icône de clé, barre de gauche) et ajouter :
 
@@ -50,7 +50,7 @@ Ce que fait chaque cellule :
 | Cellule | Rôle |
 |---|---|
 | 1. Vérifier le GPU et installer les dépendances | `ffmpeg`, `transformers`, `speechbrain`, `pyannote.audio`, `piper-tts`… |
-| 2. Cloner le dépôt | branche `integration` dans `/content/NLP` |
+| 2. Cloner le dépôt | branche `main` dans `/content/NLP` |
 | 3. Lire les secrets et choisir les moteurs | lit `HF_TOKEN` et `SCALEDOWN_API_KEY`, vérifie l'accès au modèle Cohere |
 | 4. Lancer le serveur | `uvicorn api:app` sur le port 7860 |
 | 5. Ouvrir le tunnel public | lien `trycloudflare.com` (HTTPS, sans compte) |
