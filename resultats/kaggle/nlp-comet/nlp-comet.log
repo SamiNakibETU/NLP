@@ -1,0 +1,396 @@
+[{"stream_name":"stderr","time":8.71030882,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.710356834,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.710363086,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.710367117,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.368918748,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.368948298,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.368953126,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.368956603,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":284.857764244,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":284.857817254,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":284.857823763,"data":"bayesian-optimization 3.4.0 requires numpy\u003e=2.1.3; python_full_version == \"3.13.*\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.857828744,"data":"litellm 1.93.2 requires tokenizers\u003c1.0,\u003e=0.21.0, but you have tokenizers 0.20.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.857833241,"data":"mne 1.13.2 requires numpy\u003c3,\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.857837986,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.857842442,"data":"gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.857846969,"data":"gradio 6.26.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.857856038,"data":"moviepy 1.0.3 requires decorator\u003c5.0,\u003e=4.0.2, but you have decorator 5.3.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.85811781,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.858137214,"data":"diffusers 0.40.0 requires huggingface-hub\u003c2.0,\u003e=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.858143721,"data":"jax 0.11.1 requires numpy\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.85814916,"data":"dm-tree 0.1.10 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":284.858154683,"data":"tifffile 2026.8.23 requires numpy\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.06217956,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":285.062204236,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":285.062221564,"data":"bayesian-optimization 3.4.0 requires numpy\u003e=2.1.3; python_full_version == \"3.13.*\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.06222611,"data":"litellm 1.93.2 requires tokenizers\u003c1.0,\u003e=0.21.0, but you have tokenizers 0.20.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062229797,"data":"mne 1.13.2 requires numpy\u003c3,\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062233379,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062236694,"data":"gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062244879,"data":"gradio 6.26.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062247589,"data":"moviepy 1.0.3 requires decorator\u003c5.0,\u003e=4.0.2, but you have decorator 5.3.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062250064,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062252672,"data":"diffusers 0.40.0 requires huggingface-hub\u003c2.0,\u003e=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062255119,"data":"jax 0.11.1 requires numpy\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.06225755,"data":"dm-tree 0.1.10 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062260028,"data":"tifffile 2026.8.23 requires numpy\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062263107,"data":"\n"}
+,{"stream_name":"stderr","time":285.062265346,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":285.062267935,"data":"bigframes 2.48.0 requires google-cloud-bigquery-storage\u003c3.0.0,\u003e=2.30.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":285.062270388,"data":"bayesian-optimization 3.4.0 requires numpy\u003e=2.1.3; python_full_version == \"3.13.*\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062272915,"data":"litellm 1.93.2 requires tokenizers\u003c1.0,\u003e=0.21.0, but you have tokenizers 0.20.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062276534,"data":"mne 1.13.2 requires numpy\u003c3,\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062279065,"data":"dopamine-rl 4.1.2 requires gym\u003c=0.25.2, but you have gym 0.26.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062281435,"data":"gradio 6.26.0 requires huggingface-hub\u003c2.0,\u003e=1.16.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062283876,"data":"gradio 6.26.0 requires pillow\u003c13.0,\u003e=8.0, but you have pillow 13.0.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062286275,"data":"moviepy 1.0.3 requires decorator\u003c5.0,\u003e=4.0.2, but you have decorator 5.3.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062288687,"data":"ml-dtypes 0.6.0 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062300663,"data":"diffusers 0.40.0 requires huggingface-hub\u003c2.0,\u003e=1.23.0, but you have huggingface-hub 0.36.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062303413,"data":"jax 0.11.1 requires numpy\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062305929,"data":"dm-tree 0.1.10 requires numpy\u003e=2.1.0; python_version \u003e= \"3.13\", but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":285.062308448,"data":"tifffile 2026.8.23 requires numpy\u003e=2.1, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.6434792,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":288.643504417,"data":"unbabel-comet 2.2.7 requires sacrebleu\u003c3.0.0,\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":288.643509457,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.643513132,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.643516996,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.643520542,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.846315817,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":288.846343085,"data":"unbabel-comet 2.2.7 requires sacrebleu\u003c3.0.0,\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":288.84634828,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.846352072,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.846355648,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.846358873,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.846362503,"data":"\n"}
+,{"stream_name":"stderr","time":288.846365538,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":288.846369166,"data":"unbabel-comet 2.2.7 requires sacrebleu\u003c3.0.0,\u003e=2.0.0, which is not installed.\n"}
+,{"stream_name":"stderr","time":288.846372885,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.846376945,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.0.2 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.846381175,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":288.846385041,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stdout","time":298.034357772,"data":"2.11.0+cu128 4.46.3\n"}
+,{"stream_name":"stderr","time":350.439723681,"data":"/usr/local/lib/python3.13/dist-packages/comet/models/__init__.py:101: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":350.439788761,"data":"  import pkg_resources\n"}
+,{"stream_name":"stderr","time":350.439795411,"data":"\n"}
+,{"stream_name":"stderr","time":350.439800993,"data":"/usr/local/lib/python3.13/dist-packages/comet/models/__init__.py:101: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":350.439812426,"data":"  import pkg_resources\n"}
+,{"stream_name":"stderr","time":351.834803322,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":351.834836237,"data":"\n"}
+,{"stream_name":"stderr","time":351.834842006,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":361.467255168,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":361.467279521,"data":"\n"}
+,{"stream_name":"stderr","time":361.467284924,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stdout","time":369.794364251,"data":"16 colonnes à scorer\n"}
+,{"stream_name":"stderr","time":369.949662709,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":369.949732973,"data":"\n"}
+,{"stream_name":"stderr","time":369.949740067,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":369.950714582,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":369.950735792,"data":"\n"}
+,{"stream_name":"stderr","time":369.950740763,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":369.951684958,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":369.951703225,"data":"\n"}
+,{"stream_name":"stderr","time":369.951707678,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":370.21877202,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":370.218805739,"data":"\n"}
+,{"stream_name":"stderr","time":370.218809145,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":370.222836045,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":370.22286331,"data":"\n"}
+,{"stream_name":"stderr","time":370.222866589,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":370.954583734,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":370.954611943,"data":"\n"}
+,{"stream_name":"stderr","time":370.954617336,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":381.728392717,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":381.728428856,"data":"\n"}
+,{"stream_name":"stderr","time":381.728434444,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":381.729532229,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":381.729551564,"data":"\n"}
+,{"stream_name":"stderr","time":381.729556419,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":381.730618881,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":381.730635552,"data":"\n"}
+,{"stream_name":"stderr","time":381.730640374,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":381.733745555,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":381.733767285,"data":"\n"}
+,{"stream_name":"stderr","time":381.73377164,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":381.734121715,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":381.734134011,"data":"\n"}
+,{"stream_name":"stderr","time":381.734139134,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":381.854720445,"data":"traducteurs/fleurs/opus-mt-ar-fr {'comet': 0.761, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":382.44782328,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":382.447882796,"data":"\n"}
+,{"stream_name":"stderr","time":382.44788865,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":392.031066871,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":392.031096739,"data":"\n"}
+,{"stream_name":"stderr","time":392.031101216,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":392.031474127,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":392.031488517,"data":"\n"}
+,{"stream_name":"stderr","time":392.031492879,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":392.03234477,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":392.032364622,"data":"\n"}
+,{"stream_name":"stderr","time":392.032369011,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":392.033227892,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":392.033244101,"data":"\n"}
+,{"stream_name":"stderr","time":392.033249349,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":392.03601456,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":392.036031792,"data":"\n"}
+,{"stream_name":"stderr","time":392.036036168,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":392.161280597,"data":"traducteurs/fleurs/nllb-200-distilled-600M {'comet': 0.8065, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":392.679809916,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":392.679841213,"data":"\n"}
+,{"stream_name":"stderr","time":392.679846419,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":402.602224968,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":402.602262905,"data":"\n"}
+,{"stream_name":"stderr","time":402.602270306,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":402.603097454,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":402.603120068,"data":"\n"}
+,{"stream_name":"stderr","time":402.603124824,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":402.603874136,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":402.603900479,"data":"\n"}
+,{"stream_name":"stderr","time":402.603906394,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":402.605077131,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":402.60509794,"data":"\n"}
+,{"stream_name":"stderr","time":402.605102172,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":402.605546222,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":402.60555769,"data":"\n"}
+,{"stream_name":"stderr","time":402.605561423,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":402.727416511,"data":"traducteurs/fleurs/nllb-200-distilled-1.3B {'comet': 0.8261, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":403.237064289,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":403.237093301,"data":"\n"}
+,{"stream_name":"stderr","time":403.237097666,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":413.367093954,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":413.367132825,"data":"\n"}
+,{"stream_name":"stderr","time":413.367138172,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":413.368343731,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":413.368364794,"data":"\n"}
+,{"stream_name":"stderr","time":413.368370472,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":413.369237038,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":413.369254014,"data":"\n"}
+,{"stream_name":"stderr","time":413.369258928,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":413.371365629,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":413.371381808,"data":"\n"}
+,{"stream_name":"stderr","time":413.371386871,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":413.372975265,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":413.372992101,"data":"\n"}
+,{"stream_name":"stderr","time":413.37299644,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":413.495040053,"data":"traducteurs/fleurs/qwen2.5-1.5b-base {'comet': 0.7418, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":414.060570012,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":414.060605014,"data":"\n"}
+,{"stream_name":"stderr","time":414.060610422,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":423.97040382,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":423.970463532,"data":"\n"}
+,{"stream_name":"stderr","time":423.970470591,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":423.971398617,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":423.971418979,"data":"\n"}
+,{"stream_name":"stderr","time":423.971423446,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":423.972288563,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":423.972307389,"data":"\n"}
+,{"stream_name":"stderr","time":423.972312969,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":423.973078221,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":423.973094512,"data":"\n"}
+,{"stream_name":"stderr","time":423.973099003,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":423.976123372,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":423.976139145,"data":"\n"}
+,{"stream_name":"stderr","time":423.976143472,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":424.094473522,"data":"traducteurs/fleurs/qwen2.5-1.5b-lora {'comet': 0.7629, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":424.609503028,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":424.609530208,"data":"\n"}
+,{"stream_name":"stderr","time":424.609535093,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":431.840162957,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":431.840213512,"data":"\n"}
+,{"stream_name":"stderr","time":431.840219406,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":431.84120205,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":431.841221184,"data":"\n"}
+,{"stream_name":"stderr","time":431.841225888,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":431.842012887,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":431.842030512,"data":"\n"}
+,{"stream_name":"stderr","time":431.842034974,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":431.84446958,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":431.844486398,"data":"\n"}
+,{"stream_name":"stderr","time":431.844490831,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":431.846173211,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":431.846192956,"data":"\n"}
+,{"stream_name":"stderr","time":431.84620861,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":431.970002371,"data":"traducteurs/fleurs/qwen2.5-7b-nf4 {'comet': 0.8013, 'n': 267, 'n_non_vides': 150}\n"}
+,{"stream_name":"stderr","time":432.553142658,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":432.553176973,"data":"\n"}
+,{"stream_name":"stderr","time":432.553182532,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":442.978023197,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":442.978050558,"data":"\n"}
+,{"stream_name":"stderr","time":442.978055578,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":442.97915493,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":442.979175214,"data":"\n"}
+,{"stream_name":"stderr","time":442.979179734,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":442.980055116,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":442.980074705,"data":"\n"}
+,{"stream_name":"stderr","time":442.98007933,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":442.980994956,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":442.98101381,"data":"\n"}
+,{"stream_name":"stderr","time":442.981018546,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":442.98189499,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":442.981907784,"data":"\n"}
+,{"stream_name":"stderr","time":442.981912516,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":443.090562876,"data":"lora/fr_base {'comet': 0.7417, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":443.647331124,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":443.647370798,"data":"\n"}
+,{"stream_name":"stderr","time":443.647376195,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":453.961980023,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":453.962030762,"data":"\n"}
+,{"stream_name":"stderr","time":453.962035552,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":453.963271677,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":453.963295454,"data":"\n"}
+,{"stream_name":"stderr","time":453.963302125,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":453.964466351,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":453.964482404,"data":"\n"}
+,{"stream_name":"stderr","time":453.964488189,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":453.966421422,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":453.966440558,"data":"\n"}
+,{"stream_name":"stderr","time":453.966446983,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":453.967767613,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":453.967785521,"data":"\n"}
+,{"stream_name":"stderr","time":453.967791324,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":454.080215974,"data":"lora/fr_lora {'comet': 0.7637, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":454.619703956,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":454.619763879,"data":"\n"}
+,{"stream_name":"stderr","time":454.619768358,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":470.813374924,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":470.813411423,"data":"\n"}
+,{"stream_name":"stderr","time":470.813416929,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":470.81448955,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":470.814509679,"data":"\n"}
+,{"stream_name":"stderr","time":470.814513929,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":470.815294857,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":470.815310987,"data":"\n"}
+,{"stream_name":"stderr","time":470.815315098,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":470.817205849,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":470.817220551,"data":"\n"}
+,{"stream_name":"stderr","time":470.817224533,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":470.818519585,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":470.818532613,"data":"\n"}
+,{"stream_name":"stderr","time":470.81853663,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":470.942021759,"data":"systemes/S0_fr_hyp {'comet': 0.5477, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":471.531214884,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":471.531248658,"data":"\n"}
+,{"stream_name":"stderr","time":471.531262237,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":482.616011392,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":482.6160466,"data":"\n"}
+,{"stream_name":"stderr","time":482.616051421,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":482.616814232,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":482.616829916,"data":"\n"}
+,{"stream_name":"stderr","time":482.616834987,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":482.617678769,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":482.617713585,"data":"\n"}
+,{"stream_name":"stderr","time":482.61771825,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":482.618546916,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":482.618565805,"data":"\n"}
+,{"stream_name":"stderr","time":482.618571196,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":482.619375507,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":482.619391134,"data":"\n"}
+,{"stream_name":"stderr","time":482.619395969,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":482.734582817,"data":"systemes/SEAMLESS_fr_hyp {'comet': 0.6901, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":483.323758418,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":483.32379246,"data":"\n"}
+,{"stream_name":"stderr","time":483.323797701,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":494.809896584,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":494.809935043,"data":"\n"}
+,{"stream_name":"stderr","time":494.809940719,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":494.811070369,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":494.811091059,"data":"\n"}
+,{"stream_name":"stderr","time":494.811096619,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":494.811863505,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":494.811878153,"data":"\n"}
+,{"stream_name":"stderr","time":494.811882947,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":494.813762712,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":494.813781064,"data":"\n"}
+,{"stream_name":"stderr","time":494.813786848,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":494.815436531,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":494.815457501,"data":"\n"}
+,{"stream_name":"stderr","time":494.815463354,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":494.937082228,"data":"cascade/S0+Qwen_fr {'comet': 0.5887, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":495.469651733,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":495.469679017,"data":"\n"}
+,{"stream_name":"stderr","time":495.469683591,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":508.003242598,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":508.003281295,"data":"\n"}
+,{"stream_name":"stderr","time":508.003288071,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":508.004329358,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":508.004351687,"data":"\n"}
+,{"stream_name":"stderr","time":508.004356022,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":508.005513805,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":508.005538175,"data":"\n"}
+,{"stream_name":"stderr","time":508.005544551,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":508.008158213,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":508.008179331,"data":"\n"}
+,{"stream_name":"stderr","time":508.008184164,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":508.009726047,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":508.009754563,"data":"\n"}
+,{"stream_name":"stderr","time":508.009761306,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":508.122190872,"data":"cascade/S0+Qwen+LoRA_fr {'comet': 0.5964, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":508.722275552,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":508.722318539,"data":"\n"}
+,{"stream_name":"stderr","time":508.722323216,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":520.552328651,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":520.552373865,"data":"\n"}
+,{"stream_name":"stderr","time":520.552379684,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":520.553425846,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":520.553445478,"data":"\n"}
+,{"stream_name":"stderr","time":520.553450746,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":520.554421495,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":520.554438702,"data":"\n"}
+,{"stream_name":"stderr","time":520.554443712,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":520.555369653,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":520.555387004,"data":"\n"}
+,{"stream_name":"stderr","time":520.555392208,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":520.55627052,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":520.556285007,"data":"\n"}
+,{"stream_name":"stderr","time":520.556299953,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":520.659480015,"data":"cascade/SEAMLESS+Qwen_fr {'comet': 0.7235, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":521.218896244,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":521.218925613,"data":"\n"}
+,{"stream_name":"stderr","time":521.218931156,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":532.974223255,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":532.974269886,"data":"\n"}
+,{"stream_name":"stderr","time":532.974277189,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":532.97537539,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":532.97539714,"data":"\n"}
+,{"stream_name":"stderr","time":532.975402999,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":532.9761828,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":532.976200095,"data":"\n"}
+,{"stream_name":"stderr","time":532.976205313,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":532.978283791,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":532.978301142,"data":"\n"}
+,{"stream_name":"stderr","time":532.978305409,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":532.97952058,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":532.979538302,"data":"\n"}
+,{"stream_name":"stderr","time":532.979542846,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":533.100585146,"data":"cascade/SEAMLESS+Qwen+LoRA_fr {'comet': 0.7451, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":533.668152615,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":533.668186102,"data":"\n"}
+,{"stream_name":"stderr","time":533.668191441,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":545.489853029,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":545.489887543,"data":"\n"}
+,{"stream_name":"stderr","time":545.489892157,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":545.491064523,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":545.491085111,"data":"\n"}
+,{"stream_name":"stderr","time":545.491089494,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":545.492142761,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":545.492164094,"data":"\n"}
+,{"stream_name":"stderr","time":545.492169117,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":545.494367147,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":545.494385278,"data":"\n"}
+,{"stream_name":"stderr","time":545.494389975,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":545.495876702,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":545.495896759,"data":"\n"}
+,{"stream_name":"stderr","time":545.495901992,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stdout","time":545.614357096,"data":"cascade/WHISPER_L3+Qwen_fr {'comet': 0.7171, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":546.153517552,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":546.153546779,"data":"\n"}
+,{"stream_name":"stderr","time":546.153551355,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stdout","time":557.601248677,"data":"cascade/WHISPER_L3+Qwen+LoRA_fr {'comet': 0.7246, 'n': 267, 'n_non_vides': 267}\n"}
+,{"stream_name":"stderr","time":563.866031005,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":563.866060041,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":564.032307181,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":564.032335708,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":564.852643822,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":564.962874621,"data":"[NbConvertApp] Writing 144100 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":567.604247576,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":568.182824545,"data":"[NbConvertApp] Writing 408609 bytes to __results__.html\n"}
+]

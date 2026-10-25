@@ -1,0 +1,82 @@
+{
+ "traducteurs/fleurs/opus-mt-ar-fr": {
+  "comet": 0.761,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "traducteurs/fleurs/nllb-200-distilled-600M": {
+  "comet": 0.8065,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "traducteurs/fleurs/nllb-200-distilled-1.3B": {
+  "comet": 0.8261,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "traducteurs/fleurs/qwen2.5-1.5b-base": {
+  "comet": 0.7418,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "traducteurs/fleurs/qwen2.5-1.5b-lora": {
+  "comet": 0.7629,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "traducteurs/fleurs/qwen2.5-7b-nf4": {
+  "comet": 0.8013,
+  "n": 267,
+  "n_non_vides": 150
+ },
+ "lora/fr_base": {
+  "comet": 0.7417,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "lora/fr_lora": {
+  "comet": 0.7637,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "systemes/S0_fr_hyp": {
+  "comet": 0.5477,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "systemes/SEAMLESS_fr_hyp": {
+  "comet": 0.6901,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "cascade/S0+Qwen_fr": {
+  "comet": 0.5887,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "cascade/S0+Qwen+LoRA_fr": {
+  "comet": 0.5964,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "cascade/SEAMLESS+Qwen_fr": {
+  "comet": 0.7235,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "cascade/SEAMLESS+Qwen+LoRA_fr": {
+  "comet": 0.7451,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "cascade/WHISPER_L3+Qwen_fr": {
+  "comet": 0.7171,
+  "n": 267,
+  "n_non_vides": 267
+ },
+ "cascade/WHISPER_L3+Qwen+LoRA_fr": {
+  "comet": 0.7246,
+  "n": 267,
+  "n_non_vides": 267
+ }
+}

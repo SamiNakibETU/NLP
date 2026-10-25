@@ -1,0 +1,20 @@
+{
+  "id": "codingod/nlp-eval-s3",
+  "title": "nlp-eval-s3",
+  "code_file": "nlp-eval-s3.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "codingod/nlp-code"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [
+    "codingod/nlp-lora-traduction"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

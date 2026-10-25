@@ -1,0 +1,510 @@
+[{"stream_name":"stderr","time":6.77936508,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.779425205,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.779431811,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.779435412,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.372429278,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.372468439,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.372472444,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.372475371,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":16.810281604,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":16.810309484,"data":"unbabel-comet 2.2.7 requires huggingface-hub\u003c1.0,\u003e=0.19.3, but you have huggingface-hub 1.29.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":16.810315592,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":16.810319927,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.1.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":16.81032601,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":16.810364269,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":16.810369679,"data":"unbabel-comet 2.2.7 requires transformers\u003c5.0,\u003e=4.17, but you have transformers 5.16.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013188965,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":17.013224832,"data":"unbabel-comet 2.2.7 requires huggingface-hub\u003c1.0,\u003e=0.19.3, but you have huggingface-hub 1.29.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013230763,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.01323499,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.1.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013238709,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013242299,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013245986,"data":"unbabel-comet 2.2.7 requires transformers\u003c5.0,\u003e=4.17, but you have transformers 5.16.1 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013249637,"data":"\n"}
+,{"stream_name":"stderr","time":17.013252742,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":17.013275314,"data":"unbabel-comet 2.2.7 requires huggingface-hub\u003c1.0,\u003e=0.19.3, but you have huggingface-hub 1.29.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013278179,"data":"unbabel-comet 2.2.7 requires jsonargparse==3.13.1, but you have jsonargparse 4.53.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013280492,"data":"unbabel-comet 2.2.7 requires numpy\u003c2.0.0,\u003e=1.20.0, but you have numpy 2.1.3 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013282894,"data":"unbabel-comet 2.2.7 requires protobuf\u003c5.0.0,\u003e=4.24.4, but you have protobuf 5.29.5 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013285219,"data":"unbabel-comet 2.2.7 requires torchmetrics\u003c0.11.0,\u003e=0.10.2, but you have torchmetrics 1.9.0 which is incompatible.\n"}
+,{"stream_name":"stderr","time":17.013287572,"data":"unbabel-comet 2.2.7 requires transformers\u003c5.0,\u003e=4.17, but you have transformers 5.16.1 which is incompatible.\n"}
+,{"stream_name":"stdout","time":45.400854956,"data":"2.11.0+cu128 5.16.1 0.20.0\n"}
+,{"stream_name":"stdout","time":45.771014572,"data":"/kaggle/input/nlp-eval-systemes/traductions_par_phrase.csv /kaggle/input/nlp-lora-traduction/adaptateur_lora\n"}
+,{"stream_name":"stdout","time":45.771046194,"data":"transcriptions arabes disponibles : ['S0', 'SEAMLESS', 'WHISPER_L3'] | S3 présent : False\n"}
+,{"stream_name":"stdout","time":45.771058459,"data":"ATTENTION : pas de transcription S3 (kernel nlp-eval-systemes lancé sans le secret HF_TOKEN) ; la cascade n'est mesurée que sur les autres transcriptions. Relancer nlp-eval-systemes puis ce kernel.\n"}
+,{"stream_name":"stderr","time":46.226884322,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":46.226916077,"data":"\n"}
+,{"stream_name":"stderr","time":46.226921611,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":233.697561602,"data":"S0 traduit\n"}
+,{"stream_name":"stdout","time":345.84803113,"data":"SEAMLESS traduit\n"}
+,{"stream_name":"stdout","time":466.724286427,"data":"WHISPER_L3 traduit\n"}
+,{"stream_name":"stderr","time":468.755178594,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":468.755216258,"data":"\n"}
+,{"stream_name":"stderr","time":468.755221742,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":468.875487732,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/tree/2760a223ac957f30acfb18c8aa649b01cf1d75f2?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":468.875515019,"data":"\n"}
+,{"stream_name":"stderr","time":468.875520191,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/tree/2760a223ac957f30acfb18c8aa649b01cf1d75f2?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.013385464,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":469.013426182,"data":"\n"}
+,{"stream_name":"stderr","time":469.013432498,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":469.024351885,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.024372265,"data":"\n"}
+,{"stream_name":"stderr","time":469.02437662,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.037384687,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.037401511,"data":"\n"}
+,{"stream_name":"stderr","time":469.037405644,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/.gitattributes \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.05184871,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":469.051868219,"data":"\n"}
+,{"stream_name":"stderr","time":469.051872428,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":469.061785388,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.061801732,"data":"\n"}
+,{"stream_name":"stderr","time":469.061806259,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.069322748,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":469.069356761,"data":"\n"}
+,{"stream_name":"stderr","time":469.069363457,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":469.073363779,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.073380147,"data":"\n"}
+,{"stream_name":"stderr","time":469.073384946,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/LICENSE \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.076079895,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/xet-read-token/2760a223ac957f30acfb18c8aa649b01cf1d75f2 \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.076095256,"data":"\n"}
+,{"stream_name":"stderr","time":469.076099335,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/xet-read-token/2760a223ac957f30acfb18c8aa649b01cf1d75f2 \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.08137924,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":469.081396282,"data":"\n"}
+,{"stream_name":"stderr","time":469.081409818,"data":"HTTP Request: HEAD https://huggingface.co/Unbabel/wmt22-comet-da/resolve/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":469.082329743,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.082361729,"data":"\n"}
+,{"stream_name":"stderr","time":469.082366439,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.09445772,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.094474857,"data":"\n"}
+,{"stream_name":"stderr","time":469.094479419,"data":"HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.096664469,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.096678762,"data":"\n"}
+,{"stream_name":"stderr","time":469.09668308,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/README.md \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.109863344,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":469.109885047,"data":"\n"}
+,{"stream_name":"stderr","time":469.109888416,"data":"HTTP Request: GET https://huggingface.co/api/resolve-cache/models/Unbabel/wmt22-comet-da/2760a223ac957f30acfb18c8aa649b01cf1d75f2/hparams.yaml \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":485.72839941,"data":"/usr/local/lib/python3.13/dist-packages/comet/models/__init__.py:101: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":485.728443574,"data":"  import pkg_resources\n"}
+,{"stream_name":"stderr","time":485.728448013,"data":"\n"}
+,{"stream_name":"stderr","time":485.72845136,"data":"/usr/local/lib/python3.13/dist-packages/comet/models/__init__.py:101: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools\u003c81.\n"}
+,{"stream_name":"stderr","time":485.728455787,"data":"  import pkg_resources\n"}
+,{"stream_name":"stderr","time":487.206894322,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":487.206941524,"data":"\n"}
+,{"stream_name":"stderr","time":487.206946606,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":487.33723178,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":487.337262485,"data":"\n"}
+,{"stream_name":"stderr","time":487.337265955,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":487.452553098,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":487.452583289,"data":"\n"}
+,{"stream_name":"stderr","time":487.45258849,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":487.569238075,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":487.569275773,"data":"\n"}
+,{"stream_name":"stderr","time":487.569279619,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":487.678266106,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":487.678292355,"data":"\n"}
+,{"stream_name":"stderr","time":487.678297053,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":487.783896435,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":487.78394063,"data":"\n"}
+,{"stream_name":"stderr","time":487.783945902,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":487.893039692,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":487.893063917,"data":"\n"}
+,{"stream_name":"stderr","time":487.893068803,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":487.999755532,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/sentencepiece.bpe.model \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":487.999782479,"data":"\n"}
+,{"stream_name":"stderr","time":487.999786919,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/sentencepiece.bpe.model \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":488.123150349,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/sentencepiece.bpe.model \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":488.123181627,"data":"\n"}
+,{"stream_name":"stderr","time":488.123199029,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/sentencepiece.bpe.model \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":488.426498179,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":488.426522828,"data":"\n"}
+,{"stream_name":"stderr","time":488.426527336,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":488.571283312,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":488.571310409,"data":"\n"}
+,{"stream_name":"stderr","time":488.571315099,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":489.096841636,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/added_tokens.json \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":489.096865957,"data":"\n"}
+,{"stream_name":"stderr","time":489.096870556,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/added_tokens.json \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":489.205175383,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/special_tokens_map.json \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":489.205201695,"data":"\n"}
+,{"stream_name":"stderr","time":489.205206284,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/special_tokens_map.json \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":489.313301348,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/chat_template.jinja \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":489.313325141,"data":"\n"}
+,{"stream_name":"stderr","time":489.313329448,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/chat_template.jinja \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":491.833708685,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":491.833747097,"data":"\n"}
+,{"stream_name":"stderr","time":491.83375043,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":491.965048768,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":491.965078626,"data":"\n"}
+,{"stream_name":"stderr","time":491.965085141,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":492.072026523,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":492.072063067,"data":"\n"}
+,{"stream_name":"stderr","time":492.072066033,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":492.184548033,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":492.184582562,"data":"\n"}
+,{"stream_name":"stderr","time":492.184586009,"data":"HTTP Request: GET https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":499.406429991,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":499.406470346,"data":"\n"}
+,{"stream_name":"stderr","time":499.406490152,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":499.949470962,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":499.949507932,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":499.949527295,"data":"\n"}
+,{"stream_name":"stderr","time":499.949531663,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":499.949536498,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":499.950400753,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":499.950424527,"data":"\n"}
+,{"stream_name":"stderr","time":499.950437752,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":499.951279994,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":499.951294542,"data":"\n"}
+,{"stream_name":"stderr","time":499.951298963,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":499.952200087,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":499.952217561,"data":"\n"}
+,{"stream_name":"stderr","time":499.9522223,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":499.953837735,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":499.953855818,"data":"\n"}
+,{"stream_name":"stderr","time":499.953860697,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":500.66437336,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":500.664402088,"data":"\n"}
+,{"stream_name":"stderr","time":500.66440678,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":500.807796459,"data":"\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":500.836423392,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":500.837380798,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":504.419416844,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":504.858290101,"data":"S0+Qwen {'bleu': 8.32, 'chrf_pp': 30.96, 'comet': None}\n"}
+,{"stream_name":"stderr","time":504.85914775,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":504.859165387,"data":"\n"}
+,{"stream_name":"stderr","time":504.859169593,"data":"\n"}
+,{"stream_name":"stderr","time":505.15649239,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":505.156518262,"data":"\n"}
+,{"stream_name":"stderr","time":505.156522447,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":506.18934853,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":506.189384329,"data":"\n"}
+,{"stream_name":"stderr","time":506.189388961,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":506.294136358,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":506.294168457,"data":"\n"}
+,{"stream_name":"stderr","time":506.294171877,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":506.403752402,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":506.403794535,"data":"\n"}
+,{"stream_name":"stderr","time":506.403797902,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":506.51445103,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":506.514487363,"data":"\n"}
+,{"stream_name":"stderr","time":506.514490846,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":506.621344132,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":506.621379463,"data":"\n"}
+,{"stream_name":"stderr","time":506.621384106,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":506.729032635,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":506.729059058,"data":"\n"}
+,{"stream_name":"stderr","time":506.729063434,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":509.048398865,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":509.048424494,"data":"\n"}
+,{"stream_name":"stderr","time":509.048429167,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":509.153655086,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":509.153682453,"data":"\n"}
+,{"stream_name":"stderr","time":509.153686858,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":509.280763042,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":509.280791352,"data":"\n"}
+,{"stream_name":"stderr","time":509.280796287,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":516.445102629,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":516.445141736,"data":"\n"}
+,{"stream_name":"stderr","time":516.4451451,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":516.973045533,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":516.97307913,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":516.973084208,"data":"\n"}
+,{"stream_name":"stderr","time":516.973088046,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":516.973092783,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":516.973967975,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":516.97398678,"data":"\n"}
+,{"stream_name":"stderr","time":516.973990872,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":516.974813617,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":516.974835101,"data":"\n"}
+,{"stream_name":"stderr","time":516.974839519,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":516.977139806,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":516.977155677,"data":"\n"}
+,{"stream_name":"stderr","time":516.97715971,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":516.977912063,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":516.977940243,"data":"\n"}
+,{"stream_name":"stderr","time":516.977944735,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":517.682495049,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":517.682525679,"data":"\n"}
+,{"stream_name":"stderr","time":517.682529997,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":517.8096365,"data":"\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":517.833392987,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":517.838065787,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":521.319560911,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":521.755043828,"data":"S0+Qwen+LoRA {'bleu': 9.01, 'chrf_pp': 30.49, 'comet': None}\n"}
+,{"stream_name":"stderr","time":521.756042558,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":521.758982985,"data":"\n"}
+,{"stream_name":"stderr","time":521.758995015,"data":"\n"}
+,{"stream_name":"stderr","time":522.125641846,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":522.125668755,"data":"\n"}
+,{"stream_name":"stderr","time":522.125674093,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":523.176310588,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":523.176365618,"data":"\n"}
+,{"stream_name":"stderr","time":523.176373785,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":523.282238939,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":523.282287516,"data":"\n"}
+,{"stream_name":"stderr","time":523.282292584,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":523.390884446,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":523.390933768,"data":"\n"}
+,{"stream_name":"stderr","time":523.39093936,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":523.499505727,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":523.499538182,"data":"\n"}
+,{"stream_name":"stderr","time":523.499543164,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":523.60546871,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":523.605518307,"data":"\n"}
+,{"stream_name":"stderr","time":523.605523888,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":523.71180925,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":523.711844267,"data":"\n"}
+,{"stream_name":"stderr","time":523.711849625,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":526.02993647,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":526.029967652,"data":"\n"}
+,{"stream_name":"stderr","time":526.02997238,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":526.134696384,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":526.134728291,"data":"\n"}
+,{"stream_name":"stderr","time":526.134732371,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":526.259370986,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":526.259401404,"data":"\n"}
+,{"stream_name":"stderr","time":526.259404395,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":533.522298392,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":533.522327203,"data":"\n"}
+,{"stream_name":"stderr","time":533.522347492,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":534.042545619,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":534.042583902,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":534.042590541,"data":"\n"}
+,{"stream_name":"stderr","time":534.042595298,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":534.042600735,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":534.043371064,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":534.043406534,"data":"\n"}
+,{"stream_name":"stderr","time":534.043411666,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":534.044356023,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":534.044377611,"data":"\n"}
+,{"stream_name":"stderr","time":534.04438216,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":534.045224099,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":534.045236632,"data":"\n"}
+,{"stream_name":"stderr","time":534.045240917,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":534.047948424,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":534.047975708,"data":"\n"}
+,{"stream_name":"stderr","time":534.047993212,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":534.820808922,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":534.820839472,"data":"\n"}
+,{"stream_name":"stderr","time":534.820843833,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":534.896073927,"data":"\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":534.923410239,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":534.927881893,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":538.284781709,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":538.710916353,"data":"SEAMLESS+Qwen {'bleu': 14.74, 'chrf_pp': 39.42, 'comet': None}\n"}
+,{"stream_name":"stderr","time":538.712165301,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":538.712202285,"data":"\n"}
+,{"stream_name":"stderr","time":538.712206585,"data":"\n"}
+,{"stream_name":"stderr","time":539.047875706,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":539.047901499,"data":"\n"}
+,{"stream_name":"stderr","time":539.047906071,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":540.116541303,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":540.116606125,"data":"\n"}
+,{"stream_name":"stderr","time":540.116622623,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":540.224321888,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":540.224370338,"data":"\n"}
+,{"stream_name":"stderr","time":540.224374897,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":540.338054594,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":540.338088686,"data":"\n"}
+,{"stream_name":"stderr","time":540.338093429,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":540.442777925,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":540.442811223,"data":"\n"}
+,{"stream_name":"stderr","time":540.442815054,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":540.548178583,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":540.548209404,"data":"\n"}
+,{"stream_name":"stderr","time":540.54821392,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":540.653792318,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":540.653825122,"data":"\n"}
+,{"stream_name":"stderr","time":540.653830165,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":542.975984874,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":542.976025641,"data":"\n"}
+,{"stream_name":"stderr","time":542.976030666,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":543.084457741,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":543.08449754,"data":"\n"}
+,{"stream_name":"stderr","time":543.084502404,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":543.20509417,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":543.20513939,"data":"\n"}
+,{"stream_name":"stderr","time":543.20514475,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":550.533853128,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":550.533889844,"data":"\n"}
+,{"stream_name":"stderr","time":550.533894544,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":551.064071564,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":551.064104694,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":551.064109373,"data":"\n"}
+,{"stream_name":"stderr","time":551.064112952,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":551.064116867,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":551.065048492,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":551.065069541,"data":"\n"}
+,{"stream_name":"stderr","time":551.065074078,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":551.065987824,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":551.066007,"data":"\n"}
+,{"stream_name":"stderr","time":551.066011621,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":551.066860511,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":551.066878651,"data":"\n"}
+,{"stream_name":"stderr","time":551.066883103,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":551.068470934,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":551.068487587,"data":"\n"}
+,{"stream_name":"stderr","time":551.068492321,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":551.778527147,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":551.778560607,"data":"\n"}
+,{"stream_name":"stderr","time":551.778565241,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":551.916705885,"data":"\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":551.955378164,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":551.959405671,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":555.305178182,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":555.725737984,"data":"SEAMLESS+Qwen+LoRA {'bleu': 15.68, 'chrf_pp': 40.58, 'comet': None}\n"}
+,{"stream_name":"stderr","time":555.726688357,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":555.726824774,"data":"\n"}
+,{"stream_name":"stderr","time":555.726832419,"data":"\n"}
+,{"stream_name":"stderr","time":556.056724802,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":556.056752733,"data":"\n"}
+,{"stream_name":"stderr","time":556.056757824,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":557.117590428,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":557.117624844,"data":"\n"}
+,{"stream_name":"stderr","time":557.117634629,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":557.224065238,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":557.224095473,"data":"\n"}
+,{"stream_name":"stderr","time":557.224100064,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":557.331139471,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":557.331173983,"data":"\n"}
+,{"stream_name":"stderr","time":557.33117782,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":557.436059087,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":557.43609175,"data":"\n"}
+,{"stream_name":"stderr","time":557.436096851,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":557.543346498,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":557.543382063,"data":"\n"}
+,{"stream_name":"stderr","time":557.543386652,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":557.648321792,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":557.648374876,"data":"\n"}
+,{"stream_name":"stderr","time":557.648380376,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":560.03293594,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":560.03297811,"data":"\n"}
+,{"stream_name":"stderr","time":560.032987637,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":560.140748799,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":560.140783983,"data":"\n"}
+,{"stream_name":"stderr","time":560.140788513,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":560.261948606,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":560.261981786,"data":"\n"}
+,{"stream_name":"stderr","time":560.261987035,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":567.526113494,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":567.526143668,"data":"\n"}
+,{"stream_name":"stderr","time":567.526149769,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":568.047747611,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":568.047782466,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":568.047788448,"data":"\n"}
+,{"stream_name":"stderr","time":568.047792999,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":568.047798226,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":568.048619223,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":568.048639831,"data":"\n"}
+,{"stream_name":"stderr","time":568.048645447,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":568.049463099,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":568.049481947,"data":"\n"}
+,{"stream_name":"stderr","time":568.049486987,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":568.051405766,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":568.051439384,"data":"\n"}
+,{"stream_name":"stderr","time":568.051444053,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":568.052112891,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":568.052125311,"data":"\n"}
+,{"stream_name":"stderr","time":568.052163473,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":568.766673081,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":568.766705015,"data":"\n"}
+,{"stream_name":"stderr","time":568.76670992,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":568.896432781,"data":"\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":568.923265498,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":568.929803289,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":572.338153772,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":572.762624486,"data":"WHISPER_L3+Qwen {'bleu': 14.18, 'chrf_pp': 39.02, 'comet': None}\n"}
+,{"stream_name":"stderr","time":572.763812005,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":572.763845846,"data":"\n"}
+,{"stream_name":"stderr","time":572.763851492,"data":"\n"}
+,{"stream_name":"stderr","time":573.10517644,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":573.105201208,"data":"\n"}
+,{"stream_name":"stderr","time":573.105205409,"data":"HTTP Request: GET https://huggingface.co/api/models/Unbabel/wmt22-comet-da/revision/main \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":574.164051012,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":574.164086467,"data":"\n"}
+,{"stream_name":"stderr","time":574.16409703,"data":"Lightning automatically upgraded your loaded checkpoint from v1.8.3.post1 to v2.6.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint ../../root/.cache/huggingface/hub/models--Unbabel--wmt22-comet-da/snapshots/2760a223ac957f30acfb18c8aa649b01cf1d75f2/checkpoints/model.ckpt`\n"}
+,{"stream_name":"stderr","time":574.270970536,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":574.271001945,"data":"\n"}
+,{"stream_name":"stderr","time":574.27102112,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/tokenizer_config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":574.386110991,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":574.386141659,"data":"\n"}
+,{"stream_name":"stderr","time":574.386145942,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":574.491580367,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":574.491613352,"data":"\n"}
+,{"stream_name":"stderr","time":574.491617599,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main/additional_chat_templates?recursive=false\u0026expand=false \"HTTP/1.1 404 Not Found\"\n"}
+,{"stream_name":"stderr","time":574.615254155,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":574.615282488,"data":"\n"}
+,{"stream_name":"stderr","time":574.615285839,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":574.722401526,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":574.722434689,"data":"\n"}
+,{"stream_name":"stderr","time":574.722439978,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large/tree/main?recursive=true\u0026expand=false \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":577.099448468,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":577.099484441,"data":"\n"}
+,{"stream_name":"stderr","time":577.099489046,"data":"HTTP Request: GET https://huggingface.co/api/models/xlm-roberta-large \"HTTP/1.1 307 Temporary Redirect\"\n"}
+,{"stream_name":"stderr","time":577.208088706,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":577.208119402,"data":"\n"}
+,{"stream_name":"stderr","time":577.208123764,"data":"HTTP Request: GET https://huggingface.co/api/models/FacebookAI/xlm-roberta-large \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":577.328121875,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":577.328150601,"data":"\n"}
+,{"stream_name":"stderr","time":577.328155309,"data":"HTTP Request: HEAD https://huggingface.co/xlm-roberta-large/resolve/main/config.json \"HTTP/1.1 200 OK\"\n"}
+,{"stream_name":"stderr","time":584.629994271,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":584.630036133,"data":"\n"}
+,{"stream_name":"stderr","time":584.63004178,"data":"Encoder model frozen.\n"}
+,{"stream_name":"stderr","time":585.146984487,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":585.14701963,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":585.147040875,"data":"\n"}
+,{"stream_name":"stderr","time":585.147045528,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/core/saving.py:216: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']\n"}
+,{"stream_name":"stderr","time":585.147050121,"data":"GPU available: True (cuda), used: True\n"}
+,{"stream_name":"stderr","time":585.14799896,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":585.148015255,"data":"\n"}
+,{"stream_name":"stderr","time":585.148019241,"data":"TPU available: False, using: 0 TPU cores\n"}
+,{"stream_name":"stderr","time":585.148824229,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":585.148839979,"data":"\n"}
+,{"stream_name":"stderr","time":585.148844145,"data":"💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.\n"}
+,{"stream_name":"stderr","time":585.150681436,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":585.150696248,"data":"\n"}
+,{"stream_name":"stderr","time":585.15070024,"data":"💡 Tip: For seamless cloud uploads and versioning, try installing [litmodels](https://pypi.org/project/litmodels/) to enable LitModelCheckpoint, which syncs automatically with the Lightning model registry.\n"}
+,{"stream_name":"stderr","time":585.151616892,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":585.151631582,"data":"\n"}
+,{"stream_name":"stderr","time":585.151635195,"data":"LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]\n"}
+,{"stream_name":"stderr","time":585.912025087,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":585.912059635,"data":"\n"}
+,{"stream_name":"stderr","time":585.912062988,"data":"/usr/local/lib/python3.13/dist-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.\n"}
+,{"stream_name":"stderr","time":585.982680304,"data":"\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":586.010213075,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting: 0it [00:00, ?it/s]\n"}
+,{"stream_name":"stderr","time":586.014199886,"data":"\rPredicting: 0it [00:00, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":589.29431098,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:00\u003c?, ?it/s]\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":589.732167218,"data":"WHISPER_L3+Qwen+LoRA {'bleu': 15.36, 'chrf_pp': 39.95, 'comet': None}\n"}
+,{"stream_name":"stderr","time":589.733624133,"data":"\rPredicting DataLoader 0:   0%|          | 0/9 [00:03\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":589.733646857,"data":"\n"}
+,{"stream_name":"stderr","time":589.733650233,"data":"\n"}
+,{"stream_name":"stdout","time":1213.793690412,"data":"                       bleu chrf_pp comet\n"}
+,{"stream_name":"stdout","time":1213.793734472,"data":"S0+Qwen                8.32   30.96  None\n"}
+,{"stream_name":"stdout","time":1213.793740228,"data":"S0+Qwen+LoRA           9.01   30.49  None\n"}
+,{"stream_name":"stdout","time":1213.793744717,"data":"SEAMLESS+Qwen         14.74   39.42  None\n"}
+,{"stream_name":"stdout","time":1213.793747925,"data":"SEAMLESS+Qwen+LoRA    15.68   40.58  None\n"}
+,{"stream_name":"stdout","time":1213.793751757,"data":"WHISPER_L3+Qwen       14.18   39.02  None\n"}
+,{"stream_name":"stdout","time":1213.793755631,"data":"WHISPER_L3+Qwen+LoRA  15.36   39.95  None\n"}
+,{"stream_name":"stdout","time":1213.79375892,"data":"{\n"}
+,{"stream_name":"stdout","time":1213.793762075,"data":" \"S0\": {\n"}
+,{"stream_name":"stdout","time":1213.793765339,"data":"  \"wer_pct\": 46.41,\n"}
+,{"stream_name":"stdout","time":1213.793768661,"data":"  \"cer_pct\": 24.04\n"}
+,{"stream_name":"stdout","time":1213.793771891,"data":" },\n"}
+,{"stream_name":"stdout","time":1213.793775055,"data":" \"SEAMLESS\": {\n"}
+,{"stream_name":"stdout","time":1213.793778245,"data":"  \"wer_pct\": 8.58,\n"}
+,{"stream_name":"stdout","time":1213.793781508,"data":"  \"cer_pct\": 4.79\n"}
+,{"stream_name":"stdout","time":1213.79378473,"data":" },\n"}
+,{"stream_name":"stdout","time":1213.793787765,"data":" \"WHISPER_L3\": {\n"}
+,{"stream_name":"stdout","time":1213.793807803,"data":"  \"wer_pct\": 9.65,\n"}
+,{"stream_name":"stdout","time":1213.793813005,"data":"  \"cer_pct\": 3.41\n"}
+,{"stream_name":"stdout","time":1213.79382066,"data":" }\n"}
+,{"stream_name":"stdout","time":1213.793836612,"data":"}\n"}
+,{"stream_name":"stderr","time":1219.643510894,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1219.643542624,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1219.797123965,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1219.797157891,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1220.592032366,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1220.73804035,"data":"[NbConvertApp] Writing 395659 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1223.32261091,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1223.883312281,"data":"[NbConvertApp] Writing 616872 bytes to __results__.html\n"}
+]

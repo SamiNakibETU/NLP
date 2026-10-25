@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
+<title>Kalam · Direct</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/static/icone-180.png">
+<link rel="icon" href="/static/icone.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kalam">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="/static/base.css">
+<link rel="stylesheet" href="/live/assets/live.css">
+</head>
+<body>
+<div class="ecran direct">
+  <header class="entete">
+    <div class="entete-droite">
+      <p id="indicateur" class="indicateur"><span id="pastille" class="pastille" data-etat="repos" aria-hidden="true"></span><span id="indic-texte">En direct</span><span id="duree" class="nombres">00:00</span><span id="retard" class="retard nombres"></span></p>
+    </div>
+  </header>
+
+  <section id="zone-video" class="zone-video" hidden>
+    <div id="cadre-direct" class="cadre-video"><video id="video" controls playsinline></video></div>
+  </section>
+
+  <main id="contenu" class="scene">
+    <div id="accueil" class="accueil">
+      <div id="orbe" class="orbe" aria-hidden="true">
+        <div id="orbe-niveau" class="orbe-niveau">
+          <span class="orbe-corps"></span><span id="orbe-chaud" class="orbe-chaud"></span><span class="orbe-reflet"></span>
+        </div>
+      </div>
+      <h1 id="phrase" class="phrase swap" data-marque="signature">La parole arabe, sous-titrée en français.</h1>
+      <p id="etat-texte" class="etat-texte" role="status"></p>
+    </div>
+    <div id="transcript" class="transcript" tabindex="0" aria-label="Sous-titres">
+      <div class="transcript-contenu">
+        <p id="ar-courant" class="ar-courant" lang="ar" dir="rtl"></p>
+        <div id="flux" class="flux" lang="fr"></div>
+      </div>
+    </div>
+    <button id="retour-direct" class="pilule-retour" type="button" data-visible="false" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v10M3.5 8.5L8 13l4.5-4.5"/></svg>Revenir au direct</button>
+    <p id="annonce" class="visuellement-cache" aria-live="polite"></p>
+  </main>
+
+  <div class="commandes">
+    <div id="bloc-source" class="bloc-source">
+      <button id="choix-source" class="pilule" type="button"><span id="source-lib">Micro</span><svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke-width="1.6"/></svg></button>
+      <div id="champ-zone" class="champ-zone" data-ouvert="false">
+        <div class="champ-interieur">
+          <div id="zone-url" class="zone-url" hidden>
+            <input id="champ-url" class="champ" type="url" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="go"
+                   value="https://www.youtube.com/live/bNyUyrR0PHo" placeholder="Lien YouTube en direct ou flux .m3u8" aria-label="Lien de la chaîne" aria-describedby="url-aide">
+            <p id="url-aide" class="petit">Al Jazeera en direct</p>
+          </div>
+          <div id="zone-fichier" class="zone-fichier" hidden>
+            <label class="pilule" for="champ-fichier"><span id="fichier-lib">Choisir une vidéo</span></label>
+            <input id="champ-fichier" class="visuellement-cache" type="file" accept="audio/*,video/*">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rangee">
+      <span></span>
+      <button id="principal" class="principal" type="button" aria-label="Démarrer l'écoute">
+        <span class="disque"><span class="ico ico-start" aria-hidden="true"></span><span class="ico ico-stop" aria-hidden="true"></span></span>
+        <span class="lib swap">Démarrer</span>
+      </button>
+      <span class="cote"><button id="plus" class="icone-btn" type="button" aria-label="Options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="19" cy="12" r="1.6" fill="currentColor"/></svg></button></span>
+    </div>
+
+    <div id="fin" class="carte-fin" hidden>
+      <div class="fin-texte"><p class="fin-titre">Session terminée</p><p id="fin-meta" class="petit nombres"></p></div>
+      <a id="rapport" class="pilule noire" href="/sessions" data-nav>Voir le rapport</a>
+      <button id="nouvelle" class="texte" type="button">Nouvelle écoute</button>
+    </div>
+  </div>
+</div>
+<script src="/static/marque.js"></script>
+<script src="/static/commun.js"></script>
+<script src="/live/assets/live.js"></script>
+</body>
+</html>

@@ -1,69 +1,104 @@
-# Sous-titrage français de journaux télévisés en arabe
+# Kalam (كلام)
 
-Système de traduction de la parole arabe vers des sous-titres français en mode différé (`.srt`) et en mode direct (flux temps réel avec 2 à 3 secondes de latence).
+Sous-titres français, en quasi temps réel, de journaux télévisés en arabe.
 
-Le projet compare deux architectures partageant le même encodeur audio (`openai/whisper-large-v3`), le même modèle de langue (`Qwen/Qwen3-4B`) et les mêmes données d'entraînement :
-- **Cascade (`S1` / `S2`)** : transcription automatique en arabe par Whisper, suivie d'une traduction contextuelle en français par Qwen3 entraîné par adaptation LoRA.
-- **Pont audio-LLM direct (`S3`)** : extraction des représentations de l'encodeur audio, regroupement temporel ($k = 4$), projection MLP (`Linear -> GELU -> Linear`) et décodage direct en français par le LLM sans étape intermédiaire de texte arabe.
+Kalam écoute un journal arabe (direct YouTube d'Al Jazeera, micro, fichier vidéo) et affiche des sous-titres français environ trois secondes après la parole. Le texte apparaît d'abord en gris (traduction rapide), puis il est remplacé par une traduction plus soignée. En fin de session, l'application produit un rapport : transcript par locuteur, résumé horodaté, exports SRT, Markdown et Word.
+
+Projet de groupe du cours de NLP, CY Tech, octobre 2026.
+
+Rapport : [rapport/rapport.pdf](rapport/rapport.pdf) (source LaTeX : [rapport/rapport.tex](rapport/rapport.tex)).
+
+Vidéo de présentation (3 min, démonstration sur le direct d'Al Jazeera) : [video/kalam-pitch.mp4](video/kalam-pitch.mp4).
+
+## Architecture
+
+```text
+ micro, lien YouTube/HLS,      ┌──────────────────────────── S3 : transcription de l'arabe ───────────────────────────┐
+ fichier audio ou vidéo        │                                                                                      │
+ ─────────────► FastAPI ─────► │ encodeur Cohere Transcribe Arabic ──► projecteur MLP ──► Qwen2.5-1.5B-Instruct       │
+   (WebSocket, ffmpeg)         │ (gelé, 1,9 Md param.)                 (entraîné, 8,66 M)   (gelé)                    │
+                               └──────────────────────────────────────────────┬───────────────────────────────────────┘
+                                                                              │ texte arabe
+                          ┌───────────────────────────────────────────────────┼───────────────────────────┐
+                          ▼                                                   ▼                           ▼
+                Opus-MT ar→fr : texte gris                 NLLB-200 1,3B : texte définitif      rapport de fin de session
+                (pendant la phrase, 0,19 s)                (à la clôture, 0,82 s)               (locuteurs, relecture, résumé)
+```
+
+Chaque segment clos reçoit aussi une empreinte de voix ECAPA (speechbrain), si bien que l'affichage signale les changements de locuteur. Le détail des composants, des routes et des variables d'environnement est dans [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
+## Résultats principaux
+
+Mesures sur FLEURS `ar_eg` → `fr_fr` (267 phrases, GPU T4), sauf mention contraire. Sources et protocole : [docs/RESULTATS.md](docs/RESULTATS.md).
+
+| Système | Entrée | WER (%) | BLEU | chrF++ | COMET |
+|---|---|---:|---:|---:|---:|
+| S0 : Whisper small + Opus-MT | parole | 46,41 | 11,81 | 35,04 | 0,548 |
+| **S3 + NLLB-200 1,3B (chaîne de Kalam)** | parole | 21,12 | **24,57** | **48,79** | n.m. |
+| SeamlessM4T v2 large | parole | 8,58 | 17,38 | 46,22 | 0,690 |
+| S3 + Qwen2.5-1.5B | parole | 21,12 | 12,16 | 37,52 | n.m. |
+| NLLB-200 distillé 1,3B | texte arabe de référence | n.a. | 31,26 | 55,19 | 0,826 |
+| Opus-MT ar-fr | texte arabe de référence | n.a. | 24,31 | 49,58 | 0,761 |
+| Qwen2.5-1.5B-Instruct + LoRA | texte arabe de référence | n.a. | 17,33 | 42,05 | 0,763 |
+| S3 (transcription seule) | parole, test MGB-2 (1 000 segments) | 14,26 | n.a. | n.a. | n.a. |
+
+La chaîne de Kalam, S3 suivi de NLLB-1.3B, obtient le meilleur score de bout en bout, bien que S3 transcrive FLEURS (parole lue, arabe égyptien) moins bien que son domaine d'entraînement (21,1 % de WER contre 14,3 % sur MGB-2). n.m. : non mesuré. En direct sur Al Jazeera (Colab T4, essai final avec NLLB), le texte définitif s'affiche avec un retard médian de 2,9 s (moyen 3,8 s).
+
+## Tester en 10 minutes (Google Colab)
+
+Il faut un compte Google et un compte Hugging Face qui a accepté les conditions du modèle [`CohereLabs/cohere-transcribe-arabic-07-2026`](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026).
+
+1. Ouvrir [`speech_app/colab_live.ipynb` dans Colab](https://colab.research.google.com/github/SamiNakibETU/NLP/blob/main/speech_app/colab_live.ipynb).
+2. Exécution > Modifier le type d'exécution > GPU T4.
+3. Ajouter le secret Colab `HF_TOKEN` (jeton Hugging Face en lecture) et activer son accès au notebook. `SCALEDOWN_API_KEY` est facultatif.
+4. Exécution > Tout exécuter, puis ouvrir le lien `https://….trycloudflare.com/live` affiché (ou scanner le QR code).
+
+La première exécution est la plus longue, le temps d'installer les paquets et de télécharger plusieurs Go de modèles. Le pas à pas, les démonstrations à essayer et le dépannage sont dans [docs/GUIDE.md](docs/GUIDE.md).
+
+## Tester sans GPU
+
+Le moteur factice rejoue quatre phrases arabes fixes. Il permet de parcourir l'interface et de tester l'API, mais ses sorties ne disent rien de la qualité des modèles.
+
+```bash
+pip install torch
+pip install -r speech_app/requirements.txt fastapi "uvicorn[standard]" python-multipart pyyaml
+cd speech_app
+PORTEPAROLE_LIVE=factice python -m uvicorn api:app --port 8770
+```
+
+Sous Windows (PowerShell) : `$env:PORTEPAROLE_LIVE = "factice"; python -m uvicorn api:app --port 8770`. Ouvrir ensuite <http://127.0.0.1:8770/live>. Variante plus légère, sans l'interface Gradio : `python live.py --factice` (port 8765).
 
 ## Structure du dépôt
 
-```text
-code/
-  donnees/      Normalisation arabe, validation des schémas, collecte OPUS/Wikidata et pipeline MGB-2
-  mesures/      Calcul des scores (WER, CER, chrF++, BLEU, COMET, RTF), bootstrap apparié et tableau CSV
-  ecoute/       Extraction des vecteurs de l'encodeur audio et comparaison des modèles candidats
-  cascade/      Préparation des exemples (40/30/20/10), entraînement LoRA avec reprise et inférence S1/S2
-  projecteur/   Regroupement temporel, projecteur MLP, assemblage inputs_embeds et entraînement S3 (temps 1 et 2)
-  direct/       Streaming temps réel (règle des deux passes, seuil de probabilité, serveur FastAPI/WebSocket)
-  demo/         Baseline S0 (Whisper small + Opus-MT), découpage VAD et interface web d'export SRT
-configs/        Fichiers de configuration YAML par système (s0, choix_briques, s2_cascade, s3, direct)
-notebooks/      Notebooks d'entraînement et de distillation pour exécution GPU (Kaggle T4)
-resultats/      Tableau récapitulatif des mesures (resultats.csv)
-```
+| Dossier | Contenu | Branche d'origine |
+|---|---|---|
+| `speech_app/` | application Kalam : API FastAPI, pages web, direct, rapport, Docker, notebooks Colab | `docker`, `integration` |
+| `code/projecteur/`, `code/ecoute/` | S3 : encodage Cohere, projecteur, entraînement du temps 1, transcription | `benchmarking` |
+| `code/direct/` | segmentation du flux, double passe, mesure du retard | `main`, `benchmarking` |
+| `code/donnees/`, `code/mesures/`, `code/demo/`, `code/cascade/` | données MGB-2 et OPUS, métriques et bootstrap, baseline S0, cascade LoRA | `main` |
+| `code/seamless/`, `code/traduction/` | benchmarks SeamlessM4T et traducteurs sur MGB-2 | `benchmarking-projecteurv1` |
+| `projecteur_v1/` | premier prototype de projecteur Whisper vers Qwen | `projecteurv1` |
+| `notebooks/` | notebooks d'analyse, dont `embeddinggemma_*` et `cometkiwi_comparaison` | toutes |
+| `kaggle/` | kernels d'évaluation sur FLEURS (GPU T4) | `integration` |
+| `resultats/` | mesures brutes : `kaggle/` (FLEURS), `direct/` (Al Jazeera) | `integration` |
+| `modeles/s3_temps1_50k/` | projecteur S3 entraîné (35 Mo) et son évaluation | `benchmarking` |
+| `configs/` | réglages YAML (S0, S3, direct, traduction) | toutes |
+| `rapport/` | rapport du projet (PDF, 5 pages, et source LaTeX) | `integration` |
+| `tp/` | travaux pratiques du cours (notebooks) | `integration` |
+| `video/` | vidéo de présentation du projet (3 min) | `integration` |
 
-## Installation
 
-```bash
-pip install -r requirements.txt
-cp .env.exemple .env
-```
+## Documentation
 
-## Utilisation rapide
+- [rapport/rapport.pdf](rapport/rapport.pdf) : rapport du projet (méthode, résultats, analyse du LLM, limites).
+- [docs/GUIDE.md](docs/GUIDE.md) : installation, démonstrations, dépannage, Docker, reproduction des mesures, tests.
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) : composants, flux, API, messages WebSocket, variables d'environnement.
+- [docs/RESULTATS.md](docs/RESULTATS.md) : tous les chiffres, leur source, le protocole et les limites.
 
-### 1. Sous-titrage d'un fichier audio (mode différé `.srt`)
+## Licences et données
 
-```bash
-# Baseline S0 (Whisper small + Opus-MT)
-python code/demo/systeme_s0.py --audio chemin/vers/extrait.wav --sortie-srt sous_titres.srt
-
-# Cascade S2 avec contexte des 2 phrases précédentes et lexique de noms propres
-python code/cascade/inference_s1_s2.py --systeme S2 --audio chemin/vers/extrait.wav --sortie-srt sous_titres_s2.srt
-
-# Interface web locale de dépôt de fichier (port 7860)
-python code/demo/app.py --port 7860
-```
-
-### 2. Sous-titrage en direct (streaming WebSocket)
-
-```bash
-# Lancer le serveur temps réel FastAPI / WebSocket (page mobile sur http://127.0.0.1:8000)
-python code/direct/serveur_direct.py --hote 127.0.0.1 --port 8000
-
-# Simuler 10 minutes de flux continu et mesurer le retard et le taux de réécriture
-python code/direct/flux_simule.py --essai --duree-s 600
-```
-
-### 3. Vérification et tests unitaires
-
-Chaque module dispose d'un mode `--essai` et d'une suite de tests unitaires exécutable hors ligne :
-
-```bash
-python -m unittest discover -s code/donnees/tests
-python -m unittest discover -s code/mesures/tests
-python -m unittest discover -s code/demo/tests
-python -m unittest discover -s code/ecoute/tests
-python -m unittest discover -s code/cascade/tests
-python -m unittest discover -s code/projecteur/tests
-python -m unittest discover -s code/direct/tests
-```
+- MGB-2 (QCRI), SeamlessM4T v2 et NLLB-200 sont réservés à un usage de recherche non commercial. Les données MGB-2 (audio et transcriptions) ne sont pas versionnées.
+- Le modèle Cohere Transcribe Arabic est à accès contrôlé : chacun doit accepter ses conditions sur Hugging Face.
+- La police ABC Areal (Dinamo) n'est pas redistribuée. L'interface ne la charge que si elle est installée sur la machine (`local()` en CSS) ; sinon le navigateur utilise une police système.
+- Les extraits d'Al Jazeera servent à un usage académique. Le résumé de fin peut passer par un service externe (ScaleDown) si une clé est fournie. Les sous-titres peuvent contenir des noms propres erronés : les relire avant toute diffusion.
+- Le dépôt ne contient pas de fichier de licence pour le code.

@@ -80,9 +80,11 @@ class ConfirmateurDeuxPasses:
             mots_provisoires = mots_courants[n_conf:]
             self.mots_passe_precedente = list(self.mots_confirmes) + mots_provisoires
         else:
-            # À la clôture, on conserve les mots confirmés et on fige la fin de la dernière traduction
-            reste = mots_courants[n_deja:] if len(mots_courants) > n_deja else []
-            self.mots_confirmes = list(self.mots_confirmes) + reste
+            # À la clôture, la traduction finale REMPLACE tout le provisoire : la recoller derrière les mots
+            # déjà confirmés produirait des doublons dès que le début de la phrase a changé. Une traduction
+            # finale vide n'efface pas ce qui était confirmé.
+            if mots_courants:
+                self.mots_confirmes = list(mots_courants)
             mots_provisoires = []
             self.mots_passe_precedente = list(self.mots_confirmes)
 

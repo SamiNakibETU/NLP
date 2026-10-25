@@ -1,0 +1,35 @@
+# Préparation des données S3 : manifestes MGB-2 et encodage audio (Cohere Transcribe Arabic)
+# Les chemins relatifs sont résolus depuis la racine du dépôt.
+
+sources:
+  racine_mgb2: "/Users/nicolaswujczak/Downloads/train"   # ou donnees/externe/mgb2_train après déplacement
+  sous_dossier_xml: "xml/utf8"
+  sous_dossier_wav: "wav"
+
+sortie:
+  dossier: "donnees/externe/s3_encodage"                 # ignoré par git
+
+selection:
+  graine: 42
+  pct_episodes_test: 5            # même hachage MD5 que determiner_partie (code/donnees/pipeline_mgb2.py)
+  nb_segments_train: 50000        # cible du temps 1 (§ 4 bis) ; le pilote (5000) en est le début
+  nb_segments_test: 1000
+  # durée, nombre de mots, WMER et segments max par épisode : lus dans code/donnees/seuils.yaml
+
+encodage:
+  modele_id: "CohereLabs/cohere-transcribe-arabic-07-2026"
+  langue: "ar"
+  appareil: "auto"                # cuda, puis mps, puis cpu
+  precision: "float16"
+  secondes_audio_par_lot: 120     # somme des durées d'un lot de segments de durées voisines
+  segments_par_fichier_npy: 1000
+
+controles:
+  marge_disque_go: 20             # on s'arrête si l'espace libre restant passerait sous cette marge
+  nb_segments_reencodes: 3        # segments tirés au hasard et réencodés seuls à la fin
+  # « mêmes vecteurs aux arrondis fp16 près » : |a - b| <= tolerance_absolue + tolerance_relative * |b|
+  tolerance_absolue: 0.01
+  tolerance_relative: 0.01
+  # 4 segments sur 50 000 finissent après la fin du wav (0,06 s au plus) : on coupe à la fin du fichier
+  # jusqu'à cette tolérance ; au-delà, erreur explicite.
+  tolerance_fin_wav_s: 0.1

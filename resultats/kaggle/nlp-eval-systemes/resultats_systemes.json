@@ -1,0 +1,137 @@
+{
+  "jeu": "FLEURS ar_eg test (1 phrase par id, 1re lecture), référence FR = fr_fr test",
+  "n_phrases": 267,
+  "duree_audio_s": 2961.1,
+  "systemes": {
+    "S0": {
+      "description": "openai/whisper-small + Helsinki-NLP/opus-mt-ar-fr (fp16, T4)",
+      "temps_chargement_s": 18.5,
+      "temps_calcul_s": 261.6,
+      "rtf": 0.0884,
+      "pic_vram_go": 0.73,
+      "wer_pct": 46.41,
+      "cer_pct": 24.04,
+      "bleu": 11.81,
+      "chrf_pp": 35.04,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null,
+      "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+    },
+    "SEAMLESS": {
+      "description": "facebook/seamless-m4t-v2-large, SpeechToText, tgt_lang=fra (fp16, T4) ; WER via tgt_lang=arb",
+      "temps_chargement_s": 53.3,
+      "temps_calcul_s": 432.8,
+      "rtf": 0.1461,
+      "rtf_asr_arabe": 0.1131,
+      "pic_vram_go": 3.48,
+      "wer_pct": 8.58,
+      "cer_pct": 4.79,
+      "bleu": 17.38,
+      "chrf_pp": 46.22,
+      "signature_bleu": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.6.0",
+      "signature_chrf_pp": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.6.0",
+      "comet": null,
+      "comet_motif": "COMET indisponible : ValueError: not enough values to unpack (expected 3, got 2)"
+    },
+    "WHISPER_L3": {
+      "description": "openai/whisper-large-v3, ASR arabe seul (fp16, T4)",
+      "temps_chargement_s": 23.9,
+      "temps_calcul_s": 464.7,
+      "rtf": 0.1569,
+      "pic_vram_go": 3.37,
+      "wer_pct": 9.65,
+      "cer_pct": 3.41
+    },
+    "S3": {
+      "erreur": "PermissionError: secret Kaggle HF_TOKEN absent : attacher le secret HF_TOKEN à ce kernel (Add-ons > Secrets), puis relancer",
+      "sauté": true
+    }
+  },
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "5.20.2"
+  },
+  "bootstrap": [
+    {
+      "a": "S0",
+      "b": "SEAMLESS",
+      "metrique": "chrf++",
+      "n_tirages": 300,
+      "score_a": 35.04,
+      "score_b": 46.22,
+      "ecart_observe": 11.18,
+      "ic_95_bas": 9.1947,
+      "ic_95_haut": 13.572,
+      "intervalle_texte": "[+9.19, +13.57]",
+      "contient_zero": false,
+      "exclut_zero": true,
+      "graine": 42,
+      "conclusion": "écart significatif : B meilleur que A"
+    },
+    {
+      "a": "S0",
+      "b": "SEAMLESS",
+      "metrique": "bleu",
+      "n_tirages": 300,
+      "score_a": 11.81,
+      "score_b": 17.38,
+      "ecart_observe": 5.57,
+      "ic_95_bas": 3.187,
+      "ic_95_haut": 7.712,
+      "intervalle_texte": "[+3.19, +7.71]",
+      "contient_zero": false,
+      "exclut_zero": true,
+      "graine": 42,
+      "conclusion": "écart significatif : B meilleur que A"
+    },
+    {
+      "a": "S0",
+      "b": "SEAMLESS",
+      "metrique": "wer",
+      "n_tirages": 300,
+      "score_a": 46.41,
+      "score_b": 8.58,
+      "ecart_observe": -37.83,
+      "ic_95_bas": -45.6675,
+      "ic_95_haut": -30.8233,
+      "intervalle_texte": "[-45.67, -30.82]",
+      "contient_zero": false,
+      "exclut_zero": true,
+      "graine": 42,
+      "conclusion": "écart significatif : B meilleur que A (erreur plus basse)"
+    },
+    {
+      "a": "S0",
+      "b": "WHISPER_L3",
+      "metrique": "wer",
+      "n_tirages": 300,
+      "score_a": 46.41,
+      "score_b": 9.65,
+      "ecart_observe": -36.76,
+      "ic_95_bas": -44.4527,
+      "ic_95_haut": -29.547,
+      "intervalle_texte": "[-44.45, -29.55]",
+      "contient_zero": false,
+      "exclut_zero": true,
+      "graine": 42,
+      "conclusion": "écart significatif : B meilleur que A (erreur plus basse)"
+    },
+    {
+      "a": "SEAMLESS",
+      "b": "WHISPER_L3",
+      "metrique": "wer",
+      "n_tirages": 300,
+      "score_a": 8.58,
+      "score_b": 9.65,
+      "ecart_observe": 1.07,
+      "ic_95_bas": 0.0837,
+      "ic_95_haut": 2.0353,
+      "intervalle_texte": "[+0.08, +2.04]",
+      "contient_zero": false,
+      "exclut_zero": true,
+      "graine": 42,
+      "conclusion": "écart significatif : A meilleur que B (erreur plus basse)"
+    }
+  ]
+}

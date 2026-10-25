@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<meta name="color-scheme" content="light">
+<title>Kalam · Vidéo</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/static/icone-180.png">
+<link rel="icon" href="/static/icone.svg" type="image/svg+xml">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kalam">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="/static/base.css">
+<link rel="stylesheet" href="/static/video.css">
+</head>
+<body>
+<div class="ecran">
+  <header class="entete"></header>
+
+  <!-- 1. dépôt -->
+  <main id="depot" class="vue">
+    <div class="tete-page"><h1 class="titre">Sous-titrer une vidéo</h1></div>
+    <label id="zone" class="zone" for="fichier">
+      <input id="fichier" class="visuellement-cache" type="file" accept="video/*,audio/*">
+      <span class="zone-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V5M7.5 9.5L12 5l4.5 4.5M5 19h14"/></svg></span>
+      <span id="zone-titre" class="zone-titre">Dépose une vidéo</span>
+      <span id="zone-aide" class="zone-aide">ou touche pour la choisir</span>
+    </label>
+    <p id="erreur-depot" class="msg erreur" role="alert" hidden></p>
+    <div class="actions">
+      <button id="choix-moteur" class="pilule" type="button"><span class="discret">Moteur</span><span id="moteur-lib">S3</span><svg class="chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke-width="1.6"/></svg></button>
+      <button id="lancer" class="pilule noire grande" type="button">Sous-titrer</button>
+    </div>
+  </main>
+
+  <!-- 2. progression -->
+  <section id="progression" class="vue" hidden>
+    <div class="tete-page"><h1 id="prog-titre" class="titre">En cours</h1></div>
+    <div class="prog" aria-live="polite">
+      <p class="prog-ligne"><span id="prog-etape" class="swap">Envoi du fichier</span><span id="prog-valeur" class="nombres"></span></p>
+      <div id="barre-cadre" class="barre"><i id="barre"></i></div>
+      <p class="petit"><span id="prog-temps" class="nombres">00:00</span> écoulées · la durée dépend du moteur et de la machine</p>
+      <p id="prog-erreur" class="msg erreur" role="alert" hidden></p>
+    </div>
+    <div class="actions"><button id="reessayer" class="pilule" type="button" hidden>Recommencer</button></div>
+  </section>
+
+  <!-- 3. résultat -->
+  <section id="resultat" class="vue" hidden>
+    <div class="tete-page">
+      <div class="titre-rangee"><h1 id="res-titre" class="titre res-titre">Vidéo</h1><button id="options-res" class="icone-btn" type="button" aria-label="Exports et options"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="19" cy="12" r="1.6" fill="currentColor"/></svg></button></div>
+      <p id="res-meta" class="petit"></p>
+    </div>
+    <div class="duo">
+      <div id="cadre" class="cadre"><video id="lecteur" controls playsinline preload="metadata"></video></div>
+      <div class="zone-transcript">
+        <div id="transcript" class="defile transcript" tabindex="0" aria-label="Transcript"><ol id="segments" class="segments"></ol></div>
+        <button id="retour-lecture" class="pilule-retour" type="button" data-visible="false" tabindex="-1"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v10M3.5 8.5L8 13l4.5-4.5"/></svg>Revenir à la lecture</button>
+      </div>
+    </div>
+    <div class="actions bas"><a id="rapport" class="pilule noire grande" href="#">Rapport</a></div>
+  </section>
+</div>
+<script src="/static/marque.js"></script>
+<script src="/static/commun.js"></script>
+<script src="/static/video.js"></script>
+</body>
+</html>
