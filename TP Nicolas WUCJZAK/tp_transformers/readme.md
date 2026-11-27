@@ -1,0 +1,1 @@
+L'objectif ici a été de réaliser les tp non pas sous forme de notebooks mais de fichiers pythons pour immiter une vraie application.

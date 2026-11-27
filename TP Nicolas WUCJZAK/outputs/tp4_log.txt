@@ -1,0 +1,170 @@
+
+#################### tp4 ####################
+
+device : mps
+dh = 16 | tokens par batch = 512
+
+== vérif des formes
+x : (16, 32)
+une tête : (16, 32, 16) | multi-têtes : (16, 32, 64)
+logits : (16, 32, 65) | loss initiale : 4.328 (~ ln 65 = 4.17)
+paramètres : 0.209729 M
+
+== test très court (200 itérations) pour voir que la loss descend
+iter     0 | train 4.4173 | val 4.4008 | 0s
+iter   100 | train 2.6591 | val 2.6528 | 1s
+iter   199 | train 2.5046 | val 2.5359 | 2s
+
+== génération avant entraînement
+
+;3BiAqQ;WI:tTkg pD,ELannjpzJhJip&MusstMzbwb:
+WZo!ogbuiIivMYGNeITFqtJXKnozrI KZirKQcoA!x:IJA
+
+eE&KDnXpA,&&KnWBiwVjvtJK!r3KbzWh&Og.UnkIg$PefvTxCyZjthZAcPIOUKWhjV-MPY&fT'oMJ33p3UFtYD&KNwGNHkajZR&--3:Kwb&kKdc S&D.XTnCQ;&VuRz?G;?VU:K$dat Bku;aMGBqDMCjMKW.&MwX?C-QXPsmVKvukmCDHAndi KKY&P&e&:rPTesZE?UEfZiZ
+
+
+== entraînement complet (5000 itérations)
+iter     0 | train 4.4109 | val 4.4016 | 1s
+iter   100 | train 2.6511 | val 2.6604 | 3s
+iter   200 | train 2.4941 | val 2.4903 | 5s
+iter   300 | train 2.3903 | val 2.4019 | 7s
+iter   400 | train 2.3214 | val 2.3285 | 9s
+iter   500 | train 2.2542 | val 2.2711 | 11s
+iter   600 | train 2.1951 | val 2.2048 | 13s
+iter   700 | train 2.1660 | val 2.1883 | 15s
+iter   800 | train 2.1248 | val 2.1523 | 17s
+iter   900 | train 2.0775 | val 2.1115 | 19s
+iter  1000 | train 2.0569 | val 2.0909 | 21s
+iter  1100 | train 2.0283 | val 2.0838 | 23s
+iter  1200 | train 1.9985 | val 2.0468 | 25s
+iter  1300 | train 1.9887 | val 2.0355 | 27s
+iter  1400 | train 1.9543 | val 2.0074 | 29s
+iter  1500 | train 1.9341 | val 1.9997 | 31s
+iter  1600 | train 1.9223 | val 2.0084 | 33s
+iter  1700 | train 1.9124 | val 1.9900 | 35s
+iter  1800 | train 1.8801 | val 1.9743 | 37s
+iter  1900 | train 1.8775 | val 1.9595 | 39s
+iter  2000 | train 1.8543 | val 1.9669 | 41s
+iter  2100 | train 1.8506 | val 1.9639 | 43s
+iter  2200 | train 1.8359 | val 1.9423 | 45s
+iter  2300 | train 1.8329 | val 1.9364 | 47s
+iter  2400 | train 1.8196 | val 1.9191 | 49s
+iter  2500 | train 1.7969 | val 1.9253 | 51s
+iter  2600 | train 1.8024 | val 1.9149 | 53s
+iter  2700 | train 1.7939 | val 1.9242 | 55s
+iter  2800 | train 1.7849 | val 1.9115 | 57s
+iter  2900 | train 1.7875 | val 1.9099 | 59s
+iter  3000 | train 1.7782 | val 1.9079 | 61s
+iter  3100 | train 1.7501 | val 1.9023 | 63s
+iter  3200 | train 1.7359 | val 1.8856 | 65s
+iter  3300 | train 1.7431 | val 1.8893 | 67s
+iter  3400 | train 1.7398 | val 1.8731 | 69s
+iter  3500 | train 1.7287 | val 1.8834 | 71s
+iter  3600 | train 1.7176 | val 1.8717 | 73s
+iter  3700 | train 1.7178 | val 1.8651 | 75s
+iter  3800 | train 1.7096 | val 1.8721 | 77s
+iter  3900 | train 1.7123 | val 1.8658 | 79s
+iter  4000 | train 1.7057 | val 1.8507 | 81s
+iter  4100 | train 1.7017 | val 1.8547 | 84s
+iter  4200 | train 1.6937 | val 1.8527 | 86s
+iter  4300 | train 1.6914 | val 1.8323 | 88s
+iter  4400 | train 1.6989 | val 1.8570 | 90s
+iter  4500 | train 1.6838 | val 1.8389 | 92s
+iter  4600 | train 1.6773 | val 1.8179 | 94s
+iter  4700 | train 1.6767 | val 1.8277 | 96s
+iter  4800 | train 1.6658 | val 1.8301 | 98s
+iter  4900 | train 1.6679 | val 1.8281 | 100s
+iter  4999 | train 1.6635 | val 1.8184 | 102s
+
+== génération après entraînement (2000 caractères)
+
+Well? But be king; have juch this tost to be
+Worm ghed it, then all on on fortiend?
+And I the fair tome not the tother you fhill.
+
+DUKE VINTICENTIO:
+O, then, I--musforn John's that inter.
+
+MRUTEN OF GAREY:
+
+DUKE COMINIUS:
+But look, you bash in a tolmean.
+
+Servily Guntrealy ime
+As the raves pity frirse to may brave to as the is that not.
+
+DUKE VINCENTIO:
+Stand whin:
+Cith of hadst to Plity croats with thy cyprocle;
+Wose not dind his make to say: ever them them some with the die:
+That fouth-hens, forth srect:
+I pitter I, All:
+Let is not bring untives is my crown;
+When leave and their is you.
+
+Seconken:
+You seed: put I not not, for theyse,
+Stay my sasimy wongtune to the have wive.
+
+CORIOLANUS:
+I what make your doest-that where
+Of the voes use's!
+Where again apprace, First paed,
+Angely life infortespreigns by my sold right'd stains absel,
+To his abrate ungrant on beheds, thou.
+ of this like to day
+bust wears ere drung is never Pontalying your grain.
+
+KING RICHERSIO:
+Her tonge have grave laws lame;.
+
+KING HENNYBARD
+TOMPET:
+Her this is the clast stiless my grieght,
+You, my lordst over have hose in this gown.
+
+BENVOHN OWARLA:
+How that, but you.
+
+SLOMPEY:
+
+KINCENTIO:
+To Mustres, if Yirk.
+
+HENRY BOLINGHAMER:
+Ist take larkinTomm'T on; him, the was you self,
+Gost his benement. But bableman that, your forn my thoungs
+Gahs you's forleastion and what
+as clot not not.
+O, my mind ever to his otle, my fret:
+In shall seep they mewing
+Romeforenblows our my brove earings,
+MOwham'st been love love been to need cruather.
+O, did for snoth to her him, Isake all thee?
+
+ROPCUF AU ERLEY:
+What of heas.
+
+Second:
+Glost.
+
+CORIOLANUS:
+My clonjure not it, stas no proningly such and worse bring this wriggrans, soar?
+
+GLOUCESTER:
+Aliff, and unto heaving statted
+A spesite to till and it profort is then.
+
+BUFRIELLARENT:
+O, and my hary will worth his smeets a doth his
+sen proted may gontanoly anallawful this
+not my here set Jolin the prove your thram:
+You with your grave with tee bsear:
+If you drim, in I
+
+== expériences
+base (T=32, 4 têtes)   | train 1.849 | val 1.939 | écart +0.090 | 21s
+block_size 16          | train 1.940 | val 1.991 | écart +0.051 | 21s
+block_size 64          | train 1.815 | val 1.940 | écart +0.125 | 21s
+1 tête                 | train 1.836 | val 1.935 | écart +0.099 | 11s
+dropout 0.2            | train 1.963 | val 2.008 | écart +0.045 | 21s
